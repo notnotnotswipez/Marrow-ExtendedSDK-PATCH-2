@@ -1,9 +1,15 @@
+# Fork Info
+
+This is a MODIFIED FORK of the Marrow-ExtendedSDK, it contains fixed scripts which are functional at this time. (Patch 2 of BL). I didnt bother moving the folders that the scripts were in because I am incredibly lazy, but it doesnt matter, itll still work fine.
+
+THIS ALSO INCLUDES PUPPETMASTER SCRIPTS. They're all dummy scripts, I believe they werent included in the original Extended SDK because of fear of the PuppetMaster people not being alright with it, but it should be fine considering all the scripts are empty anyway (Besides variable names and empty methods).
+
+If you want to use this fork, delete your current "Marrow-ExtendedSDK" folder and download this one via the green code button up at the top. Then place it into your folder where the old Marrow-ExtendedSDK folder was. References should be completely fine and you shouldn't have any missing scripts. Although, since PuppetMaster scripts were added, some script references on NPCs will be MISSING! If you made an NPC prior to this, you should delete your puppetmaster/behavior/NPC dummy scripts that you used prior to this fork as there will be conflicts between the scripts.
+
 # Info
 This repository allows the extension of the BONELAB Marrow SDK, allowing you to create custom guns and other types of items not yet supported by the Marrow SDK.
 
 One of the major objectives of this repo, is to remove incentives to decompile the game, through strategic inclusion of assets which aren't useful elsewhere, and thorough documentation of what's possible.
-
-This is a MODIFIED FORK of the Marrow-ExtendedSDK, it contains fixed scripts which are functional at this time. (Patch 2 of BL). I didnt bother moving the folders that the scripts were in because I am incredibly lazy, but it doesnt matter, itll still work fine.
 
 # How to Install
 
