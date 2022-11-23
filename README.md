@@ -3,6 +3,8 @@ This repository allows the extension of the BONELAB Marrow SDK, allowing you to 
 
 One of the major objectives of this repo, is to remove incentives to decompile the game, through strategic inclusion of assets which aren't useful elsewhere, and thorough documentation of what's possible.
 
+This is a MODIFIED FORK of the Marrow-ExtendedSDK, it contains fixed scripts which are functional at this time. (Patch 2 of BL). I didnt bother moving the folders that the scripts were in because I am incredibly lazy, but it doesnt matter, itll still work fine.
+
 # How to Install
 
 Follow steps 1-5 from the official SDK over at https://github.com/StressLevelZero/MarrowSDK/wiki#project-setup
