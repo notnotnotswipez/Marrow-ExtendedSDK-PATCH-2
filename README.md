@@ -23,7 +23,7 @@ https://github.com/StressLevelZero/Custom-URP.git#Bonelab
 
 https://github.com/Kairus101/MarrowSDKExt.git
 
-Using the green Code dropdown at the top of this page, download a zip of this repositry, and unzip it's contents into your Assets folder to have Assets/Marrow-ExtendedSDK
+Using the green Code dropdown at the top of this page, download a zip of this repositry, and unzip it's contents into your Assets folder to have Assets/Marrow-ExtendedSDK-PATCH-2
 
 Continue following steps 7+ from the official SDK documentation.
 
