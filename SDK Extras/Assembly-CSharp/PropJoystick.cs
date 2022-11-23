@@ -1,40 +1,47 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class PropJoystick : SphereGrip
+namespace SLZ.Props
 {
-	public struct JoystickData
+	public class PropJoystick : SphereGrip
 	{
-		public Vector2 xyLocalNormaled;
+		public struct JoystickData
+		{
+			public Vector2 xyLocalNormaled;
 
-		public Quaternion baseRotationWorld;
-	}
+			public Quaternion baseRotationWorld;
+		}
 
-	public Transform locator;
+		public Transform locator;
 
-	public Rigidbody rb_Joystick;
+		public Rigidbody rb_Joystick;
 
-	[HideInInspector]
-	public Vector2 rot_xy;
+		[HideInInspector]
+		public Vector2 rot_xy;
 
-	public Transform rotBall;
+		public Transform rotBall;
 
-	public float maxDegrees;
+		public float maxDegrees;
 
-	public float deadzoneDegrees;
+		public float deadzoneDegrees;
 
-	public GameObject[] msg_Objects;
+		public GameObject[] msg_Objects;
 
-	private Quaternion rot_Start;
+		private Quaternion rot_Start;
 
-	private JoystickData _joystickData;
+		private JoystickData _joystickData;
 
-	protected void Update()
-	{
-	}
+		protected override void Start()
+		{
+		}
 
-	public PropJoystick()
-		: base()
-	{
+		protected void Update()
+		{
+		}
+
+		public PropJoystick()
+			: base()
+		{
+		}
 	}
 }

@@ -1,40 +1,44 @@
 using System;
 using System.Collections.Generic;
+using SLZ.Props;
 using UnityEngine;
 
-public class NarrativeStateRadioAdaptor : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Serializable]
-	public class NarrativeStateRadioPair
+	public class NarrativeStateRadioAdaptor : MonoBehaviour
 	{
-		public RadioSong radioSong;
+		[Serializable]
+		public class NarrativeStateRadioPair
+		{
+			public RadioSong radioSong;
 
-		public NarrativeState narrativeState;
+			public NarrativeState narrativeState;
 
-		public NarrativeStateRadioPair()
+			public NarrativeStateRadioPair()
+				: base()
+			{
+			}
+		}
+
+		public NarrativeManager narrativeManager;
+
+		public RadioManager radioManager;
+
+		public List<NarrativeStateRadioPair> pairList;
+
+		private Dictionary<RadioSong, NarrativeState> narrativeRadioLookUp;
+
+		private void Start()
+		{
+		}
+
+		public void OverrideSongChange(RadioSong overrideSong)
+		{
+		}
+
+		public NarrativeStateRadioAdaptor()
 			: base()
 		{
 		}
-	}
-
-	public NarrativeManager narrativeManager;
-
-	public RadioManager radioManager;
-
-	public List<NarrativeStateRadioPair> pairList;
-
-	private Dictionary<RadioSong, NarrativeState> narrativeRadioLookUp;
-
-	private void Start()
-	{
-	}
-
-	public void OverrideSongChange(RadioSong overrideSong)
-	{
-	}
-
-	public NarrativeStateRadioAdaptor()
-		: base()
-	{
 	}
 }

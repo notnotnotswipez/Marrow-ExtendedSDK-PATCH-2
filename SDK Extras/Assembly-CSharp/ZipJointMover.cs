@@ -7,144 +7,147 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class ZipJointMover : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum ZipState
+	public class ZipJointMover : MonoBehaviour
 	{
-		MOVING_UP = 0,
-		MOVING_DOWN = 1,
-		READY = 2
-	}
+		public enum ZipState
+		{
+			MOVING_UP = 0,
+			MOVING_DOWN = 1,
+			READY = 2
+		}
 
-	private Vector3 localVel;
+		private Vector3 localVel;
 
-	public ZipState zipState;
+		public ZipState zipState;
 
-	[SerializeField]
-	private bool isDebugging;
+		[SerializeField]
+		private bool isDebugging;
 
-	public ZipLinkManager zipManager;
+		public ZipLinkManager zipManager;
 
-	public LinkData maxLinkData;
+		public LinkData maxLinkData;
 
-	public LinkData currLinkData;
+		public LinkData currLinkData;
 
-	public Grip _grip;
+		public Grip _grip;
 
-	public ConfigurableJoint gripJoint;
+		public ConfigurableJoint gripJoint;
 
-	public Collider gripCollider;
+		public Collider gripCollider;
 
-	public Rigidbody gripBody;
+		public Rigidbody gripBody;
 
-	[SerializeField]
-	private ConfigurableJoint moverJoint;
+		[SerializeField]
+		private ConfigurableJoint moverJoint;
 
-	public Rigidbody moverBody;
+		public Rigidbody moverBody;
 
-	public float duration;
+		public float duration;
 
-	public float zipLength;
+		public float zipLength;
 
-	[Tooltip("Meters/ second")]
-	public float speed;
+		[Tooltip("Meters/ second")]
+		public float speed;
 
-	private Coroutine moveUpRoutine;
+		private Coroutine moveUpRoutine;
 
-	private Coroutine moveDownRoutine;
+		private Coroutine moveDownRoutine;
 
-	[SerializeField]
-	private AnimationCurve animCurve;
+		[SerializeField]
+		private AnimationCurve animCurve;
 
-	public GameObject[] upperWheelObjs;
+		public GameObject[] upperWheelObjs;
 
-	public GameObject lowerWheelObj;
+		public GameObject lowerWheelObj;
 
-	public float upperWheelSpeed;
+		public float upperWheelSpeed;
 
-	public float lowerWheelSpeed;
+		public float lowerWheelSpeed;
 
-	public UnityEvent OnGripClaim;
+		public UnityEvent OnGripClaim;
 
-	public UnityEvent OnGripRelease;
+		public UnityEvent OnGripRelease;
 
-	public UnityEvent OnCompleteMove;
+		public UnityEvent OnCompleteMove;
 
-	public UnityEvent OnBreakGrip;
+		public UnityEvent OnBreakGrip;
 
-	private PlayerZipSetup playerZipSetup;
+		private PlayerZipSetup playerZipSetup;
 
-	private float playerLerpDistance;
+		private float playerLerpDistance;
 
-	public Hand activeHand;
+		public Hand activeHand;
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void FixedUpdate()
-	{
-	}
+		private void FixedUpdate()
+		{
+		}
 
-	private void OnGrab(Hand hand)
-	{
-	}
+		private void OnGrab(Hand hand)
+		{
+		}
 
-	private void OnDrop(Hand hand)
-	{
-	}
+		private void OnDrop(Hand hand)
+		{
+		}
 
-	public void NPCMove(LinkData data)
-	{
-	}
+		public void NPCMove(LinkData data)
+		{
+		}
 
-	public void NPC_MoveDown()
-	{
-	}
+		public void NPC_MoveDown()
+		{
+		}
 
-	private void SetZipState(ZipState state)
-	{
-	}
+		private void SetZipState(ZipState state)
+		{
+		}
 
-	private void ResetGripLocalPos()
-	{
-	}
+		private void ResetGripLocalPos()
+		{
+		}
 
-	private IEnumerator CoMoveJoint(float endGoalX)
-	{
-		return null;
-	}
+		private IEnumerator CoMoveJoint(float endGoalX)
+		{
+			return null;
+		}
 
-	private IEnumerator CoMoveJointDown()
-	{
-		return null;
-	}
+		private IEnumerator CoMoveJointDown()
+		{
+			return null;
+		}
 
-	private IEnumerator CoCheckGrip()
-	{
-		return null;
-	}
+		private IEnumerator CoCheckGrip()
+		{
+			return null;
+		}
 
-	[ContextMenu("Set Duration")]
-	public void SetDuration()
-	{
-	}
+		[ContextMenu("Set Duration")]
+		public void SetDuration()
+		{
+		}
 
-	[ContextMenu("GetLength")]
-	public void GetLength()
-	{
-	}
+		[ContextMenu("GetLength")]
+		public void GetLength()
+		{
+		}
 
-	public ZipJointMover()
-		: base()
-	{
+		public ZipJointMover()
+			: base()
+		{
+		}
 	}
 }

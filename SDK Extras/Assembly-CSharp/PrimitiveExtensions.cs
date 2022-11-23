@@ -1,7 +1,10 @@
-public static class PrimitiveExtensions
+namespace SLZ.UI
 {
-	public static float RoundDecimalPlaces(this float value, int decimalPlaces)
+	public static class PrimitiveExtensions
 	{
-		return default(float);
+		public static float RoundDecimalPlaces(this float value, int decimalPlaces)
+		{
+			return default(float);
+		}
 	}
 }

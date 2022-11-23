@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class SignRotater : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Rigidbody rb;
-
-	[SerializeField]
-	private float torqueForce;
-
-	private void FixedUpdate()
+	public class SignRotater : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Rigidbody rb;
 
-	public SignRotater()
-		: base()
-	{
+		[SerializeField]
+		private float torqueForce;
+
+		private void FixedUpdate()
+		{
+		}
+
+		public SignRotater()
+			: base()
+		{
+		}
 	}
 }

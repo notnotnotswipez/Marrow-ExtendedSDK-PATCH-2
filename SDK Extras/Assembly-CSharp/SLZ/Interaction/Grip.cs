@@ -48,8 +48,8 @@ namespace SLZ.Interaction
 
 		public Vector3 secondaryMovementAxis;
 
-		[EnumFlags]
 		[SerializeField]
+		[EnumFlags]
 		public InteractionOptions gripOptions;
 
 		[Tooltip("Zero priority guarantees grip victory. 1 is Neutral >1 is low priority")]
@@ -69,7 +69,7 @@ namespace SLZ.Interaction
 
 		private bool hasStartedToGrip;
 
-		protected bool _isInteractionDisabled;
+		private bool _isInteractionDisabled;
 
 		public float radius;
 
@@ -91,6 +91,14 @@ namespace SLZ.Interaction
 			}
 			set
 			{
+			}
+		}
+
+		protected bool IsInteractionDisabled
+		{
+			get
+			{
+				return default(bool);
 			}
 		}
 

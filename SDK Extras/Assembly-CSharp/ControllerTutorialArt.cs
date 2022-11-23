@@ -7,96 +7,99 @@ using SLZ.Marrow.Input;
 using SLZ.Rig;
 using UnityEngine;
 
-public class ControllerTutorialArt : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public XRControllerType controllerType;
-
-	public bool isRightHand;
-
-	public Transform offset_text;
-
-	[Header("CONTROLLER ART")]
-	public GameObject controller;
-
-	public Renderer joystick;
-
-	public Renderer button_primary;
-
-	public Renderer button_secondary;
-
-	public Renderer trigger;
-
-	public Renderer grip;
-
-	public Renderer system;
-
-	public Renderer outline;
-
-	public float timeToHighlight;
-
-	private float cur_TimeToHighlight;
-
-	private bool _endOff;
-
-	[ColorUsage(true, true)]
-	public Color max_controller_color;
-
-	[ColorUsage(true, true)]
-	public Color min_controller_color;
-
-	[ColorUsage(true, true)]
-	private Color target_controller_color;
-
-	[ColorUsage(true, true)]
-	private Color cur_controller_color;
-
-	public bool isHoldingObjectLeft;
-
-	public bool isHoldingObjectRight;
-
-	public Transform headPos;
-
-	private bool _isRunning;
-
-	private Coroutine blinkHighlightCoroutine;
-
-	private void Start()
+	public class ControllerTutorialArt : MonoBehaviour
 	{
-	}
+		public XRControllerType controllerType;
 
-	public void HIGHLIGHTACTION(TutorialRig.InputHighlight highlightedAction, int flashRate = 1)
-	{
-	}
+		public bool isRightHand;
 
-	public void AXISACTION()
-	{
-	}
+		public Transform offset_text;
 
-	public void FADECONTROLLER(RigManager manager, bool turnOn = true)
-	{
-	}
+		[Header("CONTROLLER ART")]
+		public GameObject controller;
 
-	private IEnumerator CoBlinkHighlight(Renderer renderer, float cycles = 4f)
-	{
-		return null;
-	}
+		public Renderer joystick;
 
-	private IEnumerator FXChange()
-	{
-		return null;
-	}
+		public Renderer button_primary;
 
-	private IEnumerator ControllerFollow(RigManager manager)
-	{
-		return null;
-	}
+		public Renderer button_secondary;
 
-	private void HighlightOff(Renderer renderer)
-	{
-	}
+		public Renderer trigger;
 
-	public ControllerTutorialArt()
-		: base()
-	{
+		public Renderer grip;
+
+		public Renderer system;
+
+		public Renderer outline;
+
+		public float timeToHighlight;
+
+		private float cur_TimeToHighlight;
+
+		private bool _endOff;
+
+		[ColorUsage(true, true)]
+		public Color max_controller_color;
+
+		[ColorUsage(true, true)]
+		public Color min_controller_color;
+
+		[ColorUsage(true, true)]
+		private Color target_controller_color;
+
+		[ColorUsage(true, true)]
+		private Color cur_controller_color;
+
+		public bool isHoldingObjectLeft;
+
+		public bool isHoldingObjectRight;
+
+		public Transform headPos;
+
+		private bool _isRunning;
+
+		private Coroutine blinkHighlightCoroutine;
+
+		private void Start()
+		{
+		}
+
+		public void HIGHLIGHTACTION(TutorialRig.InputHighlight highlightedAction, int flashRate = 1)
+		{
+		}
+
+		public void AXISACTION()
+		{
+		}
+
+		public void FADECONTROLLER(RigManager manager, bool turnOn = true)
+		{
+		}
+
+		private IEnumerator CoBlinkHighlight(Renderer renderer, float cycles = 4f)
+		{
+			return null;
+		}
+
+		private IEnumerator FXChange()
+		{
+			return null;
+		}
+
+		private IEnumerator ControllerFollow(RigManager manager)
+		{
+			return null;
+		}
+
+		private void HighlightOff(Renderer renderer)
+		{
+		}
+
+		public ControllerTutorialArt()
+			: base()
+		{
+		}
 	}
 }

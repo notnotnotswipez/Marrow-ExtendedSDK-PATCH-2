@@ -3,67 +3,70 @@ using System.Runtime.CompilerServices;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-public class ContestantPrefabSpawner : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	[Tooltip("Spawnable")]
-	private Spawnable playerKart;
-
-	[Tooltip("Spawnable")]
-	[SerializeField]
-	private Spawnable aiKart;
-
-	private int nbContestants;
-
-	private int nbActiveContestants;
-
-	public GameObject[] spawnLocations;
-
-	public List<GameObject> contestants;
-
-	public int NBContestants
+	public class ContestantPrefabSpawner : MonoBehaviour
 	{
-		get
+		[Tooltip("Spawnable")]
+		[SerializeField]
+		private Spawnable playerKart;
+
+		[SerializeField]
+		[Tooltip("Spawnable")]
+		private Spawnable aiKart;
+
+		private int nbContestants;
+
+		private int nbActiveContestants;
+
+		public GameObject[] spawnLocations;
+
+		public List<GameObject> contestants;
+
+		public int NBContestants
 		{
-			return default(int);
+			get
+			{
+				return default(int);
+			}
+			set
+			{
+			}
 		}
-		set
+
+		[ContextMenu("Increase Contestants")]
+		public void IncreaseContestants()
 		{
 		}
-	}
 
-	[ContextMenu("Increase Contestants")]
-	public void IncreaseContestants()
-	{
-	}
+		[ContextMenu("Decrease Contestants")]
+		public void DecreaseContestants()
+		{
+		}
 
-	[ContextMenu("Decrease Contestants")]
-	public void DecreaseContestants()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void Awake()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		public void UpdateContestants()
+		{
+		}
 
-	public void UpdateContestants()
-	{
-	}
+		public void MovePrefab(GameObject prefab, GameObject spawn)
+		{
+		}
 
-	public void MovePrefab(GameObject prefab, GameObject spawn)
-	{
-	}
+		public void SpawnPrefab(Spawnable spawnable, GameObject spawn)
+		{
+		}
 
-	public void SpawnPrefab(Spawnable spawnable, GameObject spawn)
-	{
-	}
-
-	public ContestantPrefabSpawner()
-		: base()
-	{
+		public ContestantPrefabSpawner()
+			: base()
+		{
+		}
 	}
 }

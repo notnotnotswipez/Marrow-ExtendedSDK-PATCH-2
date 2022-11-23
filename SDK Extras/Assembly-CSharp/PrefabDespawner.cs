@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class PrefabDespawner : MonoBehaviour
+namespace SLZ.Utilities
 {
-	private void OnTriggerEnter(Collider other)
+	public class PrefabDespawner : MonoBehaviour
 	{
-	}
+		private void OnTriggerEnter(Collider other)
+		{
+		}
 
-	public PrefabDespawner()
-		: base()
-	{
+		public PrefabDespawner()
+			: base()
+		{
+		}
 	}
 }

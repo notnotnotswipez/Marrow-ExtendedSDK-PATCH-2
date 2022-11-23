@@ -7,16 +7,16 @@ using System.Runtime.InteropServices;
 using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Forklift;
 using SLZ.Marrow.Forklift.Model;
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Networking;
 using UnityEngine.UI;
 
-namespace SLZ.UI.Mod
+namespace SLZ.UI
 {
 	public class UI_ModGroup : MonoBehaviour
 	{
@@ -70,6 +70,8 @@ namespace SLZ.UI.Mod
 			public bool useItemImage;
 
 			public string itemImageUrl;
+
+			public bool useVersion;
 
 			public bool useProgressBar;
 

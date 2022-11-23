@@ -1,20 +1,23 @@
-using SLZ.UI.Radial;
+using SLZ.UI;
 using UnityEngine;
 
-public class PullCordReceiver : MonoBehaviour
+namespace SLZ.Props
 {
-	public AvatarsPanelView apv;
-
-	private void OnTriggerEnter(Collider other)
+	public class PullCordReceiver : MonoBehaviour
 	{
-	}
+		public AvatarsPanelView apv;
 
-	private void OnTriggerExit(Collider other)
-	{
-	}
+		private void OnTriggerEnter(Collider other)
+		{
+		}
 
-	public PullCordReceiver()
-		: base()
-	{
+		private void OnTriggerExit(Collider other)
+		{
+		}
+
+		public PullCordReceiver()
+			: base()
+		{
+		}
 	}
 }

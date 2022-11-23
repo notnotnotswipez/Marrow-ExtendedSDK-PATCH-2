@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class FlipHelper : MonoBehaviour
+namespace SLZ.Props
 {
-	public float MaxFlippedTime;
-
-	private float m_LastTimeUp;
-
-	private void Update()
+	public class FlipHelper : MonoBehaviour
 	{
-	}
+		public float MaxFlippedTime;
 
-	public FlipHelper()
-		: base()
-	{
+		private float m_LastTimeUp;
+
+		private void Update()
+		{
+		}
+
+		public FlipHelper()
+			: base()
+		{
+		}
 	}
 }

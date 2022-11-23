@@ -31,9 +31,9 @@ namespace SLZ.Props
 
 		public GameObject[] CustomFragmentObjects;
 
-		[Space(10f)]
 		[Header("HEALTH")]
 		[Tooltip("Prop's maximum health")]
+		[Space(10f)]
 		public float maxHealth;
 
 		[Tooltip("Required hits to break, 1 = default")]
@@ -45,24 +45,24 @@ namespace SLZ.Props
 
 		public float explosiveForceOnDestruct;
 
-		[Tooltip("Can be damaged by attacks")]
 		[Space(10f)]
 		[Header("ATTACKED")]
+		[Tooltip("Can be damaged by attacks")]
 		public bool damageFromAttack;
 
 		[Tooltip("Modifier multiplier to attack damage")]
 		public float attackMod;
 
-		[EnumFlags]
 		[Tooltip("Attack type high damage")]
+		[EnumFlags]
 		public AttackType attackType;
 
 		[Tooltip("Modifier multiplier to attack type")]
 		public float modTypeDamage;
 
 		[Tooltip("Colliders for critical hits")]
-		[Space(10f)]
 		[Header("CRITICAL HIT")]
+		[Space(10f)]
 		public Collider[] colCrit;
 
 		[Tooltip("Critical hit modifier percent")]
@@ -102,8 +102,8 @@ namespace SLZ.Props
 
 		public UnityEvent OnDestruct;
 
-		[Header("DEPENDENCIES")]
 		[Space(10f)]
+		[Header("DEPENDENCIES")]
 		[SerializeField]
 		private Spawnable blasterDustSpawnable;
 

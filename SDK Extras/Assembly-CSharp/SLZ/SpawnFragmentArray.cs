@@ -1,9 +1,10 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using SLZ.Marrow.Data;
+using SLZ.VFX;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Props
 {
 	public class SpawnFragmentArray : MonoBehaviour
 	{
@@ -32,12 +33,14 @@ namespace SLZ
 
 		public Transform[] fragmentSpawnPoints;
 
+		public Rigidbody overrideAngularVelocityRb;
+
 		private List<int> _fragmentIndicesBuffer;
 
 		private int[] _randomFragmentIndices;
 
-		[Space(10f)]
 		[Header("DEPENDENCIES")]
+		[Space(10f)]
 		public Spawnable fragmentSpawnable;
 
 		private void Awake()

@@ -13,8 +13,8 @@ namespace SLZ.Zones
 	{
 		public delegate void OnAutoAgroDelegate(Behaviour newVal, TriggerRefProxy trp);
 
-		[Header("Status Section")]
 		[Tooltip("Indicates if the zone is enabled")]
+		[Header("Status Section")]
 		public bool zoneActive;
 
 		private bool _deathEventSent;

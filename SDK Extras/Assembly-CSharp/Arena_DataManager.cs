@@ -5,51 +5,54 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Arena_DataManager : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public bool visDebug;
-
-	public Arena_Stats arenaStats;
-
-	private static string ArenaSavePath
+	public class Arena_DataManager : MonoBehaviour
 	{
-		get
+		public bool visDebug;
+
+		public Arena_Stats arenaStats;
+
+		private static string ArenaSavePath
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		private IEnumerator CoWaitLoadOrCreate()
 		{
 			return null;
 		}
-	}
 
-	private void OnEnable()
-	{
-	}
+		public void SaveArenaPlayer()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		public void LoadOrCreateArenaPlayerFile()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		public void DeleteArenaPlayerFile()
+		{
+		}
 
-	private IEnumerator CoWaitLoadOrCreate()
-	{
-		return null;
-	}
-
-	public void SaveArenaPlayer()
-	{
-	}
-
-	public void LoadOrCreateArenaPlayerFile()
-	{
-	}
-
-	public void DeleteArenaPlayerFile()
-	{
-	}
-
-	public Arena_DataManager()
-		: base()
-	{
+		public Arena_DataManager()
+			: base()
+		{
+		}
 	}
 }

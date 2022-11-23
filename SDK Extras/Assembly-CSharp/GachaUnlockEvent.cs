@@ -3,48 +3,55 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GachaUnlockEvent : MonoBehaviour
+namespace SLZ.Props
 {
-	public GenericCrateReference selectedCrate;
-
-	[SerializeField]
-	private Spawnable vfxSpawnable;
-
-	public Transform vfxPoint;
-
-	public UnityEvent gachaPopEvent;
-
-	private bool used;
-
-	private static PlayerUnlocks u
+	public class GachaUnlockEvent : MonoBehaviour
 	{
-		get
+		public GenericCrateReference selectedCrate;
+
+		[SerializeField]
+		private Spawnable vfxSpawnable;
+
+		public Transform vfxPoint;
+
+		public UnityEvent gachaPopEvent;
+
+		private bool used;
+
+		private static PlayerUnlocks u
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	public void UNLOCKITEM()
-	{
-	}
+		public void Awake()
+		{
+		}
 
-	public void POPFX(Spawnable effect)
-	{
-	}
+		public void UNLOCKITEM()
+		{
+		}
 
-	private UniTaskVoid PopFXAsync(Spawnable effect)
-	{
-		return default(UniTaskVoid);
-	}
+		public void POPFX(Spawnable effect)
+		{
+		}
 
-	public GachaUnlockEvent()
-		: base()
-	{
+		private UniTaskVoid PopFXAsync(Spawnable effect)
+		{
+			return default(UniTaskVoid);
+		}
+
+		public GachaUnlockEvent()
+			: base()
+		{
+		}
 	}
 }

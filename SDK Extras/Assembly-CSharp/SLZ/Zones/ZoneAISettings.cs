@@ -1,3 +1,4 @@
+using PuppetMasta;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
@@ -9,6 +10,8 @@ namespace SLZ.Zones
 		private static ComponentCache<ZoneAISettings> _cache;
 
 		public ZoneSpawner zoneSpawner;
+
+		public BaseEnemyConfig baseConfig;
 
 		public Transform homeTransform;
 

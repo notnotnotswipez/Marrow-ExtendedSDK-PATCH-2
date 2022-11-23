@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ.Misc.Whiteboard
+namespace SLZ.Bonelab
 {
 	public class WhiteboardPen : MonoBehaviour
 	{

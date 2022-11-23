@@ -1,55 +1,82 @@
 using UnityEngine;
 
-public class ConfigJointExtendedEvents : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ConfigurableJoint joint;
-
-	private void Reset()
+	public class ConfigJointExtendedEvents : MonoBehaviour
 	{
-	}
+		public ConfigurableJoint joint;
 
-	public void SetAllFree()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	public void SetAllLocked()
-	{
-	}
+		public void SetAllFree()
+		{
+		}
 
-	public void SetLinearLimit(float limit)
-	{
-	}
+		public void SetAllLocked()
+		{
+		}
 
-	public void SetLowAngularXLimit(float limit)
-	{
-	}
+		public void SetAngularXFree()
+		{
+		}
 
-	public void SetHighAngularXLimit(float limit)
-	{
-	}
+		public void SetAngularXLimited()
+		{
+		}
 
-	public void SetAngularYLimit(float limit)
-	{
-	}
+		public void SetAngularXLock()
+		{
+		}
 
-	public void SetAngularZLimit(float limit)
-	{
-	}
+		public void SetXFree()
+		{
+		}
 
-	public void SetAllLinearDriveSpring(float spring)
-	{
-	}
+		public void SetXLimited()
+		{
+		}
 
-	public void SetAllLinearDriveDamper(float damper)
-	{
-	}
+		public void SetXLock()
+		{
+		}
 
-	public void SetAllLinearDriveMaxForce(float maxForce)
-	{
-	}
+		public void SetLinearLimit(float limit)
+		{
+		}
 
-	public ConfigJointExtendedEvents()
-		: base()
-	{
+		public void SetLowAngularXLimit(float limit)
+		{
+		}
+
+		public void SetHighAngularXLimit(float limit)
+		{
+		}
+
+		public void SetAngularYLimit(float limit)
+		{
+		}
+
+		public void SetAngularZLimit(float limit)
+		{
+		}
+
+		public void SetAllLinearDriveSpring(float spring)
+		{
+		}
+
+		public void SetAllLinearDriveDamper(float damper)
+		{
+		}
+
+		public void SetAllLinearDriveMaxForce(float maxForce)
+		{
+		}
+
+		public ConfigJointExtendedEvents()
+			: base()
+		{
+		}
 	}
 }

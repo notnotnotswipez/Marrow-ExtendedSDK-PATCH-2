@@ -12,9 +12,9 @@ namespace SLZ.Zones
 		[SerializeField]
 		private bool PrimeZoneOnly;
 
-		[Space(5f)]
 		[Header("Light properties")]
 		[SerializeField]
+		[Space(5f)]
 		[Range(0f, 180f)]
 		private float SpotLightAngle;
 
@@ -33,16 +33,16 @@ namespace SLZ.Zones
 		[SerializeField]
 		public bool cookieEnabled;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		public int cookieNumber;
 
 		[SerializeField]
 		[HideInInspector]
 		public float OverallTransitionTime;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		public float outTransitionTime;
 
 		[SerializeField]

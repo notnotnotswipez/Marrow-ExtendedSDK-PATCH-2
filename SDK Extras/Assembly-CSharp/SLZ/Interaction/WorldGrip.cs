@@ -32,7 +32,7 @@ namespace SLZ.Interaction
 
 		private List<Collider> ignoreColliders;
 
-		protected override void Start()
+		protected override void Awake()
 		{
 		}
 

@@ -16,16 +16,6 @@ namespace SLZ.Bonelab.Console
 	internal class VolumeConsoleCommand : BaseConsoleCommand
 	{
 
-		public override IUniTaskAsyncEnumerable<object> RunCommand(string command)
-		{
-			return null;
-		}
-
-		private UniTask GetVolume(IAsyncWriter<object> writer, CancellationToken _)
-		{
-			return default(UniTask);
-		}
-
 		public VolumeConsoleCommand()
 			: base()
 		{

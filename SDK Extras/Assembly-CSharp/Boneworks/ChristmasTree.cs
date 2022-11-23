@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace Boneworks
+namespace SLZ.Bonelab
 {
 	public class ChristmasTree : MonoBehaviour
 	{

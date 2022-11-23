@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using SLZ.Zones;
 using UnityEngine;
 
-namespace Boneworks
+namespace SLZ.Bonelab
 {
 	public class AlwaysLookAt : ZoneItem
 	{
@@ -19,6 +19,14 @@ namespace Boneworks
 		public ConfigurableJoint jnt_Rotator;
 
 		private void Start()
+		{
+		}
+
+		public override void OnZoneEnabled(GameObject playerObject)
+		{
+		}
+
+		public override void OnZoneDisabled(GameObject playerObject)
 		{
 		}
 

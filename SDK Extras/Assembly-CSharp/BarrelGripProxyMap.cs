@@ -8,24 +8,30 @@ using SLZ.Interaction;
 using SLZ.Marrow.Proxy;
 using UnityEngine;
 
-public class BarrelGripProxyMap : BoneProxyMap<BarrelGripProxy, BarrelGrip>
+namespace SLZ.Mods
 {
-
-	public UniTaskVoid SetupHandPose()
+	public class BarrelGripProxyMap : BoneProxyMap<BarrelGripProxy, BarrelGrip>
 	{
-		return default(UniTaskVoid);
-	}
+		protected override void MapProperties()
+		{
+		}
 
-	protected override void MapProperties() {
-		throw new System.NotImplementedException();
-	}
+		public override void AfterGenerateReal()
+		{
+		}
 
-	public override void MapMethods() {
-		throw new System.NotImplementedException();
-	}
+		public UniTaskVoid SetupHandPose()
+		{
+			return default(UniTaskVoid);
+		}
 
-	public BarrelGripProxyMap()
-		: base()
-	{
+		public override void MapMethods()
+		{
+		}
+
+		public BarrelGripProxyMap()
+			: base()
+		{
+		}
 	}
 }

@@ -6,72 +6,75 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-public class PreloadLevel : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private ShaderVariantCollection variantCollection;
-
-	public List<Vector3> positions;
-
-	public static Action onPreloadStartDelegate;
-
-	public static Action onPreloadCompleteDelegate;
-
-	private Camera[] cam;
-
-	private List<Material> mats;
-
-	private MeshRenderer MR;
-
-	private MeshFilter MF;
-
-	private Mesh mesh;
-
-	private Vector3[] vertices;
-
-	private CommandBuffer renderBuffer;
-
-	private HashSet<Material> matHash;
-
-	private void Start()
+	public class PreloadLevel : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private ShaderVariantCollection variantCollection;
 
-	private void InitializeWarmupCameras()
-	{
-	}
+		public List<Vector3> positions;
 
-	private void BlackOutVRCamera()
-	{
-	}
+		public static Action onPreloadStartDelegate;
 
-	private void makeBlackoutCommandBuffer(Camera camera)
-	{
-	}
+		public static Action onPreloadCompleteDelegate;
 
-	private void MakeWarmupCameras()
-	{
-	}
+		private Camera[] cam;
 
-	private void MaterialWarmup()
-	{
-	}
+		private List<Material> mats;
 
-	private void GatherMaterials()
-	{
-	}
+		private MeshRenderer MR;
 
-	private void InitializeMesh()
-	{
-	}
+		private MeshFilter MF;
 
-	private IEnumerator LocationWarmer()
-	{
-		return null;
-	}
+		private Mesh mesh;
 
-	public PreloadLevel()
-		: base()
-	{
+		private Vector3[] vertices;
+
+		private CommandBuffer renderBuffer;
+
+		private HashSet<Material> matHash;
+
+		private void Start()
+		{
+		}
+
+		private void InitializeWarmupCameras()
+		{
+		}
+
+		private void BlackOutVRCamera()
+		{
+		}
+
+		private void makeBlackoutCommandBuffer(Camera camera)
+		{
+		}
+
+		private void MakeWarmupCameras()
+		{
+		}
+
+		private void MaterialWarmup()
+		{
+		}
+
+		private void GatherMaterials()
+		{
+		}
+
+		private void InitializeMesh()
+		{
+		}
+
+		private IEnumerator LocationWarmer()
+		{
+			return null;
+		}
+
+		public PreloadLevel()
+			: base()
+		{
+		}
 	}
 }

@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class GenericTrigger : MonoBehaviour
+namespace SLZ.Utilities
 {
-	[SerializeField]
-	private LayerMask LayerFilter;
-
-	[SerializeField]
-	private string Tag;
-
-	[SerializeField]
-	private UnityEventTrigger OnTriggerEnterEvent;
-
-	[SerializeField]
-	private UnityEventTrigger OnTriggerExitEvent;
-
-	private void OnTriggerEnter(Collider other)
+	public class GenericTrigger : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private LayerMask LayerFilter;
 
-	private void OnTriggerExit(Collider other)
-	{
-	}
+		[SerializeField]
+		private string Tag;
 
-	public GenericTrigger()
-		: base()
-	{
+		[SerializeField]
+		private UnityEventTrigger OnTriggerEnterEvent;
+
+		[SerializeField]
+		private UnityEventTrigger OnTriggerExitEvent;
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+		}
+
+		public GenericTrigger()
+			: base()
+		{
+		}
 	}
 }

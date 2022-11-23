@@ -4,12 +4,12 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Interaction;
+using SLZ.Rig;
 using SLZ.Vehicle;
 using TMPro;
 using UnityEngine;
-using VehicleAI;
 
-namespace SLZ.Rig
+namespace VehicleAI
 {
 	public class PhysVehicleInput : MonoBehaviour
 	{

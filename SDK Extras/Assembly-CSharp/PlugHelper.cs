@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class PlugHelper : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Rigidbody rb;
-
-	private void Start()
+	public class PlugHelper : MonoBehaviour
 	{
-	}
+		private Rigidbody rb;
 
-	private void FixedUpdate()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public PlugHelper()
-		: base()
-	{
+		private void FixedUpdate()
+		{
+		}
+
+		public PlugHelper()
+			: base()
+		{
+		}
 	}
 }

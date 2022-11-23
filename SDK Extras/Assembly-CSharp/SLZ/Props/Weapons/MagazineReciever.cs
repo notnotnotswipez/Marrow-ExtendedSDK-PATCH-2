@@ -2,7 +2,7 @@ using SLZ.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class MagazineReciever : InteractionReciever
 	{

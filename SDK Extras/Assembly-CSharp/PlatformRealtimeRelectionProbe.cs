@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class PlatformRealtimeRelectionProbe : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	public class PlatformRealtimeRelectionProbe : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public PlatformRealtimeRelectionProbe()
-		: base()
-	{
+		public PlatformRealtimeRelectionProbe()
+			: base()
+		{
+		}
 	}
 }

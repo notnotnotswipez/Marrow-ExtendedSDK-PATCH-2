@@ -1,16 +1,19 @@
 using SLZ.Zones;
 using UnityEngine;
 
-public class Arena_TriggeredSpawners : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ZoneSpawner[] spawners;
-
-	private void OnDrawGizmosSelected()
+	public class Arena_TriggeredSpawners : MonoBehaviour
 	{
-	}
+		public ZoneSpawner[] spawners;
 
-	public Arena_TriggeredSpawners()
-		: base()
-	{
+		private void OnDrawGizmosSelected()
+		{
+		}
+
+		public Arena_TriggeredSpawners()
+			: base()
+		{
+		}
 	}
 }

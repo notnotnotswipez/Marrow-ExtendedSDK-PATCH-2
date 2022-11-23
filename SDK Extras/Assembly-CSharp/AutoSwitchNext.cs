@@ -5,15 +5,18 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class AutoSwitchNext : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private IEnumerator Start()
+	public class AutoSwitchNext : MonoBehaviour
 	{
-		return null;
-	}
+		private IEnumerator Start()
+		{
+			return null;
+		}
 
-	public AutoSwitchNext()
-		: base()
-	{
+		public AutoSwitchNext()
+			: base()
+		{
+		}
 	}
 }

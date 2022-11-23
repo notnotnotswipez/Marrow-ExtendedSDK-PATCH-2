@@ -3,7 +3,7 @@ using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Props
 {
 	public class GachaShot : MonoBehaviour
 	{

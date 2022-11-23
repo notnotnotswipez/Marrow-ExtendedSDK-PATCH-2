@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class HoverControl : MonoBehaviour
+namespace SLZ.Props
 {
-	public HoverOrientation Orientation;
-
-	public MovementEngine Movement;
-
-	private void Update()
+	public class HoverControl : MonoBehaviour
 	{
-	}
+		public HoverOrientation Orientation;
 
-	public HoverControl()
-		: base()
-	{
+		public MovementEngine Movement;
+
+		private void Update()
+		{
+		}
+
+		public HoverControl()
+			: base()
+		{
+		}
 	}
 }

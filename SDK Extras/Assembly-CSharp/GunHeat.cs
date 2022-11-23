@@ -1,54 +1,57 @@
 using SLZ.Props.Weapons;
 using UnityEngine;
 
-public class GunHeat : MonoBehaviour
+namespace SLZ.Props
 {
-	[SerializeField]
-	private Gun gun;
-
-	[SerializeField]
-	private Material barrelMat;
-
-	[SerializeField]
-	[GradientUsage(true)]
-	private Gradient heatGradient;
-
-	[SerializeField]
-	private float shotIncrement;
-
-	[SerializeField]
-	private float coolTime;
-
-	private float heatValue;
-
-	private float timer;
-
-	private void Start()
+	public class GunHeat : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Gun gun;
 
-	private void OnEnable()
-	{
-	}
+		[SerializeField]
+		private Material barrelMat;
 
-	private void OnDestroy()
-	{
-	}
+		[SerializeField]
+		[GradientUsage(true)]
+		private Gradient heatGradient;
 
-	private void Update()
-	{
-	}
+		[SerializeField]
+		private float shotIncrement;
 
-	private void OnFire()
-	{
-	}
+		[SerializeField]
+		private float coolTime;
 
-	private void UpdateHeat(float value)
-	{
-	}
+		private float heatValue;
 
-	public GunHeat()
-		: base()
-	{
+		private float timer;
+
+		private void Start()
+		{
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		private void OnFire()
+		{
+		}
+
+		private void UpdateHeat(float value)
+		{
+		}
+
+		public GunHeat()
+			: base()
+		{
+		}
 	}
 }

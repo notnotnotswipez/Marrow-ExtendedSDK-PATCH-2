@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class LookAtTarget : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Transform targetTransform;
-
-	private void Update()
+	public class LookAtTarget : MonoBehaviour
 	{
-	}
+		public Transform targetTransform;
 
-	public LookAtTarget()
-		: base()
-	{
+		private void Update()
+		{
+		}
+
+		public LookAtTarget()
+			: base()
+		{
+		}
 	}
 }

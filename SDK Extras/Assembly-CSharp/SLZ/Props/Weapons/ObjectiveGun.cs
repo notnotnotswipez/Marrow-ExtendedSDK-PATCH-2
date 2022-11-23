@@ -4,93 +4,91 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Interaction;
+using SLZ.Props.Weapons;
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+public class ObjectiveGun : Gun
 {
-	public class ObjectiveGun : Gun
+	[Header("Spawn Options")]
+	public LayerMask collisionLayers;
+
+	public float effectiveRange;
+
+	public bool wackySpinWhenUpsideDown;
+
+	public bool isDespawnMode;
+
+	public GameObject laserPointerGameObject;
+
+	private InferenceAgent _selectedAgent;
+
+	private Transform trackedTransform;
+
+	private GameObject placeHolder;
+
+	private bool _isOptionsActive;
+
+	private ObjetiveModes _selectedMode;
+
+	private RaycastHit _hitInfo;
+
+	private Hand currentHand;
+
+	protected override void Awake()
 	{
-		[Header("Spawn Options")]
-		public LayerMask collisionLayers;
+	}
 
-		public float effectiveRange;
+	protected override void OnPostSpawn(GameObject go)
+	{
+	}
 
-		public bool wackySpinWhenUpsideDown;
+	private void OnSpawnHandAttached(Hand hand)
+	{
+	}
 
-		public bool isDespawnMode;
+	private void OnSpawnHandDetached(Hand hand)
+	{
+	}
 
-		public GameObject laserPointerGameObject;
+	public void Flash()
+	{
+	}
 
-		private InferenceAgent _selectedAgent;
+	private IEnumerator CoFireFlash()
+	{
+		return null;
+	}
 
-		private Transform trackedTransform;
+	protected void OnAgentSelected(InferenceAgent agent)
+	{
+	}
 
-		private GameObject placeHolder;
+	protected void OnModeSelect(ObjetiveModes mode)
+	{
+	}
 
-		private bool _isOptionsActive;
+	public override void Fire()
+	{
+	}
 
-		private ObjetiveModes _selectedMode;
+	private void SetAgent()
+	{
+	}
 
-		private RaycastHit _hitInfo;
+	protected override void OnFire()
+	{
+	}
 
-		private Hand currentHand;
+	protected override void OnTriggerGripAttached(Hand hand)
+	{
+	}
 
-		protected override void Awake()
-		{
-		}
+	protected override void OnTriggerGripDetached(Hand hand)
+	{
+	}
 
-		protected override void OnPostSpawn(GameObject go)
-		{
-		}
-
-		private void OnSpawnHandAttached(Hand hand)
-		{
-		}
-
-		private void OnSpawnHandDetached(Hand hand)
-		{
-		}
-
-		public void Flash()
-		{
-		}
-
-		private IEnumerator CoFireFlash()
-		{
-			return null;
-		}
-
-		protected void OnAgentSelected(InferenceAgent agent)
-		{
-		}
-
-		protected void OnModeSelect(ObjetiveModes mode)
-		{
-		}
-
-		public override void Fire()
-		{
-		}
-
-		private void SetAgent()
-		{
-		}
-
-		protected override void OnFire()
-		{
-		}
-
-		protected override void OnTriggerGripAttached(Hand hand)
-		{
-		}
-
-		protected override void OnTriggerGripDetached(Hand hand)
-		{
-		}
-
-		public ObjectiveGun()
-			: base()
-		{
-		}
+	public ObjectiveGun()
+		: base()
+	{
 	}
 }

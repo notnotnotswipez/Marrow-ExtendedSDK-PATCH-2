@@ -1,24 +1,26 @@
 using SLZ.Combat;
-using SLZ.Props;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[RequireComponent(typeof(CollisionEnterSensor))]
-public class Prop_DamageReceiver : MonoBehaviour, ICollisonReceiver, IEventSystemHandler, IAttackReceiver
+namespace SLZ.Props
 {
-	[HideInInspector]
-	public Prop_Health p_health;
-
-	public void ReceiveAttack(Attack attack)
+	[RequireComponent(typeof(CollisionEnterSensor))]
+	public class Prop_DamageReceiver : MonoBehaviour, ICollisonReceiver, IEventSystemHandler, IAttackReceiver
 	{
-	}
+		[HideInInspector]
+		public Prop_Health p_health;
 
-	public void ReceiveCollison(Collision collision, float relVelocitySqr, bool isStay = false)
-	{
-	}
+		public void ReceiveAttack(Attack attack)
+		{
+		}
 
-	public Prop_DamageReceiver()
-		: base()
-	{
+		public void ReceiveCollison(Collision collision, float relVelocitySqr, bool isStay = false)
+		{
+		}
+
+		public Prop_DamageReceiver()
+			: base()
+		{
+		}
 	}
 }

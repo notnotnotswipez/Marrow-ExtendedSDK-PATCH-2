@@ -5,37 +5,40 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class MirrorCheatCollider : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public GameObject avatarRoot;
-
-	public GameObject reflectionCollider;
-
-	private List<GameObject> avatars;
-
-	private bool doReflectionTrack;
-
-	private IEnumerator reflectionTrackCoroutine;
-
-	public void Start()
+	public class MirrorCheatCollider : MonoBehaviour
 	{
-	}
+		public GameObject avatarRoot;
 
-	public void StartReflectionTrack()
-	{
-	}
+		public GameObject reflectionCollider;
 
-	public void StopReflectionTrack()
-	{
-	}
+		private List<GameObject> avatars;
 
-	private IEnumerator ReflectionCoroutine()
-	{
-		return null;
-	}
+		private bool doReflectionTrack;
 
-	public MirrorCheatCollider()
-		: base()
-	{
+		private IEnumerator reflectionTrackCoroutine;
+
+		public void Start()
+		{
+		}
+
+		public void StartReflectionTrack()
+		{
+		}
+
+		public void StopReflectionTrack()
+		{
+		}
+
+		private IEnumerator ReflectionCoroutine()
+		{
+			return null;
+		}
+
+		public MirrorCheatCollider()
+			: base()
+		{
+		}
 	}
 }

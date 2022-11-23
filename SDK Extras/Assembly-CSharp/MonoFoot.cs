@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class MonoFoot : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Rigidbody foot;
-
-	public ConfigurableJoint joint;
-
-	public LayerMask mask;
-
-	private Vector3 _displaceCache;
-
-	private Vector3 _originLocal;
-
-	private float _yOffset;
-
-	private void Start()
+	public class MonoFoot : MonoBehaviour
 	{
-	}
+		public Rigidbody foot;
 
-	private void FixedUpdate()
-	{
-	}
+		public ConfigurableJoint joint;
 
-	public MonoFoot()
-		: base()
-	{
+		public LayerMask mask;
+
+		private Vector3 _displaceCache;
+
+		private Vector3 _originLocal;
+
+		private float _yOffset;
+
+		private void Start()
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public MonoFoot()
+			: base()
+		{
+		}
 	}
 }

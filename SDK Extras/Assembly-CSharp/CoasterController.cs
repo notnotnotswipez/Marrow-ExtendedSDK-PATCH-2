@@ -1,41 +1,44 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class CoasterController : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Rigidbody rb;
-
-	[SerializeField]
-	private float thrust;
-
-	[SerializeField]
-	private float throttle;
-
-	[SerializeField]
-	private Grip leverGrip;
-
-	[SerializeField]
-	private bool passengerOnBoard;
-
-	private void Awake()
+	public class CoasterController : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Rigidbody rb;
 
-	public void PlayerEnterExit(bool enter)
-	{
-	}
+		[SerializeField]
+		private float thrust;
 
-	private void FixedUpdate()
-	{
-	}
+		[SerializeField]
+		private float throttle;
 
-	public void LEVER(float voltage)
-	{
-	}
+		[SerializeField]
+		private Grip leverGrip;
 
-	public CoasterController()
-		: base()
-	{
+		[SerializeField]
+		private bool passengerOnBoard;
+
+		private void Awake()
+		{
+		}
+
+		public void PlayerEnterExit(bool enter)
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public void LEVER(float voltage)
+		{
+		}
+
+		public CoasterController()
+			: base()
+		{
+		}
 	}
 }

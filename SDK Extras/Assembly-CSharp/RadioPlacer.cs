@@ -1,21 +1,24 @@
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
-[RequireComponent(typeof(SpawnableCratePlacer))]
-public class RadioPlacer : MonoBehaviour
+namespace SLZ.Props
 {
-	[SerializeField]
-	private RadioSong overrideClip;
-
-	[SerializeField]
-	private RadioStation selectedStation;
-
-	public void SetRadioPlay(SpawnableCratePlacer scp, GameObject go)
+	[RequireComponent(typeof(SpawnableCratePlacer))]
+	public class RadioPlacer : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private RadioSong overrideClip;
 
-	public RadioPlacer()
-		: base()
-	{
+		[SerializeField]
+		private RadioStation selectedStation;
+
+		public void SetRadioPlay(SpawnableCratePlacer scp, GameObject go)
+		{
+		}
+
+		public RadioPlacer()
+			: base()
+		{
+		}
 	}
 }

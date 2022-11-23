@@ -9,89 +9,92 @@ using SLZ.Vehicle;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class ArmFinale : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private enum ArmStage
+	public class ArmFinale : MonoBehaviour
 	{
-		Preshow = 0,
-		Decent = 1,
-		Hold = 2,
-		Ascent = 3,
-		Dropped = 4,
-		Void = 5
-	}
+		private enum ArmStage
+		{
+			Preshow = 0,
+			Decent = 1,
+			Hold = 2,
+			Ascent = 3,
+			Dropped = 4,
+			Void = 5
+		}
 
-	public Rigidbody windmillBlades;
+		public Rigidbody windmillBlades;
 
-	public ConfigurableJoint windmillJoint;
+		public ConfigurableJoint windmillJoint;
 
-	public PlayableDirector decent;
+		public PlayableDirector decent;
 
-	public PlayableDirector ascent;
+		public PlayableDirector ascent;
 
-	public InteractableHostManager hostManager;
+		public InteractableHostManager hostManager;
 
-	public GameObject holeStopper;
+		public GameObject holeStopper;
 
-	public SkinnedMeshRenderer armMesh;
+		public SkinnedMeshRenderer armMesh;
 
-	public Seat palmSeat;
+		public Seat palmSeat;
 
-	private RigManager _lastRmToDetatch;
+		private RigManager _lastRmToDetatch;
 
-	private int _attachedHandCount;
+		private int _attachedHandCount;
 
-	private ArmStage _armStage;
+		private ArmStage _armStage;
 
-	private float _timer;
+		private float _timer;
 
-	public void GongHit()
-	{
-	}
+		public void GongHit()
+		{
+		}
 
-	public void ReadyForAscent()
-	{
-	}
+		public void ReadyForAscent()
+		{
+		}
 
-	public void ReadyForVoid()
-	{
-	}
+		public void ReadyForVoid()
+		{
+		}
 
-	public void WindmillProjectRotation(float secondsFromNow)
-	{
-	}
+		public void WindmillProjectRotation(float secondsFromNow)
+		{
+		}
 
-	private IEnumerator CoTargetWindMill(float duration, float deltaAngVel)
-	{
-		return null;
-	}
+		private IEnumerator CoTargetWindMill(float duration, float deltaAngVel)
+		{
+			return null;
+		}
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	private void OnHandAttached(InteractableHost host, Hand hand)
-	{
-	}
+		private void OnHandAttached(InteractableHost host, Hand hand)
+		{
+		}
 
-	private void OnHandDetached(InteractableHost host, Hand hand)
-	{
-	}
+		private void OnHandDetached(InteractableHost host, Hand hand)
+		{
+		}
 
-	public ArmFinale()
-		: base()
-	{
+		public ArmFinale()
+			: base()
+		{
+		}
 	}
 }

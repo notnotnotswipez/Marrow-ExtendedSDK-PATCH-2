@@ -1,6 +1,6 @@
 using System;
 
-namespace SLZ.Data
+namespace SLZ.SaveData
 {
 	[Flags]
 	public enum SaveFlags

@@ -2,22 +2,25 @@ using SLZ.Marrow.Data;
 using SLZ.Zones;
 using UnityEngine;
 
-public class testSpawner : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ZoneSpawner spawner;
-
-	public Spawnable Crate;
-
-	private void Start()
+	public class testSpawner : MonoBehaviour
 	{
-	}
+		public ZoneSpawner spawner;
 
-	private void Update()
-	{
-	}
+		public Spawnable Crate;
 
-	public testSpawner()
-		: base()
-	{
+		private void Start()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		public testSpawner()
+			: base()
+		{
+		}
 	}
 }

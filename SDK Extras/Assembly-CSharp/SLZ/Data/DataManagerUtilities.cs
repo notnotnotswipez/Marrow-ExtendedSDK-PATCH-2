@@ -1,7 +1,7 @@
 using System;
 using System.Runtime.InteropServices;
 
-namespace SLZ.Data
+namespace SLZ.SaveData
 {
 	public static class DataManagerUtilities
 	{

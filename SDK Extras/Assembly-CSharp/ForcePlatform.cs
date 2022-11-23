@@ -1,37 +1,40 @@
 using UnityEngine;
 
-public class ForcePlatform : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Rigidbody rb;
-
-	[SerializeField]
-	private Vector3 dir;
-
-	[SerializeField]
-	private float forceMult;
-
-	[SerializeField]
-	private ConfigurableJoint joint;
-
-	[SerializeField]
-	private float linLimit;
-
-	private void Awake()
+	public class ForcePlatform : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Rigidbody rb;
 
-	private void FixedUpdate()
-	{
-	}
+		[SerializeField]
+		private Vector3 dir;
 
-	[ContextMenu("GetComponents")]
-	public void GetComponents()
-	{
-	}
+		[SerializeField]
+		private float forceMult;
 
-	public ForcePlatform()
-		: base()
-	{
+		[SerializeField]
+		private ConfigurableJoint joint;
+
+		[SerializeField]
+		private float linLimit;
+
+		private void Awake()
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		[ContextMenu("GetComponents")]
+		public void GetComponents()
+		{
+		}
+
+		public ForcePlatform()
+			: base()
+		{
+		}
 	}
 }

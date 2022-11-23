@@ -7,7 +7,7 @@ using SLZ.Marrow.Utilities;
 using TMPro;
 using UnityEngine;
 
-namespace SLZ.VFX
+namespace SLZ.Bonelab
 {
 	public class GachaPopFX : MonoBehaviour
 	{

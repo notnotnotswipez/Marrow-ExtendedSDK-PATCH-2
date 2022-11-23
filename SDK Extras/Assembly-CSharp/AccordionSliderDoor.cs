@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class AccordionSliderDoor : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ConfigurableJoint configurableJoint;
-
-	public SkinnedMeshRenderer skinnedMesh;
-
-	private float Percent;
-
-	private Vector3 startPos;
-
-	public Vector3 tempv1;
-
-	public Vector3 tempv2;
-
-	private void Start()
+	public class AccordionSliderDoor : MonoBehaviour
 	{
-	}
+		public ConfigurableJoint configurableJoint;
 
-	private void Update()
-	{
-	}
+		public SkinnedMeshRenderer skinnedMesh;
 
-	public AccordionSliderDoor()
-		: base()
-	{
+		private float Percent;
+
+		private Vector3 startPos;
+
+		public Vector3 tempv1;
+
+		public Vector3 tempv2;
+
+		private void Start()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		public AccordionSliderDoor()
+			: base()
+		{
+		}
 	}
 }

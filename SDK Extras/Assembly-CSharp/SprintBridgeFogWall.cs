@@ -1,33 +1,36 @@
 using UnityEngine;
 
-public class SprintBridgeFogWall : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float PCFogValue;
-
-	public float questFogValue;
-
-	public float questCameraFarClip;
-
-	private float fogValue;
-
-	public GameObject skyObject;
-
-	private int counter;
-
-	private void Awake()
+	public class SprintBridgeFogWall : MonoBehaviour
 	{
-	}
+		public float PCFogValue;
 
-	private void Start()
-	{
-	}
+		public float questFogValue;
 
-	private void Update()
-	{
-	}
+		public float questCameraFarClip;
 
-	public SprintBridgeFogWall()
-		: base()
-	{
+		private float fogValue;
+
+		public GameObject skyObject;
+
+		private int counter;
+
+		private void Awake()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		public SprintBridgeFogWall()
+			: base()
+		{
+		}
 	}
 }

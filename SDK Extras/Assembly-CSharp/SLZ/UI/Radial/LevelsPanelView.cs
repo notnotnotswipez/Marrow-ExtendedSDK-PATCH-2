@@ -5,14 +5,15 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Data.SaveData;
+using SLZ.Bonelab;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class LevelsPanelView : PanelView
 	{
@@ -24,6 +25,8 @@ namespace SLZ.UI.Radial
 
 		[Tooltip("Include levels that are external (mods)")]
 		public bool includeExternalLevels;
+
+		public bool isRadialMenu;
 
 		public bool isModMenu;
 
@@ -70,6 +73,10 @@ namespace SLZ.UI.Radial
 
 		private LevelCrateReference[] keyLevelCrates;
 
+		private Dictionary<string, string> storyLevelBarcodeKeyPair;
+
+		public List<string> completedStoryLevelBarcodes;
+
 		private LevelCrateReference kartRaceRef;
 
 		[Tooltip("Optional: Forward level load event to DoorPortalController")]
@@ -113,6 +120,11 @@ namespace SLZ.UI.Radial
 
 		private void CalculateSceneList()
 		{
+		}
+
+		private bool GetLevelCompletion(PlayerProgression progression, string _level)
+		{
+			return default(bool);
 		}
 
 		private void OnDestroy()

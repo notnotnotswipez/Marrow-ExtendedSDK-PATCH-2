@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace VLB.Samples
+namespace SLZ.Bonelab
 {
 	public class Rotater : MonoBehaviour
 	{

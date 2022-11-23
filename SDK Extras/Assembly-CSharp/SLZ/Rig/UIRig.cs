@@ -1,6 +1,6 @@
 using System.Runtime.CompilerServices;
+using SLZ.Bonelab;
 using SLZ.UI;
-using SLZ.UI.Radial;
 using UnityEngine;
 
 namespace SLZ.Rig

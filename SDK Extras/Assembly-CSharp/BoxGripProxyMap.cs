@@ -8,31 +8,34 @@ using SLZ.Interaction;
 using SLZ.Marrow.Proxy;
 using UnityEngine;
 
-public class BoxGripProxyMap : BoneProxyMap<BoxGripProxy, BoxGrip>
+namespace SLZ.Mods
 {
-	protected override void MapProperties()
+	public class BoxGripProxyMap : BoneProxyMap<BoxGripProxy, BoxGrip>
 	{
-	}
+		protected override void MapProperties()
+		{
+		}
 
-	public override void BeforeGenerateReal()
-	{
-	}
+		public override void BeforeGenerateReal()
+		{
+		}
 
-	public override void AfterGenerateReal()
-	{
-	}
+		public override void AfterGenerateReal()
+		{
+		}
 
-	public UniTaskVoid SetupHandPoses()
-	{
-		return default(UniTaskVoid);
-	}
+		public UniTaskVoid SetupHandPoses()
+		{
+			return default(UniTaskVoid);
+		}
 
-	public override void MapMethods()
-	{
-	}
+		public override void MapMethods()
+		{
+		}
 
-	public BoxGripProxyMap()
-		: base()
-	{
+		public BoxGripProxyMap()
+			: base()
+		{
+		}
 	}
 }

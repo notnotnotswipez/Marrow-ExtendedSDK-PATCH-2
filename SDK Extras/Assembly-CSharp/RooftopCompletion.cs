@@ -1,19 +1,21 @@
 using System;
-using SLZ.Bonelab;
 
-[Obsolete("Replace with a LevelCompletion instance with the LevelKey set")]
-public class RooftopCompletion : LevelCompletion
+namespace SLZ.Bonelab
 {
-	protected override string LevelKey
+	[Obsolete("Replace with a LevelCompletion instance with the LevelKey set")]
+	public class RooftopCompletion : LevelCompletion
 	{
-		get
+		protected override string LevelKey
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	public RooftopCompletion()
-		: base()
-	{
+		public RooftopCompletion()
+			: base()
+		{
+		}
 	}
 }

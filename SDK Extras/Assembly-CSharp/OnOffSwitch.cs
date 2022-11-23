@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class OnOffSwitch : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Powerable[] ElectricalObj;
-
-	private void Awake()
+	public class OnOffSwitch : MonoBehaviour
 	{
-	}
+		public Powerable[] ElectricalObj;
 
-	public virtual void OnOffEvent(bool isOn)
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	protected void OnDestroy()
-	{
-	}
+		public virtual void OnOffEvent(bool isOn)
+		{
+		}
 
-	public OnOffSwitch()
-		: base()
-	{
+		protected void OnDestroy()
+		{
+		}
+
+		public OnOffSwitch()
+			: base()
+		{
+		}
 	}
 }

@@ -1,268 +1,271 @@
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-public class GameControl_CheatButtons : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Control_Player controlPlayer;
-
-	public TextMeshPro beatGameStatus;
-
-	[FormerlySerializedAs("beatBigJimmyStatus")]
-	public TextMeshPro beatBigAnomalyAStatus;
-
-	public TextMeshPro beatBigAnomalyBStatus;
-
-	public TextMeshPro beatStreetPuncherStatus;
-
-	public TextMeshPro beatSprintBridgeStatus;
-
-	public TextMeshPro beatMagmaGateStatus;
-
-	public TextMeshPro beatMoonBaseStatus;
-
-	public TextMeshPro beatMotorwayStatus;
-
-	public TextMeshPro beatPillarStatus;
-
-	public TextMeshPro beatAscentStatus;
-
-	public TextMeshPro ascentProgressStatus;
-
-	public TextMeshPro beatLongRunStatus;
-
-	public TextMeshPro beatMineCartStatus;
-
-	public TextMeshPro beatTownFightStatus;
-
-	public TextMeshPro beatTutorialStatus;
-
-	public TextMeshPro hubSpawnLocationStatus;
-
-	public TextMeshPro isArenaKeyPlacedStatus;
-
-	public TextMeshPro isArenaKeyUnlockedStatus;
-
-	public TextMeshPro isBatteryAPlacedStatus;
-
-	public TextMeshPro isBatteryBPlacedStatus;
-
-	public TextMeshPro isExperimentalKeyPlacedStatus;
-
-	public TextMeshPro isExperimentalKeyUnlockedStatus;
-
-	public TextMeshPro isJimmyKeyPlacedStatus;
-
-	public TextMeshPro isJimmyKeyUnlockedStatus;
-
-	public TextMeshPro isModKeyPlacedStatus;
-
-	public TextMeshPro isModKeyUnlockedStatus;
-
-	public TextMeshPro isParkourKeyPlacedStatus;
-
-	public TextMeshPro isParkourKeyUnlockedStatus;
-
-	public TextMeshPro isSandboxKeyPlacedStatus;
-
-	public TextMeshPro isSandboxKeyUnlockedStatus;
-
-	public TextMeshPro isTacTrialKeyPlacedStatus;
-
-	public TextMeshPro isTacTrialKeyUnlockedStatus;
-
-	public TextMeshPro tutorialProgressStatus;
-
-	public TextMeshPro LongRunProgressStatus;
-
-	public TextMeshPro MenuResumeStatus;
-
-	public TextMeshPro CurrentCampaignLevelStatus;
-
-	public TextMeshPro hasBodyLogStatus;
-
-	public TextMeshPro bodyLogEnabledStatus;
-
-	public LevelCrateReference[] campaignCrates;
-
-	public AvatarCrateReference[] avatarCrates;
-
-	private static PlayerUnlocks u
+	public class GameControl_CheatButtons : MonoBehaviour
 	{
-		get
+		public Control_Player controlPlayer;
+
+		public TextMeshPro beatGameStatus;
+
+		[FormerlySerializedAs("beatBigJimmyStatus")]
+		public TextMeshPro beatBigAnomalyAStatus;
+
+		public TextMeshPro beatBigAnomalyBStatus;
+
+		public TextMeshPro beatStreetPuncherStatus;
+
+		public TextMeshPro beatSprintBridgeStatus;
+
+		public TextMeshPro beatMagmaGateStatus;
+
+		public TextMeshPro beatMoonBaseStatus;
+
+		public TextMeshPro beatMotorwayStatus;
+
+		public TextMeshPro beatPillarStatus;
+
+		public TextMeshPro beatAscentStatus;
+
+		public TextMeshPro ascentProgressStatus;
+
+		public TextMeshPro beatLongRunStatus;
+
+		public TextMeshPro beatMineCartStatus;
+
+		public TextMeshPro beatTownFightStatus;
+
+		public TextMeshPro beatTutorialStatus;
+
+		public TextMeshPro hubSpawnLocationStatus;
+
+		public TextMeshPro isArenaKeyPlacedStatus;
+
+		public TextMeshPro isArenaKeyUnlockedStatus;
+
+		public TextMeshPro isBatteryAPlacedStatus;
+
+		public TextMeshPro isBatteryBPlacedStatus;
+
+		public TextMeshPro isExperimentalKeyPlacedStatus;
+
+		public TextMeshPro isExperimentalKeyUnlockedStatus;
+
+		public TextMeshPro isJimmyKeyPlacedStatus;
+
+		public TextMeshPro isJimmyKeyUnlockedStatus;
+
+		public TextMeshPro isModKeyPlacedStatus;
+
+		public TextMeshPro isModKeyUnlockedStatus;
+
+		public TextMeshPro isParkourKeyPlacedStatus;
+
+		public TextMeshPro isParkourKeyUnlockedStatus;
+
+		public TextMeshPro isSandboxKeyPlacedStatus;
+
+		public TextMeshPro isSandboxKeyUnlockedStatus;
+
+		public TextMeshPro isTacTrialKeyPlacedStatus;
+
+		public TextMeshPro isTacTrialKeyUnlockedStatus;
+
+		public TextMeshPro tutorialProgressStatus;
+
+		public TextMeshPro LongRunProgressStatus;
+
+		public TextMeshPro MenuResumeStatus;
+
+		public TextMeshPro CurrentCampaignLevelStatus;
+
+		public TextMeshPro hasBodyLogStatus;
+
+		public TextMeshPro bodyLogEnabledStatus;
+
+		public LevelCrateReference[] campaignCrates;
+
+		public AvatarCrateReference[] avatarCrates;
+
+		private static PlayerUnlocks u
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public void ResetProgress()
-	{
-	}
+		public void ResetProgress()
+		{
+		}
 
-	public void SetFullProgress()
-	{
-	}
+		public void SetFullProgress()
+		{
+		}
 
-	public void BeatGame()
-	{
-	}
+		public void BeatGame()
+		{
+		}
 
-	public void BeatBigAnomalyA()
-	{
-	}
+		public void BeatBigAnomalyA()
+		{
+		}
 
-	public void BeatStreetPuncher()
-	{
-	}
+		public void BeatStreetPuncher()
+		{
+		}
 
-	public void BeatSprintBridge()
-	{
-	}
+		public void BeatSprintBridge()
+		{
+		}
 
-	public void BeatMagmaGate()
-	{
-	}
+		public void BeatMagmaGate()
+		{
+		}
 
-	public void BeatMoonBase()
-	{
-	}
+		public void BeatMoonBase()
+		{
+		}
 
-	public void BeatMotorway()
-	{
-	}
+		public void BeatMotorway()
+		{
+		}
 
-	public void BeatPillar()
-	{
-	}
+		public void BeatPillar()
+		{
+		}
 
-	public void BeatBigAnomalyB()
-	{
-	}
+		public void BeatBigAnomalyB()
+		{
+		}
 
-	public void HasBodyLog()
-	{
-	}
+		public void HasBodyLog()
+		{
+		}
 
-	public void BodyLogEnabled()
-	{
-	}
+		public void BodyLogEnabled()
+		{
+		}
 
-	public void BeatAscent()
-	{
-	}
+		public void BeatAscent()
+		{
+		}
 
-	public void AscentProgress()
-	{
-	}
+		public void AscentProgress()
+		{
+		}
 
-	public void BeatLongRun()
-	{
-	}
+		public void BeatLongRun()
+		{
+		}
 
-	public void BeatMineDive()
-	{
-	}
+		public void BeatMineDive()
+		{
+		}
 
-	public void BeatOutro()
-	{
-	}
+		public void BeatOutro()
+		{
+		}
 
-	public void BeatTutorial()
-	{
-	}
+		public void BeatTutorial()
+		{
+		}
 
-	public void HubSpawnLocation()
-	{
-	}
+		public void HubSpawnLocation()
+		{
+		}
 
-	public void IsArenaKeyPlaced()
-	{
-	}
+		public void IsArenaKeyPlaced()
+		{
+		}
 
-	public void IsArenaKeyUnlocked()
-	{
-	}
+		public void IsArenaKeyUnlocked()
+		{
+		}
 
-	public void IsBatteryAPlaced()
-	{
-	}
+		public void IsBatteryAPlaced()
+		{
+		}
 
-	public void IsBatteryBPlaced()
-	{
-	}
+		public void IsBatteryBPlaced()
+		{
+		}
 
-	public void IsExperimentalKeyPlaced()
-	{
-	}
+		public void IsExperimentalKeyPlaced()
+		{
+		}
 
-	public void IsExperimentalKeyUnlocked()
-	{
-	}
+		public void IsExperimentalKeyUnlocked()
+		{
+		}
 
-	public void IsJimmyKeyPlaced()
-	{
-	}
+		public void IsJimmyKeyPlaced()
+		{
+		}
 
-	public void IsJimmyKeyUnlocked()
-	{
-	}
+		public void IsJimmyKeyUnlocked()
+		{
+		}
 
-	public void IsModKeyPlaced()
-	{
-	}
+		public void IsModKeyPlaced()
+		{
+		}
 
-	public void IsModKeyUnlocked()
-	{
-	}
+		public void IsModKeyUnlocked()
+		{
+		}
 
-	public void IsSandboxKeyPlaced()
-	{
-	}
+		public void IsSandboxKeyPlaced()
+		{
+		}
 
-	public void IsSandboxKeyUnlocked()
-	{
-	}
+		public void IsSandboxKeyUnlocked()
+		{
+		}
 
-	public void IsParkourKeyPlaced()
-	{
-	}
+		public void IsParkourKeyPlaced()
+		{
+		}
 
-	public void IsParkourKeyUnlocked()
-	{
-	}
+		public void IsParkourKeyUnlocked()
+		{
+		}
 
-	public void IsTacTrialKeyPlaced()
-	{
-	}
+		public void IsTacTrialKeyPlaced()
+		{
+		}
 
-	public void IsTacTrialKeyUnlocked()
-	{
-	}
+		public void IsTacTrialKeyUnlocked()
+		{
+		}
 
-	public void TutorialProgress()
-	{
-	}
+		public void TutorialProgress()
+		{
+		}
 
-	public void LongRunProgress()
-	{
-	}
+		public void LongRunProgress()
+		{
+		}
 
-	public void MenuResumeProgress()
-	{
-	}
+		public void MenuResumeProgress()
+		{
+		}
 
-	public void CycleCampaignLevel()
-	{
-	}
+		public void CycleCampaignLevel()
+		{
+		}
 
-	public GameControl_CheatButtons()
-		: base()
-	{
+		public GameControl_CheatButtons()
+			: base()
+		{
+		}
 	}
 }

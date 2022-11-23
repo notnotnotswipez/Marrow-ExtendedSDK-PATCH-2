@@ -96,8 +96,8 @@ namespace SLZ.Interaction
 
 		private Dictionary<Hand, HandToBarrelGripState> barrelHandStates;
 
-		[SerializeField]
 		[EnumFlags]
+		[SerializeField]
 		public Caps enabledCaps;
 
 		private static float _ringPadding;

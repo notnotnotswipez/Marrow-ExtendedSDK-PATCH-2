@@ -1,27 +1,30 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class PlatformEvent : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private enum Platform
+	public class PlatformEvent : MonoBehaviour
 	{
-		Android = 0,
-		PC = 1
-	}
+		private enum Platform
+		{
+			Android = 0,
+			PC = 1
+		}
 
-	public UnityEvent PCEvent;
+		public UnityEvent PCEvent;
 
-	public UnityEvent AndroidEvent;
+		public UnityEvent AndroidEvent;
 
-	[SerializeField]
-	private Platform platform;
+		[SerializeField]
+		private Platform platform;
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public PlatformEvent()
-		: base()
-	{
+		public PlatformEvent()
+			: base()
+		{
+		}
 	}
 }

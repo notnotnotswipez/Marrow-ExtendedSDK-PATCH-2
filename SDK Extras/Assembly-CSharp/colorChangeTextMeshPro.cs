@@ -1,18 +1,21 @@
 using TMPro;
 using UnityEngine;
 
-public class colorChangeTextMeshPro : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Color32 colorToBe;
-
-	private TextMeshProUGUI textToColor;
-
-	private void OnEnable()
+	public class colorChangeTextMeshPro : MonoBehaviour
 	{
-	}
+		public Color32 colorToBe;
 
-	public colorChangeTextMeshPro()
-		: base()
-	{
+		private TextMeshProUGUI textToColor;
+
+		private void OnEnable()
+		{
+		}
+
+		public colorChangeTextMeshPro()
+			: base()
+		{
+		}
 	}
 }

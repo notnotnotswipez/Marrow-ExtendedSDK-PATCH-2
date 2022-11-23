@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class ParentToCamera : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Start()
+	public class ParentToCamera : MonoBehaviour
 	{
-	}
+		private void Start()
+		{
+		}
 
-	public ParentToCamera()
-		: base()
-	{
+		public ParentToCamera()
+			: base()
+		{
+		}
 	}
 }

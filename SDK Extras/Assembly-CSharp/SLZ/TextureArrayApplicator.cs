@@ -1,7 +1,7 @@
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.VFX
 {
 	[RequireComponent(typeof(Renderer))]
 	[ExecuteInEditMode]

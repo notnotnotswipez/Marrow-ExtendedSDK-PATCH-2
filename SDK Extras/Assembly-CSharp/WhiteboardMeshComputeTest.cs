@@ -1,95 +1,97 @@
 using System.Collections.Generic;
-using SLZ.Misc.Whiteboard;
 using UnityEngine;
 
-public class WhiteboardMeshComputeTest : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private struct penInfo
+	public class WhiteboardMeshComputeTest : MonoBehaviour
 	{
-		public WhiteboardPen penData;
+		private struct penInfo
+		{
+			public WhiteboardPen penData;
 
-		public Transform transform;
+			public Transform transform;
 
-		public Vector3 position;
+			public Vector3 position;
 
-		public Vector3 prevPosition;
-	}
+			public Vector3 prevPosition;
+		}
 
-	[SerializeField]
-	private ComputeShader WhiteboardCompute;
+		[SerializeField]
+		private ComputeShader WhiteboardCompute;
 
-	public Texture2D ObjPosTex;
+		public Texture2D ObjPosTex;
 
-	public Vector2Int textureDim;
+		public Vector2Int textureDim;
 
-	public Mesh mesh;
+		public Mesh mesh;
 
-	private int prevPenPosProp;
+		private int prevPenPosProp;
 
-	private int penPosProp;
+		private int penPosProp;
 
-	private int penWidthFProp;
+		private int penWidthFProp;
 
-	private int resultDimProp;
+		private int resultDimProp;
 
-	private int colorProp;
+		private int colorProp;
 
-	private Material blitMaterial;
+		private Material blitMaterial;
 
-	private Shader resultCopy;
+		private Shader resultCopy;
 
-	private int inputProp;
+		private int inputProp;
 
-	private int WBInitKern;
+		private int WBInitKern;
 
-	private int WBUpdateKern;
+		private int WBUpdateKern;
 
-	private int ObjSpaceTexProp;
+		private int ObjSpaceTexProp;
 
-	private int ResultProp;
+		private int ResultProp;
 
-	private int bbMinProp;
+		private int bbMinProp;
 
-	private int bbExtentsProp;
+		private int bbExtentsProp;
 
-	private Vector4 resultDim;
+		private Vector4 resultDim;
 
-	private List<penInfo> pens;
+		private List<penInfo> pens;
 
-	private RenderTexture Result;
+		private RenderTexture Result;
 
-	private Vector3 meshBoundsMin;
+		private Vector3 meshBoundsMin;
 
-	private Vector3 meshBoundsExtents;
+		private Vector3 meshBoundsExtents;
 
-	private int mipTimer;
+		private int mipTimer;
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void SetSharedComputeProps()
-	{
-	}
+		private void SetSharedComputeProps()
+		{
+		}
 
-	private void OnCollisionEnter(Collision colData)
-	{
-	}
+		private void OnCollisionEnter(Collision colData)
+		{
+		}
 
-	private void OnCollisionExit(Collision colData)
-	{
-	}
+		private void OnCollisionExit(Collision colData)
+		{
+		}
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	private void OnDestroy()
-	{
-	}
+		private void OnDestroy()
+		{
+		}
 
-	public WhiteboardMeshComputeTest()
-		: base()
-	{
+		public WhiteboardMeshComputeTest()
+			: base()
+		{
+		}
 	}
 }

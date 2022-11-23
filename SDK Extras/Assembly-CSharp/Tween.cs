@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class Tween : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Collider[] colliders;
-
-	private void Start()
+	public class Tween : MonoBehaviour
 	{
-	}
+		private Collider[] colliders;
 
-	public void DoTheTween()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void EnableColliders()
-	{
-	}
+		public void DoTheTween()
+		{
+		}
 
-	public Tween()
-		: base()
-	{
+		private void EnableColliders()
+		{
+		}
+
+		public Tween()
+			: base()
+		{
+		}
 	}
 }

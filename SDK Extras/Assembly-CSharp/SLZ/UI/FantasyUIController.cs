@@ -1,8 +1,6 @@
 using System;
 using SLZ.Rig;
-using SLZ.UI.Radial;
 using UnityEngine;
-using UnityEngine.EventSystems;
 
 namespace SLZ.UI
 {

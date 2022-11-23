@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using SLZ.Interaction;
 using UnityEngine;
 
-namespace SLZ.Arena
+namespace SLZ.Bonelab
 {
 	public class Arena_BellInteractable : MonoBehaviour
 	{

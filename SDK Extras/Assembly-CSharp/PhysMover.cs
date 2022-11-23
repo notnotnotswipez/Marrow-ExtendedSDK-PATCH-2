@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class PhysMover : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Rigidbody rb;
-
-	[SerializeField]
-	private Vector2 input;
-
-	public void Update()
+	public class PhysMover : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Rigidbody rb;
 
-	public void FixedUpdate()
-	{
-	}
+		[SerializeField]
+		private Vector2 input;
 
-	public PhysMover()
-		: base()
-	{
+		public void Update()
+		{
+		}
+
+		public void FixedUpdate()
+		{
+		}
+
+		public PhysMover()
+			: base()
+		{
+		}
 	}
 }

@@ -1,17 +1,25 @@
-using SLZ.Data.SaveData;
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.Rendering.Universal;
 
-namespace SLZ.Data
+namespace SLZ.SaveData
 {
 	public class GraphicsManager
 	{
-		[SerializeField]
-		public static UniversalRenderPipelineAsset CustomPipelineAsset;
+		public enum FoveatedRadii
+		{
+			VRSOuterRadius = 0,
+			VRSAnisotropy = 1,
+			VRSInnerRatio = 2,
+			RDMOuterRadius = 3,
+			RDMInnerRatio = 4
+		}
 
 		[SerializeField]
 		public static UniversalRendererData CustomRendererData;
+
+		[SerializeField]
+		public static UniversalRenderPipelineAsset CustomPipelineAsset;
 
 		[SerializeField]
 		public static VolumetricData CustomVolumetricRenderingSettings;
@@ -31,11 +39,19 @@ namespace SLZ.Data
 		[SerializeField]
 		public static VolumeProfile CustomVolumeProfile;
 
-		private static int HBAOFeature;
+		private static int SSAOFeature;
 
 		private static int BloomFeature;
 
+		private static int HBAOFeature;
+
+		private static int AutoExposureFeature;
+
+		private static int VRSRenderFeature;
+
 		private static float PercentToFloat;
+
+		private static GraphicsSettings graphicsSettings;
 
 		public static void DecreaseQualityLevel()
 		{
@@ -61,6 +77,10 @@ namespace SLZ.Data
 		{
 		}
 
+		private static void CustomFoveatedSet()
+		{
+		}
+
 		public static void SetQualityFromPreset(GraphicsQuality quality)
 		{
 		}
@@ -73,11 +93,20 @@ namespace SLZ.Data
 		{
 		}
 
-		public static void SetCurrentRenderer(UniversalRenderPipelineAsset pipelineAsset)
+		public static void SetFoveatedSettings()
 		{
 		}
 
-		public static void SetLODBias()
+		public static bool ToggleFoveatedVisualization()
+		{
+			return default(bool);
+		}
+
+		public static void DisableFoveatedVisualization()
+		{
+		}
+
+		public static void SetCurrentRenderer(UniversalRenderPipelineAsset pipelineAsset)
 		{
 		}
 
@@ -117,6 +146,34 @@ namespace SLZ.Data
 		{
 		}
 
+		public static void SetDepthPrepass(bool hasDepthPrepass)
+		{
+		}
+
+		public static void SetOpaqueBlit(bool hasOpaqueTexture)
+		{
+		}
+
+		public static void SetHDR(bool enable)
+		{
+		}
+
+		public static void SetAdditionalLights(bool perPixel, int maxLights)
+		{
+		}
+
+		public static void SetMainLightShadows(bool enableShadows)
+		{
+		}
+
+		public static void SetAutoExposure(bool enabled)
+		{
+		}
+
+		public static void SetProbeProjectionBlend(bool boxProjection, bool probeBlending)
+		{
+		}
+
 		public static void IncreaseRenderScale()
 		{
 		}
@@ -134,6 +191,10 @@ namespace SLZ.Data
 		}
 
 		public static void DecreaseLODBias()
+		{
+		}
+
+		public static void SetLODBias()
 		{
 		}
 
@@ -196,6 +257,34 @@ namespace SLZ.Data
 		}
 
 		public static void DecreaseVolumetrics()
+		{
+		}
+
+		public static void IncreaseFoveatedRenderingMode()
+		{
+		}
+
+		public static void DecreaseFoveatedRenderingMode()
+		{
+		}
+
+		public static void IncreaseFoveatedPreset()
+		{
+		}
+
+		public static void DecreaseFoveatedPreset()
+		{
+		}
+
+		public static void IncreaseFoveatedRadius(FoveatedRadii radius)
+		{
+		}
+
+		public static void DecreaseFoveatedRadius(FoveatedRadii radius)
+		{
+		}
+
+		public static void SetFoveatedCustomRadii(FoveatedRadii radius, int value)
 		{
 		}
 

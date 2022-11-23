@@ -1,37 +1,40 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class FlightStabilizer : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private InteractableHost host;
-
-	private Rigidbody rb;
-
-	[Tooltip("The axis in which the object will orient itself to in flight")]
-	public Vector3 primaryAxis;
-
-	public Vector3 secondaryAxis;
-
-	private bool isCollisionStay;
-
-	private void Start()
+	public class FlightStabilizer : MonoBehaviour
 	{
-	}
+		private InteractableHost host;
 
-	private void OnCollisionStay(Collision collision)
-	{
-	}
+		private Rigidbody rb;
 
-	private void FixedUpdate()
-	{
-	}
+		[Tooltip("The axis in which the object will orient itself to in flight")]
+		public Vector3 primaryAxis;
 
-	public void ResetRB()
-	{
-	}
+		public Vector3 secondaryAxis;
 
-	public FlightStabilizer()
-		: base()
-	{
+		private bool isCollisionStay;
+
+		private void Start()
+		{
+		}
+
+		private void OnCollisionStay(Collision collision)
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public void ResetRB()
+		{
+		}
+
+		public FlightStabilizer()
+			: base()
+		{
+		}
 	}
 }

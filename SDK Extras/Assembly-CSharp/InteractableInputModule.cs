@@ -1,41 +1,49 @@
 using System.Runtime.InteropServices;
 using SLZ.Interaction;
+using SLZ.UI;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-[AddComponentMenu("Event/Interactable Input Module")]
-public class InteractableInputModule : VRStandaloneInputModule
+namespace SLZ.Bonelab
 {
-	private VRInput m_Input;
-
-	private bool GetInput(Hand hand, [Out] int index)
+	[AddComponentMenu("Event/Interactable Input Module")]
+	public class InteractableInputModule : VRStandaloneInputModule
 	{
-		return default(bool);
-	}
+		private VRInput m_Input;
 
-	protected PointerEventData ModifiedGetTouchPointerEventData(Touch input, [Out] bool pressed, [Out] bool released)
-	{
-		return null;
-	}
+		protected override void Awake()
+		{
+		}
 
-	public void SetTrackedInput(Hand hand)
-	{
-	}
+		private bool GetInput(Hand hand, [Out] int index)
+		{
+			return default(bool);
+		}
 
-	public void RemoveTrackedInput(Hand hand)
-	{
-	}
+		protected PointerEventData ModifiedGetTouchPointerEventData(Touch input, [Out] bool pressed, [Out] bool released)
+		{
+			return null;
+		}
 
-	protected virtual void ModifiedProcessMove(PointerEventData pointerEvent)
-	{
-	}
+		public void SetTrackedInput(Hand hand)
+		{
+		}
 
-	protected void ModifiedHandlePointerExitAndEnter(PointerEventData currentPointerData, GameObject newEnterTarget)
-	{
-	}
+		public void RemoveTrackedInput(Hand hand)
+		{
+		}
 
-	public InteractableInputModule()
-		: base()
-	{
+		protected virtual void ModifiedProcessMove(PointerEventData pointerEvent)
+		{
+		}
+
+		protected void ModifiedHandlePointerExitAndEnter(PointerEventData currentPointerData, GameObject newEnterTarget)
+		{
+		}
+
+		public InteractableInputModule()
+			: base()
+		{
+		}
 	}
 }

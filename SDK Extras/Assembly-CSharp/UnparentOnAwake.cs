@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class UnparentOnAwake : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	public class UnparentOnAwake : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public UnparentOnAwake()
-		: base()
-	{
+		public UnparentOnAwake()
+			: base()
+		{
+		}
 	}
 }

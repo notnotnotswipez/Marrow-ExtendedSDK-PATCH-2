@@ -1,7 +1,6 @@
 using UnityEngine;
-using UnityEngine.EventSystems;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class PanelView : MonoBehaviour
 	{

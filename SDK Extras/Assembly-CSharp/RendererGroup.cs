@@ -1,36 +1,39 @@
 using UnityEngine;
 
-public class RendererGroup : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Renderer[] group;
-
-	public GameObject hidBox;
-
-	[SerializeField]
-	private LayerMask LayerFilter;
-
-	private void Start()
+	public class RendererGroup : MonoBehaviour
 	{
-	}
+		public Renderer[] group;
 
-	public void GROUPENABLED()
-	{
-	}
+		public GameObject hidBox;
 
-	public void GROUPDISABLED()
-	{
-	}
+		[SerializeField]
+		private LayerMask LayerFilter;
 
-	public void SHOWMODULE()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public void HIDEMODULE()
-	{
-	}
+		public void GROUPENABLED()
+		{
+		}
 
-	public RendererGroup()
-		: base()
-	{
+		public void GROUPDISABLED()
+		{
+		}
+
+		public void SHOWMODULE()
+		{
+		}
+
+		public void HIDEMODULE()
+		{
+		}
+
+		public RendererGroup()
+			: base()
+		{
+		}
 	}
 }

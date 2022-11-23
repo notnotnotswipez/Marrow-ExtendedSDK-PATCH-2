@@ -1,24 +1,27 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class trackBatteriesReciever : InteractionReciever
+namespace SLZ.Bonelab
 {
-	private InteractableHost interactableHost;
-
-	private GameObject go;
-
-	private trackBatteries trackBatteries;
-
-	public override void OnInteractableHostEnter(InteractableHost host)
+	public class trackBatteriesReciever : InteractionReciever
 	{
-	}
+		private InteractableHost interactableHost;
 
-	public void LockBattery()
-	{
-	}
+		private GameObject go;
 
-	public trackBatteriesReciever()
-		: base()
-	{
+		private trackBatteries trackBatteries;
+
+		public override void OnInteractableHostEnter(InteractableHost host)
+		{
+		}
+
+		public void LockBattery()
+		{
+		}
+
+		public trackBatteriesReciever()
+			: base()
+		{
+		}
 	}
 }

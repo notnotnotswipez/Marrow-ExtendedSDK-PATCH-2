@@ -7,101 +7,104 @@ using SLZ.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class GeoManager : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum GeoState
+	public class GeoManager : MonoBehaviour
 	{
-		CLEARED = 0,
-		MOVING = 1,
-		UP = 2,
-		MOVING_TO_CLEAR = 3
-	}
-
-	public GeoState geoState;
-
-	public GeoMover activeGeoMover;
-
-	[SerializeField]
-	private AudioMixerGroup mixerGroup;
-
-	[SerializeField]
-	private AudioClip moveGeoClip;
-
-	[SerializeField]
-	private AudioPlayer _loopAudioPlayer;
-
-	public List<GeoMover> geoMoverList;
-
-	[SerializeField]
-	private GeoMover deathPitGeoMover;
-
-	[SerializeField]
-	private GeoMover deathPitFloorMover;
-
-	public GameObject geoMoverPrefab;
-
-	private int _currMoverIndex;
-
-	public int currGeoIndex;
-
-	public static Action OnMoveUpComplete;
-
-	public Dictionary<string, int> geoDict;
-
-	public Dictionary<string, GeoMover> geoMoverDict;
-
-	public int moverIndex
-	{
-		get
+		public enum GeoState
 		{
-			return default(int);
+			CLEARED = 0,
+			MOVING = 1,
+			UP = 2,
+			MOVING_TO_CLEAR = 3
 		}
-	}
 
-	public void Awake()
-	{
-	}
+		public GeoState geoState;
 
-	[ContextMenu("IncrementAndToggleGeo")]
-	public void IncrementAndToggleGeo()
-	{
-	}
+		public GeoMover activeGeoMover;
 
-	public void IncrementGeoIndex()
-	{
-	}
+		[SerializeField]
+		private AudioMixerGroup mixerGroup;
 
-	public void SelectGeo(string geoTitle)
-	{
-	}
+		[SerializeField]
+		private AudioClip moveGeoClip;
 
-	public void ClearCurrentGeo()
-	{
-	}
+		[SerializeField]
+		private AudioPlayer _loopAudioPlayer;
 
-	public void ToggleGeo(int index)
-	{
-	}
+		public List<GeoMover> geoMoverList;
 
-	public void ToggleAudio(bool startPlaying, bool pitchShift = false)
-	{
-	}
+		[SerializeField]
+		private GeoMover deathPitGeoMover;
 
-	public void MoveUpComplete(GeoMover geoMover)
-	{
-	}
+		[SerializeField]
+		private GeoMover deathPitFloorMover;
 
-	public void MoveDownComplete(GeoMover geoMover)
-	{
-	}
+		public GameObject geoMoverPrefab;
 
-	private IEnumerator CoDelayedMoveNext(float timeDelay, int index)
-	{
-		return null;
-	}
+		private int _currMoverIndex;
 
-	public GeoManager()
-		: base()
-	{
+		public int currGeoIndex;
+
+		public static Action OnMoveUpComplete;
+
+		public Dictionary<string, int> geoDict;
+
+		public Dictionary<string, GeoMover> geoMoverDict;
+
+		public int moverIndex
+		{
+			get
+			{
+				return default(int);
+			}
+		}
+
+		public void Awake()
+		{
+		}
+
+		[ContextMenu("IncrementAndToggleGeo")]
+		public void IncrementAndToggleGeo()
+		{
+		}
+
+		public void IncrementGeoIndex()
+		{
+		}
+
+		public void SelectGeo(string geoTitle)
+		{
+		}
+
+		public void ClearCurrentGeo()
+		{
+		}
+
+		public void ToggleGeo(int index)
+		{
+		}
+
+		public void ToggleAudio(bool startPlaying, bool pitchShift = false)
+		{
+		}
+
+		public void MoveUpComplete(GeoMover geoMover)
+		{
+		}
+
+		public void MoveDownComplete(GeoMover geoMover)
+		{
+		}
+
+		private IEnumerator CoDelayedMoveNext(float timeDelay, int index)
+		{
+			return null;
+		}
+
+		public GeoManager()
+			: base()
+		{
+		}
 	}
 }

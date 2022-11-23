@@ -1,14 +1,17 @@
 using SLZ.Marrow.Data;
 
-public class Looter
+namespace SLZ.Bonelab
 {
-	public static Spawnable[] GetAllLootItems(ArenaLootItem[] items)
+	public class Looter
 	{
-		return null;
-	}
+		public static Spawnable[] GetAllLootItems(ArenaLootItem[] items)
+		{
+			return null;
+		}
 
-	public Looter()
-		: base()
-	{
+		public Looter()
+			: base()
+		{
+		}
 	}
 }

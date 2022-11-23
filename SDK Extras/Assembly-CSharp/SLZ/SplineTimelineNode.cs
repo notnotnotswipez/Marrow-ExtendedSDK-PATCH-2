@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	[Serializable]
 	public class SplineTimelineNode

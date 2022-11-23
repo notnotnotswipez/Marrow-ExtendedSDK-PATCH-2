@@ -3,428 +3,443 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using PuppetMasta;
 using SLZ.AI;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.AI;
 
-public class AgentLinkControl : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum LinkState
+	public class AgentLinkControl : MonoBehaviour
 	{
-		SEARCHING = 0,
-		WAITING = 1,
-		LINKING = 2
-	}
+		public enum LinkState
+		{
+			SEARCHING = 0,
+			WAITING = 1,
+			LINKING = 2
+		}
 
-	private static ComponentCache<AgentLinkControl> _cache;
+		private static ComponentCache<AgentLinkControl> _cache;
 
-	private bool isDebugging;
+		private bool isDebugging;
 
-	private bool isDisplayingDist;
+		private bool isDisplayingDist;
 
-	private bool isDebuggingFallenState;
+		private bool isDebuggingFallenState;
 
-	[SerializeField]
-	[Header("Agent Data")]
-	private float totalMass;
+		[SerializeField]
+		[Header("Agent Data")]
+		private float totalMass;
 
-	[SerializeField]
-	private float jointForceMult;
+		[SerializeField]
+		private float jointForceMult;
 
-	private float defaultTotalMass;
+		private float defaultTotalMass;
 
-	public NavMeshAgent navAgent;
+		public NavMeshAgent navAgent;
 
-	[SerializeField]
-	private AIBrain brain;
+		[SerializeField]
+		private AIBrain brain;
 
-	public TriggerRefProxy triggerProxy;
+		public TriggerRefProxy triggerProxy;
 
-	[SerializeField]
-	private GameObject frozenCrabJumpTargetObj;
+		public BehaviourBaseNav baseBehaviour;
 
-	public LinkState linkState;
+		public BehaviourPowerLegs legBehaviour;
 
-	public bool isOnLink;
+		public BehaviourOmniwheel omniBehaviour;
 
-	public bool isZipping;
+		[SerializeField]
+		private BehaviourCrablet crabBehaviour;
 
-	public float agentDot;
+		[SerializeField]
+		private GameObject frozenCrabJumpTargetObj;
 
-	[SerializeField]
-	private float yDiff;
+		public PuppetMaster _puppet;
 
-	public Spawnable zipStickSpawn;
+		public LinkState linkState;
 
-	public GameObject zipStick;
+		public bool isOnLink;
 
-	public Rigidbody zipGripBody;
+		public bool isZipping;
 
-	[SerializeField]
-	[Header("Link Data")]
-	private UnityEngine.Object owner;
+		public float agentDot;
 
-	[SerializeField]
-	private NavMeshLink currLink;
+		[SerializeField]
+		private float yDiff;
 
-	[SerializeField]
-	private LinkData currLinkData;
+		public Spawnable zipStickSpawn;
 
-	[SerializeField]
-	private LinkData prevFailedLink;
+		public GameObject zipStick;
 
-	private Coroutine searchRoutine;
+		public Rigidbody zipGripBody;
 
-	private Coroutine climbRoutine;
+		[SerializeField]
+		[Header("Link Data")]
+		private UnityEngine.Object owner;
 
-	private Coroutine jumpRoutine;
+		[SerializeField]
+		private NavMeshLink currLink;
 
-	private Coroutine launchRoutine;
+		[SerializeField]
+		private LinkData currLinkData;
 
-	private Coroutine climbBarsRoutine;
+		[SerializeField]
+		private LinkData prevFailedLink;
 
-	private Coroutine slideRoutine;
+		private Coroutine searchRoutine;
 
-	private Coroutine climbLedgeRoutine;
+		private Coroutine climbRoutine;
 
-	private Coroutine zipRoutine;
+		private Coroutine jumpRoutine;
 
-	private Coroutine reverseZipRoutine;
+		private Coroutine launchRoutine;
 
-	private Coroutine occupiedRoutine;
+		private Coroutine climbBarsRoutine;
 
-	private Coroutine distRoutine;
+		private Coroutine slideRoutine;
 
-	private Coroutine fallenRoutine;
+		private Coroutine climbLedgeRoutine;
 
-	private Coroutine escalatorRoutine;
+		private Coroutine zipRoutine;
 
-	[Header("Rigidbodies")]
-	[SerializeField]
-	public Rigidbody headRB;
+		private Coroutine reverseZipRoutine;
 
-	[SerializeField]
-	public Rigidbody chestRB;
+		private Coroutine occupiedRoutine;
 
-	[SerializeField]
-	private Rigidbody leftHandRB;
+		private Coroutine distRoutine;
 
-	[SerializeField]
-	private Rigidbody leftElbowRB;
+		private Coroutine fallenRoutine;
 
-	[SerializeField]
-	private Rigidbody rightHandRB;
+		private Coroutine escalatorRoutine;
 
-	[SerializeField]
-	private Rigidbody rightElbowRB;
+		[Header("Rigidbodies")]
+		[SerializeField]
+		public Rigidbody headRB;
 
-	[SerializeField]
-	private Rigidbody leftFootRB;
+		[SerializeField]
+		public Rigidbody chestRB;
 
-	[SerializeField]
-	private Rigidbody leftKneeRB;
+		[SerializeField]
+		private Rigidbody leftHandRB;
 
-	[SerializeField]
-	private Rigidbody rightFootRB;
+		[SerializeField]
+		private Rigidbody leftElbowRB;
 
-	[SerializeField]
-	private Rigidbody rightKneeRB;
+		[SerializeField]
+		private Rigidbody rightHandRB;
 
-	public Rigidbody[] allRBs;
+		[SerializeField]
+		private Rigidbody rightElbowRB;
 
-	[Header("Joints")]
-	[SerializeField]
-	private ConfigurableJoint headJoint;
+		[SerializeField]
+		private Rigidbody leftFootRB;
 
-	[SerializeField]
-	private ConfigurableJoint chestJoint;
+		[SerializeField]
+		private Rigidbody leftKneeRB;
 
-	[SerializeField]
-	private ConfigurableJoint leftElbowJoint;
+		[SerializeField]
+		private Rigidbody rightFootRB;
 
-	[SerializeField]
-	private ConfigurableJoint rightElbowJoint;
+		[SerializeField]
+		private Rigidbody rightKneeRB;
 
-	[SerializeField]
-	private ConfigurableJoint leftHandJoint;
+		public Rigidbody[] allRBs;
 
-	[SerializeField]
-	private ConfigurableJoint rightHandJoint;
+		[SerializeField]
+		[Header("Joints")]
+		private ConfigurableJoint headJoint;
 
-	[SerializeField]
-	private ConfigurableJoint leftKneeJoint;
+		[SerializeField]
+		private ConfigurableJoint chestJoint;
 
-	[SerializeField]
-	private ConfigurableJoint rightKneeJoint;
+		[SerializeField]
+		private ConfigurableJoint leftElbowJoint;
 
-	[SerializeField]
-	private ConfigurableJoint leftFootJoint;
+		[SerializeField]
+		private ConfigurableJoint rightElbowJoint;
 
-	[SerializeField]
-	private ConfigurableJoint rightFootJoint;
+		[SerializeField]
+		private ConfigurableJoint leftHandJoint;
 
-	private JointDrive kneeDrive;
+		[SerializeField]
+		private ConfigurableJoint rightHandJoint;
 
-	private JointDrive footDrive;
+		[SerializeField]
+		private ConfigurableJoint leftKneeJoint;
 
-	private JointDrive handDrive;
+		[SerializeField]
+		private ConfigurableJoint rightKneeJoint;
 
-	private JointDrive chestDrive;
+		[SerializeField]
+		private ConfigurableJoint leftFootJoint;
 
-	private JointDrive headDrive;
+		[SerializeField]
+		private ConfigurableJoint rightFootJoint;
 
-	private int crabletAgentID;
+		private JointDrive kneeDrive;
 
-	public TriggerRefProxy playerProxy;
+		private JointDrive footDrive;
 
-	[SerializeField]
-	[Header("Distance Covered")]
-	private Vector3 initialPos;
+		private JointDrive handDrive;
 
-	[SerializeField]
-	private float sqrPos;
+		private JointDrive chestDrive;
 
-	[SerializeField]
-	private float distTimer;
+		private JointDrive headDrive;
 
-	private Color agentColor;
+		private int crabletAgentID;
 
-	public static ComponentCache<AgentLinkControl> Cache
-	{
-		get
+		public TriggerRefProxy playerProxy;
+
+		[Header("Distance Covered")]
+		[SerializeField]
+		private Vector3 initialPos;
+
+		[SerializeField]
+		private float sqrPos;
+
+		[SerializeField]
+		private float distTimer;
+
+		private Color agentColor;
+
+		public static ComponentCache<AgentLinkControl> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private IEnumerator CoSearchForLink()
 		{
 			return null;
 		}
-	}
 
-	private void Awake()
-	{
-	}
+		private IEnumerator CoTriggerLink()
+		{
+			return null;
+		}
 
-	private void OnEnable()
-	{
-	}
+		[ContextMenu("Reset Agent Path")]
+		public void ResetAgent()
+		{
+		}
 
-	private IEnumerator CoSearchForLink()
-	{
-		return null;
-	}
+		public void ResetDistRoutine()
+		{
+		}
 
-	private IEnumerator CoTriggerLink()
-	{
-		return null;
-	}
+		public void StopDistRoutines()
+		{
+		}
 
-	[ContextMenu("Reset Agent Path")]
-	public void ResetAgent()
-	{
-	}
+		private void SetLinkState(LinkState state)
+		{
+		}
 
-	public void ResetDistRoutine()
-	{
-	}
+		private void StartLinkByType()
+		{
+		}
 
-	public void StopDistRoutines()
-	{
-	}
+		private IEnumerator CoWaitForOccupation()
+		{
+			return null;
+		}
 
-	private void SetLinkState(LinkState state)
-	{
-	}
+		private IEnumerator CoClimbBlock(float obstructionWait = 10f)
+		{
+			return null;
+		}
 
-	private void StartLinkByType()
-	{
-	}
+		private void LaunchArm()
+		{
+		}
 
-	private IEnumerator CoWaitForOccupation()
-	{
-		return null;
-	}
+		private IEnumerator CoJump(float seconds)
+		{
+			return null;
+		}
 
-	private IEnumerator CoClimbBlock(float obstructionWait = 10f)
-	{
-		return null;
-	}
+		private IEnumerator CoLaunch(float linkDuration)
+		{
+			return null;
+		}
 
-	private void LaunchArm()
-	{
-	}
+		private IEnumerator CoOmniJumpDown(float seconds)
+		{
+			return null;
+		}
 
-	private IEnumerator CoJump(float seconds)
-	{
-		return null;
-	}
+		private IEnumerator CoClimbBars()
+		{
+			return null;
+		}
 
-	private IEnumerator CoLaunch(float linkDuration)
-	{
-		return null;
-	}
+		private IEnumerator CoSlide()
+		{
+			return null;
+		}
 
-	private IEnumerator CoOmniJumpDown(float seconds)
-	{
-		return null;
-	}
+		private IEnumerator CoClimbLedge()
+		{
+			return null;
+		}
 
-	private IEnumerator CoClimbBars()
-	{
-		return null;
-	}
+		private IEnumerator CoZipLineDown()
+		{
+			return null;
+		}
 
-	private IEnumerator CoSlide()
-	{
-		return null;
-	}
+		private IEnumerator CoZipLineUp()
+		{
+			return null;
+		}
 
-	private IEnumerator CoClimbLedge()
-	{
-		return null;
-	}
+		private IEnumerator CoEscalate()
+		{
+			return null;
+		}
 
-	private IEnumerator CoZipLineDown()
-	{
-		return null;
-	}
+		private IEnumerator CoDistCovered()
+		{
+			return null;
+		}
 
-	private IEnumerator CoZipLineUp()
-	{
-		return null;
-	}
+		private IEnumerator CoCheckLegsFallenState()
+		{
+			return null;
+		}
 
-	private IEnumerator CoEscalate()
-	{
-		return null;
-	}
+		private IEnumerator CoCheckCrabFallenState()
+		{
+			return null;
+		}
 
-	private IEnumerator CoDistCovered()
-	{
-		return null;
-	}
+		private void OnProxyEnter(TriggerRefProxy proxy)
+		{
+		}
 
-	private IEnumerator CoCheckLegsFallenState()
-	{
-		return null;
-	}
+		public void DetachDownZip()
+		{
+		}
 
-	private IEnumerator CoCheckCrabFallenState()
-	{
-		return null;
-	}
+		public void DetachUpZip()
+		{
+		}
 
-	private void OnProxyEnter(TriggerRefProxy proxy)
-	{
-	}
+		private void CreateJumpTarget()
+		{
+		}
 
-	public void DetachDownZip()
-	{
-	}
+		private IEnumerator CoCrabJumpAttempt()
+		{
+			return null;
+		}
 
-	public void DetachUpZip()
-	{
-	}
+		private IEnumerator CoCrabZip()
+		{
+			return null;
+		}
 
-	private void CreateJumpTarget()
-	{
-	}
+		private void FailLink()
+		{
+		}
 
-	private IEnumerator CoCrabJumpAttempt()
-	{
-		return null;
-	}
+		private void CompleteLink()
+		{
+		}
 
-	private IEnumerator CoCrabZip()
-	{
-		return null;
-	}
+		private void ReleaseLinkAndJoints()
+		{
+		}
 
-	private void FailLink()
-	{
-	}
+		private void StopAllLinkRoutines()
+		{
+		}
 
-	private void CompleteLink()
-	{
-	}
+		private void OnDeath()
+		{
+		}
 
-	private void ReleaseLinkAndJoints()
-	{
-	}
+		private IEnumerator CoDespawnDeadEscalator()
+		{
+			return null;
+		}
 
-	private void StopAllLinkRoutines()
-	{
-	}
+		private void DestroyHandJoints()
+		{
+		}
 
-	private void OnDeath()
-	{
-	}
+		private void DestroyLeftArmJoints()
+		{
+		}
 
-	private IEnumerator CoDespawnDeadEscalator()
-	{
-		return null;
-	}
+		private void DestroyRightArmJoints()
+		{
+		}
 
-	private void DestroyHandJoints()
-	{
-	}
+		private void DestroyArmJoints()
+		{
+		}
 
-	private void DestroyLeftArmJoints()
-	{
-	}
+		private void DestroyLegJoints()
+		{
+		}
 
-	private void DestroyRightArmJoints()
-	{
-	}
+		private void DestroyAllJoints()
+		{
+		}
 
-	private void DestroyArmJoints()
-	{
-	}
+		private void DestroyHeadJoint()
+		{
+		}
 
-	private void DestroyLegJoints()
-	{
-	}
+		private void DestroyChestJoint()
+		{
+		}
 
-	private void DestroyAllJoints()
-	{
-	}
+		private bool CheckYDist(float maxVal)
+		{
+			return default(bool);
+		}
 
-	private void DestroyHeadJoint()
-	{
-	}
+		public void StopAllRoutinesAndDisable()
+		{
+		}
 
-	private void DestroyChestJoint()
-	{
-	}
+		[ContextMenu("GetAgentRefs")]
+		public void GetAgentRefs()
+		{
+		}
 
-	private bool CheckYDist(float maxVal)
-	{
-		return default(bool);
-	}
+		[ContextMenu("GetAllRigidbodies")]
+		public void GetAllRigidbodies()
+		{
+		}
 
-	public void StopAllRoutinesAndDisable()
-	{
-	}
+		[ContextMenu("GetTotalMass")]
+		public void GetTotalMass()
+		{
+		}
 
-	[ContextMenu("GetAgentRefs")]
-	public void GetAgentRefs()
-	{
-	}
+		public void OnDrawGizmos()
+		{
+		}
 
-	[ContextMenu("GetAllRigidbodies")]
-	public void GetAllRigidbodies()
-	{
-	}
-
-	[ContextMenu("GetTotalMass")]
-	public void GetTotalMass()
-	{
-	}
-
-	public void OnDrawGizmos()
-	{
-	}
-
-	public AgentLinkControl()
-		: base()
-	{
+		public AgentLinkControl()
+			: base()
+		{
+		}
 	}
 }

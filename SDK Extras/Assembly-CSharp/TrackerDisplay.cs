@@ -1,32 +1,35 @@
 using TMPro;
 using UnityEngine;
 
-public class TrackerDisplay : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private int score;
-
-	[SerializeField]
-	private TargetTracker[] targetTrackers;
-
-	[SerializeField]
-	private TMP_Text scoreText;
-
-	private void OnEnable()
+	public class TrackerDisplay : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private int score;
 
-	public void UpdateScore(int targScore)
-	{
-	}
+		[SerializeField]
+		private TargetTracker[] targetTrackers;
 
-	[ContextMenu("ClearAllScores")]
-	public void ClearAllScores()
-	{
-	}
+		[SerializeField]
+		private TMP_Text scoreText;
 
-	public TrackerDisplay()
-		: base()
-	{
+		private void OnEnable()
+		{
+		}
+
+		public void UpdateScore(int targScore)
+		{
+		}
+
+		[ContextMenu("ClearAllScores")]
+		public void ClearAllScores()
+		{
+		}
+
+		public TrackerDisplay()
+			: base()
+		{
+		}
 	}
 }

@@ -4,19 +4,25 @@ using SLZ.Interaction;
 using SLZ.Marrow.Proxy;
 using UnityEngine;
 
-public class GripProxyMap : BoneProxyMap<GripProxy, Grip>
+namespace SLZ.Mods
 {
-
-	public GripProxyMap()
-		: base()
+	public class GripProxyMap : BoneProxyMap<GripProxy, Grip>
 	{
-	}
+		protected override void MapProperties()
+		{
+		}
 
-	public override void MapMethods() {
-		throw new System.NotImplementedException();
-	}
+		public override void BeforeGenerateReal()
+		{
+		}
 
-	protected override void MapProperties() {
-		throw new System.NotImplementedException();
+		public override void MapMethods()
+		{
+		}
+
+		public GripProxyMap()
+			: base()
+		{
+		}
 	}
 }

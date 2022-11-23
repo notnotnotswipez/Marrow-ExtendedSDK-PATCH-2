@@ -1,11 +1,23 @@
+using SLZ.Bonelab;
 using SLZ.Interaction;
 
-public class PropLeverSwitch : CylinderGrip
+namespace SLZ.Props
 {
-	public Control_PowerLever ctrl_lever;
-
-	public PropLeverSwitch()
-		: base()
+	public class PropLeverSwitch : CylinderGrip
 	{
+		public Control_PowerLever ctrl_lever;
+
+		public override void OnAttachedToHand(Hand hand)
+		{
+		}
+
+		public override void OnDetachedFromHand(Hand hand)
+		{
+		}
+
+		public PropLeverSwitch()
+			: base()
+		{
+		}
 	}
 }

@@ -6,10 +6,10 @@ using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using Newtonsoft.Json.Linq;
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
 using SLZ.Player;
+using SLZ.SaveData;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -24,6 +24,20 @@ namespace SLZ.Bonelab
 			Outro = 3,
 			None = 4
 		}
+
+		public const string INITIAL_INVENTORY = "SLZ.Bonelab.initial_inventory";
+
+		public const string IN_PROGRESS_INVENTORY = "SLZ.Bonelab.in_progress_inventory";
+
+		public const string FINAL_INVENTORY_DEPRECATED = "SLZ.Bonelab.final_inventory";
+
+		public const string FINAL_AMMO_DELTA = "SLZ.Bonelab.final_ammo_delta";
+
+		public const string IN_PROGRESS_AMMO = "SLZ.Bonelab.in_progress_ammo";
+
+		public const string PROGRESS = "SLZ.Bonelab.progress";
+
+		public const string COMPLETED = "SLZ.Bonelab.completed";
 
 		public static Dictionary<string, int> CalculateStartingAmmo(this PlayerProgression progression, params string[] priorLevels)
 		{
@@ -48,7 +62,7 @@ namespace SLZ.Bonelab
 			return null;
 		}
 
-		public static bool SaveInventory(this PlayerProgression progression, string levelKey, string valueKey)
+		private static bool GatherInventory([Out] JObject slotBarcodes)
 		{
 			return default(bool);
 		}
@@ -85,6 +99,23 @@ namespace SLZ.Bonelab
 		}
 
 		public static bool TryGetLevelCompleted(this PlayerProgression progression, string levelKey, [Out] bool completed)
+		{
+			return default(bool);
+		}
+
+		public static bool PushInventoryInto(this PlayerProgression progression, params string[] intoLevelKeys)
+		{
+			intoLevelKeys = default(string[]);
+			return default(bool);
+		}
+
+		public static bool SaveInventoryInProgress(this PlayerProgression progression, string levelKey)
+		{
+			return default(bool);
+		}
+
+		[Obsolete("To be replaced with PushInventoryInto")]
+		public static bool SaveInventoryFinal_Deprecated(this PlayerProgression progression, string levelKey)
 		{
 			return default(bool);
 		}

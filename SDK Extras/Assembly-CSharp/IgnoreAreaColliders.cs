@@ -1,45 +1,48 @@
 using UnityEngine;
 
-public class IgnoreAreaColliders : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("Uses a list of colliders to ignore with other local colliders")]
-	public Vector3 ColliderBounds;
-
-	private Collider[] SceneColliders;
-
-	[SerializeField]
-	private Collider[] CollidersToIgnore;
-
-	private void Awake()
+	public class IgnoreAreaColliders : MonoBehaviour
 	{
-	}
+		[Header("Uses a list of colliders to ignore with other local colliders")]
+		public Vector3 ColliderBounds;
 
-	private void IntializeLoop()
-	{
-	}
+		private Collider[] SceneColliders;
 
-	private void CollectColliders()
-	{
-	}
+		[SerializeField]
+		private Collider[] CollidersToIgnore;
 
-	private void ignoreColliders()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void DisableCol()
-	{
-	}
+		private void IntializeLoop()
+		{
+		}
 
-	private void EnableCol()
-	{
-	}
+		private void CollectColliders()
+		{
+		}
 
-	private void OnDrawGizmosSelected()
-	{
-	}
+		private void ignoreColliders()
+		{
+		}
 
-	public IgnoreAreaColliders()
-		: base()
-	{
+		private void DisableCol()
+		{
+		}
+
+		private void EnableCol()
+		{
+		}
+
+		private void OnDrawGizmosSelected()
+		{
+		}
+
+		public IgnoreAreaColliders()
+			: base()
+		{
+		}
 	}
 }

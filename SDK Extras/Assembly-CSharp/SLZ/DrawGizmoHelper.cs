@@ -1,7 +1,7 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Interaction
 {
 	public class DrawGizmoHelper
 	{

@@ -1,25 +1,28 @@
 using UnityEngine;
 
-public class KF_Trajectory : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Transform target;
-
-	public float height;
-
-	public Rigidbody rb;
-
-	[ContextMenu("Launch")]
-	public void Launch()
+	public class KF_Trajectory : MonoBehaviour
 	{
-	}
+		public Transform target;
 
-	public TrajectoryData CalcInitialVelocity()
-	{
-		return null;
-	}
+		public float height;
 
-	public KF_Trajectory()
-		: base()
-	{
+		public Rigidbody rb;
+
+		[ContextMenu("Launch")]
+		public void Launch()
+		{
+		}
+
+		public TrajectoryData CalcInitialVelocity()
+		{
+			return null;
+		}
+
+		public KF_Trajectory()
+			: base()
+		{
+		}
 	}
 }

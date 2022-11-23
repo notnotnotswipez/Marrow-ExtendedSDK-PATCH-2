@@ -1,25 +1,28 @@
 using UnityEngine;
 
-public class AxisFollow : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum vectorType
+	public class AxisFollow : MonoBehaviour
 	{
-		x = 0,
-		y = 1,
-		z = 2
-	}
+		public enum vectorType
+		{
+			x = 0,
+			y = 1,
+			z = 2
+		}
 
-	public vectorType VecType;
+		public vectorType VecType;
 
-	[SerializeField]
-	private Transform FollowTarget;
+		[SerializeField]
+		private Transform FollowTarget;
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	public AxisFollow()
-		: base()
-	{
+		public AxisFollow()
+			: base()
+		{
+		}
 	}
 }

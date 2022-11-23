@@ -1,78 +1,88 @@
 using SLZ.SFX;
 using UnityEngine;
 
-[RequireComponent(typeof(ParticleSystem))]
-public class Powerable_ParticleManager : Powerable
+namespace SLZ.Bonelab
 {
-	[Header("Powerable Settings")]
-	public float map_low;
-
-	public float map_high;
-
-	[SerializeField]
-	[Range(0f, 1f)]
-	[Header("Control Particle System externally")]
-	public float Thickness;
-
-	[SerializeField]
-	[Range(0f, 1f)]
-	public float OutputSpeed;
-
-	[SerializeField]
-	[Tooltip("Minimum amount of particles allowed")]
-	private float MinParticleCount;
-
-	public AmbientSFX ambientSound;
-
-	private float ambientSoundMax;
-
-	[HideInInspector]
-	[SerializeField]
-	private ParticleSystem sourcePSystem;
-
-	[SerializeField]
-	[HideInInspector]
-	private ParticleSystem.EmissionModule EmissionModule;
-
-	[HideInInspector]
-	[SerializeField]
-	private ParticleSystem.MainModule MainModule;
-
-	private float orginalEmissionRate;
-
-	private Vector2 orginalSpeed;
-
-	private void Reset()
+	[RequireComponent(typeof(ParticleSystem))]
+	public class Powerable_ParticleManager : Powerable
 	{
-	}
+		[Header("Powerable Settings")]
+		public float map_low;
 
-	private void Awake()
-	{
-	}
+		public float map_high;
 
-	public void UpdateAmount()
-	{
-	}
+		[Header("Control Particle System externally")]
+		[SerializeField]
+		[Range(0f, 1f)]
+		public float Thickness;
 
-	public void UpdateSpeed(float SpeedPercentage)
-	{
-	}
+		[Range(0f, 1f)]
+		[SerializeField]
+		public float OutputSpeed;
 
-	public void UpdateAmount(float SpeedPercentage, float ThicknessPercentage)
-	{
-	}
+		[SerializeField]
+		[Tooltip("Minimum amount of particles allowed")]
+		private float MinParticleCount;
 
-	public void turnOff()
-	{
-	}
+		public AmbientSFX ambientSound;
 
-	public void turnOn()
-	{
-	}
+		private float ambientSoundMax;
 
+		[SerializeField]
+		[HideInInspector]
+		private ParticleSystem sourcePSystem;
 
-	public Powerable_ParticleManager()
-		: base()
-	{
+		[HideInInspector]
+		[SerializeField]
+		private ParticleSystem.EmissionModule EmissionModule;
+
+		[SerializeField]
+		[HideInInspector]
+		private ParticleSystem.MainModule MainModule;
+
+		private float orginalEmissionRate;
+
+		private Vector2 orginalSpeed;
+
+		private void Reset()
+		{
+		}
+
+		private void Awake()
+		{
+		}
+
+		public void UpdateAmount()
+		{
+		}
+
+		public void UpdateSpeed(float SpeedPercentage)
+		{
+		}
+
+		public void UpdateAmount(float SpeedPercentage, float ThicknessPercentage)
+		{
+		}
+
+		public void turnOff()
+		{
+		}
+
+		public void turnOn()
+		{
+		}
+
+		public override void SwitchPowerOnOff(bool isOn)
+		{
+		}
+
+		public override void VoltageToObject(float voltage, int id = 0)
+		{
+		}
+
+		public Powerable_ParticleManager()
+			: base()
+		{
+		}
 	}
 }

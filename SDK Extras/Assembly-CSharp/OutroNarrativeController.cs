@@ -5,107 +5,110 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class OutroNarrativeController : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Animator animator;
-
-	[SerializeField]
-	private AudioSource audioSource;
-
-	[SerializeField]
-	private AnimData[] pushData;
-
-	[SerializeField]
-	private int currPushVoice;
-
-	[SerializeField]
-	private float pushPromptDelay;
-
-	[SerializeField]
-	private AudioClip getInClip;
-
-	[SerializeField]
-	private AudioClip[] seatedClips;
-
-	[SerializeField]
-	private int currSeatedClip;
-
-	[SerializeField]
-	private float responseDelay;
-
-	[SerializeField]
-	private AudioClip[] driveClips;
-
-	[SerializeField]
-	private int currDriveClip;
-
-	[SerializeField]
-	private AudioClip[] completeClips;
-
-	[SerializeField]
-	private int currCompleteClip;
-
-	private Coroutine pushVoiceRoutine;
-
-	private Coroutine waitRoutine;
-
-	[ContextMenu("StartTest")]
-	public void StartPushLoop()
+	public class OutroNarrativeController : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Animator animator;
 
-	private IEnumerator CoVoiceTest(AnimData data)
-	{
-		return null;
-	}
+		[SerializeField]
+		private AudioSource audioSource;
 
-	private void CompletePushLine()
-	{
-	}
+		[SerializeField]
+		private AnimData[] pushData;
 
-	private IEnumerator CoWaitForLine()
-	{
-		return null;
-	}
+		[SerializeField]
+		private int currPushVoice;
 
-	[ContextMenu("OnEngineStart")]
-	public void OnEngineStart()
-	{
-	}
+		[SerializeField]
+		private float pushPromptDelay;
 
-	[ContextMenu("OnPlayerSeated")]
-	public void OnPlayerSeated()
-	{
-	}
+		[SerializeField]
+		private AudioClip getInClip;
 
-	private IEnumerator CoSeated(float clipLength)
-	{
-		return null;
-	}
+		[SerializeField]
+		private AudioClip[] seatedClips;
 
-	[ContextMenu("OnBlankResponse")]
-	public void OnBlankResponse()
-	{
-	}
+		[SerializeField]
+		private int currSeatedClip;
 
-	private IEnumerator CoDrive()
-	{
-		return null;
-	}
+		[SerializeField]
+		private float responseDelay;
 
-	[ContextMenu("OnDriveComplete")]
-	public void OnDriveComplete()
-	{
-	}
+		[SerializeField]
+		private AudioClip[] driveClips;
 
-	private IEnumerator CoComplete()
-	{
-		return null;
-	}
+		[SerializeField]
+		private int currDriveClip;
 
-	public OutroNarrativeController()
-		: base()
-	{
+		[SerializeField]
+		private AudioClip[] completeClips;
+
+		[SerializeField]
+		private int currCompleteClip;
+
+		private Coroutine pushVoiceRoutine;
+
+		private Coroutine waitRoutine;
+
+		[ContextMenu("StartTest")]
+		public void StartPushLoop()
+		{
+		}
+
+		private IEnumerator CoVoiceTest(AnimData data)
+		{
+			return null;
+		}
+
+		private void CompletePushLine()
+		{
+		}
+
+		private IEnumerator CoWaitForLine()
+		{
+			return null;
+		}
+
+		[ContextMenu("OnEngineStart")]
+		public void OnEngineStart()
+		{
+		}
+
+		[ContextMenu("OnPlayerSeated")]
+		public void OnPlayerSeated()
+		{
+		}
+
+		private IEnumerator CoSeated(float clipLength)
+		{
+			return null;
+		}
+
+		[ContextMenu("OnBlankResponse")]
+		public void OnBlankResponse()
+		{
+		}
+
+		private IEnumerator CoDrive()
+		{
+			return null;
+		}
+
+		[ContextMenu("OnDriveComplete")]
+		public void OnDriveComplete()
+		{
+		}
+
+		private IEnumerator CoComplete()
+		{
+			return null;
+		}
+
+		public OutroNarrativeController()
+			: base()
+		{
+		}
 	}
 }

@@ -9,129 +9,132 @@ using SLZ.Props;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GeoMover : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public GeoManager geoManager;
-
-	public bool isDeathPit;
-
-	public bool isFloor;
-
-	public bool isDynamic;
-
-	public bool isBoxForest;
-
-	public float moveUpDuration;
-
-	[SerializeField]
-	private float moveDownDuration;
-
-	public Vector3 startPos;
-
-	[SerializeField]
-	private Vector3 endPos;
-
-	private Coroutine moveRoutine;
-
-	[SerializeField]
-	private Spawnable spawnable;
-
-	[SerializeField]
-	private GameObject[] spawnPointObjs;
-
-	[SerializeField]
-	private GameObject[] boxForestSpawnObjs;
-
-	[SerializeField]
-	private int randBoxCount;
-
-	[SerializeField]
-	private int maxStackCount;
-
-	private int edgeMaxStackCount;
-
-	private int edgeThresh;
-
-	[SerializeField]
-	private List<ObjectDestructable> destList;
-
-	[SerializeField]
-	private List<AssetPoolee> pooleeList;
-
-	private HashSet<int> boxHash;
-
-	[SerializeField]
-	private LayerMask boxLayerMask;
-
-	[SerializeField]
-	private List<SpawnableGroup> spawnableGroups;
-
-	public UnityEvent onMoveUpComplete;
-
-	public UnityEvent onStartMoveDown;
-
-	[Header("TimerJointVals")]
-	private float spring;
-
-	private float damper;
-
-	private float maxForce;
-
-	private Vector3 targetAngVel;
-
-	public ConfigurableJoint timberJoint;
-
-	public void Awake()
+	public class GeoMover : MonoBehaviour
 	{
-	}
+		public GeoManager geoManager;
 
-	public void MoveGeo(bool moveUp)
-	{
-	}
+		public bool isDeathPit;
 
-	private IEnumerator CoMoveGeo(bool moveUp)
-	{
-		return null;
-	}
+		public bool isFloor;
 
-	[ContextMenu("IncrementalMove")]
-	public void IncrementGeo()
-	{
-	}
+		public bool isDynamic;
 
-	private IEnumerator CoIncrementalMove()
-	{
-		return null;
-	}
+		public bool isBoxForest;
 
-	public void SpawnDestructables()
-	{
-	}
+		public float moveUpDuration;
 
-	public void ClearDestructables()
-	{
-	}
+		[SerializeField]
+		private float moveDownDuration;
 
-	private IEnumerator CoSpawnBoxForest(bool spawnRand = true)
-	{
-		return null;
-	}
+		public Vector3 startPos;
 
-	[ContextMenu("GetBoxSpawns")]
-	public void GetBoxSpawns()
-	{
-	}
+		[SerializeField]
+		private Vector3 endPos;
 
-	public void CreateTimberJoint(GameObject timber)
-	{
-	}
+		private Coroutine moveRoutine;
 
-	public void CleanupJoint()
-	{
-	}
+		[SerializeField]
+		private Spawnable spawnable;
 
-	public GeoMover()
-		: base()
-	{
+		[SerializeField]
+		private GameObject[] spawnPointObjs;
+
+		[SerializeField]
+		private GameObject[] boxForestSpawnObjs;
+
+		[SerializeField]
+		private int randBoxCount;
+
+		[SerializeField]
+		private int maxStackCount;
+
+		private int edgeMaxStackCount;
+
+		private int edgeThresh;
+
+		[SerializeField]
+		private List<ObjectDestructable> destList;
+
+		[SerializeField]
+		private List<AssetPoolee> pooleeList;
+
+		private HashSet<int> boxHash;
+
+		[SerializeField]
+		private LayerMask boxLayerMask;
+
+		[SerializeField]
+		private List<SpawnableGroup> spawnableGroups;
+
+		public UnityEvent onMoveUpComplete;
+
+		public UnityEvent onStartMoveDown;
+
+		[Header("TimerJointVals")]
+		private float spring;
+
+		private float damper;
+
+		private float maxForce;
+
+		private Vector3 targetAngVel;
+
+		public ConfigurableJoint timberJoint;
+
+		public void Awake()
+		{
+		}
+
+		public void MoveGeo(bool moveUp)
+		{
+		}
+
+		private IEnumerator CoMoveGeo(bool moveUp)
+		{
+			return null;
+		}
+
+		[ContextMenu("IncrementalMove")]
+		public void IncrementGeo()
+		{
+		}
+
+		private IEnumerator CoIncrementalMove()
+		{
+			return null;
+		}
+
+		public void SpawnDestructables()
+		{
+		}
+
+		public void ClearDestructables()
+		{
+		}
+
+		private IEnumerator CoSpawnBoxForest(bool spawnRand = true)
+		{
+			return null;
+		}
+
+		[ContextMenu("GetBoxSpawns")]
+		public void GetBoxSpawns()
+		{
+		}
+
+		public void CreateTimberJoint(GameObject timber)
+		{
+		}
+
+		public void CleanupJoint()
+		{
+		}
+
+		public GeoMover()
+			: base()
+		{
+		}
 	}
 }

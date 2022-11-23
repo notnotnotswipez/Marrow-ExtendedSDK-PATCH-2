@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using SLZ.UI;
 using TMPro;
 using UnityEngine;
 
-namespace SLZ.UI
+namespace SLZ.Bonelab
 {
 	public class ControllerToolTip : ToolTip
 	{

@@ -1,6 +1,6 @@
 using System;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	[Serializable]
 	public enum UtilityModes

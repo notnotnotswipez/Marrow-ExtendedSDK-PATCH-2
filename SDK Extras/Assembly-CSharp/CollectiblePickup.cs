@@ -5,50 +5,53 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class CollectiblePickup : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum CollectibleType
+	public class CollectiblePickup : MonoBehaviour
 	{
-		P = 0,
-		R = 1,
-		O = 2,
-		J = 3,
-		E = 4,
-		C = 5,
-		T = 6,
-		F = 7
-	}
+		public enum CollectibleType
+		{
+			P = 0,
+			R = 1,
+			O = 2,
+			J = 3,
+			E = 4,
+			C = 5,
+			T = 6,
+			F = 7
+		}
 
-	public CollectibleType collectibleType;
+		public CollectibleType collectibleType;
 
-	public GameObject[] pickupMeshes;
+		public GameObject[] pickupMeshes;
 
-	private bool _isCollected;
+		private bool _isCollected;
 
-	public Action<CollectiblePickup> pickupEvent;
+		public Action<CollectiblePickup> pickupEvent;
 
-	public AudioClip collectedClip;
+		public AudioClip collectedClip;
 
-	public bool GetCollectionState()
-	{
-		return default(bool);
-	}
+		public bool GetCollectionState()
+		{
+			return default(bool);
+		}
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		private void OnTriggerEnter(Collider other)
+		{
+		}
 
-	private IEnumerator CoCollectAnimation()
-	{
-		return null;
-	}
+		private IEnumerator CoCollectAnimation()
+		{
+			return null;
+		}
 
-	public CollectiblePickup()
-		: base()
-	{
+		public CollectiblePickup()
+			: base()
+		{
+		}
 	}
 }

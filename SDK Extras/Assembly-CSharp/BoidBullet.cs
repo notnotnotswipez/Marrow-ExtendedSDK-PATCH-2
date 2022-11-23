@@ -1,30 +1,30 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Runtime.CompilerServices;
+using PuppetMasta;
+using SLZ.AI;
 using UnityEngine;
 
 public class BoidBullet : MonoBehaviour
 {
-	public float baseDamage;
+	public delegate void OnDespawnDelegate(BehaviourBoidAgent_SlicedInference boid);
 
-	private Rigidbody _rb;
+	public float maxTimeAlive;
 
-	private bool killingBlow;
+	public float currentTimeAlive;
 
-	private float deathTimer;
+	public BehaviourBoidAgent_SlicedInference boidAgent;
 
-	public float deathTime;
+	private TriggerRefProxy temp_trp;
 
-	private void Start()
+	public IEnumerator DespawnCounter()
 	{
+		return null;
 	}
 
-	private void OnEnable()
-	{
-	}
-
-	public void Deactivate()
-	{
-	}
-
-	private void FixedUpdate()
+	private void OnCollisionEnter(Collision collision)
 	{
 	}
 
@@ -32,4 +32,6 @@ public class BoidBullet : MonoBehaviour
 		: base()
 	{
 	}
+
+	public event OnDespawnDelegate OnDespawn;
 }

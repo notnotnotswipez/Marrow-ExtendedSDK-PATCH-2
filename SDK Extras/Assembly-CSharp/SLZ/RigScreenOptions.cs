@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Data.SaveData;
+using SLZ.SaveData;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public class RigScreenOptions : ScreenOptions
 	{

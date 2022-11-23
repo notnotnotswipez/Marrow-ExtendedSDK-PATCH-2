@@ -6,17 +6,20 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Data.SaveData;
+using SLZ.Bonelab;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
+using SLZ.Mods;
+using SLZ.Props;
 using SLZ.Rig;
+using SLZ.SaveData;
 using SLZ.VRMK;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class AvatarsPanelView : PanelView
 	{

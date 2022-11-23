@@ -6,34 +6,37 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 
-public class UIClock : MonoBehaviour
+namespace SLZ.UI
 {
-	public TextMeshPro txt_clock;
-
-	private DateTime time;
-
-	private WaitForSecondsRealtime sec;
-
-	private string LeadingZero(int n)
+	public class UIClock : MonoBehaviour
 	{
-		return null;
-	}
+		public TextMeshPro txt_clock;
 
-	private void OnEnable()
-	{
-	}
+		private DateTime time;
 
-	private void OnDisable()
-	{
-	}
+		private WaitForSecondsRealtime sec;
 
-	private IEnumerator Clock()
-	{
-		return null;
-	}
+		private string LeadingZero(int n)
+		{
+			return null;
+		}
 
-	public UIClock()
-		: base()
-	{
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private IEnumerator Clock()
+		{
+			return null;
+		}
+
+		public UIClock()
+			: base()
+		{
+		}
 	}
 }

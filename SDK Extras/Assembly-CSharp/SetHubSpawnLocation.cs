@@ -1,28 +1,31 @@
-using SLZ.Data.SaveData;
+using SLZ.SaveData;
 using UnityEngine;
 
-public class SetHubSpawnLocation : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public int location;
-
-	private static PlayerProgression p
+	public class SetHubSpawnLocation : MonoBehaviour
 	{
-		get
+		public int location;
+
+		private static PlayerProgression p
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	public void SetSpawnLocation()
-	{
-	}
+		public void SetSpawnLocation()
+		{
+		}
 
-	public void UnlockModKey()
-	{
-	}
+		public void UnlockModKey()
+		{
+		}
 
-	public SetHubSpawnLocation()
-		: base()
-	{
+		public SetHubSpawnLocation()
+			: base()
+		{
+		}
 	}
 }

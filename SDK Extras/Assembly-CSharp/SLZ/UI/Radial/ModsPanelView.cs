@@ -3,7 +3,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class ModsPanelView : PanelView
 	{

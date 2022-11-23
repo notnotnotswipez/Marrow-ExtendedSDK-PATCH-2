@@ -1,14 +1,17 @@
 using UnityEngine;
 
-[RequireComponent(typeof(RectTransform))]
-public class ResetRect : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	[RequireComponent(typeof(RectTransform))]
+	public class ResetRect : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public ResetRect()
-		: base()
-	{
+		public ResetRect()
+			: base()
+		{
+		}
 	}
 }

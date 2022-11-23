@@ -1,79 +1,82 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Manager_Circuit : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("Surge BOX")]
-	[Space(5f)]
-	[Tooltip("Assign a value if there is an object that functions like a fusebox")]
-	public SurgeBox FuseBoxRef;
-
-	[Space(5f)]
-	[Header("ELECTRONICS")]
-	[Tooltip("Used if you don't want a powerSource connected.")]
-	public bool isPowerSource;
-
-	[Tooltip("The minumum voltage required to power this circuit")]
-	public float MinimumVoltage;
-
-	public float TotalVoltage;
-
-	[Space(3f)]
-	public List<PowerSocket> PowerSockets;
-
-	public List<Powerable> Electronics;
-
-	[Space(10f)]
-	[Header("SPECIFIC POWERSOURCE")]
-	[Tooltip("Checked if you want it to only work with a specific Power Source.")]
-	public bool SpecificPSMode;
-
-	public bool hasPowerSources
+	public class Manager_Circuit : MonoBehaviour
 	{
-		get
+		[Space(5f)]
+		[Tooltip("Assign a value if there is an object that functions like a fusebox")]
+		[Header("Surge BOX")]
+		public SurgeBox FuseBoxRef;
+
+		[Tooltip("Used if you don't want a powerSource connected.")]
+		[Header("ELECTRONICS")]
+		[Space(5f)]
+		public bool isPowerSource;
+
+		[Tooltip("The minumum voltage required to power this circuit")]
+		public float MinimumVoltage;
+
+		public float TotalVoltage;
+
+		[Space(3f)]
+		public List<PowerSocket> PowerSockets;
+
+		public List<Powerable> Electronics;
+
+		[Tooltip("Checked if you want it to only work with a specific Power Source.")]
+		[Header("SPECIFIC POWERSOURCE")]
+		[Space(10f)]
+		public bool SpecificPSMode;
+
+		public bool hasPowerSources
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
 		}
-	}
 
-	public bool isInfinitePower
-	{
-		get
+		public bool isInfinitePower
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
 		}
-	}
 
-	public bool hasReqCharge
-	{
-		get
+		public bool hasReqCharge
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
 		}
-	}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public void CurrentOnOff(bool isOn)
-	{
-	}
+		public void CurrentOnOff(bool isOn)
+		{
+		}
 
-	public void DestroyedPowerable(Powerable obj)
-	{
-	}
+		public void DestroyedPowerable(Powerable obj)
+		{
+		}
 
-	private void OnDestroy()
-	{
-	}
+		private void OnDestroy()
+		{
+		}
 
-	public Manager_Circuit()
-		: base()
-	{
+		public Manager_Circuit()
+			: base()
+		{
+		}
 	}
 }

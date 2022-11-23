@@ -5,42 +5,45 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class ImplosionProjectile : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private LayerMask LayerFilter;
-
-	public Collider sphere;
-
-	public float implosionForceMultiplier;
-
-	public float implosionForceClamp;
-
-	private List<Rigidbody> allRBs;
-
-	private List<Rigidbody> filteredRBs;
-
-	public bool fire;
-
-	private void Awake()
+	public class ImplosionProjectile : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private LayerMask LayerFilter;
 
-	private void Update()
-	{
-	}
+		public Collider sphere;
 
-	private IEnumerator ImplosionCoroutine()
-	{
-		return null;
-	}
+		public float implosionForceMultiplier;
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		public float implosionForceClamp;
 
-	public ImplosionProjectile()
-		: base()
-	{
+		private List<Rigidbody> allRBs;
+
+		private List<Rigidbody> filteredRBs;
+
+		public bool fire;
+
+		private void Awake()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		private IEnumerator ImplosionCoroutine()
+		{
+			return null;
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		public ImplosionProjectile()
+			: base()
+		{
+		}
 	}
 }

@@ -1,12 +1,13 @@
+using SLZ.Props.Weapons;
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class GrapplingHook : Gun
 	{
 		[Space(20f)]
-		[Header("Grappling Hook Options")]
 		[SerializeField]
+		[Header("Grappling Hook Options")]
 		private LayerMask collisionLayers;
 
 		[SerializeField]

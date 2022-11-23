@@ -6,93 +6,96 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RadioManager : MonoBehaviour
+namespace SLZ.Props
 {
-	[Serializable]
-	public struct StationData
+	public class RadioManager : MonoBehaviour
 	{
-		public RadioStation stationOJ;
+		[Serializable]
+		public struct StationData
+		{
+			public RadioStation stationOJ;
 
-		public RadioSong currentSong;
+			public RadioSong currentSong;
 
-		public RadioSong alertOverride;
+			public RadioSong alertOverride;
 
-		public RadioSong queuedTrack;
+			public RadioSong queuedTrack;
 
-		public int currentTrackIndex;
+			public int currentTrackIndex;
 
-		public float currentRunningPosition;
-	}
+			public float currentRunningPosition;
+		}
 
-	[Serializable]
-	public class OnRadioOverrideEvent : UnityEvent<RadioSong>
-	{
-		public OnRadioOverrideEvent()
-			: base()
+		[Serializable]
+		public class OnRadioOverrideEvent : UnityEvent<RadioSong>
+		{
+			public OnRadioOverrideEvent()
+				: base()
+			{
+			}
+		}
+
+		public bool radioOn;
+
+		private static RadioManager _rmInstance;
+
+		public List<RadioPlayer> radios;
+
+		public List<RadioAnnouncement> radioAnnouncements;
+
+		public RadioStation[] stations;
+
+		[HideInInspector]
+		public List<StationData> stationDatas;
+
+		[HideInInspector]
+		public List<RadioPlayer> radioPlayers;
+
+		private StationData cur_stationData;
+
+		[SerializeField]
+		public OnRadioOverrideEvent onRadioOverrideEvent;
+
+		public static RadioManager RadioManagerInstance
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		private void Awake()
 		{
 		}
-	}
 
-	public bool radioOn;
+		private void OnDestroy()
+		{
+		}
 
-	private static RadioManager _rmInstance;
+		public void Update()
+		{
+		}
 
-	public List<RadioPlayer> radios;
+		private void IterateStationTime()
+		{
+		}
 
-	public List<RadioAnnouncement> radioAnnouncements;
+		public void PlayOverride(RadioSong overrideClip)
+		{
+		}
 
-	public RadioStation[] stations;
+		public void PlayAnnouncementOverride(RadioSong overrideClip, float delay)
+		{
+		}
 
-	[HideInInspector]
-	public List<StationData> stationDatas;
-
-	[HideInInspector]
-	public List<RadioPlayer> radioPlayers;
-
-	private StationData cur_stationData;
-
-	[SerializeField]
-	public OnRadioOverrideEvent onRadioOverrideEvent;
-
-	public static RadioManager RadioManagerInstance
-	{
-		get
+		private IEnumerator AnnouncementOverride(RadioSong overrideClip, float delay)
 		{
 			return null;
 		}
-	}
 
-	private void Awake()
-	{
-	}
-
-	private void OnDestroy()
-	{
-	}
-
-	public void Update()
-	{
-	}
-
-	private void IterateStationTime()
-	{
-	}
-
-	public void PlayOverride(RadioSong overrideClip)
-	{
-	}
-
-	public void PlayAnnouncementOverride(RadioSong overrideClip, float delay)
-	{
-	}
-
-	private IEnumerator AnnouncementOverride(RadioSong overrideClip, float delay)
-	{
-		return null;
-	}
-
-	public RadioManager()
-		: base()
-	{
+		public RadioManager()
+			: base()
+		{
+		}
 	}
 }

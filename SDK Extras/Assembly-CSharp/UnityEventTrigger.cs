@@ -2,11 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-[Serializable]
-public class UnityEventTrigger : UnityEvent<Collider>
+namespace SLZ.Utilities
 {
-	public UnityEventTrigger()
-		: base()
+	[Serializable]
+	public class UnityEventTrigger : UnityEvent<Collider>
 	{
+		public UnityEventTrigger()
+			: base()
+		{
+		}
 	}
 }

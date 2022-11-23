@@ -74,6 +74,7 @@ namespace SLZ.Props.Weapons
 
 		public float roundsPerMinute;
 
+		[Tooltip("Used if there's no projectile with a velocity. m/s")]
 		public float muzzleVelocity;
 
 		public FireMode fireMode;

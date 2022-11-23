@@ -5,49 +5,52 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class VignetteController : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private enum FadeType
+	public class VignetteController : MonoBehaviour
 	{
-		On = 0,
-		Off = 1
-	}
+		private enum FadeType
+		{
+			On = 0,
+			Off = 1
+		}
 
-	[SerializeField]
-	[HideInInspector]
-	private Renderer rend;
+		[HideInInspector]
+		[SerializeField]
+		private Renderer rend;
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public void FadeToFull()
-	{
-	}
+		public void FadeToFull()
+		{
+		}
 
-	public void FadeOn()
-	{
-	}
+		public void FadeOn()
+		{
+		}
 
-	public void FadeOn(float Time)
-	{
-	}
+		public void FadeOn(float Time)
+		{
+		}
 
-	public void FadeOff()
-	{
-	}
+		public void FadeOff()
+		{
+		}
 
-	public void FadeOff(float Time)
-	{
-	}
+		public void FadeOff(float Time)
+		{
+		}
 
-	private IEnumerator Fader(FadeType Fade, float FadeTime)
-	{
-		return null;
-	}
+		private IEnumerator Fader(FadeType Fade, float FadeTime)
+		{
+			return null;
+		}
 
-	public VignetteController()
-		: base()
-	{
+		public VignetteController()
+			: base()
+		{
+		}
 	}
 }

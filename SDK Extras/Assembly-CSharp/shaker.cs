@@ -5,52 +5,55 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public class shaker : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Range(0f, 1f)]
-	[SerializeField]
-	private float multiplier;
-
-	[SerializeField]
-	private Transform temptrans;
-
-	[HideInInspector]
-	[SerializeField]
-	private Rigidbody bodyRB;
-
-	private void Reset()
+	[RequireComponent(typeof(Rigidbody))]
+	public class shaker : MonoBehaviour
 	{
-	}
+		[Range(0f, 1f)]
+		[SerializeField]
+		private float multiplier;
 
-	public void TimedShake(float Shaketime)
-	{
-	}
+		[SerializeField]
+		private Transform temptrans;
 
-	public void TimedShake(float Shaketime, float Frequency, Quaternion Direction)
-	{
-	}
+		[SerializeField]
+		[HideInInspector]
+		private Rigidbody bodyRB;
 
-	public void TimedShake(float Shaketime, float Frequency, Quaternion Direction, Vector3 AxisAlignedIntensity)
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	public void ContinuousShake()
-	{
-	}
+		public void TimedShake(float Shaketime)
+		{
+		}
 
-	private IEnumerator TimedShakeCo(float Shaketime, float Frequency, Quaternion Direction, Vector3 AxisAlignedIntensity)
-	{
-		return null;
-	}
+		public void TimedShake(float Shaketime, float Frequency, Quaternion Direction)
+		{
+		}
 
-	private IEnumerator ContinuousShaking()
-	{
-		return null;
-	}
+		public void TimedShake(float Shaketime, float Frequency, Quaternion Direction, Vector3 AxisAlignedIntensity)
+		{
+		}
 
-	public shaker()
-		: base()
-	{
+		public void ContinuousShake()
+		{
+		}
+
+		private IEnumerator TimedShakeCo(float Shaketime, float Frequency, Quaternion Direction, Vector3 AxisAlignedIntensity)
+		{
+			return null;
+		}
+
+		private IEnumerator ContinuousShaking()
+		{
+			return null;
+		}
+
+		public shaker()
+			: base()
+		{
+		}
 	}
 }

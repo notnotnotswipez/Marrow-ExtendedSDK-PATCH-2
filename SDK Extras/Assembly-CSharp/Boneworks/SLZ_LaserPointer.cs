@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Boneworks
+namespace SLZ.Bonelab
 {
 	public class SLZ_LaserPointer : MonoBehaviour
 	{

@@ -1,17 +1,20 @@
 using System;
 using UnityEngine.Playables;
 
-[Serializable]
-public class ActionDirector
+namespace SLZ.Bonelab
 {
-	public string actionKey;
-
-	public PlayableDirector director;
-
-	public bool wasTriggered;
-
-	public ActionDirector()
-		: base()
+	[Serializable]
+	public class ActionDirector
 	{
+		public string actionKey;
+
+		public PlayableDirector director;
+
+		public bool wasTriggered;
+
+		public ActionDirector()
+			: base()
+		{
+		}
 	}
 }

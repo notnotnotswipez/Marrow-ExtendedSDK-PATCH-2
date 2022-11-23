@@ -143,8 +143,8 @@ namespace SLZ.Interaction
 		private Dictionary<Hand, GrabConfiguration> _grabConfig;
 
 		[EnumFlags]
-		[SerializeField]
 		[Header("BoxGrip Face Options")]
+		[SerializeField]
 		public Faces enabledFaces;
 
 		[SerializeField]
@@ -159,12 +159,12 @@ namespace SLZ.Interaction
 		[Tooltip("Defines the primary face for force grab orentation")]
 		private Faces forceGrabFace;
 
-		[Tooltip("Defines the secondary face for force grab orentation")]
 		[SerializeField]
+		[Tooltip("Defines the secondary face for force grab orentation")]
 		private Faces forceGrabTop;
 
-		[SerializeField]
 		[Header("References")]
+		[SerializeField]
 		public BoxCollider _boxCollider;
 
 		private Dictionary<Hand, HandToBoxGripState> boxHandStates;

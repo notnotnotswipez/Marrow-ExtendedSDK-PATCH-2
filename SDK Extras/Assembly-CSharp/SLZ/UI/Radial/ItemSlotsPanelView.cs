@@ -7,7 +7,7 @@ using SLZ.Player;
 using SLZ.Rig;
 using UnityEngine;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class ItemSlotsPanelView : PanelView
 	{

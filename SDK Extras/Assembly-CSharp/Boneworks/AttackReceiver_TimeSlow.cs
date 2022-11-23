@@ -2,7 +2,7 @@ using SLZ.Combat;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-namespace Boneworks
+namespace SLZ.Bonelab
 {
 	public class AttackReceiver_TimeSlow : MonoBehaviour, IAttackReceiver, IEventSystemHandler
 	{

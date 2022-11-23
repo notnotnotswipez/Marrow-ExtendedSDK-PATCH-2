@@ -1,31 +1,34 @@
 using UnityEngine;
 
-public class ConfigJointChangeViaCodeTester : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ConfigurableJoint joint;
-
-	public bool swapBodies;
-
-	private bool _lastSwapBodies;
-
-	private void Reset()
+	public class ConfigJointChangeViaCodeTester : MonoBehaviour
 	{
-	}
+		public ConfigurableJoint joint;
 
-	private void Awake()
-	{
-	}
+		public bool swapBodies;
 
-	private void Start()
-	{
-	}
+		private bool _lastSwapBodies;
 
-	private void Update()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	public ConfigJointChangeViaCodeTester()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		public ConfigJointChangeViaCodeTester()
+			: base()
+		{
+		}
 	}
 }

@@ -14,16 +14,16 @@ namespace SLZ.UI
 
 		public Transform spawnFromTransform;
 
-		[Header("MODULES")]
 		[Space(10f)]
+		[Header("MODULES")]
 		public GameObject ui_Core;
 
-		[Header("BUTTONS")]
 		[Space(10f)]
+		[Header("BUTTONS")]
 		public GameObject[] but_Compass;
 
-		[Header("SELECTION ")]
 		[Space(10f)]
+		[Header("SELECTION ")]
 		public AudioClip[] clips_Confirm;
 
 		public AudioClip[] clips_Deny;

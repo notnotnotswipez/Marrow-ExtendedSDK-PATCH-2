@@ -1,37 +1,40 @@
 using UnityEngine;
 
-public class TriggerSwitch : OnOffSwitch
+namespace SLZ.Bonelab
 {
-	public bool momentary;
-
-	public int layer;
-
-	public Collider col_Pin;
-
-	public float voltage;
-
-	private bool OnOff;
-
-	public GameObject[] send_Objects;
-
-	public void OnTriggerEnter(Collider other)
+	public class TriggerSwitch : OnOffSwitch
 	{
-	}
+		public bool momentary;
 
-	public void OnTriggerExit(Collider other)
-	{
-	}
+		public int layer;
 
-	private void CIRCUIT()
-	{
-	}
+		public Collider col_Pin;
 
-	private void NONCIRCUIT()
-	{
-	}
+		public float voltage;
 
-	public TriggerSwitch()
-		: base()
-	{
+		private bool OnOff;
+
+		public GameObject[] send_Objects;
+
+		public void OnTriggerEnter(Collider other)
+		{
+		}
+
+		public void OnTriggerExit(Collider other)
+		{
+		}
+
+		private void CIRCUIT()
+		{
+		}
+
+		private void NONCIRCUIT()
+		{
+		}
+
+		public TriggerSwitch()
+			: base()
+		{
+		}
 	}
 }

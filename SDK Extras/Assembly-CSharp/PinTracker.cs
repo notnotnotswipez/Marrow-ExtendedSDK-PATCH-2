@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class PinTracker : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public LayerMask layersToIgnore;
-
-	public BowlingResetMechanism pinManager;
-
-	private void OnCollisionEnter(Collision collision)
+	public class PinTracker : MonoBehaviour
 	{
-	}
+		public LayerMask layersToIgnore;
 
-	public PinTracker()
-		: base()
-	{
+		public BowlingResetMechanism pinManager;
+
+		private void OnCollisionEnter(Collision collision)
+		{
+		}
+
+		public PinTracker()
+			: base()
+		{
+		}
 	}
 }

@@ -1,32 +1,35 @@
 using SLZ.AI;
 using UnityEngine;
 
-public class AllianceTester : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public TriggerRefProxy[] proxies;
-
-	public TriggerRefProxy proxyA;
-
-	public TriggerRefProxy proxyB;
-
-	private bool result;
-
-	public void Start()
+	public class AllianceTester : MonoBehaviour
 	{
-	}
+		public TriggerRefProxy[] proxies;
 
-	[ContextMenu("FindAllProxies")]
-	public void FindAllProxies()
-	{
-	}
+		public TriggerRefProxy proxyA;
 
-	[ContextMenu("TestAlliance")]
-	public void TestAlliance()
-	{
-	}
+		public TriggerRefProxy proxyB;
 
-	public AllianceTester()
-		: base()
-	{
+		private bool result;
+
+		public void Start()
+		{
+		}
+
+		[ContextMenu("FindAllProxies")]
+		public void FindAllProxies()
+		{
+		}
+
+		[ContextMenu("TestAlliance")]
+		public void TestAlliance()
+		{
+		}
+
+		public AllianceTester()
+			: base()
+		{
+		}
 	}
 }

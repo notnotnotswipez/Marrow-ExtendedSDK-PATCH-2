@@ -6,29 +6,32 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class animatedText : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float letterPaused;
-
-	public string message;
-
-	public Text textComp;
-
-	private void Start()
+	public class animatedText : MonoBehaviour
 	{
-	}
+		public float letterPaused;
 
-	private void OnEnable()
-	{
-	}
+		public string message;
 
-	private IEnumerator TypeText()
-	{
-		return null;
-	}
+		public Text textComp;
 
-	public animatedText()
-		: base()
-	{
+		private void Start()
+		{
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private IEnumerator TypeText()
+		{
+			return null;
+		}
+
+		public animatedText()
+			: base()
+		{
+		}
 	}
 }

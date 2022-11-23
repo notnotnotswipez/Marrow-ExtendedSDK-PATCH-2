@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ.Environment
+namespace SLZ.Bonelab
 {
 	public class Nail : MonoBehaviour
 	{

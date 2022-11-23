@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using SLZ.Marrow.Input;
 using UnityEngine;
 
 namespace SLZ.Rig
@@ -14,6 +15,8 @@ namespace SLZ.Rig
 		private Vector3 _localTrackPos;
 
 		private Quaternion _localTrackRot;
+
+		private bool _noFingies;
 
 		private void DrawSkeletonHand(Vector3[] positions, Quaternion[] rotations)
 		{
@@ -37,6 +40,14 @@ namespace SLZ.Rig
 		}
 
 		private void ProcessFingers()
+		{
+		}
+
+		private void ProcessHandTrackedFingers(XRController controller, XRHand hand)
+		{
+		}
+
+		private void ProcessNonHandTrackedFingers(XRController controller)
 		{
 		}
 

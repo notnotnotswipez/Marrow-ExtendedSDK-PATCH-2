@@ -104,7 +104,7 @@ namespace SLZ.VRMK
 		{
 		}
 
-		public void OnDrawGizmosSelected()
+		public override void OnDrawGizmosSelected()
 		{
 		}
 

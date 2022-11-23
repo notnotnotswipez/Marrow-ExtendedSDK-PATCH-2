@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class SceneGravity : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Vector3 GravityVector;
-
-	private Vector3 PreloadedGrav;
-
-	private void Start()
+	public class SceneGravity : MonoBehaviour
 	{
-	}
+		public Vector3 GravityVector;
 
-	private void OnDestroy()
-	{
-	}
+		private Vector3 PreloadedGrav;
 
-	public SceneGravity()
-		: base()
-	{
+		private void Start()
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
+		public SceneGravity()
+			: base()
+		{
+		}
 	}
 }

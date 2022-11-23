@@ -1,7 +1,7 @@
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Utilities
 {
 	public class PrefabSpawner : MonoBehaviour
 	{

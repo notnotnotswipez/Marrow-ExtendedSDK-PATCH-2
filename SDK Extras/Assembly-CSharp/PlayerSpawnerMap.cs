@@ -10,36 +10,39 @@ using SLZ.Marrow.Proxy;
 using SLZ.Rig;
 using UnityEngine;
 
-public class PlayerSpawnerMap : BoneProxyMap<PlayerSpawner, RigManager>
+namespace SLZ.Mods
 {
-	public RigManager rigManager;
-
-	public bool generating;
-
-	public override void MapMethods()
+	public class PlayerSpawnerMap : BoneProxyMap<PlayerSpawner, RigManager>
 	{
-	}
+		public RigManager rigManager;
 
-	protected override void MapProperties()
-	{
-	}
+		public bool generating;
 
-	public override void GenerateReal()
-	{
-	}
+		public override void MapMethods()
+		{
+		}
 
-	public UniTaskVoid SpawnPlayer()
-	{
-		return default(UniTaskVoid);
-	}
+		protected override void MapProperties()
+		{
+		}
 
-	public IEnumerator FindRigManager()
-	{
-		return null;
-	}
+		public override void GenerateReal()
+		{
+		}
 
-	public PlayerSpawnerMap()
-		: base()
-	{
+		public UniTaskVoid SpawnPlayer()
+		{
+			return default(UniTaskVoid);
+		}
+
+		public IEnumerator FindRigManager()
+		{
+			return null;
+		}
+
+		public PlayerSpawnerMap()
+			: base()
+		{
+		}
 	}
 }

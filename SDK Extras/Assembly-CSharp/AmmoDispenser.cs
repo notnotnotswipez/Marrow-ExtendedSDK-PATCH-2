@@ -3,60 +3,63 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ;
+using SLZ.Utilities;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class AmmoDispenser : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public TextMeshPro[] txt_ammoDisplay;
-
-	public bool[] count_infinite;
-
-	public int[] count_ammo;
-
-	public PrefabSpawner[] spawn_ammo;
-
-	public PrefabSpawner[] spawn_fx;
-
-	public bool makeItRain;
-
-	public TextMeshPro txt_makeItRain;
-
-	public AudioClip[] clip_spawn;
-
-	public AudioClip[] clip_deny;
-
-	public AudioMixerGroup mixerGroup;
-
-	public void Start()
+	public class AmmoDispenser : MonoBehaviour
 	{
-	}
+		public TextMeshPro[] txt_ammoDisplay;
 
-	public void SPAWN_AMMO(int type)
-	{
-	}
+		public bool[] count_infinite;
 
-	public IEnumerator RAINAMMO(int type)
-	{
-		return null;
-	}
+		public int[] count_ammo;
 
-	public void TOGGLERAIN()
-	{
-	}
+		public PrefabSpawner[] spawn_ammo;
 
-	public void TEXTDISPLAY()
-	{
-	}
+		public PrefabSpawner[] spawn_fx;
 
-	public void AUDIOALERT(bool positive = false, int type = 0)
-	{
-	}
+		public bool makeItRain;
 
-	public AmmoDispenser()
-		: base()
-	{
+		public TextMeshPro txt_makeItRain;
+
+		public AudioClip[] clip_spawn;
+
+		public AudioClip[] clip_deny;
+
+		public AudioMixerGroup mixerGroup;
+
+		public void Start()
+		{
+		}
+
+		public void SPAWN_AMMO(int type)
+		{
+		}
+
+		public IEnumerator RAINAMMO(int type)
+		{
+			return null;
+		}
+
+		public void TOGGLERAIN()
+		{
+		}
+
+		public void TEXTDISPLAY()
+		{
+		}
+
+		public void AUDIOALERT(bool positive = false, int type = 0)
+		{
+		}
+
+		public AmmoDispenser()
+			: base()
+		{
+		}
 	}
 }

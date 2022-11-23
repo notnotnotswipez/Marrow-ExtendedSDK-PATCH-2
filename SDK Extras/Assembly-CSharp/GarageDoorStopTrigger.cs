@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class GarageDoorStopTrigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public GarageDoorPowerable m_gDoorRef;
-
-	public GameObject SlatsIgnore;
-
-	private void Awake()
+	public class GarageDoorStopTrigger : MonoBehaviour
 	{
-	}
+		public GarageDoorPowerable m_gDoorRef;
 
-	private void OnTriggerStay(Collider other)
-	{
-	}
+		public GameObject SlatsIgnore;
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void OnTriggerExit(Collider other)
-	{
-	}
+		private void OnTriggerStay(Collider other)
+		{
+		}
 
-	public GarageDoorStopTrigger()
-		: base()
-	{
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+		}
+
+		public GarageDoorStopTrigger()
+			: base()
+		{
+		}
 	}
 }

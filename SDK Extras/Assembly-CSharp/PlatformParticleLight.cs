@@ -1,17 +1,24 @@
 using UnityEngine;
 
-[RequireComponent(typeof(ParticleSystem))]
-public class PlatformParticleLight : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private ParticleSystem ps;
-
-	private void Reset()
+	[RequireComponent(typeof(ParticleSystem))]
+	public class PlatformParticleLight : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private ParticleSystem ps;
 
-	public PlatformParticleLight()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		private void Reset()
+		{
+		}
+
+		public PlatformParticleLight()
+			: base()
+		{
+		}
 	}
 }

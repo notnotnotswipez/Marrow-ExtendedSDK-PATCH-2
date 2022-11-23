@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using PuppetMasta;
 using SLZ.AI;
+using SLZ.Bonelab;
+using SLZ.Data;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -44,8 +47,8 @@ namespace SLZ.Zones
 
 		public modes mode;
 
-		[Header("Emitter Settings")]
 		[Tooltip("Maximum that can be spawned ")]
+		[Header("Emitter Settings")]
 		public int max;
 
 		[Tooltip("Maximum spawns that can be alive before spawning stops (0 = Infinity)")]
@@ -92,6 +95,8 @@ namespace SLZ.Zones
 
 		public Action<ZoneSpawner, AIBrain, EnemyProfile, bool> onSpawnNPCDelegate;
 
+		public Action<BehaviourBaseNav, Rigidbody> OnSpawn_NPC_Launcher;
+
 		private GameObject _playerObject;
 
 		private int _dead;
@@ -100,8 +105,8 @@ namespace SLZ.Zones
 
 		private Coroutine _emitterCoroutine;
 
-		[Header("Arena")]
 		[Tooltip("Used for explicit arena spawns only, useful for enemies spawned on ziplines or at heights, disables damage from collision for x seconds after spawn")]
+		[Header("Arena")]
 		[SerializeField]
 		private float blockCollisionDelay;
 
@@ -198,6 +203,10 @@ namespace SLZ.Zones
 		}
 
 		public void StopEmitterSpawns()
+		{
+		}
+
+		public void ExplicitFriendlySpawn(Vector3 spawnPos, Quaternion spawnRot, EnemyProfile enemyProfile, BaseEnemyConfig baseConfig = default(BaseEnemyConfig), bool autoDespawn = false, float colDelay = 0f)
 		{
 		}
 

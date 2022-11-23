@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	public class PlayerUnlocks : INotifyPropertyChanging, INotifyPropertyChanged
 	{

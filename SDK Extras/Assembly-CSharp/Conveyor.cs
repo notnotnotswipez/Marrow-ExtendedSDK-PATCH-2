@@ -2,50 +2,60 @@ using SLZ.Interaction;
 using SLZ.Zones;
 using UnityEngine;
 
-public class Conveyor : ZoneItem
+namespace SLZ.Bonelab
 {
-	private enum Mode
+	public class Conveyor : ZoneItem
 	{
-		zTranslation = 0,
-		xRotation = 1
-	}
+		private enum Mode
+		{
+			zTranslation = 0,
+			xRotation = 1
+		}
 
-	public Rigidbody primaryRb;
+		public Rigidbody primaryRb;
 
-	public ConfigurableJoint primaryJoint;
+		public ConfigurableJoint primaryJoint;
 
-	public float resetHalfThreshold;
+		public float resetHalfThreshold;
 
-	[SerializeField]
-	private Mode mode;
+		[SerializeField]
+		private Mode mode;
 
-	public float velocity;
+		public float velocity;
 
-	public InteractableHost host;
+		public InteractableHost host;
 
-	private Vector3 _initialLocalPos;
+		private Vector3 _initialLocalPos;
 
-	private Quaternion _initialLocalRot;
+		private Quaternion _initialLocalRot;
 
-	private void Reset()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public void OnFixedUpdate()
-	{
-	}
+		public void OnFixedUpdate()
+		{
+		}
 
-	private void FixedUpdate()
-	{
-	}
+		private void FixedUpdate()
+		{
+		}
 
+		public override void OnZoneDisabled(GameObject playerObject)
+		{
+		}
 
-	public Conveyor()
-		: base()
-	{
+		public override void OnZoneEnabled(GameObject playerObject)
+		{
+		}
+
+		public Conveyor()
+			: base()
+		{
+		}
 	}
 }

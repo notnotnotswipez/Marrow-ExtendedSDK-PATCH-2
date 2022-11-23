@@ -18,6 +18,10 @@ namespace SLZ.Bonelab
 
 		protected double LevelLoadBufferTime { get; set; }
 
+		public override void Awake()
+		{
+		}
+
 		public void SetHubSpawnLocation(int hubSpawnLocation)
 		{
 		}

@@ -1,56 +1,60 @@
-using SLZ.Data.SaveData;
+
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class DebugCheats : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public UnityEvent cheatsOn;
-
-	public UnityEvent cheatsOff;
-
-	public GenericCrateReference crate_Nimbus;
-
-	public GenericCrateReference crate_SpawnGun;
-
-	private static PlayerProgression Progression
+	public class DebugCheats : MonoBehaviour
 	{
-		get
+		public UnityEvent cheatsOn;
+
+		public UnityEvent cheatsOff;
+
+		public GenericCrateReference crate_Nimbus;
+
+		public GenericCrateReference crate_SpawnGun;
+
+		private static PlayerProgression Progression
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private static PlayerUnlocks u
-	{
-		get
+		private static PlayerUnlocks u
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	private void DebugCheatModeStuff(bool shouldCheck = true)
-	{
-	}
+		private void DebugCheatModeStuff(bool shouldCheck = true)
+		{
+		}
 
-	public void BIGCHEAT()
-	{
-	}
+		public void BIGCHEAT()
+		{
+		}
 
-	public DebugCheats()
-		: base()
-	{
+		public DebugCheats()
+			: base()
+		{
+		}
 	}
 }

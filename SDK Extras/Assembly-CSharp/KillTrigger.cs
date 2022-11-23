@@ -1,32 +1,35 @@
 using SLZ.AI;
 using UnityEngine;
 
-public class KillTrigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Collider m_Collider;
-
-	public bool isKillingPlayer;
-
-	public bool isKillingNPCs;
-
-	private void Start()
+	public class KillTrigger : MonoBehaviour
 	{
-	}
+		private Collider m_Collider;
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		public bool isKillingPlayer;
 
-	private void KillNPC(TriggerRefProxy proxy)
-	{
-	}
+		public bool isKillingNPCs;
 
-	private void KillPlayer(TriggerRefProxy proxy)
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public KillTrigger()
-		: base()
-	{
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void KillNPC(TriggerRefProxy proxy)
+		{
+		}
+
+		private void KillPlayer(TriggerRefProxy proxy)
+		{
+		}
+
+		public KillTrigger()
+			: base()
+		{
+		}
 	}
 }

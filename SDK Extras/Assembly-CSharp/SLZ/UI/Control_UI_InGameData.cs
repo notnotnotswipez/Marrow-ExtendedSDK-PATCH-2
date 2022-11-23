@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
-using SLZ.Data.SaveData;
+using SLZ.Bonelab;
 using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
+using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -63,8 +64,6 @@ namespace SLZ.UI
 
 		public TextMeshProUGUI txt_ShadowCascade;
 
-		public TextMeshProUGUI txt_foveatedRendering;
-
 		public TextMeshProUGUI txt_shadowQuality;
 
 		public TextMeshProUGUI txt_physicsUpdate;
@@ -80,6 +79,34 @@ namespace SLZ.UI
 		public GameObject button_graphicsUp;
 
 		public Scrollbar scroller;
+
+		[Header("UI DISPLAY - Variable Rate Shading")]
+		public GameObject AdvFovSettingsMenuButton;
+
+		public GameObject SimpleFovSettings;
+
+		public TextMeshProUGUI txt_simplefoveatedQualityPreset;
+
+		[Space(5f)]
+		public TextMeshProUGUI txt_foveatedRendering;
+
+		public TextMeshProUGUI txt_foveatedQualityPreset;
+
+		public TextMeshProUGUI txt_foveatedRadius;
+
+		public TextMeshProUGUI txt_foveatedAnisotropy;
+
+		public TextMeshProUGUI txt_foveatedInnerRatio;
+
+		public TextMeshProUGUI txt_foveatedRDMOuterRadius;
+
+		public TextMeshProUGUI txt_foveatedRDMInnerRatio;
+
+		public GameObject[] CustomFoveatedSettings;
+
+		public GameObject[] CustomVRSSettings;
+
+		public GameObject[] CustomRDMSettings;
 
 		[Header("UI DISPLAY - Spectator")]
 		public TextMeshProUGUI txt_SpectatorCam;
@@ -225,6 +252,18 @@ namespace SLZ.UI
 		}
 
 		public void BUTTON_foveatedRendering(int buttonNumber)
+		{
+		}
+
+		public void BUTTON_foveatedPreset(int buttonNumber)
+		{
+		}
+
+		public void BUTTON_IncreaseFoveatedRadius(int radius)
+		{
+		}
+
+		public void BUTTON_DecreaseFoveatedRadius(int radius)
 		{
 		}
 

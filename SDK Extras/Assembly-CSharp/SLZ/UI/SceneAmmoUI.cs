@@ -1,6 +1,6 @@
 using System;
 using System.Runtime.InteropServices;
-using SLZ.Data.SaveData;
+using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 

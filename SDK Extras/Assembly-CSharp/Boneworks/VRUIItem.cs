@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Boneworks
+namespace SLZ.Bonelab
 {
 	[RequireComponent(typeof(RectTransform))]
 	public class VRUIItem : MonoBehaviour

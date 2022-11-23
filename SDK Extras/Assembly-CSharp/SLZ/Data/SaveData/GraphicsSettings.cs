@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 using JetBrains.Annotations;
 using Newtonsoft.Json;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	public sealed class GraphicsSettings : INotifyPropertyChanging, INotifyPropertyChanged
 	{
@@ -33,6 +33,14 @@ namespace SLZ.Data.SaveData
 		private SettingLevel _volumetrics;
 
 		private int _LODBias;
+
+		private int _FoveatedOuterRadius;
+
+		private int _FoveatedInnerRatio;
+
+		private int _FoveatedSamplingAnisotropy;
+
+		private bool _EnableFoveatedRenderingMenu;
 
 		[JsonProperty("graphics_quality")]
 		public GraphicsQuality GraphicsQuality
@@ -184,6 +192,54 @@ namespace SLZ.Data.SaveData
 			get
 			{
 				return default(int);
+			}
+			set
+			{
+			}
+		}
+
+		[JsonProperty("FoveatedOuterRadius")]
+		public int FoveatedOuterRadius
+		{
+			get
+			{
+				return default(int);
+			}
+			set
+			{
+			}
+		}
+
+		[JsonProperty("FoveatedInnerRatio")]
+		public int FoveatedInnerRatio
+		{
+			get
+			{
+				return default(int);
+			}
+			set
+			{
+			}
+		}
+
+		[JsonProperty("FoveatedSamplingAnisotropy")]
+		public int FoveatedSamplingAnisotropy
+		{
+			get
+			{
+				return default(int);
+			}
+			set
+			{
+			}
+		}
+
+		[JsonProperty("EnableFoveatedRenderingMenu")]
+		public bool EnableFoveatedRenderingMenu
+		{
+			get
+			{
+				return default(bool);
 			}
 			set
 			{

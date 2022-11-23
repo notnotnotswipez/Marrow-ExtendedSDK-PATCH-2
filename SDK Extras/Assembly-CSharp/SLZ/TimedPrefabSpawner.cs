@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Utilities
 {
 	public class TimedPrefabSpawner : MonoBehaviour
 	{
@@ -14,12 +14,12 @@ namespace SLZ
 		[Tooltip("Spawnable")]
 		private Spawnable spawnable;
 
-		[Tooltip("Spawn Interval")]
 		[SerializeField]
+		[Tooltip("Spawn Interval")]
 		private float spawnInterval;
 
-		[Tooltip("Ignore Colliders")]
 		[SerializeField]
+		[Tooltip("Ignore Colliders")]
 		private Collider[] ignoreColliders;
 
 		private IEnumerator coroutine;

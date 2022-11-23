@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
-namespace UnityEngine.EventSystems
+namespace SLZ.UI
 {
 	public abstract class VRInputModule : BaseInputModule
 	{

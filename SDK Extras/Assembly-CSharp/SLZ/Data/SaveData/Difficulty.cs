@@ -1,7 +1,7 @@
 using Newtonsoft.Json;
 using Newtonsoft.Json.Converters;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	[JsonConverter(typeof(StringEnumConverter))]
 	public enum Difficulty : sbyte

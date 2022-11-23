@@ -1,7 +1,7 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-namespace SLZ.Environment
+namespace SLZ.Bonelab
 {
 	public class JointSleeper : MonoBehaviour
 	{

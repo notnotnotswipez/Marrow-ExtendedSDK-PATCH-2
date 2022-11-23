@@ -6,22 +6,25 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GenericWaitForForwardEvent : MonoBehaviour
+namespace SLZ.Utilities
 {
-	[SerializeField]
-	private UnityEvent ForwardEvent;
-
-	public void FowardEvents(float delay)
+	public class GenericWaitForForwardEvent : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private UnityEvent ForwardEvent;
 
-	private IEnumerator CoDelayForward(float delay)
-	{
-		return null;
-	}
+		public void FowardEvents(float delay)
+		{
+		}
 
-	public GenericWaitForForwardEvent()
-		: base()
-	{
+		private IEnumerator CoDelayForward(float delay)
+		{
+			return null;
+		}
+
+		public GenericWaitForForwardEvent()
+			: base()
+		{
+		}
 	}
 }

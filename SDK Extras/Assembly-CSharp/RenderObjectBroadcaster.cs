@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class RenderObjectBroadcaster : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public UnityEvent RenderEvent;
-
-	private void OnRenderObject()
+	public class RenderObjectBroadcaster : MonoBehaviour
 	{
-	}
+		public UnityEvent RenderEvent;
 
-	public RenderObjectBroadcaster()
-		: base()
-	{
+		private void OnRenderObject()
+		{
+		}
+
+		public RenderObjectBroadcaster()
+			: base()
+		{
+		}
 	}
 }

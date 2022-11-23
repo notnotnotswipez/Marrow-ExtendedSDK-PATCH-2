@@ -1,6 +1,6 @@
 using System.Runtime.InteropServices;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	public static class ProgressionHelper
 	{

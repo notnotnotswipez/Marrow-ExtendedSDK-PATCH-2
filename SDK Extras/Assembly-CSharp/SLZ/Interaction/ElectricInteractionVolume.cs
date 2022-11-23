@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace SLZ.Interaction
+namespace SLZ.Bonelab
 {
 	public class ElectricInteractionVolume : InteractionVolume
 	{
@@ -24,9 +25,9 @@ namespace SLZ.Interaction
 
 		private bool m_isElectricInserted;
 
-		[Tooltip("The type of electronic this object takes")]
 		[Space(10f)]
 		[SerializeField]
+		[Tooltip("The type of electronic this object takes")]
 		private List<PowerSourceType> m_acceptedTypes;
 
 		private PowerSocket m_powerSock;

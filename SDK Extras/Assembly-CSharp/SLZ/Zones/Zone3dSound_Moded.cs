@@ -43,8 +43,8 @@ namespace SLZ.Zones
 		[Tooltip("Higher number fades faster")]
 		public float fadeSpeed;
 
-		[Tooltip("Radius of min sphere")]
 		[Range(0.1f, 10f)]
+		[Tooltip("Radius of min sphere")]
 		public float sourceRadius;
 
 		private bool loop;

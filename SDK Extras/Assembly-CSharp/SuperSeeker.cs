@@ -1,76 +1,80 @@
 using System.Runtime.InteropServices;
+using SLZ.AI;
 using SLZ.Marrow.Utilities;
 using SLZ.Rig;
 using SLZ.Zones;
 using UnityEngine;
 
-public class SuperSeeker : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private static ComponentCache<SuperSeeker> _cache;
-
-	[SerializeField]
-	private GameObject targetObj;
-
-	public RigManager rigManager;
-
-	private bool scaleChild;
-
-	private float scaleFactor;
-
-	[SerializeField]
-	private GameObject childObj;
-
-	public ZoneSpawner spawner;
-
-	[SerializeField]
-	private AIManager aiBrain;
-
-	public static ComponentCache<SuperSeeker> Cache
+	public class SuperSeeker : MonoBehaviour
 	{
-		get
+		private static ComponentCache<SuperSeeker> _cache;
+
+		[SerializeField]
+		private GameObject targetObj;
+
+		public RigManager rigManager;
+
+		private bool scaleChild;
+
+		private float scaleFactor;
+
+		[SerializeField]
+		private GameObject childObj;
+
+		public ZoneSpawner spawner;
+
+		[SerializeField]
+		private AIManager aiBrain;
+
+		public static ComponentCache<SuperSeeker> Cache
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	public void Awake()
-	{
-	}
+		public void Awake()
+		{
+		}
 
-	public void SubToSpawner()
-	{
-	}
+		public void SubToSpawner()
+		{
+		}
 
-	public void OnDisable()
-	{
-	}
+		public void OnDisable()
+		{
+		}
 
-	private void OnSpawn(GameObject npcObj, GameObject playerObj)
-	{
-	}
+		private void OnSpawn(GameObject npcObj, GameObject playerObj)
+		{
+		}
 
-	private void OnSpawnerDeath()
-	{
-	}
+		private void OnSpawnerDeath()
+		{
+		}
 
-	private void OnDespawn(GameObject npcObj)
-	{
-	}
+		private void OnDespawn(GameObject npcObj)
+		{
+		}
 
-	public void SetSeekerTarget(GameObject targ, GameObject playerObj = default(GameObject))
-	{
-	}
+		public void SetSeekerTarget(GameObject targ, GameObject playerObj = default(GameObject))
+		{
+		}
 
-	public void SeekCompletion()
-	{
-	}
+		public void SeekCompletion()
+		{
+		}
 
-	public void FixedUpdate()
-	{
-	}
+		public void FixedUpdate()
+		{
+		}
 
-	public SuperSeeker()
-		: base()
-	{
+		public SuperSeeker()
+			: base()
+		{
+		}
 	}
 }

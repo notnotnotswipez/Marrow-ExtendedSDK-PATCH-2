@@ -1,17 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class HubModule_AvatarSelect : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	public UnityEvent onConfirm;
-
-	public void CONFIRM()
+	public class HubModule_AvatarSelect : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		public UnityEvent onConfirm;
 
-	public HubModule_AvatarSelect()
-		: base()
-	{
+		public void CONFIRM()
+		{
+		}
+
+		public HubModule_AvatarSelect()
+			: base()
+		{
+		}
 	}
 }

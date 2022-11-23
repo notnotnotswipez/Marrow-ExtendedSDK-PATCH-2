@@ -8,45 +8,48 @@ using SLZ.Marrow.Data;
 using SLZ.Player;
 using UnityEngine;
 
-public class DefaultInventoryLoadout : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Serializable]
-	public struct SlotSpawnPair
+	public class DefaultInventoryLoadout : MonoBehaviour
 	{
-		public string slotName;
-
-		public Spawnable spawnable;
-
-		public SlotSpawnPair(string slotName, Spawnable spawnable)
+		[Serializable]
+		public struct SlotSpawnPair
 		{
-			this.spawnable = default(Spawnable);
-			this.slotName = default(string);
+			public string slotName;
+
+			public Spawnable spawnable;
+
+			public SlotSpawnPair(string slotName, Spawnable spawnable)
+			{
+				this.spawnable = default(Spawnable);
+				this.slotName = default(string);
+			}
 		}
-	}
 
-	public Inventory inventory;
+		public Inventory inventory;
 
-	public SlotSpawnPair[] spawnInSlotData;
+		public SlotSpawnPair[] spawnInSlotData;
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public void Reset()
-	{
-	}
+		public void Reset()
+		{
+		}
 
-	private void OnGameReady()
-	{
-	}
+		private void OnGameReady()
+		{
+		}
 
-	private UniTaskVoid SpawnInSlotsAsync()
-	{
-		return default(UniTaskVoid);
-	}
+		private UniTaskVoid SpawnInSlotsAsync()
+		{
+			return default(UniTaskVoid);
+		}
 
-	public DefaultInventoryLoadout()
-		: base()
-	{
+		public DefaultInventoryLoadout()
+			: base()
+		{
+		}
 	}
 }

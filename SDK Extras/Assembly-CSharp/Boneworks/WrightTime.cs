@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace Boneworks
+namespace SLZ.Bonelab
 {
 	public class WrightTime : MonoBehaviour
 	{

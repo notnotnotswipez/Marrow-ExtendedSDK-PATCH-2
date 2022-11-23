@@ -48,6 +48,8 @@ namespace SLZ.Props.Weapons
 		[HideInInspector]
 		public bool isMagazineInserted;
 
+		public bool ignoreSecondBulletSpawn;
+
 		public static ComponentCache<Magazine> Cache
 		{
 			get

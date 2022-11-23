@@ -1,4 +1,6 @@
 using System;
+using SLZ.Bonelab;
+using SLZ.Data;
 using SLZ.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;

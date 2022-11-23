@@ -17,8 +17,8 @@ namespace SLZ.Bonelab
 		[Tooltip("Spawn point location for item held in right hand when saving partial progress")]
 		public Transform rightHandItem;
 
-		[Header("Spawners deactive all previous spawners")]
 		[Tooltip("Additional Spawners to be disabled on progression")]
+		[Header("Spawners deactive all previous spawners")]
 		public ZoneSpawner[] spawners;
 
 		[Tooltip("Game Objects to be disabled on this progression point")]

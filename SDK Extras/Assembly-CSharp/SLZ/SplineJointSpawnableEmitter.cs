@@ -6,7 +6,7 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public class SplineJointSpawnableEmitter : SplineEntity
 	{

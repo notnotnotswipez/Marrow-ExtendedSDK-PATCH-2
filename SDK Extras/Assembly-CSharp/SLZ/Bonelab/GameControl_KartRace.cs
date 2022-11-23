@@ -1,8 +1,9 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using System.Threading;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Warehouse;
@@ -96,11 +97,19 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GenericCrateReference unlockCrate;
 
-		[FormerlySerializedAs("avatarGatcha")]
 		[SerializeField]
+		[FormerlySerializedAs("avatarGatcha")]
 		private GameObject avatarGacha;
 
-		private CancellationTokenSource lapTimerCTS;
+		private Coroutine timerRoutine;
+
+		public override void Awake()
+		{
+		}
+
+		public override void Start()
+		{
+		}
 
 		public void STARTRACE()
 		{
@@ -122,9 +131,9 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private UniTaskVoid StartTimer()
+		private IEnumerator StartTimer()
 		{
-			return default(UniTaskVoid);
+			return null;
 		}
 
 		public void WIPE_PB()
@@ -150,6 +159,10 @@ namespace SLZ.Bonelab
 		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
 		{
 			return default(UniTaskVoid);
+		}
+
+		public override void DoLevelComplete()
+		{
 		}
 
 		private void ButtonsSetup()

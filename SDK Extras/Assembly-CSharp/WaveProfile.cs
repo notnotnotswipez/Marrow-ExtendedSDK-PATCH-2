@@ -1,39 +1,43 @@
 using System;
 using System.Collections.Generic;
+using SLZ.Data;
 
-[Serializable]
-public class WaveProfile
+namespace SLZ.Bonelab
 {
-	public bool showWave;
-
-	public bool showEnemies;
-
-	public bool showFriendlies;
-
-	public int maxConcurrent;
-
-	public List<EnemyProfile> enemyProfilesList;
-
-	public List<EnemyProfile> friendlyProfileList;
-
-	public int hoiPoiChance;
-
-	public bool showWaveLootItems;
-
-	public List<ArenaLootItem> lootItems;
-
-	public int bulletsPerEnemy;
-
-	public int lightBulletAmount;
-
-	public int medBulletAmount;
-
-	public int heavyBulletAmount;
-
-	public bool isProceduralWave;
-
-	public WaveProfile()
-		: base()
+	[Serializable]
+	public class WaveProfile
 	{
+		public bool showWave;
+
+		public bool showEnemies;
+
+		public bool showFriendlies;
+
+		public int maxConcurrent;
+
+		public List<EnemyProfile> enemyProfilesList;
+
+		public List<EnemyProfile> friendlyProfileList;
+
+		public int hoiPoiChance;
+
+		public bool showWaveLootItems;
+
+		public List<ArenaLootItem> lootItems;
+
+		public int bulletsPerEnemy;
+
+		public int lightBulletAmount;
+
+		public int medBulletAmount;
+
+		public int heavyBulletAmount;
+
+		public bool isProceduralWave;
+
+		public WaveProfile()
+			: base()
+		{
+		}
 	}
 }

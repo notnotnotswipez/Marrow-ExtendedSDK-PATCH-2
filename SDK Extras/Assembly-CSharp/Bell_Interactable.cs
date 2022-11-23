@@ -7,128 +7,131 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Bell_Interactable : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private enum MoveState
+	public class Bell_Interactable : MonoBehaviour
 	{
-		UP = 0,
-		DOWN = 1,
-		MOVING_UP = 2,
-		MOVING_DOWN = 3
-	}
+		[SerializeField]
+		private enum MoveState
+		{
+			UP = 0,
+			DOWN = 1,
+			MOVING_UP = 2,
+			MOVING_DOWN = 3
+		}
 
-	[SerializeField]
-	private bool isVisDebug;
+		[SerializeField]
+		private bool isVisDebug;
 
-	public bool isReady;
+		public bool isReady;
 
-	[SerializeField]
-	private MoveState moveState;
+		[SerializeField]
+		private MoveState moveState;
 
-	[SerializeField]
-	private float duration;
+		[SerializeField]
+		private float duration;
 
-	[SerializeField]
-	private InteractableHost host;
+		[SerializeField]
+		private InteractableHost host;
 
-	[SerializeField]
-	private Grip _grip;
+		[SerializeField]
+		private Grip _grip;
 
-	[SerializeField]
-	private ConfigurableJoint joint;
+		[SerializeField]
+		private ConfigurableJoint joint;
 
-	[SerializeField]
-	private Transform topTarget;
+		[SerializeField]
+		private Transform topTarget;
 
-	[SerializeField]
-	private Transform bottomTarget;
+		[SerializeField]
+		private Transform bottomTarget;
 
-	[SerializeField]
-	private GameObject anchorObj;
+		[SerializeField]
+		private GameObject anchorObj;
 
-	private Coroutine jointMoveRoutine;
+		private Coroutine jointMoveRoutine;
 
-	public UnityEvent OnRing;
+		public UnityEvent OnRing;
 
-	public UnityEvent OnBellReset;
+		public UnityEvent OnBellReset;
 
-	[SerializeField]
-	private Rigidbody[] jointChainRBs;
+		[SerializeField]
+		private Rigidbody[] jointChainRBs;
 
-	public Quaternion[] localBodyRotations;
+		public Quaternion[] localBodyRotations;
 
-	public Vector3[] localBodyPositions;
+		public Vector3[] localBodyPositions;
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private GameObject CreateAnchorObject(ConfigurableJoint joint)
-	{
-		return null;
-	}
+		private GameObject CreateAnchorObject(ConfigurableJoint joint)
+		{
+			return null;
+		}
 
-	private void OnGrab(Hand hand)
-	{
-	}
+		private void OnGrab(Hand hand)
+		{
+		}
 
-	private void OnDrop(Hand hand)
-	{
-	}
+		private void OnDrop(Hand hand)
+		{
+		}
 
-	public void RingTheBell()
-	{
-	}
+		public void RingTheBell()
+		{
+		}
 
-	public void TeleportToUpState()
-	{
-	}
+		public void TeleportToUpState()
+		{
+		}
 
-	[ContextMenu("ToggleMove")]
-	public void ToggleMove()
-	{
-	}
+		[ContextMenu("ToggleMove")]
+		public void ToggleMove()
+		{
+		}
 
-	private IEnumerator CoMoveJointTarget(Vector3 startPos, Vector3 endPos)
-	{
-		return null;
-	}
+		private IEnumerator CoMoveJointTarget(Vector3 startPos, Vector3 endPos)
+		{
+			return null;
+		}
 
-	[ContextMenu("Reset Bell")]
-	public void ResetBell()
-	{
-	}
+		[ContextMenu("Reset Bell")]
+		public void ResetBell()
+		{
+		}
 
-	private IEnumerator CoResetBell()
-	{
-		return null;
-	}
+		private IEnumerator CoResetBell()
+		{
+			return null;
+		}
 
-	[ContextMenu("Get All Local Positions")]
-	private void GetAllReferences()
-	{
-	}
+		[ContextMenu("Get All Local Positions")]
+		private void GetAllReferences()
+		{
+		}
 
-	public void OnDrawGizmos()
-	{
-	}
+		public void OnDrawGizmos()
+		{
+		}
 
-	[ContextMenu("ForceDetach")]
-	public void ForceDetachFromBell()
-	{
-	}
+		[ContextMenu("ForceDetach")]
+		public void ForceDetachFromBell()
+		{
+		}
 
-	public Bell_Interactable()
-		: base()
-	{
+		public Bell_Interactable()
+			: base()
+		{
+		}
 	}
 }

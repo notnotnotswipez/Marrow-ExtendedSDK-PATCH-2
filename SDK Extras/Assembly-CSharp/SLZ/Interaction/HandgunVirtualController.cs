@@ -29,7 +29,7 @@ namespace SLZ.Interaction
 			return default(Vector3);
 		}
 
-		protected Quaternion AimEnhancer(Quaternion rotation, SimpleTransform eyeTran, SimpleTransform rearSightTran, float enhanceIntensity)
+		protected Quaternion AimEnhancer(Quaternion rotation, SimpleTransform eyeTran, SimpleTransform rearSightTran, float enhanceIntensity, [Out] float enhanceT)
 		{
 			return default(Quaternion);
 		}

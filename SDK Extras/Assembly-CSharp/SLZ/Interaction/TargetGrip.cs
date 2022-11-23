@@ -8,15 +8,15 @@ namespace SLZ.Interaction
 	public class TargetGrip : Grip
 	{
 		[Tooltip("Degrees plus/minus. Defaults to 180")]
-		[Header("Target Grip")]
 		[Range(0f, 180f)]
+		[Header("Target Grip")]
 		public float rotationLimit;
 
 		[Range(0f, 180f)]
 		public float rotationPriorityBuffer;
 
-		[Tooltip("Will switch to this handpose when the primary axis is flipped on hover")]
 		[Header("Flippable Hand Pose")]
+		[Tooltip("Will switch to this handpose when the primary axis is flipped on hover")]
 		public HandPose handPoseOnFlippedPrimaryAxis;
 
 		[Tooltip("Will update the target transform when the primary axis is flipped on hover")]

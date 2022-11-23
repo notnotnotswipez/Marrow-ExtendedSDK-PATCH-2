@@ -1,7 +1,7 @@
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
-namespace SLZ.VFX
+namespace SLZ.Bonelab
 {
 	[RequireComponent(typeof(Rigidbody))]
 	public class GetVelocity : MonoBehaviour

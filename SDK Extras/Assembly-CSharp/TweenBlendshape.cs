@@ -1,46 +1,49 @@
 using UnityEngine;
 
-[RequireComponent(typeof(SkinnedMeshRenderer))]
-public class TweenBlendshape : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private SkinnedMeshRenderer skin;
-
-	[SerializeField]
-	private uint BlendTarget;
-
-	public LeanTweenType tweenType;
-
-	private void Reset()
+	[RequireComponent(typeof(SkinnedMeshRenderer))]
+	public class TweenBlendshape : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private SkinnedMeshRenderer skin;
 
-	private void OnEnable()
-	{
-	}
+		[SerializeField]
+		private uint BlendTarget;
 
-	public void TweenOn(float time)
-	{
-	}
+		public LeanTweenType tweenType;
 
-	public void TweenOff(float time)
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	private void SetBlend(float currentBlend, float ratio)
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void DisableMesh()
-	{
-	}
+		public void TweenOn(float time)
+		{
+		}
 
-	private void EnableMesh()
-	{
-	}
+		public void TweenOff(float time)
+		{
+		}
 
-	public TweenBlendshape()
-		: base()
-	{
+		private void SetBlend(float currentBlend, float ratio)
+		{
+		}
+
+		private void DisableMesh()
+		{
+		}
+
+		private void EnableMesh()
+		{
+		}
+
+		public TweenBlendshape()
+			: base()
+		{
+		}
 	}
 }

@@ -5,30 +5,33 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class ShutterManager : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ConfigurableJoint[] windowJoints;
-
-	public ConfigurableJoint doorJointA;
-
-	public ConfigurableJoint doorJointB;
-
-	public ConfigurableJoint skylightJointA;
-
-	public ConfigurableJoint skylightJointB;
-
-	[ContextMenu("OpenShutters")]
-	public void OpenShutters()
+	public class ShutterManager : MonoBehaviour
 	{
-	}
+		public ConfigurableJoint[] windowJoints;
 
-	private IEnumerator CoStaggerShuttersSurvival()
-	{
-		return null;
-	}
+		public ConfigurableJoint doorJointA;
 
-	public ShutterManager()
-		: base()
-	{
+		public ConfigurableJoint doorJointB;
+
+		public ConfigurableJoint skylightJointA;
+
+		public ConfigurableJoint skylightJointB;
+
+		[ContextMenu("OpenShutters")]
+		public void OpenShutters()
+		{
+		}
+
+		private IEnumerator CoStaggerShuttersSurvival()
+		{
+			return null;
+		}
+
+		public ShutterManager()
+			: base()
+		{
+		}
 	}
 }

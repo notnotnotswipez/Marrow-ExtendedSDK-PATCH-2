@@ -8,109 +8,115 @@ using SLZ.Marrow.Warehouse;
 using SLZ.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
-public class BowlingResetMechanism : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public GameObject[] pins;
-
-	private ConfigurableJoint[] joints;
-
-	private ConfigurableJoint[] closeJoints;
-
-	public Vector3 jointDriveSettings;
-
-	public float cycleTime;
-
-	public float maxResetTime;
-
-	public float scoreTimmer;
-
-	public float posEpsilon;
-
-	public float rotEpsilon;
-
-	private IEnumerator pinCycle;
-
-	private JointDrive minDrive;
-
-	private JointDrive maxDrive;
-
-	public Collider[] pinColliders;
-
-	public PhysicMaterial normalFriction;
-
-	public PhysicMaterial noFriction;
-
-	public AudioMixerGroup outputMixer;
-
-	public AudioClip pullSFX;
-
-	public AudioClip dropSFX;
-
-	private AudioPlayer ap;
-
-	public SpawnableCrateReference[] whiteListCrates;
-
-	private Dictionary<string, int> whiteListObjects;
-
-	private Dictionary<int, AssetPoolee> objectsInTrigger;
-
-	private List<AssetPoolee> objectsToSweep;
-
-	private Vector3[] pinOriginalPos;
-
-	private bool isScoring;
-
-	private bool isPlayerInTrigger;
-
-	private bool isBallInTrigger;
-
-	public void Start()
+	public class BowlingResetMechanism : MonoBehaviour
 	{
-	}
+		public GameObject[] pins;
 
-	public void PINAWOKEN()
-	{
-	}
+		private ConfigurableJoint[] joints;
 
-	private IEnumerator ScoreAndResetCoroutine()
-	{
-		return null;
-	}
+		private ConfigurableJoint[] closeJoints;
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		public Vector3 jointDriveSettings;
 
-	private void OnTriggerExit(Collider other)
-	{
-	}
+		public float cycleTime;
 
-	private int CheckScore()
-	{
-		return default(int);
-	}
+		public float maxResetTime;
 
-	private bool PinDownCheck(GameObject pin)
-	{
-		return default(bool);
-	}
+		public float scoreTimmer;
 
-	private void CheckPinReset()
-	{
-	}
+		public float posEpsilon;
 
-	public void RESETPINS()
-	{
-	}
+		public float rotEpsilon;
 
-	private IEnumerator PinResetCycle()
-	{
-		return null;
-	}
+		private IEnumerator pinCycle;
 
-	public BowlingResetMechanism()
-		: base()
-	{
+		private JointDrive minDrive;
+
+		private JointDrive maxDrive;
+
+		public Collider[] pinColliders;
+
+		public PhysicMaterial normalFriction;
+
+		public PhysicMaterial noFriction;
+
+		public AudioMixerGroup outputMixer;
+
+		public AudioClip pullSFX;
+
+		public AudioClip dropSFX;
+
+		private AudioPlayer ap;
+
+		public SpawnableCrateReference[] whiteListCrates;
+
+		private Dictionary<string, int> whiteListObjects;
+
+		private Dictionary<int, AssetPoolee> objectsInTrigger;
+
+		private List<AssetPoolee> objectsToSweep;
+
+		private Vector3[] pinOriginalPos;
+
+		private bool isScoring;
+
+		private bool isPlayerInTrigger;
+
+		private bool isBallInTrigger;
+
+		public UnityEvent BowlingAchUnlock;
+
+		public void Start()
+		{
+		}
+
+		public void PINAWOKEN()
+		{
+		}
+
+		private IEnumerator ScoreAndResetCoroutine()
+		{
+			return null;
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+		}
+
+		private int CheckScore()
+		{
+			return default(int);
+		}
+
+		private bool PinDownCheck(GameObject pin)
+		{
+			return default(bool);
+		}
+
+		private void CheckPinReset()
+		{
+		}
+
+		public void RESETPINS()
+		{
+		}
+
+		private IEnumerator PinResetCycle()
+		{
+			return null;
+		}
+
+		public BowlingResetMechanism()
+			: base()
+		{
+		}
 	}
 }

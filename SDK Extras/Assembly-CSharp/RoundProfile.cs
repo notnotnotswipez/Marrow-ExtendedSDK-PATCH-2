@@ -1,45 +1,48 @@
 using System;
 using System.Collections.Generic;
 
-[Serializable]
-public class RoundProfile
+namespace SLZ.Bonelab
 {
-	public enum RoundMode
+	[Serializable]
+	public class RoundProfile
 	{
-		UNLIMITED = 0,
-		LIMITED = 1
-	}
+		public enum RoundMode
+		{
+			UNLIMITED = 0,
+			LIMITED = 1
+		}
 
-	public bool showRound;
+		public bool showRound;
 
-	public int waveDelayTime;
+		public int waveDelayTime;
 
-	public int roundDelayTime;
+		public int roundDelayTime;
 
-	public List<WaveProfile> waveGroupList;
+		public List<WaveProfile> waveGroupList;
 
-	public RoundMode roundMode;
+		public RoundMode roundMode;
 
-	public bool showRoundInfo;
+		public bool showRoundInfo;
 
-	public int totalRoundLightCount;
+		public int totalRoundLightCount;
 
-	public int totalRoundMedCount;
+		public int totalRoundMedCount;
 
-	public int totalRoundHeavyCount;
+		public int totalRoundHeavyCount;
 
-	public int totalRoundEnemyCount;
+		public int totalRoundEnemyCount;
 
-	public int totalRoundBulletsPerEnemy;
+		public int totalRoundBulletsPerEnemy;
 
-	public bool isSlowHealthRegen;
+		public bool isSlowHealthRegen;
 
-	public float customHealthRegenDuration;
+		public float customHealthRegenDuration;
 
-	public bool isProceduralRound;
+		public bool isProceduralRound;
 
-	public RoundProfile()
-		: base()
-	{
+		public RoundProfile()
+			: base()
+		{
+		}
 	}
 }

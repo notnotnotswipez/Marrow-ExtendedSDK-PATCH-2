@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class DustParticles : MonoBehaviour
+namespace SLZ.Props
 {
-	public ParticleSystem ParticleSystem;
-
-	public HoverEngine Engine;
-
-	public float MaxEmission;
-
-	public float DustHeightFudge;
-
-	private void Update()
+	public class DustParticles : MonoBehaviour
 	{
-	}
+		public ParticleSystem ParticleSystem;
 
-	public DustParticles()
-		: base()
-	{
+		public HoverEngine Engine;
+
+		public float MaxEmission;
+
+		public float DustHeightFudge;
+
+		private void Update()
+		{
+		}
+
+		public DustParticles()
+			: base()
+		{
+		}
 	}
 }

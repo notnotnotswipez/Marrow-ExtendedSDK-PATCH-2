@@ -1,7 +1,8 @@
+using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public class SplineEntity : MonoBehaviour
 	{
@@ -23,6 +24,9 @@ namespace SLZ
 		protected Vector2 _size;
 
 		public Vector3 anchor;
+
+		[Header("References")]
+		public SplineJoint splineJoint;
 
 		[HideInInspector]
 		public int lastSegmentIdx;
@@ -67,6 +71,10 @@ namespace SLZ
 		}
 
 		protected virtual void OnDestroy()
+		{
+		}
+
+		public void AttachToSplineJoint(SplineJoint splineJoint)
 		{
 		}
 

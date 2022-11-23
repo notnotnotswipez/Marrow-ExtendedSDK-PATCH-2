@@ -1,51 +1,54 @@
 using UnityEngine;
 
-public class NavMeshDoor : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum DoorType
+	public class NavMeshDoor : MonoBehaviour
 	{
-		DoorA = 0,
-		DoorB = 1,
-		DoorC = 2,
-		DoorD = 3,
-		DoorE = 4
-	}
+		public enum DoorType
+		{
+			DoorA = 0,
+			DoorB = 1,
+			DoorC = 2,
+			DoorD = 3,
+			DoorE = 4
+		}
 
-	public DoorType doorType;
+		public DoorType doorType;
 
-	[SerializeField]
-	private bool isOpen;
+		[SerializeField]
+		private bool isOpen;
 
-	[SerializeField]
-	private Vector3 openPos;
+		[SerializeField]
+		private Vector3 openPos;
 
-	[SerializeField]
-	private Vector3 closePos;
+		[SerializeField]
+		private Vector3 closePos;
 
-	[SerializeField]
-	private AudioClip openClip;
+		[SerializeField]
+		private AudioClip openClip;
 
-	[SerializeField]
-	private AudioClip closeClip;
+		[SerializeField]
+		private AudioClip closeClip;
 
-	public void ToggleDoor()
-	{
-	}
+		public void ToggleDoor()
+		{
+		}
 
-	private void OpenDoor()
-	{
-	}
+		private void OpenDoor()
+		{
+		}
 
-	private void CloseDoor()
-	{
-	}
+		private void CloseDoor()
+		{
+		}
 
-	public void ToggleArea(bool open)
-	{
-	}
+		public void ToggleArea(bool open)
+		{
+		}
 
-	public NavMeshDoor()
-		: base()
-	{
+		public NavMeshDoor()
+			: base()
+		{
+		}
 	}
 }

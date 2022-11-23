@@ -6,61 +6,64 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 
-public class taxiFare : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public TextMeshProUGUI txt_fare;
-
-	public TextMeshProUGUI txt_rideNumber;
-
-	public TextMeshProUGUI txt_timeUntilArrive;
-
-	public TextMeshProUGUI txt_travelDirection;
-
-	public TextMeshProUGUI txt_destinationName;
-
-	[Space(20f)]
-	public string destinationName;
-
-	public string cur_fareCost;
-
-	private string _rideNumber;
-
-	public float secondsUntilArrive;
-
-	private float cur_secondsUntilArrive;
-
-	public bool countFare;
-
-	public Transform thisVehicle;
-
-	public Transform destinationBeacon;
-
-	private Vector3 destinationPos;
-
-	private IEnumerator Start()
+	public class taxiFare : MonoBehaviour
 	{
-		return null;
-	}
+		public TextMeshProUGUI txt_fare;
 
-	private void OnEnable()
-	{
-	}
+		public TextMeshProUGUI txt_rideNumber;
 
-	private void OnDisable()
-	{
-	}
+		public TextMeshProUGUI txt_timeUntilArrive;
 
-	public IEnumerator Calculate()
-	{
-		return null;
-	}
+		public TextMeshProUGUI txt_travelDirection;
 
-	public void UPDATEDISPLAY()
-	{
-	}
+		public TextMeshProUGUI txt_destinationName;
 
-	public taxiFare()
-		: base()
-	{
+		[Space(20f)]
+		public string destinationName;
+
+		public string cur_fareCost;
+
+		private string _rideNumber;
+
+		public float secondsUntilArrive;
+
+		private float cur_secondsUntilArrive;
+
+		public bool countFare;
+
+		public Transform thisVehicle;
+
+		public Transform destinationBeacon;
+
+		private Vector3 destinationPos;
+
+		private IEnumerator Start()
+		{
+			return null;
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		public IEnumerator Calculate()
+		{
+			return null;
+		}
+
+		public void UPDATEDISPLAY()
+		{
+		}
+
+		public taxiFare()
+			: base()
+		{
+		}
 	}
 }

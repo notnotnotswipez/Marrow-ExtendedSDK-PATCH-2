@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class PullCordHandle : MonoBehaviour
+namespace SLZ.Props
 {
-	public PullCordDevice pcd;
-
-	public PullCordHandle()
-		: base()
+	public class PullCordHandle : MonoBehaviour
 	{
+		public PullCordDevice pcd;
+
+		public PullCordHandle()
+			: base()
+		{
+		}
 	}
 }

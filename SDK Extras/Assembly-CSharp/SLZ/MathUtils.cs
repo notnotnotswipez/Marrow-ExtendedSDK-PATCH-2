@@ -2,7 +2,7 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Interaction
 {
 	public static class MathUtils
 	{

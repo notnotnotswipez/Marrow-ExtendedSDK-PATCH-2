@@ -48,8 +48,8 @@ public class Haptor : MonoBehaviour
 	[Range(0.03f, 0.5f)]
 	public float hap_calc_t;
 
-	[Space(10f)]
 	[Header("Subtle")]
+	[Space(10f)]
 	private float hap_subtle_t;
 
 	private float hap_subtle_frequency;
@@ -69,8 +69,8 @@ public class Haptor : MonoBehaviour
 
 	public float hap_click_up_amplitude;
 
-	[Range(0f, 0.1f)]
 	[Header("Tap")]
+	[Range(0f, 0.1f)]
 	public float hap_tap_duration;
 
 	[Range(20f, 300f)]
@@ -89,17 +89,17 @@ public class Haptor : MonoBehaviour
 	[Range(0f, 1f)]
 	public float hap_knock_amplitude;
 
-	[Range(0.1f, 1f)]
 	[Header("Hit")]
+	[Range(0.1f, 1f)]
 	public float hap_hit_mod;
 
 	[Range(0f, 320f)]
 	public float hap_hit_frequency;
 
-	[Header("Sine")]
-	[Header("Slide Friction")]
-	[Space(10f)]
 	[Header("Slide")]
+	[Header("Slide Friction")]
+	[Header("Sine")]
+	[Space(10f)]
 	public int sin_gateCount;
 
 	private int cur_sin_gateCount;
@@ -108,8 +108,8 @@ public class Haptor : MonoBehaviour
 
 	private float cur_sin_amp;
 
-	[Range(0f, 10f)]
 	[Header("Soft Sine")]
+	[Range(0f, 10f)]
 	public float hap_softSin_length;
 
 	[Range(120f, 1000f)]
@@ -121,8 +121,8 @@ public class Haptor : MonoBehaviour
 	[Range(0f, 1f)]
 	public float hap_min_softSin_amp;
 
-	[Range(0f, 10f)]
 	[Header("Hard Sine")]
+	[Range(0f, 10f)]
 	public float hap_hardSin_length;
 
 	[Range(100f, 400f)]

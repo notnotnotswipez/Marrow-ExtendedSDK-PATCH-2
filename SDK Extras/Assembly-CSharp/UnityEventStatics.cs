@@ -1,9 +1,12 @@
 using UnityEngine.Events;
 
-public static class UnityEventStatics
+namespace SLZ.Utilities
 {
-	public static int GetListenerNumber(this UnityEventBase unityEvent)
+	public static class UnityEventStatics
 	{
-		return default(int);
+		public static int GetListenerNumber(this UnityEventBase unityEvent)
+		{
+			return default(int);
+		}
 	}
 }

@@ -1,17 +1,20 @@
 using System;
 using UnityEngine;
 
-[Serializable]
-public class CargoData
+namespace SLZ.Bonelab
 {
-	public Rigidbody rb;
-
-	public Vector3 grabPoint;
-
-	public Vector3 dropPoint;
-
-	public CargoData()
-		: base()
+	[Serializable]
+	public class CargoData
 	{
+		public Rigidbody rb;
+
+		public Vector3 grabPoint;
+
+		public Vector3 dropPoint;
+
+		public CargoData()
+			: base()
+		{
+		}
 	}
 }

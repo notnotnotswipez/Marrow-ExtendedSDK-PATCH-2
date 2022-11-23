@@ -2,18 +2,21 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class VersionViewer : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public TextMeshPro tmp;
-
-	public Text text;
-
-	private void Awake()
+	public class VersionViewer : MonoBehaviour
 	{
-	}
+		public TextMeshPro tmp;
 
-	public VersionViewer()
-		: base()
-	{
+		public Text text;
+
+		private void Awake()
+		{
+		}
+
+		public VersionViewer()
+			: base()
+		{
+		}
 	}
 }

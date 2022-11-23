@@ -1,26 +1,29 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class GrabDisable : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public GameObject disableObject;
-
-	public Grip grip;
-
-	private void Awake()
+	public class GrabDisable : MonoBehaviour
 	{
-	}
+		public GameObject disableObject;
 
-	private void OnDestroy()
-	{
-	}
+		public Grip grip;
 
-	private void OnAttached(Hand hand)
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public GrabDisable()
-		: base()
-	{
+		private void OnDestroy()
+		{
+		}
+
+		private void OnAttached(Hand hand)
+		{
+		}
+
+		public GrabDisable()
+			: base()
+		{
+		}
 	}
 }

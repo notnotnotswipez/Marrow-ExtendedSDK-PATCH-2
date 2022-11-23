@@ -1,48 +1,52 @@
-using SLZ.Data.SaveData;
+
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
 using UnityEngine;
 
-[RequireComponent(typeof(SpawnableCratePlacer))]
-public class GachaPlacer : MonoBehaviour
+namespace SLZ.Props
 {
-	[SerializeField]
-	private GenericCrateReference unlockCrate;
-
-	public SpawnableCratePlacer cratePlacer;
-
-	public bool onlyPlaceIfBeatGame;
-
-	private static PlayerUnlocks u
+	[RequireComponent(typeof(SpawnableCratePlacer))]
+	public class GachaPlacer : MonoBehaviour
 	{
-		get
+		[SerializeField]
+		private GenericCrateReference unlockCrate;
+
+		public SpawnableCratePlacer cratePlacer;
+
+		public bool onlyPlaceIfBeatGame;
+
+		private static PlayerUnlocks u
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private static PlayerProgression p
-	{
-		get
+		private static PlayerProgression p
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private bool ShouldPlace()
-	{
-		return default(bool);
-	}
+		private bool ShouldPlace()
+		{
+			return default(bool);
+		}
 
-	public void SetGachaContents(SpawnableCratePlacer scp, GameObject go)
-	{
-	}
+		public void SetGachaContents(SpawnableCratePlacer scp, GameObject go)
+		{
+		}
 
-	public GachaPlacer()
-		: base()
-	{
+		public GachaPlacer()
+			: base()
+		{
+		}
 	}
 }

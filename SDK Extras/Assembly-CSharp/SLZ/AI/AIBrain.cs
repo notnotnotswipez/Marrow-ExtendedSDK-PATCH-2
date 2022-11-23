@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using PuppetMasta;
 using SLZ.Marrow.Pool;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -12,6 +13,11 @@ namespace SLZ.AI
 	public class AIBrain : SpawnEvents
 	{
 		private static ComponentCache<AIBrain> _cache;
+
+		[Header("References")]
+		public BehaviourBaseNav behaviour;
+
+		public PuppetMaster puppetMaster;
 
 		public EnemyTurret turret;
 
@@ -44,6 +50,14 @@ namespace SLZ.AI
 			}
 		}
 
+		public BehaviourBaseNav.MentalState MentalState
+		{
+			get
+			{
+				return default(BehaviourBaseNav.MentalState);
+			}
+		}
+
 		public bool IsSoundAggroWhenInSecondaryZone
 		{
 			get
@@ -61,6 +75,22 @@ namespace SLZ.AI
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		protected override void OnDespawn(GameObject spawnedObject)
+		{
+		}
+
+		protected override void OnSpawn(GameObject go)
+		{
+		}
+
+		protected override void OnPostSpawn(GameObject go)
+		{
+		}
+
+		public void SetBaseConfig(BaseEnemyConfig config)
 		{
 		}
 

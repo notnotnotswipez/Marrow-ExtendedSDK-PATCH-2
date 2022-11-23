@@ -1,10 +1,10 @@
 using System;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
+using SLZ.SaveData;
 using UnityEngine;
 
 namespace SLZ.Bonelab
@@ -33,6 +33,8 @@ namespace SLZ.Bonelab
 		public Spawnable VfxFadeOutSpawnable { get; protected set; }
 
 		protected List<string> PriorLevels { get; set; }
+
+		protected string NextLevel { get; set; }
 
 		protected List<ResumePoint> ProgressionPoint { get; set; }
 

@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class OledScreen : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("Electronic Ref")]
-	[SerializeField]
-	private Powerable m_Electronic;
-
-	[SerializeField]
-	[Header("Renderer")]
-	private Renderer m_Renderer;
-
-	private void Awake()
+	public class OledScreen : MonoBehaviour
 	{
-	}
+		[Header("Electronic Ref")]
+		[SerializeField]
+		private Powerable m_Electronic;
 
-	private void M_DisplayIcon()
-	{
-	}
+		[SerializeField]
+		[Header("Renderer")]
+		private Renderer m_Renderer;
 
-	private void M_SetShader(bool on)
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public OledScreen()
-		: base()
-	{
+		private void M_DisplayIcon()
+		{
+		}
+
+		private void M_SetShader(bool on)
+		{
+		}
+
+		public OledScreen()
+			: base()
+		{
+		}
 	}
 }

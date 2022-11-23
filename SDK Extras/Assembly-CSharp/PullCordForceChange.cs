@@ -8,42 +8,45 @@ using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
 using UnityEngine;
 
-public class PullCordForceChange : MonoBehaviour
+namespace SLZ.Props
 {
-	public AvatarCrateReference avatarCrate;
-
-	public int optionalPullCordStopIndex;
-
-	[SerializeField]
-	public LayerMask LayerFilter;
-
-	public bool onlyTriggerOnce;
-
-	private RigManager rigManager;
-
-	private bool used;
-
-	private int choice;
-
-	public bool randomize;
-
-	private List<AvatarCrateReference> defaultFavoriteAvatarsBarcodes;
-
-	private void OnTriggerEnter(Collider other)
+	public class PullCordForceChange : MonoBehaviour
 	{
-	}
+		public AvatarCrateReference avatarCrate;
 
-	private void ForceChange(GameObject other)
-	{
-	}
+		public int optionalPullCordStopIndex;
 
-	private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrate)
-	{
-		return default(UniTaskVoid);
-	}
+		[SerializeField]
+		public LayerMask LayerFilter;
 
-	public PullCordForceChange()
-		: base()
-	{
+		public bool onlyTriggerOnce;
+
+		private RigManager rigManager;
+
+		private bool used;
+
+		private int choice;
+
+		public bool randomize;
+
+		private List<AvatarCrateReference> defaultFavoriteAvatarsBarcodes;
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void ForceChange(GameObject other)
+		{
+		}
+
+		private UniTaskVoid SwapAvatar(AvatarCrateReference avatarCrate)
+		{
+			return default(UniTaskVoid);
+		}
+
+		public PullCordForceChange()
+			: base()
+		{
+		}
 	}
 }

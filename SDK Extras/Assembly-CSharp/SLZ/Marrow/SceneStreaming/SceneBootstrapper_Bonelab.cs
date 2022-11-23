@@ -1,14 +1,14 @@
-using System;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
+using TMPro;
 using UnityEngine;
 
-namespace SLZ.Marrow.SceneStreaming
+namespace SLZ.Bonelab
 {
 	public class SceneBootstrapper_Bonelab : MonoBehaviour
 	{
@@ -17,6 +17,10 @@ namespace SLZ.Marrow.SceneStreaming
 		public LevelCrateReference VoidG114CrateRef;
 
 		public LevelCrateReference LevelLoaderCrateRef;
+
+		public TextMeshProUGUI tmp;
+
+		public GameObject Overlay2d;
 
 		private static PlayerProgression p
 		{
@@ -29,6 +33,10 @@ namespace SLZ.Marrow.SceneStreaming
 		private UniTaskVoid Start()
 		{
 			return default(UniTaskVoid);
+		}
+
+		private void UpdateLog(string msg)
+		{
 		}
 
 		public SceneBootstrapper_Bonelab()

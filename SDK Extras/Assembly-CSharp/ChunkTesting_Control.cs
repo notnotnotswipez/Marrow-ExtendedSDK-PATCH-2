@@ -7,108 +7,111 @@ using SLZ.Marrow.SceneStreaming;
 using SLZ.Rig;
 using UnityEngine;
 
-public class ChunkTesting_Control : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum Chunks
+	public class ChunkTesting_Control : MonoBehaviour
 	{
-		CHUNK1 = 0,
-		CHUNK2 = 1,
-		CHUNK3 = 2,
-		CHUNK4 = 3,
-		CHUNK5 = 4
-	}
+		public enum Chunks
+		{
+			CHUNK1 = 0,
+			CHUNK2 = 1,
+			CHUNK3 = 2,
+			CHUNK4 = 3,
+			CHUNK5 = 4
+		}
 
-	public RigManager rm;
+		public RigManager rm;
 
-	public Transform chunk1Location;
+		public Transform chunk1Location;
 
-	public Transform chunk2Location;
+		public Transform chunk2Location;
 
-	public Transform chunk3Location;
+		public Transform chunk3Location;
 
-	public Transform chunk4Location;
+		public Transform chunk4Location;
 
-	public Transform chunk5Location;
+		public Transform chunk5Location;
 
-	public Chunks startChunk;
+		public Chunks startChunk;
 
-	public Chunk airLockForwardChunk;
+		public Chunk airLockForwardChunk;
 
-	public Chunk airLockBackwardChunk;
+		public Chunk airLockBackwardChunk;
 
-	public Transform forwardDoor;
+		public Transform forwardDoor;
 
-	public Transform backwardDoor;
+		public Transform backwardDoor;
 
-	private Coroutine forwardDoorCoroutine;
+		private Coroutine forwardDoorCoroutine;
 
-	private Coroutine backwardDoorCoroutine;
+		private Coroutine backwardDoorCoroutine;
 
-	private Coroutine airlockCoroutine;
+		private Coroutine airlockCoroutine;
 
-	private bool _isForwardChunkLoaded;
+		private bool _isForwardChunkLoaded;
 
-	private bool _isBackwardChunkLoaded;
+		private bool _isBackwardChunkLoaded;
 
-	private bool _isAirlockChunkLoaded;
+		private bool _isAirlockChunkLoaded;
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void Teleport()
-	{
-	}
+		private void Teleport()
+		{
+		}
 
-	public void OnForwardChunkLoaded()
-	{
-	}
+		public void OnForwardChunkLoaded()
+		{
+		}
 
-	public void OnBackwardChunkLoaded()
-	{
-	}
+		public void OnBackwardChunkLoaded()
+		{
+		}
 
-	public void OnAirlockChunkLoaded()
-	{
-	}
+		public void OnAirlockChunkLoaded()
+		{
+		}
 
-	public void OnForwardChunkUnloaded()
-	{
-	}
+		public void OnForwardChunkUnloaded()
+		{
+		}
 
-	public void OnBackwardChunkUnloaded()
-	{
-	}
+		public void OnBackwardChunkUnloaded()
+		{
+		}
 
-	public void OnAirlockChunkUnloaded()
-	{
-	}
+		public void OnAirlockChunkUnloaded()
+		{
+		}
 
-	private void OpenAirlockDoors()
-	{
-	}
+		private void OpenAirlockDoors()
+		{
+		}
 
-	public void AirlockButton()
-	{
-	}
+		public void AirlockButton()
+		{
+		}
 
-	private IEnumerator CoAirlock()
-	{
-		return null;
-	}
+		private IEnumerator CoAirlock()
+		{
+			return null;
+		}
 
-	private IEnumerator CoOpenDoor(Transform transform)
-	{
-		return null;
-	}
+		private IEnumerator CoOpenDoor(Transform transform)
+		{
+			return null;
+		}
 
-	private IEnumerator CoCloseDoor(Transform transform)
-	{
-		return null;
-	}
+		private IEnumerator CoCloseDoor(Transform transform)
+		{
+			return null;
+		}
 
-	public ChunkTesting_Control()
-		: base()
-	{
+		public ChunkTesting_Control()
+			: base()
+		{
+		}
 	}
 }

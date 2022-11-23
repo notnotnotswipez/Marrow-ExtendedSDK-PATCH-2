@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ.Misc.PipeTool
+namespace SLZ.Bonelab
 {
 	public class PipeLODPlacer : MonoBehaviour
 	{

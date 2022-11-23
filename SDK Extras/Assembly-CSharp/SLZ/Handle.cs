@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public abstract class Handle<T> : MonoBehaviour where T : MonoBehaviour
 	{

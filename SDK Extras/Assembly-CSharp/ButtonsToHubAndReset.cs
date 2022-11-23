@@ -4,35 +4,38 @@ using SLZ.Marrow.Data;
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
-public class ButtonsToHubAndReset : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("Level Loader")]
-	public LevelCrateReference nextLevel;
-
-	public LevelCrateReference hubCrate;
-
-	public LevelCrateReference loadScreenLevel;
-
-	public Spawnable vfxFadeOutSpawnable;
-
-	public void ResetLevel()
+	public class ButtonsToHubAndReset : MonoBehaviour
 	{
-	}
+		[Header("Level Loader")]
+		public LevelCrateReference nextLevel;
 
-	public void ReturnToHub()
-	{
-	}
+		public LevelCrateReference hubCrate;
 
-	public void NextLevel()
-	{
-	}
+		public LevelCrateReference loadScreenLevel;
 
-	private void LoadFXAndLevel(LevelCrateReference level)
-	{
-	}
+		public Spawnable vfxFadeOutSpawnable;
 
-	public ButtonsToHubAndReset()
-		: base()
-	{
+		public void ResetLevel()
+		{
+		}
+
+		public void ReturnToHub()
+		{
+		}
+
+		public void NextLevel()
+		{
+		}
+
+		private void LoadFXAndLevel(LevelCrateReference level)
+		{
+		}
+
+		public ButtonsToHubAndReset()
+			: base()
+		{
+		}
 	}
 }

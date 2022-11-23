@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class Cable_Spawner : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("CABLE LIFT REF")]
-	[ContextMenuItem("Generate Cable", "Generate")]
-	[Space(5f)]
-	public CabletSeUp[] cableSetup;
-
-	[Space(5f)]
-	public bool isBinary;
-
-	private float colOffset;
-
-	public void Generate()
+	public class Cable_Spawner : MonoBehaviour
 	{
-	}
+		[ContextMenuItem("Generate Cable", "Generate")]
+		[Space(5f)]
+		[Header("CABLE LIFT REF")]
+		public CabletSeUp[] cableSetup;
 
-	public Cable_Spawner()
-		: base()
-	{
+		[Space(5f)]
+		public bool isBinary;
+
+		private float colOffset;
+
+		public void Generate()
+		{
+		}
+
+		public Cable_Spawner()
+			: base()
+		{
+		}
 	}
 }

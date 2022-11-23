@@ -2,45 +2,48 @@ using System;
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
-public class SpawnableDoorStateSetter : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Serializable]
-	public class SpawnableDoorGroup
+	public class SpawnableDoorStateSetter : MonoBehaviour
 	{
-		public GameObject door;
+		[Serializable]
+		public class SpawnableDoorGroup
+		{
+			public GameObject door;
 
-		public SpawnableCratePlacer[] items;
+			public SpawnableCratePlacer[] items;
 
-		public string saveVar;
+			public string saveVar;
 
-		public bool overrideOpen;
+			public bool overrideOpen;
 
-		public SpawnableDoorGroup()
+			public SpawnableDoorGroup()
+				: base()
+			{
+			}
+		}
+
+		public float doorHighOffset;
+
+		public float doorLowOffset;
+
+		public SpawnableDoorGroup[] doors;
+
+		public void Start()
+		{
+		}
+
+		public void OVERRIDEALLOPEN()
+		{
+		}
+
+		public void OPENDOOR(int i)
+		{
+		}
+
+		public SpawnableDoorStateSetter()
 			: base()
 		{
 		}
-	}
-
-	public float doorHighOffset;
-
-	public float doorLowOffset;
-
-	public SpawnableDoorGroup[] doors;
-
-	public void Start()
-	{
-	}
-
-	public void OVERRIDEALLOPEN()
-	{
-	}
-
-	public void OPENDOOR(int i)
-	{
-	}
-
-	public SpawnableDoorStateSetter()
-		: base()
-	{
 	}
 }

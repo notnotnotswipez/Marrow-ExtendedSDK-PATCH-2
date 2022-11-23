@@ -21,8 +21,8 @@ namespace SLZ.Zones
 
 		public AudioMixerGroup mixerGroup;
 
-		[Range(0f, 1f)]
 		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
+		[Range(0f, 1f)]
 		public float primaryVolume;
 
 		[Range(0f, 1f)]
@@ -35,8 +35,8 @@ namespace SLZ.Zones
 		[Range(0.1f, 4f)]
 		public float fadeSpeed;
 
-		[Range(0.1f, 10f)]
 		[Tooltip("Radius of min sphere")]
+		[Range(0.1f, 10f)]
 		public float sourceRadius;
 
 		[Tooltip("Should source loop?")]

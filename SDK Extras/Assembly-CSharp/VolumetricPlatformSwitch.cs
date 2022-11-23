@@ -1,33 +1,36 @@
 using UnityEngine;
 
-[RequireComponent(typeof(VolumetricRendering))]
-public class VolumetricPlatformSwitch : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("Per Platform settings")]
-	public VolumetricData VolumetricSettingsAndroid;
-
-	public VolumetricData VolumetricSettingsPC;
-
-	[Header("Per Rig setting")]
-	public Camera targetCamera;
-
-	[Header("Target scrpit")]
-	public VolumetricRendering volumetricRendering;
-
-	private void Reset()
+	[RequireComponent(typeof(VolumetricRendering))]
+	public class VolumetricPlatformSwitch : MonoBehaviour
 	{
-	}
+		[Header("Per Platform settings")]
+		public VolumetricData VolumetricSettingsAndroid;
 
-	private void Awake()
-	{
-	}
+		public VolumetricData VolumetricSettingsPC;
 
-	private void OnloadEvent()
-	{
-	}
+		[Header("Per Rig setting")]
+		public Camera targetCamera;
 
-	public VolumetricPlatformSwitch()
-		: base()
-	{
+		[Header("Target scrpit")]
+		public VolumetricRendering volumetricRendering;
+
+		private void Reset()
+		{
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void OnloadEvent()
+		{
+		}
+
+		public VolumetricPlatformSwitch()
+			: base()
+		{
+		}
 	}
 }

@@ -3,9 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using SLZ.Data.SaveData;
+using SLZ.Props;
 using SLZ.Rig;
-using SLZ.Utilities;
+using SLZ.SaveData;
 using UnityEngine;
 using UnityEngine.Audio;
 
@@ -34,8 +34,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GameObject targetObj;
 
-		[SerializeField]
 		[Header("FX")]
+		[SerializeField]
 		private GameObject lightningBoltObj;
 
 		[SerializeField]
@@ -65,6 +65,10 @@ namespace SLZ.Bonelab
 			{
 				return null;
 			}
+		}
+
+		public override void DoLevelComplete()
+		{
 		}
 
 		public void SaveBigJimmyKey()

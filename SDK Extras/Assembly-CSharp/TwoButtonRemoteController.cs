@@ -1,23 +1,26 @@
-public class TwoButtonRemoteController : OnOffSwitch
+namespace SLZ.Bonelab
 {
-	private void Start()
+	public class TwoButtonRemoteController : OnOffSwitch
 	{
-	}
+		private void Start()
+		{
+		}
 
-	public void ENERGIZEJOINT()
-	{
-	}
+		public void ENERGIZEJOINT()
+		{
+		}
 
-	public void ENERGIZEJOINTNEGATIVE()
-	{
-	}
+		public void ENERGIZEJOINTNEGATIVE()
+		{
+		}
 
-	public void DEENERGIZEJOINT()
-	{
-	}
+		public void DEENERGIZEJOINT()
+		{
+		}
 
-	public TwoButtonRemoteController()
-		: base()
-	{
+		public TwoButtonRemoteController()
+			: base()
+		{
+		}
 	}
 }

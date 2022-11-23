@@ -1,40 +1,43 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(Terrain))]
-public class PlatformTerrain : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Serializable]
-	public struct TerrainSettings
+	[RequireComponent(typeof(Terrain))]
+	public class PlatformTerrain : MonoBehaviour
 	{
-		[Range(1f, 200f)]
-		public float PixelError;
+		[Serializable]
+		public struct TerrainSettings
+		{
+			[Range(1f, 200f)]
+			public float PixelError;
 
-		[Range(1f, 20000f)]
-		public float basemapDistance;
-	}
+			[Range(1f, 20000f)]
+			public float basemapDistance;
+		}
 
-	[SerializeField]
-	private Terrain terrain;
+		[SerializeField]
+		private Terrain terrain;
 
-	public TerrainSettings AndroidTerrainSettings;
+		public TerrainSettings AndroidTerrainSettings;
 
-	public TerrainSettings PCTerrainSettings;
+		public TerrainSettings PCTerrainSettings;
 
-	private void Reset()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void OnDestroy()
-	{
-	}
+		private void OnDestroy()
+		{
+		}
 
-	public PlatformTerrain()
-		: base()
-	{
+		public PlatformTerrain()
+			: base()
+		{
+		}
 	}
 }

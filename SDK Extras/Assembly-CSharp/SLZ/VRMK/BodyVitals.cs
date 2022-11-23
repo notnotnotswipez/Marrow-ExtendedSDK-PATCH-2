@@ -148,8 +148,8 @@ namespace SLZ.VRMK
 
 		public RigManager mngr_Rig;
 
-		[HideInInspector]
 		[Range(0f, 1f)]
+		[HideInInspector]
 		public float counterScaleCam;
 
 		public ControllerRig ctrl_Rig;

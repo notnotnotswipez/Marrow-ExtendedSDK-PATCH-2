@@ -176,6 +176,10 @@ namespace SLZ.Rig
 		{
 		}
 
+		public override void OnRigEnable(bool reEnable)
+		{
+		}
+
 		protected SimpleTransform LimitSpineRotation(SimpleTransform from, SimpleTransform to, Vector4 rangeOfMotion, [Out] float limitedTilt, [Out] float limitedTwist, [Out] float tiltRom, [Out] float tiltDir, [Out] Vector2 xzFromUp)
 		{
 			return default(SimpleTransform);

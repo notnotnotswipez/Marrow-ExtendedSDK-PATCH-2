@@ -4,36 +4,39 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-public class TargetTracker : MonoBehaviour, IAttackReceiver, IEventSystemHandler
+namespace SLZ.Bonelab
 {
-	public int score;
-
-	public int minScore;
-
-	public UnityEvent OnBullseye;
-
-	public UnityEvent OnMinScore;
-
-	public Action<int> OnScore;
-
-	public void Bullseye()
+	public class TargetTracker : MonoBehaviour, IAttackReceiver, IEventSystemHandler
 	{
-	}
+		public int score;
 
-	public void AddScore(int targetScore)
-	{
-	}
+		public int minScore;
 
-	public void ClearScore()
-	{
-	}
+		public UnityEvent OnBullseye;
 
-	public void ReceiveAttack(Attack attack)
-	{
-	}
+		public UnityEvent OnMinScore;
 
-	public TargetTracker()
-		: base()
-	{
+		public Action<int> OnScore;
+
+		public void Bullseye()
+		{
+		}
+
+		public void AddScore(int targetScore)
+		{
+		}
+
+		public void ClearScore()
+		{
+		}
+
+		public void ReceiveAttack(Attack attack)
+		{
+		}
+
+		public TargetTracker()
+			: base()
+		{
+		}
 	}
 }

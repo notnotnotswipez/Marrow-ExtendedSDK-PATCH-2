@@ -15,8 +15,8 @@ namespace SLZ.VFX
 			Out = 1
 		}
 
-		[SerializeField]
 		[Range(0f, 5f)]
+		[SerializeField]
 		private float TimeToFullyFade;
 
 		[SerializeField]

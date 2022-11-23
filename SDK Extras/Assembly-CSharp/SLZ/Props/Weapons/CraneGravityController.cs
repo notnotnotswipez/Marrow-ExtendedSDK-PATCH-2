@@ -1,9 +1,10 @@
 using System.Runtime.CompilerServices;
+using SLZ.Props;
 using SLZ.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Bonelab
 {
 	public class CraneGravityController : MonoBehaviour
 	{

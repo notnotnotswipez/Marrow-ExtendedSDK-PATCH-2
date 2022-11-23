@@ -1,30 +1,31 @@
 using SLZ.Marrow.Interaction;
 using UnityEngine;
 
-public class SplineShieldController : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private SplineJoint[] sJoints;
-
-	[SerializeField]
-	private float innerForce;
-
-	[ContextMenu("SetShieldVelocities")]
-	public void SetShieldVels()
+	public class SplineShieldController : MonoBehaviour
 	{
-	}
 
-	[ContextMenu("StopShields")]
-	public void StopShields()
-	{
-	}
+		[SerializeField]
+		private float innerForce;
 
-	public void DestroyShieldJoints()
-	{
-	}
+		[ContextMenu("SetShieldVelocities")]
+		public void SetShieldVels()
+		{
+		}
 
-	public SplineShieldController()
-		: base()
-	{
+		[ContextMenu("StopShields")]
+		public void StopShields()
+		{
+		}
+
+		public void DestroyShieldJoints()
+		{
+		}
+
+		public SplineShieldController()
+			: base()
+		{
+		}
 	}
 }

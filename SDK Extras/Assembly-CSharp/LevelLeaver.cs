@@ -1,9 +1,12 @@
 using UnityEngine;
 
-public class LevelLeaver : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public LevelLeaver()
-		: base()
+	public class LevelLeaver : MonoBehaviour
 	{
+		public LevelLeaver()
+			: base()
+		{
+		}
 	}
 }

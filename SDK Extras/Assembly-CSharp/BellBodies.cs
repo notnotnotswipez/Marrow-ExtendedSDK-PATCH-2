@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class BellBodies : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Quaternion[] localBodyRotations;
-
-	public Vector3[] localBodyPositions;
-
-	public BellBodies()
-		: base()
+	public class BellBodies : MonoBehaviour
 	{
+		public Quaternion[] localBodyRotations;
+
+		public Vector3[] localBodyPositions;
+
+		public BellBodies()
+			: base()
+		{
+		}
 	}
 }

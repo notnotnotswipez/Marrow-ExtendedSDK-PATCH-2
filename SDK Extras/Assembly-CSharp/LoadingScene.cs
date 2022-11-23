@@ -1,18 +1,21 @@
 using TMPro;
 using UnityEngine;
 
-public class LoadingScene : MonoBehaviour
+namespace SLZ.UI
 {
-	public TextMeshPro[] title_sceneName;
-
-	public string title;
-
-	private void Start()
+	public class LoadingScene : MonoBehaviour
 	{
-	}
+		public TextMeshPro[] title_sceneName;
 
-	public LoadingScene()
-		: base()
-	{
+		public string title;
+
+		private void Start()
+		{
+		}
+
+		public LoadingScene()
+			: base()
+		{
+		}
 	}
 }

@@ -1,28 +1,31 @@
 using UnityEngine;
 
-[RequireComponent(typeof(SkinnedMeshRenderer))]
-public class CloneBlendShapes : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public SkinnedMeshRenderer SourceSkinnedRnd;
-
-	public SkinnedMeshRenderer[] TargetSkinnedRnds;
-
-	private int blendCount;
-
-	private void Awake()
+	[RequireComponent(typeof(SkinnedMeshRenderer))]
+	public class CloneBlendShapes : MonoBehaviour
 	{
-	}
+		public SkinnedMeshRenderer SourceSkinnedRnd;
 
-	private void Update()
-	{
-	}
+		public SkinnedMeshRenderer[] TargetSkinnedRnds;
 
-	private void Reset()
-	{
-	}
+		private int blendCount;
 
-	public CloneBlendShapes()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		private void Reset()
+		{
+		}
+
+		public CloneBlendShapes()
+			: base()
+		{
+		}
 	}
 }

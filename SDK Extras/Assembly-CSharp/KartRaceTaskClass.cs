@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Bonelab;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
@@ -12,8 +13,8 @@ public class KartRaceTaskClass : MonoBehaviour
 
 	private RaceCountdownDisplay countdownDisplay;
 
-	[Tooltip("Spawnable")]
 	[SerializeField]
+	[Tooltip("Spawnable")]
 	private Spawnable playerKart;
 
 	[Tooltip("Spawnable")]
@@ -49,8 +50,8 @@ public class KartRaceTaskClass : MonoBehaviour
 
 	public int displayedContestants;
 
-	[Tooltip("Best times for each checkpoint")]
 	[Header("Race Specific Section")]
+	[Tooltip("Best times for each checkpoint")]
 	public float[] checkpointTimes;
 
 	[Tooltip("The farthest contestant on the track")]

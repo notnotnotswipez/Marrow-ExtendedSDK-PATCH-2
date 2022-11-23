@@ -4,62 +4,65 @@ using SLZ.Marrow.Utilities;
 using TMPro;
 using UnityEngine;
 
-public class ObjectiveBattery : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private static ComponentCache<ObjectiveBattery> _cache;
-
-	public float charge;
-
-	public TMP_Text chargeText;
-
-	public Grip grip;
-
-	private float energyPerc;
-
-	[SerializeField]
-	private GameObject energyBarObj;
-
-	private Vector3 startBar;
-
-	[SerializeField]
-	private Vector3 endBar;
-
-	public static Action OnBattteryGrabbed;
-
-	public static ComponentCache<ObjectiveBattery> Cache
+	public class ObjectiveBattery : MonoBehaviour
 	{
-		get
+		private static ComponentCache<ObjectiveBattery> _cache;
+
+		public float charge;
+
+		public TMP_Text chargeText;
+
+		public Grip grip;
+
+		private float energyPerc;
+
+		[SerializeField]
+		private GameObject energyBarObj;
+
+		private Vector3 startBar;
+
+		[SerializeField]
+		private Vector3 endBar;
+
+		public static Action OnBattteryGrabbed;
+
+		public static ComponentCache<ObjectiveBattery> Cache
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public void UpdateCharge(float energy)
-	{
-	}
+		public void UpdateCharge(float energy)
+		{
+		}
 
-	public void DecrementCharge(float energy)
-	{
-	}
+		public void DecrementCharge(float energy)
+		{
+		}
 
-	private void OnGrab(Hand hand)
-	{
-	}
+		private void OnGrab(Hand hand)
+		{
+		}
 
-	public ObjectiveBattery()
-		: base()
-	{
+		public ObjectiveBattery()
+			: base()
+		{
+		}
 	}
 }

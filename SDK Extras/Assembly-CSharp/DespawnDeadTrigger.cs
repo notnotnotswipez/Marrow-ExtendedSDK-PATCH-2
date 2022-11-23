@@ -1,34 +1,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DespawnDeadTrigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Collider m_Collider;
-
-	public List<AgentLinkControl> agentList;
-
-	private void Start()
+	public class DespawnDeadTrigger : MonoBehaviour
 	{
-	}
+		private Collider m_Collider;
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		public List<AgentLinkControl> agentList;
 
-	private void OnTriggerExit(Collider other)
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void RegisterAgent(AgentLinkControl agent)
-	{
-	}
+		private void OnTriggerEnter(Collider other)
+		{
+		}
 
-	private void UnregisterAgent(AgentLinkControl agent)
-	{
-	}
+		private void OnTriggerExit(Collider other)
+		{
+		}
 
-	public DespawnDeadTrigger()
-		: base()
-	{
+		private void RegisterAgent(AgentLinkControl agent)
+		{
+		}
+
+		private void UnregisterAgent(AgentLinkControl agent)
+		{
+		}
+
+		public DespawnDeadTrigger()
+			: base()
+		{
+		}
 	}
 }

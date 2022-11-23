@@ -4,47 +4,50 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class EarthquakeEvent : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Serializable]
-	public class Events
+	public class EarthquakeEvent : MonoBehaviour
 	{
-		public float time;
+		[Serializable]
+		public class Events
+		{
+			public float time;
 
-		public Rigidbody rb;
+			public Rigidbody rb;
 
-		public Transform atPosition;
+			public Transform atPosition;
 
-		public float magnitude;
+			public float magnitude;
 
-		public ConfigurableJoint joint;
+			public ConfigurableJoint joint;
 
-		public Events()
+			public Events()
+				: base()
+			{
+			}
+		}
+
+		public List<Events> events;
+
+		public AudioClip earthquakeStart;
+
+		public AudioMixerGroup mixerGroup;
+
+		private float _startTime;
+
+		private int _index;
+
+		private void OnEnable()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		public EarthquakeEvent()
 			: base()
 		{
 		}
-	}
-
-	public List<Events> events;
-
-	public AudioClip earthquakeStart;
-
-	public AudioMixerGroup mixerGroup;
-
-	private float _startTime;
-
-	private int _index;
-
-	private void OnEnable()
-	{
-	}
-
-	private void Update()
-	{
-	}
-
-	public EarthquakeEvent()
-		: base()
-	{
 	}
 }

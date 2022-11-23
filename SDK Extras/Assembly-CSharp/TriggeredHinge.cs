@@ -1,39 +1,42 @@
 using UnityEngine;
 
-public class TriggeredHinge : MonoBehaviour
+namespace SLZ.Props
 {
-	public ConfigurableJoint joint;
-
-	public AudioClip[] openClips;
-
-	public AudioClip[] closeClips;
-
-	private float _minAngle;
-
-	private float _maxAngle;
-
-	private void Awake()
+	public class TriggeredHinge : MonoBehaviour
 	{
-	}
+		public ConfigurableJoint joint;
 
-	private void Start()
-	{
-	}
+		public AudioClip[] openClips;
 
-	public void Release()
-	{
-	}
+		public AudioClip[] closeClips;
 
-	public void Open()
-	{
-	}
+		private float _minAngle;
 
-	public void Close()
-	{
-	}
+		private float _maxAngle;
 
-	public TriggeredHinge()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		public void Release()
+		{
+		}
+
+		public void Open()
+		{
+		}
+
+		public void Close()
+		{
+		}
+
+		public TriggeredHinge()
+			: base()
+		{
+		}
 	}
 }

@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class QuestObjSwitcher : MonoBehaviour
+namespace SLZ.Props
 {
-	public GameObject pcObject;
-
-	public GameObject questObject;
-
-	private void Start()
+	public class QuestObjSwitcher : MonoBehaviour
 	{
-	}
+		public GameObject pcObject;
 
-	public QuestObjSwitcher()
-		: base()
-	{
+		public GameObject questObject;
+
+		private void Start()
+		{
+		}
+
+		public QuestObjSwitcher()
+			: base()
+		{
+		}
 	}
 }

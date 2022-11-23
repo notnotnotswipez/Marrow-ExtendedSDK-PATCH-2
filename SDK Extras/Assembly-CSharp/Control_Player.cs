@@ -1,93 +1,95 @@
-using SLZ;
-using SLZ.Data;
 using SLZ.Rig;
+using SLZ.SaveData;
 using SLZ.VRMK;
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-public class Control_Player : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public UIRig uiRig;
-
-	[HideInInspector]
-	public BodyVitals body_vitals;
-
-	[HideInInspector]
-	public float stored_offset_Sitting;
-
-	public RigScreenOptions rigScreen;
-
-	public Audio_Manager audioManager;
-
-	public Control_GlobalTime control_GlobalTime;
-
-	public UniversalRenderPipelineAsset CustomPipelineAsset;
-
-	public bool toolTipDisplay
+	public class Control_Player : MonoBehaviour
 	{
-		get
+		public UIRig uiRig;
+
+		[HideInInspector]
+		public BodyVitals body_vitals;
+
+		[HideInInspector]
+		public float stored_offset_Sitting;
+
+		public RigScreenOptions rigScreen;
+
+		public Audio_Manager audioManager;
+
+		public Control_GlobalTime control_GlobalTime;
+
+		public UniversalRenderPipelineAsset CustomPipelineAsset;
+
+		public bool toolTipDisplay
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
+			set
+			{
+			}
 		}
-		set
+
+		public int physicsUpdateRate
+		{
+			get
+			{
+				return default(int);
+			}
+		}
+
+		public void OnEnable()
 		{
 		}
-	}
 
-	public int physicsUpdateRate
-	{
-		get
+		public void OnDisable()
 		{
-			return default(int);
 		}
-	}
 
-	public void OnEnable()
-	{
-	}
+		private void InstanceOnDataManagerEventPublished(object sender, DataManagerEventArgs args)
+		{
+		}
 
-	public void OnDisable()
-	{
-	}
+		private void Startup()
+		{
+		}
 
-	private void InstanceOnDataManagerEventPublished(object sender, DataManagerEventArgs args)
-	{
-	}
+		public void STANDING()
+		{
+		}
 
-	private void Startup()
-	{
-	}
+		public void SendHeight()
+		{
+		}
 
-	public void STANDING()
-	{
-	}
+		public void UpdateSpectator()
+		{
+		}
 
-	public void SendHeight()
-	{
-	}
+		public void SEND_GRAPHICS()
+		{
+		}
 
-	public void UpdateSpectator()
-	{
-	}
+		public void SEND_VITALS()
+		{
+		}
 
-	public void SEND_GRAPHICS()
-	{
-	}
+		public void AUDIOUPDATE()
+		{
+		}
 
-	public void SEND_VITALS()
-	{
-	}
+		public void SEND_BODYLOG_VITALS()
+		{
+		}
 
-	public void AUDIOUPDATE()
-	{
-	}
-
-	public void SEND_BODYLOG_VITALS()
-	{
-	}
-
-	public Control_Player()
-		: base()
-	{
+		public Control_Player()
+			: base()
+		{
+		}
 	}
 }

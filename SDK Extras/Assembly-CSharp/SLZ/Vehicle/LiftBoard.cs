@@ -1,7 +1,8 @@
 using SLZ.Interaction;
+using SLZ.Vehicle;
 using UnityEngine;
 
-namespace SLZ.Vehicle
+namespace SLZ.Bonelab
 {
 	public class LiftBoard : MonoBehaviour
 	{

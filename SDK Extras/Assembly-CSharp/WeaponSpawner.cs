@@ -10,167 +10,170 @@ using SLZ.Marrow.Pool;
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
-public class WeaponSpawner : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private bool isSpawningAllowed;
-
-	[SerializeField]
-	private bool visDebug;
-
-	[SerializeField]
-	private float initSpawnDelay;
-
-	[SerializeField]
-	private List<WeaponPack> weaponPackList;
-
-	[SerializeField]
-	private GameObject lightAmmoSpawnTarg;
-
-	[SerializeField]
-	private GameObject medAmmoSpawnTarg;
-
-	[SerializeField]
-	private GameObject heavyAmmoSpawnTarg;
-
-	[SerializeField]
-	private AssetPoolee lightAmmoPoolee;
-
-	[SerializeField]
-	private AssetPoolee medAmmoPoolee;
-
-	[SerializeField]
-	private AssetPoolee heavyAmmoPoolee;
-
-	[SerializeField]
-	private SpawnablePack defaultSpawnablePack;
-
-	public Dictionary<string, WeaponPack> weaponPackMap;
-
-	public Transform defSpawn;
-
-	[SerializeField]
-	private int weaponLimit;
-
-	public Transform[] limitedSpawns;
-
-	[SerializeField]
-	private AudioClip overLimitClip;
-
-	private Dictionary<GameObject, AssetPoolee> pooleeDict;
-
-	public static Action<Vector2> OnCountUpdated;
-
-	public static Action<bool> IsSpawningAllowed;
-
-	[SerializeField]
-	private AudioClip spawnClip;
-
-	[SerializeField]
-	private AudioClip despawnClip;
-
-	[SerializeField]
-	private Spawnable spawnFXSpawnable;
-
-	[SerializeField]
-	private Spawnable despawnFXSpawnable;
-
-	[SerializeField]
-	private InventorySlotReceiver[] inventorySlotRecievers;
-
-	private void OnEnable()
+	public class WeaponSpawner : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private bool isSpawningAllowed;
 
-	private void OnDisable()
-	{
-	}
+		[SerializeField]
+		private bool visDebug;
 
-	private void Start()
-	{
-	}
+		[SerializeField]
+		private float initSpawnDelay;
 
-	[ContextMenu("Spawn all WeaponPacks")]
-	public void SpawnAllWeaponPacks()
-	{
-	}
+		[SerializeField]
+		private List<WeaponPack> weaponPackList;
 
-	[ContextMenu("Despawn All WeaponPacks")]
-	public void DespawnAllWeaponPacks()
-	{
-	}
+		[SerializeField]
+		private GameObject lightAmmoSpawnTarg;
 
-	private void DespawnPack(WeaponPack pack)
-	{
-	}
+		[SerializeField]
+		private GameObject medAmmoSpawnTarg;
 
-	private IEnumerator CoSpawnDefaultPack()
-	{
-		return null;
-	}
+		[SerializeField]
+		private GameObject heavyAmmoSpawnTarg;
 
-	private void SpawnDefaultSpawnablePack()
-	{
-	}
+		[SerializeField]
+		private AssetPoolee lightAmmoPoolee;
 
-	private IEnumerator CoSpawnAllWeaponPacks(float delay)
-	{
-		return null;
-	}
+		[SerializeField]
+		private AssetPoolee medAmmoPoolee;
 
-	private void SpawnWeaponPack(WeaponPack pack)
-	{
-	}
+		[SerializeField]
+		private AssetPoolee heavyAmmoPoolee;
 
-	private void OnPackGrabbed(WeaponPack pack)
-	{
-	}
+		[SerializeField]
+		private SpawnablePack defaultSpawnablePack;
 
-	public void ToggleWeaponSpawning(bool enable)
-	{
-	}
+		public Dictionary<string, WeaponPack> weaponPackMap;
 
-	public void SpawnDefaultAmmo()
-	{
-	}
+		public Transform defSpawn;
 
-	[ContextMenu("Despawn All Ammo")]
-	private void DespawnAllAmmo()
-	{
-	}
+		[SerializeField]
+		private int weaponLimit;
 
-	private void CreateSpawnDictionary()
-	{
-	}
+		public Transform[] limitedSpawns;
 
-	public void OnWeaponSelected(SpawnableCrateReference scr)
-	{
-	}
+		[SerializeField]
+		private AudioClip overLimitClip;
 
-	[ContextMenu("GetWeaponSlots")]
-	public void GetWeaponSlots()
-	{
-	}
+		private Dictionary<GameObject, AssetPoolee> pooleeDict;
 
-	public void DropAndDespawnInventory(GameObject playerObject = default(GameObject))
-	{
-	}
+		public static Action<Vector2> OnCountUpdated;
 
-	[ContextMenu("Despawn All Weapons")]
-	public void DespawnAllWeapons()
-	{
-	}
+		public static Action<bool> IsSpawningAllowed;
 
-	public void OnTriggerEnter(Collider other)
-	{
-	}
+		[SerializeField]
+		private AudioClip spawnClip;
 
-	private void UpdateSpawn(Transform spawnPoint)
-	{
-	}
+		[SerializeField]
+		private AudioClip despawnClip;
 
-	public WeaponSpawner()
-		: base()
-	{
+		[SerializeField]
+		private Spawnable spawnFXSpawnable;
+
+		[SerializeField]
+		private Spawnable despawnFXSpawnable;
+
+		[SerializeField]
+		private InventorySlotReceiver[] inventorySlotRecievers;
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		[ContextMenu("Spawn all WeaponPacks")]
+		public void SpawnAllWeaponPacks()
+		{
+		}
+
+		[ContextMenu("Despawn All WeaponPacks")]
+		public void DespawnAllWeaponPacks()
+		{
+		}
+
+		private void DespawnPack(WeaponPack pack)
+		{
+		}
+
+		private IEnumerator CoSpawnDefaultPack()
+		{
+			return null;
+		}
+
+		private void SpawnDefaultSpawnablePack()
+		{
+		}
+
+		private IEnumerator CoSpawnAllWeaponPacks(float delay)
+		{
+			return null;
+		}
+
+		private void SpawnWeaponPack(WeaponPack pack)
+		{
+		}
+
+		private void OnPackGrabbed(WeaponPack pack)
+		{
+		}
+
+		public void ToggleWeaponSpawning(bool enable)
+		{
+		}
+
+		public void SpawnDefaultAmmo()
+		{
+		}
+
+		[ContextMenu("Despawn All Ammo")]
+		private void DespawnAllAmmo()
+		{
+		}
+
+		private void CreateSpawnDictionary()
+		{
+		}
+
+		public void OnWeaponSelected(SpawnableCrateReference scr)
+		{
+		}
+
+		[ContextMenu("GetWeaponSlots")]
+		public void GetWeaponSlots()
+		{
+		}
+
+		public void DropAndDespawnInventory(GameObject playerObject = default(GameObject))
+		{
+		}
+
+		[ContextMenu("Despawn All Weapons")]
+		public void DespawnAllWeapons()
+		{
+		}
+
+		public void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void UpdateSpawn(Transform spawnPoint)
+		{
+		}
+
+		public WeaponSpawner()
+			: base()
+		{
+		}
 	}
 }

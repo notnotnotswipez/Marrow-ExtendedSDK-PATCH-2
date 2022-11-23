@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class JumpVelocity : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Rigidbody rb;
-
-	public GameObject target;
-
-	private float grav;
-
-	public Vector3 direction;
-
-	private void Start()
+	public class JumpVelocity : MonoBehaviour
 	{
-	}
+		public Rigidbody rb;
 
-	private void FixedUpdate()
-	{
-	}
+		public GameObject target;
 
-	public void launch()
-	{
-	}
+		private float grav;
 
-	public JumpVelocity()
-		: base()
-	{
+		public Vector3 direction;
+
+		private void Start()
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public void launch()
+		{
+		}
+
+		public JumpVelocity()
+			: base()
+		{
+		}
 	}
 }

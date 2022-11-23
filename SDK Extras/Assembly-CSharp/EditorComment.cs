@@ -1,12 +1,15 @@
 using UnityEngine;
 
-public class EditorComment : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[TextArea(16, 32)]
-	public string comments;
-
-	public EditorComment()
-		: base()
+	public class EditorComment : MonoBehaviour
 	{
+		[TextArea(16, 32)]
+		public string comments;
+
+		public EditorComment()
+			: base()
+		{
+		}
 	}
 }

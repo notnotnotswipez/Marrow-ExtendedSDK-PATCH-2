@@ -1,10 +1,13 @@
 using System;
 
-[Serializable]
-public class Data_Game
+namespace SLZ.SaveData
 {
-	public Data_Game()
-		: base()
+	[Serializable]
+	public class Data_Game
 	{
+		public Data_Game()
+			: base()
+		{
+		}
 	}
 }

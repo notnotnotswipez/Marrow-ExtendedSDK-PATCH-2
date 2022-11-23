@@ -8,11 +8,12 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Interaction;
 using SLZ.Marrow.Warehouse;
+using SLZ.Props.Weapons;
 using SLZ.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class SpawnGun : Gun
 	{

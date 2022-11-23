@@ -2,11 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.Events;
 
-[Serializable]
-public class UnityEventCollision : UnityEvent<Collider, Vector3, Vector3>
+namespace SLZ.Combat
 {
-	public UnityEventCollision()
-		: base()
+	[Serializable]
+	public class UnityEventCollision : UnityEvent<Collider, Vector3, Vector3>
 	{
+		public UnityEventCollision()
+			: base()
+		{
+		}
 	}
 }

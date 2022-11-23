@@ -5,82 +5,85 @@ using SLZ.Marrow.Utilities;
 using SLZ.SFX;
 using UnityEngine;
 
-public class GripThruster : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private static ComponentCache<GripThruster> _cache;
-
-	public GravGunSFX sfx;
-
-	public Grip triggerGrip;
-
-	public Vector3 forward;
-
-	private float _triggerStartTime;
-
-	private float _cooldownStartTime;
-
-	public float launchForce;
-
-	public Rigidbody rb;
-
-	public float cooldownTime;
-
-	public AudioClip noCoolClip;
-
-	public Color _color;
-
-	public LayerMask enemyLayermask;
-
-	public float explosionRadius;
-
-	public float minExplosionForce;
-
-	public float maxExplosionForce;
-
-	public HashSet<AIBrain> brainHash;
-
-	private bool isExploding;
-
-	public static ComponentCache<GripThruster> Cache
+	public class GripThruster : MonoBehaviour
 	{
-		get
+		private static ComponentCache<GripThruster> _cache;
+
+		public GravGunSFX sfx;
+
+		public Grip triggerGrip;
+
+		public Vector3 forward;
+
+		private float _triggerStartTime;
+
+		private float _cooldownStartTime;
+
+		public float launchForce;
+
+		public Rigidbody rb;
+
+		public float cooldownTime;
+
+		public AudioClip noCoolClip;
+
+		public Color _color;
+
+		public LayerMask enemyLayermask;
+
+		public float explosionRadius;
+
+		public float minExplosionForce;
+
+		public float maxExplosionForce;
+
+		public HashSet<AIBrain> brainHash;
+
+		private bool isExploding;
+
+		public static ComponentCache<GripThruster> Cache
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void OnDestroy()
-	{
-	}
+		private void OnDestroy()
+		{
+		}
 
-	private void OnAttachedUpdate(Hand hand)
-	{
-	}
+		private void OnAttachedUpdate(Hand hand)
+		{
+		}
 
-	public void ApplyThrust()
-	{
-	}
+		public void ApplyThrust()
+		{
+		}
 
-	[ContextMenu("GetNearbyEnemies")]
-	public void GetNearbyEnemies()
-	{
-	}
+		[ContextMenu("GetNearbyEnemies")]
+		public void GetNearbyEnemies()
+		{
+		}
 
-	[ContextMenu("Explode")]
-	public void ExplodeFromHere()
-	{
-	}
+		[ContextMenu("Explode")]
+		public void ExplodeFromHere()
+		{
+		}
 
-	private void OnDrawGizmos()
-	{
-	}
+		private void OnDrawGizmos()
+		{
+		}
 
-	public GripThruster()
-		: base()
-	{
+		public GripThruster()
+			: base()
+		{
+		}
 	}
 }

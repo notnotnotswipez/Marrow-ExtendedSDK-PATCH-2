@@ -1,17 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GenericOnDisable : MonoBehaviour
+namespace SLZ.Utilities
 {
-	[SerializeField]
-	private UnityEvent DisableEvent;
-
-	private void OnDisable()
+	public class GenericOnDisable : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private UnityEvent DisableEvent;
 
-	public GenericOnDisable()
-		: base()
-	{
+		private void OnDisable()
+		{
+		}
+
+		public GenericOnDisable()
+			: base()
+		{
+		}
 	}
 }

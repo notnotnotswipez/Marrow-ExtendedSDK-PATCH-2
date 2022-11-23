@@ -7,7 +7,13 @@ public class SLZAudioRouting : MonoBehaviour
 
 	private bool ready;
 
+	private static extern void Routing_GetData(int target, float[] data, int numsamples, int numchannels);
+
 	private void Start()
+	{
+	}
+
+	private void OnAudioFilterRead(float[] data, int numchannels)
 	{
 	}
 

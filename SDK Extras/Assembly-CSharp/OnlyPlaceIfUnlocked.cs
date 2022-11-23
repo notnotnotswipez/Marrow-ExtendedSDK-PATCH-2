@@ -1,31 +1,34 @@
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Warehouse;
+using SLZ.SaveData;
 using UnityEngine;
 
-[RequireComponent(typeof(SpawnableCratePlacer))]
-public class OnlyPlaceIfUnlocked : MonoBehaviour
+namespace SLZ.Props
 {
-	public SpawnableCratePlacer cratePlacer;
-
-	private static PlayerUnlocks u
+	[RequireComponent(typeof(SpawnableCratePlacer))]
+	public class OnlyPlaceIfUnlocked : MonoBehaviour
 	{
-		get
+		public SpawnableCratePlacer cratePlacer;
+
+		private static PlayerUnlocks u
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private bool ShouldPlace()
-	{
-		return default(bool);
-	}
+		private bool ShouldPlace()
+		{
+			return default(bool);
+		}
 
-	public OnlyPlaceIfUnlocked()
-		: base()
-	{
+		public OnlyPlaceIfUnlocked()
+			: base()
+		{
+		}
 	}
 }

@@ -1,25 +1,28 @@
 using UnityEngine;
 
-public class SimpleTimeDestroy : MonoBehaviour
+namespace SLZ.Props
 {
-	public float destroy_t;
-
-	public bool DestroyOnStart;
-
-	private void Start()
+	public class SimpleTimeDestroy : MonoBehaviour
 	{
-	}
+		public float destroy_t;
 
-	public void TimeDestroy(float timer)
-	{
-	}
+		public bool DestroyOnStart;
 
-	public void Destroy()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public SimpleTimeDestroy()
-		: base()
-	{
+		public void TimeDestroy(float timer)
+		{
+		}
+
+		public void Destroy()
+		{
+		}
+
+		public SimpleTimeDestroy()
+			: base()
+		{
+		}
 	}
 }

@@ -10,9 +10,9 @@ using UnityEngine;
 
 public class Enemy_Health : MonoBehaviour
 {
+	[Space(2f)]
 	[Tooltip("Can be damaged by physical impacts")]
 	[Header("IMPACT")]
-	[Space(2f)]
 	public bool damageFromImpact;
 
 	[Tooltip("Modifier multiplier to collision")]
@@ -47,9 +47,9 @@ public class Enemy_Health : MonoBehaviour
 	[Tooltip("Modifier multiplier to attack type")]
 	public float mod_TypeDamage;
 
-	[Header("CRITICAL HIT")]
 	[Space(10f)]
 	[Tooltip("Colliders for critical hits")]
+	[Header("CRITICAL HIT")]
 	public Collider[] col_crit;
 
 	[Tooltip("Critical hit modifier percent")]
@@ -58,9 +58,9 @@ public class Enemy_Health : MonoBehaviour
 	[Tooltip("FX for crit hit")]
 	public GameObject fx_crit;
 
+	[Tooltip("Invulnerable, probably temp")]
 	[Header("HEALTH")]
 	[Space(10f)]
-	[Tooltip("Invulnerable, probably temp")]
 	public bool invulnerable;
 
 	[Tooltip("Enemy maximum health")]
@@ -104,9 +104,9 @@ public class Enemy_Health : MonoBehaviour
 	[Tooltip("FX for regenerating")]
 	public GameObject fx_regen;
 
+	[Tooltip("Threshold of damage to cause a reaction")]
 	[Space(5f)]
 	[Header("REACTION")]
-	[Tooltip("Threshold of damage to cause a reaction")]
 	public float thr_React;
 
 	private bool reacting;

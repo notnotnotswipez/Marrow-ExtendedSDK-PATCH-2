@@ -260,8 +260,8 @@ namespace SLZ.Rig
 
 		protected bool _lockViveJump;
 
-		[Header("Popup UI")]
 		[Space(10f)]
+		[Header("Popup UI")]
 		public GameObject menu_UI_Left;
 
 		public GameObject menu_UI_Right;
@@ -291,6 +291,8 @@ namespace SLZ.Rig
 		public static Action<float> onPlayerJump;
 
 		private static bool _isPaused;
+
+		private bool _isPausedFinal;
 
 		private Vector2 _axisPrimary;
 
@@ -363,7 +365,7 @@ namespace SLZ.Rig
 			}
 		}
 
-		public override void OnRigEnable()
+		public override void OnRigEnable(bool reEnable)
 		{
 		}
 

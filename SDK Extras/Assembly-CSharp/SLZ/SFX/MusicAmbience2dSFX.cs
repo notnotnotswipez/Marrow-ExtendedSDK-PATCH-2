@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;

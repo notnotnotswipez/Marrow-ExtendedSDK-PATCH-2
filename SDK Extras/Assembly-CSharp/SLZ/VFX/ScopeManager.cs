@@ -16,8 +16,8 @@ namespace SLZ.VFX
 		[Range(0f, 10f)]
 		public int frameskip;
 
-		[SerializeField]
 		[Range(0f, 1028f)]
+		[SerializeField]
 		private int RenderTextureRes;
 
 		private Material ScopeMat;

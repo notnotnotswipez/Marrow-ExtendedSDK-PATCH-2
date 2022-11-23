@@ -7,7 +7,7 @@ using SLZ.Interaction;
 using SLZ.SFX;
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class FlyingGun : MonoBehaviour
 	{
@@ -49,6 +49,8 @@ namespace SLZ.Props.Weapons
 		private Rigidbody[] _playerRbs;
 
 		private InteractableHost _host;
+
+		public static Action OnFlyEnabled;
 
 		private void Awake()
 		{

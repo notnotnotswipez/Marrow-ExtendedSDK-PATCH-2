@@ -5,14 +5,14 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Warehouse;
-using SLZ.Props.Weapons;
+using SLZ.Props;
+using SLZ.SaveData;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class SpawnablesPanelView : PanelView
 	{

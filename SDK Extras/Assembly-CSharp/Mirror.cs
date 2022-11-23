@@ -6,6 +6,7 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
+using SLZ.Mods;
 using SLZ.Rig;
 using SLZ.VRMK;
 using UnityEngine;
@@ -15,8 +16,8 @@ public class Mirror : MonoBehaviour
 	[ReadOnly(false)]
 	public RigManager rigManager;
 
-	[ReadOnly(false)]
 	[SerializeField]
+	[ReadOnly(false)]
 	private SLZ.VRMK.Avatar _reflection;
 
 	[SerializeField]

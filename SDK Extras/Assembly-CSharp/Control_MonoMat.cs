@@ -1,5 +1,4 @@
 using System.Runtime.CompilerServices;
-using SLZ;
 using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using SLZ.Props.Weapons;
@@ -7,95 +6,102 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Audio;
 
-public class Control_MonoMat : Powerable
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Rigidbody[] _loots;
-
-	[SerializeField]
-	private Control_PowerLever _doorLever;
-
-	[SerializeField]
-	private Powerable _doorMotor;
-
-	[SerializeField]
-	private int _multiplier;
-
-	[SerializeField]
-	private int _itemPrice;
-
-	[SerializeField]
-	private int _smallBullets;
-
-	[SerializeField]
-	private int _mediumBullets;
-
-	[SerializeField]
-	private bool _opened;
-
-	[SerializeField]
-	private bool _unlocked;
-
-	[SerializeField]
-	private TextMeshProUGUI _bulletBalanceTextmesh;
-
-	[SerializeField]
-	private TextMeshProUGUI _refundTextmesh;
-
-	[SerializeField]
-	private AmmoReciever reciever;
-
-	[SerializeField]
-	private Spawnable lightRefundSpawnable;
-
-	[SerializeField]
-	private Spawnable mediumRefundSpawnable;
-
-	[SerializeField]
-	private AudioClip _openedClip;
-
-	[SerializeField]
-	private AudioClip _unlockedClip;
-
-	[SerializeField]
-	private AudioClip _lockedClip;
-
-	[SerializeField]
-	private AudioMixerGroup _mixergroup;
-
-	public Transform giveChangeTransform;
-
-	private void Start()
+	public class Control_MonoMat : Powerable
 	{
-	}
+		[SerializeField]
+		private Rigidbody[] _loots;
 
-	public void GiveChange()
-	{
-	}
+		[SerializeField]
+		private Control_PowerLever _doorLever;
 
-	public void InsertMagazine(Magazine magazine)
-	{
-	}
+		[SerializeField]
+		private Powerable _doorMotor;
 
-	public void AddBullets(int addedBullets, bool isSmall = true)
-	{
-	}
+		[SerializeField]
+		private int _multiplier;
 
-	public Rigidbody[] GetLoots()
-	{
-		return null;
-	}
+		[SerializeField]
+		private int _itemPrice;
 
-	public void SetPrice(int price, int mult)
-	{
-	}
+		[SerializeField]
+		private int _smallBullets;
 
-	public void SetLoots(Rigidbody[] loots)
-	{
-	}
+		[SerializeField]
+		private int _mediumBullets;
 
-	public Control_MonoMat()
-		: base()
-	{
+		[SerializeField]
+		private bool _opened;
+
+		[SerializeField]
+		private bool _unlocked;
+
+		[SerializeField]
+		private TextMeshProUGUI _bulletBalanceTextmesh;
+
+		[SerializeField]
+		private TextMeshProUGUI _refundTextmesh;
+
+		[SerializeField]
+		private AmmoReciever reciever;
+
+		[SerializeField]
+		private Spawnable lightRefundSpawnable;
+
+		[SerializeField]
+		private Spawnable mediumRefundSpawnable;
+
+		[SerializeField]
+		private AudioClip _openedClip;
+
+		[SerializeField]
+		private AudioClip _unlockedClip;
+
+		[SerializeField]
+		private AudioClip _lockedClip;
+
+		[SerializeField]
+		private AudioMixerGroup _mixergroup;
+
+		public Transform giveChangeTransform;
+
+		private void Start()
+		{
+		}
+
+		public void GiveChange()
+		{
+		}
+
+		public void InsertMagazine(Magazine magazine)
+		{
+		}
+
+		public void AddBullets(int addedBullets, bool isSmall = true)
+		{
+		}
+
+		public override void VoltageToObject(float voltage, int id = 0)
+		{
+		}
+
+		public Rigidbody[] GetLoots()
+		{
+			return null;
+		}
+
+		public void SetPrice(int price, int mult)
+		{
+		}
+
+		public void SetLoots(Rigidbody[] loots)
+		{
+		}
+
+		public Control_MonoMat()
+			: base()
+		{
+		}
 	}
 }

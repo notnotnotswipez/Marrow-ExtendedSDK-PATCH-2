@@ -24,8 +24,8 @@ namespace SLZ.Props
 		public Action onDestroyDelegate;
 
 		[Tooltip("Can be damaged by physical impacts")]
-		[Space(2f)]
 		[Header("IMPACT")]
+		[Space(2f)]
 		public bool damageFromImpact;
 
 		[Tooltip("Modifier multiplier to collision")]
@@ -43,9 +43,9 @@ namespace SLZ.Props
 		[Tooltip("Amount of Minimal Mod")]
 		public float mod_Minimal;
 
-		[Tooltip("Can be damaged by attacks")]
 		[Space(10f)]
 		[Header("ATTACKED")]
+		[Tooltip("Can be damaged by attacks")]
 		public bool damageFromAttack;
 
 		[Tooltip("Modifier multiplier to attack damage")]
@@ -60,9 +60,9 @@ namespace SLZ.Props
 		[Tooltip("Modifier multiplier to attack type")]
 		public float mod_TypeDamage;
 
-		[Header("CRITICAL HIT")]
 		[Space(10f)]
 		[Tooltip("Colliders for critical hits")]
+		[Header("CRITICAL HIT")]
 		public Collider[] col_crit;
 
 		[Tooltip("Critical hit modifier percent")]
@@ -96,8 +96,8 @@ namespace SLZ.Props
 		[Tooltip("True = use materials instead of objects for damage look")]
 		public bool useMaterialChange;
 
-		[Header("HEALTH REGEN")]
 		[Tooltip("Health to regen per frequency")]
+		[Header("HEALTH REGEN")]
 		[Space(10f)]
 		public float amt_Regen;
 
@@ -113,9 +113,9 @@ namespace SLZ.Props
 		[Tooltip("FX for regenerating")]
 		public GameObject fx_regen;
 
-		[Space(5f)]
-		[Header("REACTION")]
 		[Tooltip("Threshold of damage to cause a reaction")]
+		[Header("REACTION")]
+		[Space(5f)]
 		public float thr_React;
 
 		private bool reacting;
@@ -144,8 +144,8 @@ namespace SLZ.Props
 
 		private bool rebool;
 
-		[Space(5f)]
 		[Header("DEATH")]
+		[Space(5f)]
 		public bool use_Explosion;
 
 		public bool drop_Bloodied;
@@ -175,8 +175,8 @@ namespace SLZ.Props
 
 		public GameObject fx_Reward;
 
-		[Header("REFERENCES")]
 		[Space(10f)]
+		[Header("REFERENCES")]
 		[Tooltip("Default Prop 100% health")]
 		public GameObject prop_Whole;
 
@@ -220,8 +220,8 @@ namespace SLZ.Props
 
 		private Vector3 BoundScale;
 
-		[Header("DEPENDENCIES")]
 		[Space(10f)]
+		[Header("DEPENDENCIES")]
 		public Spawnable blasterDustSpawnable;
 
 		public Spawnable breakEffectSpawnable;

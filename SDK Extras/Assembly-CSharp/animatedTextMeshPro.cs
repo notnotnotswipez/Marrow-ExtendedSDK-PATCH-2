@@ -6,29 +6,32 @@ using System.Runtime.CompilerServices;
 using TMPro;
 using UnityEngine;
 
-public class animatedTextMeshPro : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float letterPaused;
-
-	public string message;
-
-	public TextMeshPro textComp;
-
-	private void Awake()
+	public class animatedTextMeshPro : MonoBehaviour
 	{
-	}
+		public float letterPaused;
 
-	private void OnEnable()
-	{
-	}
+		public string message;
 
-	private IEnumerator TypeText()
-	{
-		return null;
-	}
+		public TextMeshPro textComp;
 
-	public animatedTextMeshPro()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private IEnumerator TypeText()
+		{
+			return null;
+		}
+
+		public animatedTextMeshPro()
+			: base()
+		{
+		}
 	}
 }

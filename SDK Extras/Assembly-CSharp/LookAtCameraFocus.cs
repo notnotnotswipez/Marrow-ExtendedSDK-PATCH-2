@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class LookAtCameraFocus : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Update()
+	public class LookAtCameraFocus : MonoBehaviour
 	{
-	}
+		private void Update()
+		{
+		}
 
-	public LookAtCameraFocus()
-		: base()
-	{
+		public LookAtCameraFocus()
+			: base()
+		{
+		}
 	}
 }

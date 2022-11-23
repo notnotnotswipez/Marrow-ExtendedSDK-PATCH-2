@@ -5,76 +5,79 @@ using System.Runtime.InteropServices;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class VRPhysicsRaycaster : BaseRaycaster
+namespace SLZ.UI
 {
-	protected const int kNoEventMaskSet = -1;
-
-	[SerializeField]
-	protected LayerMask m_EventMask;
-
-	[SerializeField]
-	protected int m_MaxRayIntersections;
-
-	protected int m_LastMaxRayIntersections;
-
-	private RaycastHit[] m_Hits;
-
-	public override Camera eventCamera
+	public class VRPhysicsRaycaster : BaseRaycaster
 	{
-		get
+		protected const int kNoEventMaskSet = -1;
+
+		[SerializeField]
+		protected LayerMask m_EventMask;
+
+		[SerializeField]
+		protected int m_MaxRayIntersections;
+
+		protected int m_LastMaxRayIntersections;
+
+		private RaycastHit[] m_Hits;
+
+		public override Camera eventCamera
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	public virtual int depth
-	{
-		get
+		public virtual int depth
 		{
-			return default(int);
+			get
+			{
+				return default(int);
+			}
 		}
-	}
 
-	public int finalEventMask
-	{
-		get
+		public int finalEventMask
 		{
-			return default(int);
+			get
+			{
+				return default(int);
+			}
 		}
-	}
 
-	public LayerMask eventMask
-	{
-		get
+		public LayerMask eventMask
 		{
-			return default(LayerMask);
+			get
+			{
+				return default(LayerMask);
+			}
+			set
+			{
+			}
 		}
-		set
+
+		public int maxRayIntersections
+		{
+			get
+			{
+				return default(int);
+			}
+			set
+			{
+			}
+		}
+
+		protected VRPhysicsRaycaster()
+			: base()
 		{
 		}
-	}
 
-	public int maxRayIntersections
-	{
-		get
-		{
-			return default(int);
-		}
-		set
+		protected void ComputeRayAndDistance(PointerEventData eventData, [Out] Ray ray, [Out] float distanceToClipPlane)
 		{
 		}
-	}
 
-	protected VRPhysicsRaycaster()
-		: base()
-	{
-	}
-
-	protected void ComputeRayAndDistance(PointerEventData eventData, [Out] Ray ray, [Out] float distanceToClipPlane)
-	{
-	}
-
-	public override void Raycast(PointerEventData eventData, List<RaycastResult> resultAppendList)
-	{
+		public override void Raycast(PointerEventData eventData, List<RaycastResult> resultAppendList)
+		{
+		}
 	}
 }

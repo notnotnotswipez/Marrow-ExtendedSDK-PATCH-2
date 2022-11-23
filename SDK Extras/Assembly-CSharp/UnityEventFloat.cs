@@ -1,11 +1,14 @@
 using System;
 using UnityEngine.Events;
 
-[Serializable]
-public class UnityEventFloat : UnityEvent<float>
+namespace SLZ.Combat
 {
-	public UnityEventFloat()
-		: base()
+	[Serializable]
+	public class UnityEventFloat : UnityEvent<float>
 	{
+		public UnityEventFloat()
+			: base()
+		{
+		}
 	}
 }

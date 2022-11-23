@@ -5,97 +5,100 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class VehicleDamage : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum WheelDamage
+	public class VehicleDamage : MonoBehaviour
 	{
-		Off = 0,
-		Visual = 1,
-		Mechanical = 2
-	}
+		public enum WheelDamage
+		{
+			Off = 0,
+			Visual = 1,
+			Mechanical = 2
+		}
 
-	private struct originalMeshVerts
-	{
-		public Vector3[] meshVerts;
-	}
+		private struct originalMeshVerts
+		{
+			public Vector3[] meshVerts;
+		}
 
-	[SerializeField]
-	private float health;
+		[SerializeField]
+		private float health;
 
-	[SerializeField]
-	private float minCollisionForce;
+		[SerializeField]
+		private float minCollisionForce;
 
-	[SerializeField]
-	private AudioClip[] crashClips;
+		[SerializeField]
+		private AudioClip[] crashClips;
 
-	public bool useDamage;
+		public bool useDamage;
 
-	public WheelDamage wheelDamage;
+		public WheelDamage wheelDamage;
 
-	public float wheelDamageRadius;
+		public float wheelDamageRadius;
 
-	public float wheelDamageMultiplier;
+		public float wheelDamageMultiplier;
 
-	private originalMeshVerts[] originalMeshData;
+		private originalMeshVerts[] originalMeshData;
 
-	public MeshFilter[] deformableMeshFilters;
+		public MeshFilter[] deformableMeshFilters;
 
-	public LayerMask damageFilter;
+		public LayerMask damageFilter;
 
-	public float randomizeVertices;
+		public float randomizeVertices;
 
-	public float damageRadius;
+		public float damageRadius;
 
-	private float minimumVertDistanceForDamagedMesh;
+		private float minimumVertDistanceForDamagedMesh;
 
-	public bool repairNow;
+		public bool repairNow;
 
-	public bool repaired;
+		public bool repaired;
 
-	public float maximumDamage;
+		public float maximumDamage;
 
-	public float damageMultiplier;
+		public float damageMultiplier;
 
-	private Vector3 localVector;
+		private Vector3 localVector;
 
-	private Quaternion rot;
+		private Quaternion rot;
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void InitDamage()
-	{
-	}
+		private void InitDamage()
+		{
+		}
 
-	private void OnCollisionEnter(Collision collision)
-	{
-	}
+		private void OnCollisionEnter(Collision collision)
+		{
+		}
 
-	private void LoadOriginalMeshData()
-	{
-	}
+		private void LoadOriginalMeshData()
+		{
+		}
 
-	private void DeformMesh(Mesh mesh, Vector3[] originalMesh, Collision collision, float cos, Transform meshTransform, Quaternion rot)
-	{
-	}
+		private void DeformMesh(Mesh mesh, Vector3[] originalMesh, Collision collision, float cos, Transform meshTransform, Quaternion rot)
+		{
+		}
 
-	[ContextMenu("Repair")]
-	public void StartRepair()
-	{
-	}
+		[ContextMenu("Repair")]
+		public void StartRepair()
+		{
+		}
 
-	private IEnumerator CoRepair()
-	{
-		return null;
-	}
+		private IEnumerator CoRepair()
+		{
+			return null;
+		}
 
-	public void Repair()
-	{
-	}
+		public void Repair()
+		{
+		}
 
-	public VehicleDamage()
-		: base()
-	{
+		public VehicleDamage()
+			: base()
+		{
+		}
 	}
 }

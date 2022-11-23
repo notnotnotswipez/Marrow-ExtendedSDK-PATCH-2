@@ -8,62 +8,65 @@ using SLZ.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
-public class BatteryReciever : MonoBehaviour, IInteractionReceivable
+namespace SLZ.Bonelab
 {
-	public Transform target;
-
-	private ConfigurableJoint ignoreJoint;
-
-	private InteractableHost batteryHost;
-
-	private void CreateJoint(Rigidbody rb)
+	public class BatteryReciever : MonoBehaviour, IInteractionReceivable
 	{
-	}
+		public Transform target;
 
-	private void DestroyJoint()
-	{
-	}
+		private ConfigurableJoint ignoreJoint;
 
-	public void OnInteractableHostEnter(InteractableHost host)
-	{
-	}
+		private InteractableHost batteryHost;
 
-	public virtual void OnInteractableHostDrop(InteractableHost host)
-	{
-	}
+		private void CreateJoint(Rigidbody rb)
+		{
+		}
 
-	public void OnInteractableHostExit(InteractableHost host)
-	{
-	}
+		private void DestroyJoint()
+		{
+		}
 
-	public void OnInteractableHostStay(InteractableHost host)
-	{
-	}
+		public void OnInteractableHostEnter(InteractableHost host)
+		{
+		}
 
-	protected void GetHandPositionFromWorldHandle(Hand hand, Vector3 worldHandlePosition, Quaternion worldHandleRotation, [Out] Vector3 handPosition, [Out] Quaternion handRotation)
-	{
-	}
+		public virtual void OnInteractableHostDrop(InteractableHost host)
+		{
+		}
 
-	protected void GetHandPositionFromWorldHandle(Hand hand, SimpleTransform worldHandleTransform, [Out] SimpleTransform handTransform)
-	{
-	}
+		public void OnInteractableHostExit(InteractableHost host)
+		{
+		}
 
-	public void Generic(Grip grip, Hand hand, InteractableHost host, float perc)
-	{
-	}
+		public void OnInteractableHostStay(InteractableHost host)
+		{
+		}
 
-	private IEnumerator CoDriftIntoTransform()
-	{
-		return null;
-	}
+		protected void GetHandPositionFromWorldHandle(Hand hand, Vector3 worldHandlePosition, Quaternion worldHandleRotation, [Out] Vector3 handPosition, [Out] Quaternion handRotation)
+		{
+		}
 
-	private IEnumerator CoDriftOutOfTransform()
-	{
-		return null;
-	}
+		protected void GetHandPositionFromWorldHandle(Hand hand, SimpleTransform worldHandleTransform, [Out] SimpleTransform handTransform)
+		{
+		}
 
-	public BatteryReciever()
-		: base()
-	{
+		public void Generic(Grip grip, Hand hand, InteractableHost host, float perc)
+		{
+		}
+
+		private IEnumerator CoDriftIntoTransform()
+		{
+			return null;
+		}
+
+		private IEnumerator CoDriftOutOfTransform()
+		{
+			return null;
+		}
+
+		public BatteryReciever()
+			: base()
+		{
+		}
 	}
 }

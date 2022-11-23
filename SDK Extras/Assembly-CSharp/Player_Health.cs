@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using PuppetMasta;
+using SLZ.Bonelab;
 using SLZ.Combat;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -20,9 +22,9 @@ public class Player_Health : Health
 
 	public bool reloadLevelOnDeath;
 
+	[Tooltip("Can be damaged by physical impacts")]
 	[Space(2f)]
 	[Header("IMPACT")]
-	[Tooltip("Can be damaged by physical impacts")]
 	public bool damageFromImpact;
 
 	[Tooltip("Modifier multiplier to collision")]
@@ -43,9 +45,9 @@ public class Player_Health : Health
 	[Tooltip("Spawnable hero props")]
 	public GameObject[] prop_Hero;
 
-	[Tooltip("Threshold of damage to cause a reaction")]
 	[Space(5f)]
 	[Header("REACTION")]
+	[Tooltip("Threshold of damage to cause a reaction")]
 	public float thr_React;
 
 	private bool reacting;
@@ -83,8 +85,8 @@ public class Player_Health : Health
 	[Tooltip("Time until regen starts after hit")]
 	public float wait_Regen_t;
 
-	[Range(0.05f, 15f)]
 	[Tooltip("Time in seconds to regnerate health from 0 - maxHealth")]
+	[Range(0.05f, 15f)]
 	public float totalRegenDuration;
 
 	private float currentHealthRegenDuration;
@@ -167,6 +169,10 @@ public class Player_Health : Health
 	{
 	}
 
+	protected override void Awake()
+	{
+	}
+
 	private void OnDestroy()
 	{
 	}
@@ -184,6 +190,14 @@ public class Player_Health : Health
 	}
 
 	public void ToggleInstantDeathMode(bool toggleOn)
+	{
+	}
+
+	public void OnPuppetDeath(PuppetMaster puppet)
+	{
+	}
+
+	public override void OnReceivedDamage(Attack attack, PlayerDamageReceiver.BodyPart part)
 	{
 	}
 
@@ -209,6 +223,10 @@ public class Player_Health : Health
 	}
 
 	private void PlayerDamageScore(float damage)
+	{
+	}
+
+	public override void TAKEDAMAGE(float damage)
 	{
 	}
 

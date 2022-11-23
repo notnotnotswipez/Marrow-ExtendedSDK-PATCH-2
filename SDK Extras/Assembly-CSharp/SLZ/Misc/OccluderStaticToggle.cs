@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ.Misc
+namespace SLZ.Bonelab
 {
 	public class OccluderStaticToggle : MonoBehaviour
 	{

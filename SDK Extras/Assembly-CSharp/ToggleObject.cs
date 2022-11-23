@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class ToggleObject : MonoBehaviour
+namespace SLZ.Utilities
 {
-	[SerializeField]
-	private GameObject ObjectToToggle;
-
-	public void Toggle()
+	public class ToggleObject : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private GameObject ObjectToToggle;
 
-	public ToggleObject()
-		: base()
-	{
+		public void Toggle()
+		{
+		}
+
+		public ToggleObject()
+			: base()
+		{
+		}
 	}
 }

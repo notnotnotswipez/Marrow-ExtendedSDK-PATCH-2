@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SLZ.Environment
+namespace SLZ.Bonelab
 {
 	public class SimpleDoorControl : MonoBehaviour
 	{

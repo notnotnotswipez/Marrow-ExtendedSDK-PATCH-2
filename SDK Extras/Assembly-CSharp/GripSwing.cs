@@ -7,52 +7,55 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GripSwing : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private GameObject anchorObj;
-
-	[SerializeField]
-	private ConfigurableJoint _joint;
-
-	[SerializeField]
-	private Grip _grip;
-
-	public UnityEvent OnGripClaim;
-
-	public UnityEvent OnDetachComplete;
-
-	private void OnEnable()
+	public class GripSwing : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private GameObject anchorObj;
 
-	private void OnDisable()
-	{
-	}
+		[SerializeField]
+		private ConfigurableJoint _joint;
 
-	private void Start()
-	{
-	}
+		[SerializeField]
+		private Grip _grip;
 
-	public void OnGrab(Hand hand)
-	{
-	}
+		public UnityEvent OnGripClaim;
 
-	public void OnDrop(Hand hand)
-	{
-	}
+		public UnityEvent OnDetachComplete;
 
-	private IEnumerator CoCheckGrip()
-	{
-		return null;
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void ResetJoint()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	public GripSwing()
-		: base()
-	{
+		private void Start()
+		{
+		}
+
+		public void OnGrab(Hand hand)
+		{
+		}
+
+		public void OnDrop(Hand hand)
+		{
+		}
+
+		private IEnumerator CoCheckGrip()
+		{
+			return null;
+		}
+
+		private void ResetJoint()
+		{
+		}
+
+		public GripSwing()
+			: base()
+		{
+		}
 	}
 }

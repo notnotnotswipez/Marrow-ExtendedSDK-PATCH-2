@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class ModuleHandler : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public RendererGroup[] rendererGroups;
-
-	private void Start()
+	public class ModuleHandler : MonoBehaviour
 	{
-	}
+		public RendererGroup[] rendererGroups;
 
-	public void SETMODULESTATE(string state)
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public ModuleHandler()
-		: base()
-	{
+		public void SETMODULESTATE(string state)
+		{
+		}
+
+		public ModuleHandler()
+			: base()
+		{
+		}
 	}
 }

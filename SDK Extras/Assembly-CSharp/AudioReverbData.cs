@@ -1,35 +1,38 @@
 using System;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "AudioReverbData", menuName = "StressLevelZero/Audio Reverb Data", order = 2)]
-public class AudioReverbData : ScriptableObject
+namespace SLZ.Data
 {
-	[Serializable]
-	public struct ReverbData
+	[CreateAssetMenu(fileName = "AudioReverbData", menuName = "StressLevelZero/Audio Reverb Data", order = 2)]
+	public class AudioReverbData : ScriptableObject
 	{
-		public string paramName;
-
-		public float paramValue;
-
-		[HideInInspector]
-		public float minRange;
-
-		[HideInInspector]
-		public float maxRange;
-
-		public ReverbData(string name, float val, float min, float max)
+		[Serializable]
+		public struct ReverbData
 		{
-			this.maxRange = default(float);
-			this.minRange = default(float);
-			this.paramValue = default(float);
-			this.paramName = default(string);
+			public string paramName;
+
+			public float paramValue;
+
+			[HideInInspector]
+			public float minRange;
+
+			[HideInInspector]
+			public float maxRange;
+
+			public ReverbData(string name, float val, float min, float max)
+			{
+				this.maxRange = default(float);
+				this.minRange = default(float);
+				this.paramValue = default(float);
+				this.paramName = default(string);
+			}
 		}
-	}
 
-	public ReverbData[] reverbData;
+		public ReverbData[] reverbData;
 
-	public AudioReverbData()
-		: base()
-	{
+		public AudioReverbData()
+			: base()
+		{
+		}
 	}
 }

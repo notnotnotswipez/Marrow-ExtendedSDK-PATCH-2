@@ -1,5 +1,6 @@
 using SLZ.Marrow.Utilities;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.Rendering;
 
 namespace SLZ.Rig
@@ -16,6 +17,8 @@ namespace SLZ.Rig
 
 		private bool _timeInput;
 
+		public UnityEvent OnLastCameraUpdate;
+
 		private readonly SimpleTransform OculusHandOffsetLf;
 
 		private readonly SimpleTransform OculusHandOffsetRt;
@@ -29,6 +32,18 @@ namespace SLZ.Rig
 		private SimpleTransform rightHandOffset;
 
 		private bool _isControllerRigPaused;
+
+		private int leftAdjustMode;
+
+		private int leftAdjustDir;
+
+		private SimpleTransform leftOffsetBuffer;
+
+		private int rightAdjustMode;
+
+		private int rightAdjustDir;
+
+		private SimpleTransform rightOffsetBuffer;
 
 		public void RefreshGenericTrackerIndices()
 		{

@@ -12,7 +12,7 @@ using SLZ.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class AvatarGun : MonoBehaviour
 	{

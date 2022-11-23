@@ -1,7 +1,7 @@
 using TMPro;
 using UnityEngine;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class PageItemView : MonoBehaviour, IPopUpElementable
 	{
@@ -14,8 +14,8 @@ namespace SLZ.UI.Radial
 			EIGHTH = 4
 		}
 
-		[ColorUsage(true, true)]
 		[Header("Options")]
+		[ColorUsage(true, true)]
 		public Color highlightColor1;
 
 		[ColorUsage(true, true)]

@@ -5,7 +5,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class PageElementView : MonoBehaviour, IPopUpElementable
 	{

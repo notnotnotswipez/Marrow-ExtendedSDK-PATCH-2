@@ -4,7 +4,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using PuppetMasta;
 using SLZ.AI;
+using SLZ.Bonelab;
+using SLZ.Data;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
@@ -94,6 +97,8 @@ namespace SLZ.Zones
 
 		public Action<MLZoneSpawner, AIBrain, EnemyProfile, bool> onSpawnNPCDelegate;
 
+		public Action<BehaviourBaseNav, Rigidbody> OnSpawn_NPC_Launcher;
+
 		private GameObject _playerObject;
 
 		private int _dead;
@@ -102,9 +107,9 @@ namespace SLZ.Zones
 
 		private Coroutine _emitterCoroutine;
 
-		[SerializeField]
 		[Header("Arena")]
 		[Tooltip("Used for explicit arena spawns only, useful for enemies spawned on ziplines or at heights, disables damage from collision for x seconds after spawn")]
+		[SerializeField]
 		private float blockCollisionDelay;
 
 		public EnemyProfile currEnemyProfile;

@@ -3,9 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Interaction;
 using UnityEngine;
 
-namespace SLZ.Interaction
+namespace SLZ.Bonelab
 {
 	public class FuseInteractionVolume : InteractionVolume
 	{
@@ -20,9 +21,9 @@ namespace SLZ.Interaction
 		private Control_SurgeBox m_fuseBox;
 
 		[Tooltip("Assign the maximum wattage cap before the fuse blows")]
-		[SerializeField]
-		[Header("FUSE DATA")]
 		[Space(10f)]
+		[Header("FUSE DATA")]
+		[SerializeField]
 		private float m_FuseBlowoutCap;
 
 		public bool FuseIn

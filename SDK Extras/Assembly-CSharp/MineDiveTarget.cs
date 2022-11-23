@@ -6,55 +6,58 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MineDiveTarget : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private ConfigurableJoint joint;
-
-	[SerializeField]
-	private Quaternion goalRot;
-
-	private JointDrive jointDrive;
-
-	[SerializeField]
-	private float delayTime;
-
-	[SerializeField]
-	private bool isLocked;
-
-	[SerializeField]
-	private float jointSpringForce;
-
-	public bool isPractice;
-
-	public int isWorth;
-
-	public UnityEvent OnGoDown;
-
-	public UnityEvent OnGoUp;
-
-	public static Action<MineDiveTarget> hitAction;
-
-	public void AttackTarget()
+	public class MineDiveTarget : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private ConfigurableJoint joint;
 
-	private IEnumerator CoWaitForTarget()
-	{
-		return null;
-	}
+		[SerializeField]
+		private Quaternion goalRot;
 
-	private void UnlockJoint()
-	{
-	}
+		private JointDrive jointDrive;
 
-	[ContextMenu("GetJoint")]
-	public void GetJoint()
-	{
-	}
+		[SerializeField]
+		private float delayTime;
 
-	public MineDiveTarget()
-		: base()
-	{
+		[SerializeField]
+		private bool isLocked;
+
+		[SerializeField]
+		private float jointSpringForce;
+
+		public bool isPractice;
+
+		public int isWorth;
+
+		public UnityEvent OnGoDown;
+
+		public UnityEvent OnGoUp;
+
+		public static Action<MineDiveTarget> hitAction;
+
+		public void AttackTarget()
+		{
+		}
+
+		private IEnumerator CoWaitForTarget()
+		{
+			return null;
+		}
+
+		private void UnlockJoint()
+		{
+		}
+
+		[ContextMenu("GetJoint")]
+		public void GetJoint()
+		{
+		}
+
+		public MineDiveTarget()
+			: base()
+		{
+		}
 	}
 }

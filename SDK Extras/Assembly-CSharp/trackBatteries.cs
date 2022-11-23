@@ -1,25 +1,28 @@
 using UnityEngine;
 
-public class trackBatteries : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum ThisBattery
+	public class trackBatteries : MonoBehaviour
 	{
-		A = 0,
-		B = 1
-	}
+		public enum ThisBattery
+		{
+			A = 0,
+			B = 1
+		}
 
-	public GameControl_Hub gameControl;
+		public GameControl_Hub gameControl;
 
-	public GameObject dummyBattery;
+		public GameObject dummyBattery;
 
-	public ThisBattery thisBattery;
+		public ThisBattery thisBattery;
 
-	public void BatteryPlaced()
-	{
-	}
+		public void BatteryPlaced()
+		{
+		}
 
-	public trackBatteries()
-		: base()
-	{
+		public trackBatteries()
+			: base()
+		{
+		}
 	}
 }

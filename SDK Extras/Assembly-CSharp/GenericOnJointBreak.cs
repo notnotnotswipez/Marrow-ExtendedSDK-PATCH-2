@@ -1,16 +1,19 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GenericOnJointBreak : MonoBehaviour
+namespace SLZ.Utilities
 {
-	public UnityEvent JointBreakEvent;
-
-	private void OnJointBreak(float breakForce)
+	public class GenericOnJointBreak : MonoBehaviour
 	{
-	}
+		public UnityEvent JointBreakEvent;
 
-	public GenericOnJointBreak()
-		: base()
-	{
+		private void OnJointBreak(float breakForce)
+		{
+		}
+
+		public GenericOnJointBreak()
+			: base()
+		{
+		}
 	}
 }

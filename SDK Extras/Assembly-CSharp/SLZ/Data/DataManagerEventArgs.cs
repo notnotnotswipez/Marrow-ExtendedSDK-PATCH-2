@@ -1,6 +1,6 @@
 using System;
 
-namespace SLZ.Data
+namespace SLZ.SaveData
 {
 	public class DataManagerEventArgs : EventArgs
 	{

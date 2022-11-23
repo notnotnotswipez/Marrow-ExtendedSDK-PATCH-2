@@ -2,65 +2,68 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Playables;
 
-public class NarrativeManager : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("Active Narrative State, do not set in inspector")]
-	public NarrativeState activeNState;
-
-	[SerializeField]
-	private PlayableDirector activeDirector;
-
-	[SerializeField]
-	private NarrativeState.HoldState activeHoldState;
-
-	[Header("Active Interupt Director")]
-	[SerializeField]
-	private PlayableDirector interuptDirector;
-
-	[SerializeField]
-	private NarrativeState[] narrativeStates;
-
-	[SerializeField]
-	private ActionDirector[] actionDirectors;
-
-	private Dictionary<string, ActionDirector> actionDictionary;
-
-	private void OnEnable()
+	public class NarrativeManager : MonoBehaviour
 	{
-	}
+		[Header("Active Narrative State, do not set in inspector")]
+		public NarrativeState activeNState;
 
-	private void OnDisable()
-	{
-	}
+		[SerializeField]
+		private PlayableDirector activeDirector;
 
-	private void Awake()
-	{
-	}
+		[SerializeField]
+		private NarrativeState.HoldState activeHoldState;
 
-	private void OnPlayableDirectorStopped(PlayableDirector stoppedDirector)
-	{
-	}
+		[SerializeField]
+		[Header("Active Interupt Director")]
+		private PlayableDirector interuptDirector;
 
-	private void OnStateChanged(NarrativeState nState, PlayableDirector director)
-	{
-	}
+		[SerializeField]
+		private NarrativeState[] narrativeStates;
 
-	public void PlayerInteruptAction(string playerAction)
-	{
-	}
+		[SerializeField]
+		private ActionDirector[] actionDirectors;
 
-	[ContextMenu("TestSuicideAction")]
-	public void TestInterupt()
-	{
-	}
+		private Dictionary<string, ActionDirector> actionDictionary;
 
-	[ContextMenu("GetAllNarrativeStates")]
-	public void GetAllHoldStates()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	public NarrativeManager()
-		: base()
-	{
+		private void OnDisable()
+		{
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void OnPlayableDirectorStopped(PlayableDirector stoppedDirector)
+		{
+		}
+
+		private void OnStateChanged(NarrativeState nState, PlayableDirector director)
+		{
+		}
+
+		public void PlayerInteruptAction(string playerAction)
+		{
+		}
+
+		[ContextMenu("TestSuicideAction")]
+		public void TestInterupt()
+		{
+		}
+
+		[ContextMenu("GetAllNarrativeStates")]
+		public void GetAllHoldStates()
+		{
+		}
+
+		public NarrativeManager()
+			: base()
+		{
+		}
 	}
 }

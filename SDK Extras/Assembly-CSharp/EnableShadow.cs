@@ -1,14 +1,17 @@
 using UnityEngine;
 
-[RequireComponent(typeof(MeshRenderer))]
-public class EnableShadow : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	[RequireComponent(typeof(MeshRenderer))]
+	public class EnableShadow : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public EnableShadow()
-		: base()
-	{
+		public EnableShadow()
+			: base()
+		{
+		}
 	}
 }

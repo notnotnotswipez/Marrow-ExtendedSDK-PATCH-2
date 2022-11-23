@@ -6,7 +6,7 @@ using JetBrains.Annotations;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	public sealed class DebugSettings : INotifyPropertyChanging, INotifyPropertyChanged
 	{

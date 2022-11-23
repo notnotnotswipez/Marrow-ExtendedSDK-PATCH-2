@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using SLZ.Marrow.Data;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	[Serializable]
 	public class MagazineState

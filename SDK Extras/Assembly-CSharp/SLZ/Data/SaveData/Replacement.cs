@@ -2,7 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using SLZ.Marrow.Warehouse;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	[Serializable]
 	public struct Replacement

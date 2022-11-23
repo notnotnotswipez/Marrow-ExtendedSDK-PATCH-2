@@ -1,21 +1,23 @@
-using SLZ;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-public class HandPoseTester : MonoBehaviour
+namespace SLZ.Utilities
 {
-	public HandPose[] handPoses;
-
-	public HandPoseAnimator hpAnimator;
-
-	private int _idx;
-
-	private void Update()
+	public class HandPoseTester : MonoBehaviour
 	{
-	}
+		public HandPose[] handPoses;
 
-	public HandPoseTester()
-		: base()
-	{
+		public HandPoseAnimator hpAnimator;
+
+		private int _idx;
+
+		private void Update()
+		{
+		}
+
+		public HandPoseTester()
+			: base()
+		{
+		}
 	}
 }

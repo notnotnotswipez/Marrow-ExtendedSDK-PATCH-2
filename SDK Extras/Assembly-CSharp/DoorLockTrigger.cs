@@ -1,35 +1,38 @@
 using UnityEngine;
 
-public class DoorLockTrigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private bool m_locked;
-
-	public GameObject thisKey;
-
-	private DoorControl doorControl;
-
-	public bool locked
+	public class DoorLockTrigger : MonoBehaviour
 	{
-		get
+		private bool m_locked;
+
+		public GameObject thisKey;
+
+		private DoorControl doorControl;
+
+		public bool locked
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
 		}
-	}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		private void OnTriggerEnter(Collider other)
+		{
+		}
 
-	private void M_DoorControlUnlock(bool hasKey = true)
-	{
-	}
+		private void M_DoorControlUnlock(bool hasKey = true)
+		{
+		}
 
-	public DoorLockTrigger()
-		: base()
-	{
+		public DoorLockTrigger()
+			: base()
+		{
+		}
 	}
 }

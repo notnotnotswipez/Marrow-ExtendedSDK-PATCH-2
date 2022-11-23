@@ -70,8 +70,6 @@ namespace SLZ.Rig
 
 		private bool _legsKinematic;
 
-		private bool _reEnable;
-
 		private SimpleTransform _initialPelvis;
 
 		private SimpleTransform _initialSpine;
@@ -111,6 +109,46 @@ namespace SLZ.Rig
 		private Quaternion _initialKneeRt;
 
 		private Quaternion _initialFootRt;
+
+		private SimpleTransform _cachedPelvis;
+
+		private SimpleTransform _cachedSpine;
+
+		private SimpleTransform _cachedChest;
+
+		private SimpleTransform _cachedNeck;
+
+		private SimpleTransform _cachedHead;
+
+		private SimpleTransform _cachedJaw;
+
+		private SimpleTransform _cachedKnee;
+
+		private SimpleTransform _cachedFeet;
+
+		private SimpleTransform _cachedGhLf;
+
+		private SimpleTransform _cachedElbowLf;
+
+		private SimpleTransform _cachedHandLf;
+
+		private SimpleTransform _cachedGhRt;
+
+		private SimpleTransform _cachedElbowRt;
+
+		private SimpleTransform _cachedHandRt;
+
+		private Quaternion _cachedHipLf;
+
+		private Quaternion _cachedKneeLf;
+
+		private Quaternion _cachedFootLf;
+
+		private Quaternion _cachedHipRt;
+
+		private Quaternion _cachedKneeRt;
+
+		private Quaternion _cachedFootRt;
 
 		private float _monoRemainder;
 
@@ -315,7 +353,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public override void OnRigEnable()
+		public override void OnRigEnable(bool reEnable)
 		{
 		}
 

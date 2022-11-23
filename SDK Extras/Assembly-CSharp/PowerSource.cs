@@ -1,49 +1,52 @@
 using UnityEngine;
 
-public class PowerSource : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private bool m_InfinitePower;
-
-	[Header("VOLTAGE")]
-	[Space(5f)]
-	[SerializeField]
-	[Tooltip("The Capcity of the PowerSource in Watts-min")]
-	private float m_Capacity;
-
-	[Tooltip("Only for reading, functions for charging/drawing should be the mutator")]
-	public float BatteryCharge;
-
-	public bool InfinitePower
+	public class PowerSource : MonoBehaviour
 	{
-		get
+		[SerializeField]
+		private bool m_InfinitePower;
+
+		[Space(5f)]
+		[SerializeField]
+		[Tooltip("The Capcity of the PowerSource in Watts-min")]
+		[Header("VOLTAGE")]
+		private float m_Capacity;
+
+		[Tooltip("Only for reading, functions for charging/drawing should be the mutator")]
+		public float BatteryCharge;
+
+		public bool InfinitePower
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
 		}
-	}
 
-	public float Capacity
-	{
-		get
+		public float Capacity
 		{
-			return default(float);
+			get
+			{
+				return default(float);
+			}
 		}
-	}
 
-	public bool CanCharge
-	{
-		get
+		public bool CanCharge
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
 		}
-	}
 
-	public void LOADCURRENTCHARGE(float savedCharge)
-	{
-	}
+		public void LOADCURRENTCHARGE(float savedCharge)
+		{
+		}
 
-	public PowerSource()
-		: base()
-	{
+		public PowerSource()
+			: base()
+		{
+		}
 	}
 }

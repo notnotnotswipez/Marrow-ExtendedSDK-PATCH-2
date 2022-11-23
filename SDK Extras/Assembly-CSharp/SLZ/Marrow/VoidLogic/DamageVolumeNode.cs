@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using PuppetMasta;
 using SLZ.Combat;
 using SLZ.Marrow.Data;
 using SLZ.Props;
@@ -11,8 +12,8 @@ namespace SLZ.Marrow.VoidLogic
 	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Damage Volume")]
 	public class DamageVolumeNode : BaseNode
 	{
-		[SerializeField]
 		[Header("Damage")]
+		[SerializeField]
 		[Range(0.25f, 10f)]
 		private float _tickFrequency;
 
@@ -40,6 +41,8 @@ namespace SLZ.Marrow.VoidLogic
 		private Dictionary<GameObject, Rigidbody> _gameObjectToRigidbodyMap;
 
 		private Dictionary<Rigidbody, int> _rigidbodyRefcounts;
+
+		private Dictionary<GameObject, MuscleCollisionBroadcaster> _rootToTriggerRefProxy;
 
 		private List<PlayerDamageReceiver> _playerDamageRecievers;
 

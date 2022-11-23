@@ -1,27 +1,30 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-[RequireComponent(typeof(Camera))]
-public class CameraSettings : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Camera cam;
-
-	private UniversalAdditionalCameraData cameraData;
-
-	private void GetComps()
+	[RequireComponent(typeof(Camera))]
+	public class CameraSettings : MonoBehaviour
 	{
-	}
+		private Camera cam;
 
-	private void Awake()
-	{
-	}
+		private UniversalAdditionalCameraData cameraData;
 
-	private void ChangeSettings()
-	{
-	}
+		private void GetComps()
+		{
+		}
 
-	public CameraSettings()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		private void ChangeSettings()
+		{
+		}
+
+		public CameraSettings()
+			: base()
+		{
+		}
 	}
 }

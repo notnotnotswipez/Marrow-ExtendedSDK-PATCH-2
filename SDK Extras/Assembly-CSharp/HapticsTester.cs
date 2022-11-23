@@ -1,60 +1,63 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class HapticsTester : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Grip grip;
-
-	public InteractableHost host;
-
-	public int index;
-
-	[SerializeField]
-	[Range(0f, 1f)]
-	private float amplitudeMin;
-
-	[Range(0f, 1f)]
-	[SerializeField]
-	private float amplitudeMax;
-
-	[Range(0f, 2000f)]
-	[SerializeField]
-	private float frequencyMin;
-
-	[SerializeField]
-	[Range(0f, 2000f)]
-	private float frequencyMax;
-
-	[SerializeField]
-	[Range(0f, 1f)]
-	private float duration;
-
-	private float frequency;
-
-	private float amplitude;
-
-	private void OnEnable()
+	public class HapticsTester : MonoBehaviour
 	{
-	}
+		public Grip grip;
 
-	private void OnDisable()
-	{
-	}
+		public InteractableHost host;
 
-	private void OnGripUpdate(Hand hand)
-	{
-	}
+		public int index;
 
-	private void OnGripAttached(Hand hand)
-	{
-	}
+		[Range(0f, 1f)]
+		[SerializeField]
+		private float amplitudeMin;
 
-	private void OnGripDetached(Hand hand)
-	{
-	}
+		[Range(0f, 1f)]
+		[SerializeField]
+		private float amplitudeMax;
 
-	public HapticsTester()
-		: base()
-	{
+		[SerializeField]
+		[Range(0f, 2000f)]
+		private float frequencyMin;
+
+		[Range(0f, 2000f)]
+		[SerializeField]
+		private float frequencyMax;
+
+		[SerializeField]
+		[Range(0f, 1f)]
+		private float duration;
+
+		private float frequency;
+
+		private float amplitude;
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnGripUpdate(Hand hand)
+		{
+		}
+
+		private void OnGripAttached(Hand hand)
+		{
+		}
+
+		private void OnGripDetached(Hand hand)
+		{
+		}
+
+		public HapticsTester()
+			: base()
+		{
+		}
 	}
 }

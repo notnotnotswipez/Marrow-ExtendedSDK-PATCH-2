@@ -1,18 +1,20 @@
 using System.Runtime.CompilerServices;
-using SLZ.Combat;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class CollisionEnterSensor : MonoBehaviour
+namespace SLZ.Combat
 {
-	public float minVelocityDeltaSqr;
-
-	private void OnCollisionEnter(Collision c)
+	public class CollisionEnterSensor : MonoBehaviour
 	{
-	}
+		public float minVelocityDeltaSqr;
 
-	public CollisionEnterSensor()
-		: base()
-	{
+		private void OnCollisionEnter(Collision c)
+		{
+		}
+
+		public CollisionEnterSensor()
+			: base()
+		{
+		}
 	}
 }

@@ -1,56 +1,59 @@
 using UnityEngine;
 
-public class TankTread : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float resetHalfThreshold;
-
-	[Range(-15f, 15f)]
-	public float velocity;
-
-	public Rigidbody tankTread;
-
-	public Rigidbody topFrontRoll;
-
-	public Rigidbody botFrontRoll;
-
-	public Rigidbody topBackRoll;
-
-	public Rigidbody botBackRoll;
-
-	public Rigidbody frontSlope;
-
-	public Rigidbody tread1;
-
-	public Rigidbody backSlope;
-
-	public ConfigurableJoint tread1Drive;
-
-	public ConfigurableJoint frontSlopeDrive;
-
-	public ConfigurableJoint rearSlopeDrive;
-
-	public ConfigurableJoint topFrontDrive;
-
-	public ConfigurableJoint botFrontDrive;
-
-	public ConfigurableJoint topBackDrive;
-
-	public ConfigurableJoint botBackDrive;
-
-	private void Start()
+	public class TankTread : MonoBehaviour
 	{
-	}
+		public float resetHalfThreshold;
 
-	public void OnFixedUpdate()
-	{
-	}
+		[Range(-15f, 15f)]
+		public float velocity;
 
-	private void FixedUpdate()
-	{
-	}
+		public Rigidbody tankTread;
 
-	public TankTread()
-		: base()
-	{
+		public Rigidbody topFrontRoll;
+
+		public Rigidbody botFrontRoll;
+
+		public Rigidbody topBackRoll;
+
+		public Rigidbody botBackRoll;
+
+		public Rigidbody frontSlope;
+
+		public Rigidbody tread1;
+
+		public Rigidbody backSlope;
+
+		public ConfigurableJoint tread1Drive;
+
+		public ConfigurableJoint frontSlopeDrive;
+
+		public ConfigurableJoint rearSlopeDrive;
+
+		public ConfigurableJoint topFrontDrive;
+
+		public ConfigurableJoint botFrontDrive;
+
+		public ConfigurableJoint topBackDrive;
+
+		public ConfigurableJoint botBackDrive;
+
+		private void Start()
+		{
+		}
+
+		public void OnFixedUpdate()
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public TankTread()
+			: base()
+		{
+		}
 	}
 }

@@ -5,68 +5,71 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class ColorMaterialPropertyBlock : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Renderer[] Renderers;
-
-	[SerializeField]
-	private string[] PropertyNames;
-
-	[SerializeField]
-	private bool ColorOnAwake;
-
-	[SerializeField]
-	[ColorUsage(true, true)]
-	private Color DefaultColor;
-
-	private int[] propIDs;
-
-	private MaterialPropertyBlock propertyBlock;
-
-	private void Awake()
+	public class ColorMaterialPropertyBlock : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Renderer[] Renderers;
 
-	public void SetAllColors(Color color)
-	{
-	}
+		[SerializeField]
+		private string[] PropertyNames;
 
-	public void SetDefaultColors()
-	{
-	}
+		[SerializeField]
+		private bool ColorOnAwake;
 
-	public void SetColorsToBlack()
-	{
-	}
+		[SerializeField]
+		[ColorUsage(true, true)]
+		private Color DefaultColor;
 
-	public void LerpClearToWhite(float Time)
-	{
-	}
+		private int[] propIDs;
 
-	public void LerpWhiteToClear(float Time)
-	{
-	}
+		private MaterialPropertyBlock propertyBlock;
 
-	public void LerpColor(Color Target)
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public void LerpColor(Color Target, float Time)
-	{
-	}
+		public void SetAllColors(Color color)
+		{
+		}
 
-	public void LerpColor(Color Base, Color Target, float Time)
-	{
-	}
+		public void SetDefaultColors()
+		{
+		}
 
-	private IEnumerator LerpColorCo(Color Base, Color Target, float LerpTime)
-	{
-		return null;
-	}
+		public void SetColorsToBlack()
+		{
+		}
 
-	public ColorMaterialPropertyBlock()
-		: base()
-	{
+		public void LerpClearToWhite(float Time)
+		{
+		}
+
+		public void LerpWhiteToClear(float Time)
+		{
+		}
+
+		public void LerpColor(Color Target)
+		{
+		}
+
+		public void LerpColor(Color Target, float Time)
+		{
+		}
+
+		public void LerpColor(Color Base, Color Target, float Time)
+		{
+		}
+
+		private IEnumerator LerpColorCo(Color Base, Color Target, float LerpTime)
+		{
+			return null;
+		}
+
+		public ColorMaterialPropertyBlock()
+			: base()
+		{
+		}
 	}
 }

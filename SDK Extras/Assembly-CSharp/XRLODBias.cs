@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class XRLODBias : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[HideInInspector]
-	[SerializeField]
-	private float OrginalLOD;
-
-	private void Start()
+	public class XRLODBias : MonoBehaviour
 	{
-	}
+		[HideInInspector]
+		[SerializeField]
+		private float OrginalLOD;
 
-	public XRLODBias()
-		: base()
-	{
+		private void Start()
+		{
+		}
+
+		public XRLODBias()
+			: base()
+		{
+		}
 	}
 }

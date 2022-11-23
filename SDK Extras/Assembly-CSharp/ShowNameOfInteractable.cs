@@ -3,42 +3,45 @@ using SLZ.Interaction;
 using TMPro;
 using UnityEngine;
 
-public class ShowNameOfInteractable : MonoBehaviour, IInteractionReceivable
+namespace SLZ.Utilities
 {
-	public TextMeshPro tmp;
-
-	private Dictionary<InteractableHost, string> log;
-
-	private List<InteractableHost> enterNames;
-
-	private List<string> history;
-
-	private void Awake()
+	public class ShowNameOfInteractable : MonoBehaviour, IInteractionReceivable
 	{
-	}
+		public TextMeshPro tmp;
 
-	public void OnInteractableHostDrop(InteractableHost host)
-	{
-	}
+		private Dictionary<InteractableHost, string> log;
 
-	public void OnInteractableHostEnter(InteractableHost host)
-	{
-	}
+		private List<InteractableHost> enterNames;
 
-	public void OnInteractableHostExit(InteractableHost host)
-	{
-	}
+		private List<string> history;
 
-	public void OnInteractableHostStay(InteractableHost host)
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void FixedUpdate()
-	{
-	}
+		public void OnInteractableHostDrop(InteractableHost host)
+		{
+		}
 
-	public ShowNameOfInteractable()
-		: base()
-	{
+		public void OnInteractableHostEnter(InteractableHost host)
+		{
+		}
+
+		public void OnInteractableHostExit(InteractableHost host)
+		{
+		}
+
+		public void OnInteractableHostStay(InteractableHost host)
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public ShowNameOfInteractable()
+			: base()
+		{
+		}
 	}
 }

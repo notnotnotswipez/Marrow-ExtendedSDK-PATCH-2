@@ -22,9 +22,13 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GenericCrateReference unlockCrate;
 
-		[FormerlySerializedAs("avatarGatcha")]
 		[SerializeField]
+		[FormerlySerializedAs("avatarGatcha")]
 		private GameObject avatarGacha;
+
+		public override void Start()
+		{
+		}
 
 		public void SwitchAvatar()
 		{
@@ -36,6 +40,10 @@ namespace SLZ.Bonelab
 		}
 
 		private void OnDestroy()
+		{
+		}
+
+		public override void DoLevelComplete()
 		{
 		}
 

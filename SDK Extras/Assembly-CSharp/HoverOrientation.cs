@@ -1,37 +1,40 @@
 using UnityEngine;
 
-public class HoverOrientation : MonoBehaviour
+namespace SLZ.Props
 {
-	public float Turn;
-
-	public float MaxTorque;
-
-	public float BrakingTorque;
-
-	public float RollOnTurns;
-
-	public float RollOnTurnsTorque;
-
-	public float RollCompensationTorque;
-
-	public float PitchCompensationTorque;
-
-	public HoverEngine[] HoverEngines;
-
-	private void FixedUpdate()
+	public class HoverOrientation : MonoBehaviour
 	{
-	}
+		public float Turn;
 
-	private void Level()
-	{
-	}
+		public float MaxTorque;
 
-	private void ApplyTurn()
-	{
-	}
+		public float BrakingTorque;
 
-	public HoverOrientation()
-		: base()
-	{
+		public float RollOnTurns;
+
+		public float RollOnTurnsTorque;
+
+		public float RollCompensationTorque;
+
+		public float PitchCompensationTorque;
+
+		public HoverEngine[] HoverEngines;
+
+		private void FixedUpdate()
+		{
+		}
+
+		private void Level()
+		{
+		}
+
+		private void ApplyTurn()
+		{
+		}
+
+		public HoverOrientation()
+			: base()
+		{
+		}
 	}
 }

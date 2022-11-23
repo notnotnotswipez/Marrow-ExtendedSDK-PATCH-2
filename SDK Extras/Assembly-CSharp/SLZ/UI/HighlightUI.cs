@@ -17,8 +17,8 @@ namespace SLZ.UI
 
 		private Renderer m_Renderer;
 
-		[ColorUsage(true, true)]
 		[Header("Options")]
+		[ColorUsage(true, true)]
 		public Color color1;
 
 		[ColorUsage(true, true)]

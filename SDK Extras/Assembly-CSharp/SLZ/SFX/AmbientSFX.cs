@@ -20,8 +20,8 @@ namespace SLZ.SFX
 
 		public AudioClip powerDown;
 
-		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		[Range(0f, 1f)]
+		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		public float volume;
 
 		[Tooltip("Volume of power up event sounds")]

@@ -7,101 +7,104 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class CarDoorController : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ConfigurableJoint jnt;
-
-	public Rigidbody rb;
-
-	public Servo servo;
-
-	public Grip[] grips;
-
-	public Grip[] insideGrips;
-
-	public bool isLatched;
-
-	public bool isInHand;
-
-	public bool isLocked;
-
-	public float latchThreshhold;
-
-	public Vector3 positiveDrive;
-
-	public Vector3 negativeDrive;
-
-	public float positiveRot;
-
-	public float negativeRot;
-
-	private SoftJointLimit lowLimit;
-
-	private SoftJointLimit highLimit;
-
-	private SoftJointLimit zeroLimit;
-
-	private JointDrive openDrive;
-
-	private JointDrive closeDrive;
-
-	[SerializeField]
-	private UnityEvent DoorCloseEvent;
-
-	[SerializeField]
-	private UnityEvent DoorOpenEvent;
-
-	private void Awake()
+	public class CarDoorController : MonoBehaviour
 	{
-	}
+		public ConfigurableJoint jnt;
 
-	private void OnEnable()
-	{
-	}
+		public Rigidbody rb;
 
-	private void OnDisable()
-	{
-	}
+		public Servo servo;
 
-	private void OnHandAttached(Hand hand)
-	{
-	}
+		public Grip[] grips;
 
-	private void OnHandDetached(Hand hand)
-	{
-	}
+		public Grip[] insideGrips;
 
-	private void OnFarHoverUpdate(Hand hand)
-	{
-	}
+		public bool isLatched;
 
-	private void OnHandAttachedUpdate(Hand hand)
-	{
-	}
+		public bool isInHand;
 
-	private void FixedUpdate()
-	{
-	}
+		public bool isLocked;
 
-	public void OPENDOOR()
-	{
-	}
+		public float latchThreshhold;
 
-	private IEnumerator SetLatch()
-	{
-		return null;
-	}
+		public Vector3 positiveDrive;
 
-	public void CLOSEDOOR()
-	{
-	}
+		public Vector3 negativeDrive;
 
-	public void CLOSEDOORCAB()
-	{
-	}
+		public float positiveRot;
 
-	public CarDoorController()
-		: base()
-	{
+		public float negativeRot;
+
+		private SoftJointLimit lowLimit;
+
+		private SoftJointLimit highLimit;
+
+		private SoftJointLimit zeroLimit;
+
+		private JointDrive openDrive;
+
+		private JointDrive closeDrive;
+
+		[SerializeField]
+		private UnityEvent DoorCloseEvent;
+
+		[SerializeField]
+		private UnityEvent DoorOpenEvent;
+
+		private void Awake()
+		{
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnHandAttached(Hand hand)
+		{
+		}
+
+		private void OnHandDetached(Hand hand)
+		{
+		}
+
+		private void OnFarHoverUpdate(Hand hand)
+		{
+		}
+
+		private void OnHandAttachedUpdate(Hand hand)
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public void OPENDOOR()
+		{
+		}
+
+		private IEnumerator SetLatch()
+		{
+			return null;
+		}
+
+		public void CLOSEDOOR()
+		{
+		}
+
+		public void CLOSEDOORCAB()
+		{
+		}
+
+		public CarDoorController()
+			: base()
+		{
+		}
 	}
 }

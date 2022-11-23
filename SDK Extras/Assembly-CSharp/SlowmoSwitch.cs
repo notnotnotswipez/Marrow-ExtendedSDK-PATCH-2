@@ -1,16 +1,19 @@
 using SLZ.Rig;
 using UnityEngine;
 
-public class SlowmoSwitch : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public RigManager rm;
-
-	public void SetInvincibleAndDisableSlowmo()
+	public class SlowmoSwitch : MonoBehaviour
 	{
-	}
+		public RigManager rm;
 
-	public SlowmoSwitch()
-		: base()
-	{
+		public void SetInvincibleAndDisableSlowmo()
+		{
+		}
+
+		public SlowmoSwitch()
+			: base()
+		{
+		}
 	}
 }

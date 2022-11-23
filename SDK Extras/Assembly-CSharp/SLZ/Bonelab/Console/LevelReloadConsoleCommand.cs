@@ -14,6 +14,7 @@ namespace SLZ.Bonelab.Console
 	[ConsoleCommand("level", "reload", "Reload Current Level")]
 	public class LevelReloadConsoleCommand : BaseConsoleCommand
 	{
+
 		public override IUniTaskAsyncEnumerable<object> RunCommand(string command)
 		{
 			return null;

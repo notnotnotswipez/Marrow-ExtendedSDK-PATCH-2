@@ -1,10 +1,9 @@
 using System.Runtime.InteropServices;
 using SLZ.Interaction;
-using SLZ.UI;
-using SLZ.Utilities;
+using SLZ.Rig;
 using UnityEngine;
 
-namespace SLZ.Rig
+namespace SLZ.Bonelab
 {
 	public class TutorialRig : MonoBehaviour
 	{

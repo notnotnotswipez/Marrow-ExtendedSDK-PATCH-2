@@ -1,48 +1,51 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class ZipGrip : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Grip grip;
-
-	[SerializeField]
-	private Vector3 startPos;
-
-	[SerializeField]
-	private Quaternion startRot;
-
-	[SerializeField]
-	private Rigidbody body;
-
-	[SerializeField]
-	private ConfigurableJoint joint;
-
-	[SerializeField]
-	private Transform com;
-
-	public void OnEnable()
+	public class ZipGrip : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Grip grip;
 
-	public void OnDisable()
-	{
-	}
+		[SerializeField]
+		private Vector3 startPos;
 
-	public void OnAttached(Hand hand)
-	{
-	}
+		[SerializeField]
+		private Quaternion startRot;
 
-	public void OnDettached(Hand hand)
-	{
-	}
+		[SerializeField]
+		private Rigidbody body;
 
-	public void ResetToStart()
-	{
-	}
+		[SerializeField]
+		private ConfigurableJoint joint;
 
-	public ZipGrip()
-		: base()
-	{
+		[SerializeField]
+		private Transform com;
+
+		public void OnEnable()
+		{
+		}
+
+		public void OnDisable()
+		{
+		}
+
+		public void OnAttached(Hand hand)
+		{
+		}
+
+		public void OnDettached(Hand hand)
+		{
+		}
+
+		public void ResetToStart()
+		{
+		}
+
+		public ZipGrip()
+			: base()
+		{
+		}
 	}
 }

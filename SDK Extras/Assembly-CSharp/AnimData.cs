@@ -1,19 +1,22 @@
 using System;
 using UnityEngine;
 
-[Serializable]
-public class AnimData
+namespace SLZ.Bonelab
 {
-	public int animIndex;
-
-	public string animGrp;
-
-	public string animTrigger;
-
-	public AudioClip voiceClip;
-
-	public AnimData()
-		: base()
+	[Serializable]
+	public class AnimData
 	{
+		public int animIndex;
+
+		public string animGrp;
+
+		public string animTrigger;
+
+		public AudioClip voiceClip;
+
+		public AnimData()
+			: base()
+		{
+		}
 	}
 }

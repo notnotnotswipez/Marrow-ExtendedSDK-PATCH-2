@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Data;
 using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.Audio;
@@ -151,6 +152,14 @@ namespace SLZ.Bonelab
 		{
 		}
 
+		public override void Start()
+		{
+		}
+
+		public void DISABLEDEATHRELOAD()
+		{
+		}
+
 		public void SEQUENCE(int gate_index = 0)
 		{
 		}
@@ -188,6 +197,10 @@ namespace SLZ.Bonelab
 		}
 
 		private void PlayAudioQuick(AudioClip clipToPlay, Transform place)
+		{
+		}
+
+		public override void DoLevelComplete()
 		{
 		}
 

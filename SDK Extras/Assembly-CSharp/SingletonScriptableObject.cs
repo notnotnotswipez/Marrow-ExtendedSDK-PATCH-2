@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class SingletonScriptableObject<T> : ScriptableObject where T : ScriptableObject
+namespace SLZ.Bonelab
 {
-	private static T s_Instance;
-
-	public static T Instance
+	public class SingletonScriptableObject<T> : ScriptableObject where T : ScriptableObject
 	{
-		get
+		private static T s_Instance;
+
+		public static T Instance
 		{
-			return null;
+			get
+			{
+				return null;
+			}
 		}
-	}
 
-	public SingletonScriptableObject()
-		: base()
-	{
+		public SingletonScriptableObject()
+			: base()
+		{
+		}
 	}
 }

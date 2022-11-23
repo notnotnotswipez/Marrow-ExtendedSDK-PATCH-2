@@ -1,28 +1,31 @@
 using UnityEngine;
 
-public class SlidingDoorManager : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private SlidingDoors[] doors;
-
-	private void Awake()
+	public class SlidingDoorManager : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private SlidingDoors[] doors;
 
-	public void FixedUpdate()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public void ClearDoorLists()
-	{
-	}
+		public void FixedUpdate()
+		{
+		}
 
-	public void CloseAllEnemyDoors()
-	{
-	}
+		public void ClearDoorLists()
+		{
+		}
 
-	public SlidingDoorManager()
-		: base()
-	{
+		public void CloseAllEnemyDoors()
+		{
+		}
+
+		public SlidingDoorManager()
+			: base()
+		{
+		}
 	}
 }

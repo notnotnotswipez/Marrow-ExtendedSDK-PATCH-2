@@ -6,7 +6,7 @@ using System.Runtime.CompilerServices;
 using SLZ.Interaction;
 using UnityEngine;
 
-namespace SLZ.Utilities
+namespace SLZ.Bonelab
 {
 	public class CraneControlBox : MonoBehaviour
 	{
@@ -20,7 +20,7 @@ namespace SLZ.Utilities
 
 		public Powerable_Joint[] craneSegments;
 
-		public Powerable[] craneGantry;
+		public Powerable_Joint[] craneGantry;
 
 		public Material craneLightOn;
 
@@ -30,11 +30,35 @@ namespace SLZ.Utilities
 
 		public List<Renderer> lightRenderers;
 
+		public GameObject[] craneRunningColliders;
+
+		public Collider[] craneMainColliders;
+
+		public PhysicMaterial zeroFriction;
+
+		public PhysicMaterial steel;
+
+		public Rigidbody[] rigidbodies;
+
+		public ConfigurableJoint[] configurableJoints;
+
+		private Vector3[] initialRBPosition;
+
+		private Quaternion[] initialRBRotation;
+
+		private HandJointConfiguration[] savedJointConfiguration;
+
+		private IEnumerator craneResetCoroutine;
+
 		private IEnumerator coroutine;
 
 		public bool isPowered;
 
 		private bool craneDeactivating;
+
+		private bool blockAction;
+
+		private bool inCraneVolume;
 
 		private void Start()
 		{
@@ -42,6 +66,15 @@ namespace SLZ.Utilities
 
 		public void DeactivateCrane()
 		{
+		}
+
+		public void FULLCRANERESET()
+		{
+		}
+
+		public IEnumerator FullCraneResetCoroutine()
+		{
+			return null;
 		}
 
 		private IEnumerator Deactivation()
@@ -54,6 +87,14 @@ namespace SLZ.Utilities
 		}
 
 		private void Activation()
+		{
+		}
+
+		public void ActivateCraneColliders()
+		{
+		}
+
+		public void DeactivateCraneColliders()
 		{
 		}
 

@@ -1,29 +1,32 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RandomObject : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public List<GameObject> Objects;
-
-	private void OnEnable()
+	public class RandomObject : MonoBehaviour
 	{
-	}
+		public List<GameObject> Objects;
 
-	private void Randomizer()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void Flipper()
-	{
-	}
+		private void Randomizer()
+		{
+		}
 
-	[ContextMenu("Static Pick")]
-	private void Method()
-	{
-	}
+		private void Flipper()
+		{
+		}
 
-	public RandomObject()
-		: base()
-	{
+		[ContextMenu("Static Pick")]
+		private void Method()
+		{
+		}
+
+		public RandomObject()
+			: base()
+		{
+		}
 	}
 }

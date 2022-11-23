@@ -4,7 +4,7 @@ using SLZ.Rig;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace SLZ.Marrow
+namespace SLZ.Bonelab
 {
 	public class DebugController : MarrowBehaviour
 	{

@@ -6,118 +6,121 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TimedJointEvents : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public ConfigurableJoint joint;
-
-	public ConfigurableJoint secJoint;
-
-	[SerializeField]
-	private AudioClip[] initClips;
-
-	[SerializeField]
-	private float audioDelay;
-
-	[SerializeField]
-	private bool initialIsTriggered;
-
-	[SerializeField]
-	private float initThreshold;
-
-	public UnityEvent initEvent;
-
-	[SerializeField]
-	private AudioClip[] secondaryClips;
-
-	[SerializeField]
-	private bool secondaryIsTriggered;
-
-	[SerializeField]
-	private float secondaryThreshold;
-
-	public UnityEvent secondaryEvent;
-
-	[SerializeField]
-	private AudioClip[] finalClips;
-
-	[SerializeField]
-	private bool finalIsTriggered;
-
-	[SerializeField]
-	private float finalThreshold;
-
-	public UnityEvent finalEvent;
-
-	[SerializeField]
-	private float elapsedTime;
-
-	private Coroutine timerRoutine;
-
-	public void StartTimer()
+	public class TimedJointEvents : MonoBehaviour
 	{
-	}
+		public ConfigurableJoint joint;
 
-	public void ResetStates()
-	{
-	}
+		public ConfigurableJoint secJoint;
 
-	public void StopTimer()
-	{
-	}
+		[SerializeField]
+		private AudioClip[] initClips;
 
-	private IEnumerator CoTimerRoutine()
-	{
-		return null;
-	}
+		[SerializeField]
+		private float audioDelay;
 
-	public void TriggerInitialEvent()
-	{
-	}
+		[SerializeField]
+		private bool initialIsTriggered;
 
-	public void TriggerSecondaryEvent()
-	{
-	}
+		[SerializeField]
+		private float initThreshold;
 
-	public void TriggerFinalEvent()
-	{
-	}
+		public UnityEvent initEvent;
 
-	public void LimitJoint()
-	{
-	}
+		[SerializeField]
+		private AudioClip[] secondaryClips;
 
-	[ContextMenu("TestLimitUpdate")]
-	public void TestLimitUpdate()
-	{
-	}
+		[SerializeField]
+		private bool secondaryIsTriggered;
 
-	public void UpdateLimits(float limitVal)
-	{
-	}
+		[SerializeField]
+		private float secondaryThreshold;
 
-	public void UnlockJoint()
-	{
-	}
+		public UnityEvent secondaryEvent;
 
-	public void DestroyJoint()
-	{
-	}
+		[SerializeField]
+		private AudioClip[] finalClips;
 
-	public void FireOffAudio(AudioClip[] clips)
-	{
-	}
+		[SerializeField]
+		private bool finalIsTriggered;
 
-	private IEnumerator CoSecondaryAudio(AudioClip[] clips, float delay)
-	{
-		return null;
-	}
+		[SerializeField]
+		private float finalThreshold;
 
-	private void OnDestroy()
-	{
-	}
+		public UnityEvent finalEvent;
 
-	public TimedJointEvents()
-		: base()
-	{
+		[SerializeField]
+		private float elapsedTime;
+
+		private Coroutine timerRoutine;
+
+		public void StartTimer()
+		{
+		}
+
+		public void ResetStates()
+		{
+		}
+
+		public void StopTimer()
+		{
+		}
+
+		private IEnumerator CoTimerRoutine()
+		{
+			return null;
+		}
+
+		public void TriggerInitialEvent()
+		{
+		}
+
+		public void TriggerSecondaryEvent()
+		{
+		}
+
+		public void TriggerFinalEvent()
+		{
+		}
+
+		public void LimitJoint()
+		{
+		}
+
+		[ContextMenu("TestLimitUpdate")]
+		public void TestLimitUpdate()
+		{
+		}
+
+		public void UpdateLimits(float limitVal)
+		{
+		}
+
+		public void UnlockJoint()
+		{
+		}
+
+		public void DestroyJoint()
+		{
+		}
+
+		public void FireOffAudio(AudioClip[] clips)
+		{
+		}
+
+		private IEnumerator CoSecondaryAudio(AudioClip[] clips, float delay)
+		{
+			return null;
+		}
+
+		private void OnDestroy()
+		{
+		}
+
+		public TimedJointEvents()
+			: base()
+		{
+		}
 	}
 }

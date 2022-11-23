@@ -7,27 +7,30 @@ using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
 using UnityEngine;
 
-public class ForceAvatar : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public RigManager rm;
-
-	[Header("Avatar")]
-	public AvatarCrate avatarCrate;
-
-	[Header("Settings")]
-	public bool saveAvatar;
-
-	public void FORCEAVATAR()
+	public class ForceAvatar : MonoBehaviour
 	{
-	}
+		public RigManager rm;
 
-	private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
-	{
-		return default(UniTaskVoid);
-	}
+		[Header("Avatar")]
+		public AvatarCrate avatarCrate;
 
-	public ForceAvatar()
-		: base()
-	{
+		[Header("Settings")]
+		public bool saveAvatar;
+
+		public void FORCEAVATAR()
+		{
+		}
+
+		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
+		{
+			return default(UniTaskVoid);
+		}
+
+		public ForceAvatar()
+			: base()
+		{
+		}
 	}
 }

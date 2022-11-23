@@ -5,90 +5,93 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class Powerable : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	[Header("POWERED AND TURNED ON")]
-	protected bool m_Powered;
-
-	[SerializeField]
-	protected bool m_TurnedOn;
-
-	[Space(5f)]
-	[Header("DRAW")]
-	[Tooltip("Default value for 10 minutes of use if capacity is 1000f in the PowerSource and there are 4 electronics using it. Divide number based on number of objects using it")]
-	public float Discharge;
-
-	[Tooltip("Used when checking compatability")]
-	public ElectricItem Electronic;
-
-	private Coroutine CoroutineUnChargeLoop;
-
-	public Manager_Circuit ControlCircuit { get; set; }
-
-	public OnOffSwitch SwitchRef { get; set; }
-
-	public bool Powered
+	public class Powerable : MonoBehaviour
 	{
-		get
+		[SerializeField]
+		[Header("POWERED AND TURNED ON")]
+		protected bool m_Powered;
+
+		[SerializeField]
+		protected bool m_TurnedOn;
+
+		[Header("DRAW")]
+		[Space(5f)]
+		[Tooltip("Default value for 10 minutes of use if capacity is 1000f in the PowerSource and there are 4 electronics using it. Divide number based on number of objects using it")]
+		public float Discharge;
+
+		[Tooltip("Used when checking compatability")]
+		public ElectricItem Electronic;
+
+		private Coroutine CoroutineUnChargeLoop;
+
+		public Manager_Circuit ControlCircuit { get; set; }
+
+		public OnOffSwitch SwitchRef { get; set; }
+
+		public bool Powered
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
+			set
+			{
+			}
 		}
-		set
+
+		public bool TurnedOn
+		{
+			get
+			{
+				return default(bool);
+			}
+			set
+			{
+			}
+		}
+
+		public virtual void SwitchPowerOnOff(bool isOn)
 		{
 		}
-	}
 
-	public bool TurnedOn
-	{
-		get
-		{
-			return default(bool);
-		}
-		set
+		public virtual void VoltageToObject(float voltage, int id = 0)
 		{
 		}
-	}
 
-	public virtual void SwitchPowerOnOff(bool isOn)
-	{
-	}
+		public virtual void Vector2InputToObject(Vector2 xyLocal, int id = 0)
+		{
+		}
 
-	public virtual void VoltageToObject(float voltage, int id = 0)
-	{
-	}
+		protected void OnDestroy()
+		{
+		}
 
-	public virtual void Vector2InputToObject(Vector2 xyLocal, int id = 0)
-	{
-	}
+		private void AddDischarge()
+		{
+		}
 
-	protected void OnDestroy()
-	{
-	}
+		public void UnCharge()
+		{
+		}
 
-	private void AddDischarge()
-	{
-	}
+		private void SubtractDischarge()
+		{
+		}
 
-	public void UnCharge()
-	{
-	}
+		public void StopUnCharge()
+		{
+		}
 
-	private void SubtractDischarge()
-	{
-	}
+		private IEnumerator CoUnchargeLoop()
+		{
+			return null;
+		}
 
-	public void StopUnCharge()
-	{
-	}
-
-	private IEnumerator CoUnchargeLoop()
-	{
-		return null;
-	}
-
-	public Powerable()
-		: base()
-	{
+		public Powerable()
+			: base()
+		{
+		}
 	}
 }

@@ -5,50 +5,53 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-[RequireComponent(typeof(ParticleSystem))]
-public class ParticleAttractorBhv : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	[HideInInspector]
-	private ParticleSystem AffectedParticles;
-
-	public float LerpTime;
-
-	private Transform m_rTransform;
-
-	private ParticleSystem.Particle[] m_rParticlesArray;
-
-	private bool m_bWorldPosition;
-
-	private int m_iNumActiveParticles;
-
-	private Transform m_vParticlesTarget;
-
-	private float m_fCursor;
-
-	private void Reset()
+	[RequireComponent(typeof(ParticleSystem))]
+	public class ParticleAttractorBhv : MonoBehaviour
 	{
-	}
+		[HideInInspector]
+		[SerializeField]
+		private ParticleSystem AffectedParticles;
 
-	private void Awake()
-	{
-	}
+		public float LerpTime;
 
-	private void OnEnable()
-	{
-	}
+		private Transform m_rTransform;
 
-	private IEnumerator ParticleAttractor()
-	{
-		return null;
-	}
+		private ParticleSystem.Particle[] m_rParticlesArray;
 
-	public void Setup()
-	{
-	}
+		private bool m_bWorldPosition;
 
-	public ParticleAttractorBhv()
-		: base()
-	{
+		private int m_iNumActiveParticles;
+
+		private Transform m_vParticlesTarget;
+
+		private float m_fCursor;
+
+		private void Reset()
+		{
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		private IEnumerator ParticleAttractor()
+		{
+			return null;
+		}
+
+		public void Setup()
+		{
+		}
+
+		public ParticleAttractorBhv()
+			: base()
+		{
+		}
 	}
 }

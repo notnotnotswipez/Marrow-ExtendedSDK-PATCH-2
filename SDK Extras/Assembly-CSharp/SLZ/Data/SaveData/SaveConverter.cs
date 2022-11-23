@@ -1,7 +1,7 @@
 using System;
 using Newtonsoft.Json;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	public class SaveConverter : JsonConverter<Save>
 	{

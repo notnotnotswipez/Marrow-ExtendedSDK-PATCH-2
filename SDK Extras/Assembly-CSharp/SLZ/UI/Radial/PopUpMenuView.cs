@@ -4,13 +4,13 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
-using SLZ.Data.SaveData;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
+using SLZ.SaveData;
 using UnityEngine;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class PopUpMenuView : MonoBehaviour
 	{
@@ -94,6 +94,8 @@ namespace SLZ.UI.Radial
 		public GenericCrateReference crate_Nimbus;
 
 		public GenericCrateReference crate_SpawnGun;
+
+		public static Action OnDevToolSpawn;
 
 		public static PopUpMenuView instance { get; private set; }
 

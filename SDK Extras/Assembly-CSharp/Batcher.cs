@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class Batcher : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	public class Batcher : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public Batcher()
-		: base()
-	{
+		public Batcher()
+			: base()
+		{
+		}
 	}
 }

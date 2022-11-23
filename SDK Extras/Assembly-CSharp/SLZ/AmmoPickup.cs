@@ -9,7 +9,7 @@ using SLZ.Marrow.Pool;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public class AmmoPickup : SpawnEvents
 	{
@@ -32,6 +32,10 @@ namespace SLZ
 		private Vector3 scale;
 
 		protected void Awake()
+		{
+		}
+
+		protected override void OnSpawn(GameObject go)
 		{
 		}
 

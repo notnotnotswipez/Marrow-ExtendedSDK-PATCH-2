@@ -7,53 +7,56 @@ using SLZ.VRMK;
 using TMPro;
 using UnityEngine;
 
-public class GameControl_intro : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public string buildTitle;
-
-	public string buildState;
-
-	private string buildDate;
-
-	public TextMeshProUGUI tmp_Title;
-
-	public TextMeshProUGUI tmp_BuildInfo;
-
-	public GameObject logoSLZ;
-
-	public GameObject logoSabrelake;
-
-	public GameObject canvasHeightCheck;
-
-	public GameObject[] panelsHeightCheck;
-
-	public GameObject canvasMainMenu;
-
-	private bool m_waitForConfirm;
-
-	private WaitForSeconds frameWait;
-
-	public BodyVitals ctrl_bodyVitals;
-
-	private void Awake()
+	public class GameControl_intro : MonoBehaviour
 	{
-	}
+		public string buildTitle;
 
-	private IEnumerator Start()
-	{
-		return null;
-	}
+		public string buildState;
 
-	public void NEXTSTEP()
-	{
-	}
+		private string buildDate;
 
-	public void Update()
-	{
-	}
+		public TextMeshProUGUI tmp_Title;
 
-	public GameControl_intro()
-		: base()
-	{
+		public TextMeshProUGUI tmp_BuildInfo;
+
+		public GameObject logoSLZ;
+
+		public GameObject logoSabrelake;
+
+		public GameObject canvasHeightCheck;
+
+		public GameObject[] panelsHeightCheck;
+
+		public GameObject canvasMainMenu;
+
+		private bool m_waitForConfirm;
+
+		private WaitForSeconds frameWait;
+
+		public BodyVitals ctrl_bodyVitals;
+
+		private void Awake()
+		{
+		}
+
+		private IEnumerator Start()
+		{
+			return null;
+		}
+
+		public void NEXTSTEP()
+		{
+		}
+
+		public void Update()
+		{
+		}
+
+		public GameControl_intro()
+			: base()
+		{
+		}
 	}
 }

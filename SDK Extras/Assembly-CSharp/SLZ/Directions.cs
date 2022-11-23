@@ -1,4 +1,4 @@
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public enum Directions
 	{

@@ -36,7 +36,7 @@ namespace SLZ.Combat
 		[Header("References")]
 		public Spawnable balloonPopVfxSpawnable;
 
-		public GameObject balloonArt;
+		public GameObject[] balloonArt;
 
 		public Transform stringStartTransform;
 
@@ -54,7 +54,7 @@ namespace SLZ.Combat
 
 		private ConfigurableJoint joint;
 
-		private MeshRenderer artRenderer;
+		private MeshRenderer[] artRenderer;
 
 		private LineRenderer lineRenderer;
 
@@ -130,7 +130,7 @@ namespace SLZ.Combat
 		{
 		}
 
-		public void SetColor(SLZ.Props.Balloon.BalloonColor color)
+		public void SetColor(Balloon.BalloonColor color)
 		{
 		}
 

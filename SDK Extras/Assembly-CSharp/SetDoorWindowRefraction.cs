@@ -1,31 +1,34 @@
 using System;
 using UnityEngine;
 
-[RequireComponent(typeof(ReflectionProbe))]
-public class SetDoorWindowRefraction : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Serializable]
-	public struct TargetMaterial
+	[RequireComponent(typeof(ReflectionProbe))]
+	public class SetDoorWindowRefraction : MonoBehaviour
 	{
-		public Renderer renderer;
+		[Serializable]
+		public struct TargetMaterial
+		{
+			public Renderer renderer;
 
-		public int matNumber;
-	}
+			public int matNumber;
+		}
 
-	public ReflectionProbe rp;
+		public ReflectionProbe rp;
 
-	public TargetMaterial[] targetMaterials;
+		public TargetMaterial[] targetMaterials;
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void Reset()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	public SetDoorWindowRefraction()
-		: base()
-	{
+		public SetDoorWindowRefraction()
+			: base()
+		{
+		}
 	}
 }

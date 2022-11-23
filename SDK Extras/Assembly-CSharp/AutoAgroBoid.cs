@@ -1,3 +1,4 @@
+using PuppetMasta;
 using SLZ.AI;
 using SLZ.Zones;
 using UnityEngine;
@@ -5,6 +6,8 @@ using UnityEngine;
 public class AutoAgroBoid : MonoBehaviour
 {
 	public MLZoneSpawner_Child boidSpawner;
+
+	private BehaviourBoid boid;
 
 	public bool findBall;
 

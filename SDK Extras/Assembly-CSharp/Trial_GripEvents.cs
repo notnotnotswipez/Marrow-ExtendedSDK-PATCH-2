@@ -3,33 +3,36 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class Trial_GripEvents : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public GameObject[] weaponObjects;
-
-	public List<Grip> gripsList;
-
-	public UnityEvent onGrabbed;
-
-	private void OnEnable()
+	public class Trial_GripEvents : MonoBehaviour
 	{
-	}
+		public GameObject[] weaponObjects;
 
-	private void OnDisable()
-	{
-	}
+		public List<Grip> gripsList;
 
-	public void OnGrab(Hand hand)
-	{
-	}
+		public UnityEvent onGrabbed;
 
-	[ContextMenu("GetAllGrips")]
-	public void GetAllGrips()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	public Trial_GripEvents()
-		: base()
-	{
+		private void OnDisable()
+		{
+		}
+
+		public void OnGrab(Hand hand)
+		{
+		}
+
+		[ContextMenu("GetAllGrips")]
+		public void GetAllGrips()
+		{
+		}
+
+		public Trial_GripEvents()
+			: base()
+		{
+		}
 	}
 }

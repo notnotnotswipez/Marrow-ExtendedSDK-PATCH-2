@@ -1,22 +1,25 @@
-public class CommandLine
+namespace SLZ.Bonelab
 {
-	public static bool HasArg(string argumentName)
+	public class CommandLine
 	{
-		return default(bool);
-	}
+		public static bool HasArg(string argumentName)
+		{
+			return default(bool);
+		}
 
-	public static int GetArgValue(string argumentName, int nDefaultValue)
-	{
-		return default(int);
-	}
+		public static int GetArgValue(string argumentName, int nDefaultValue)
+		{
+			return default(int);
+		}
 
-	public static float GetArgValue(string argumentName, float flDefaultValue)
-	{
-		return default(float);
-	}
+		public static float GetArgValue(string argumentName, float flDefaultValue)
+		{
+			return default(float);
+		}
 
-	public CommandLine()
-		: base()
-	{
+		public CommandLine()
+			: base()
+		{
+		}
 	}
 }

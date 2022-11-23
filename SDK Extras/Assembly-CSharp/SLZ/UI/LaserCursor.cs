@@ -4,7 +4,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Rig;
-using SLZ.UI.Radial;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
@@ -75,19 +74,19 @@ namespace SLZ.UI
 
 		private Transform location;
 
+		[Range(0f, 1f)]
 		[Header("AudioSettings")]
 		[Tooltip("Is the sound 2d or 3d?")]
-		[Range(0f, 1f)]
 		public float spatialBlend;
 
 		public AudioMixerGroup _audioMixerGroup;
 
-		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		[Range(0f, 1f)]
+		[Tooltip("Higher than 1 numbers increase min sphere by 1 meter per unit over 1")]
 		public float _sourceVolume;
 
-		[Space(10f)]
 		[Range(0.1f, 10f)]
+		[Space(10f)]
 		public float _sourceRadius;
 
 		public bool cursorHidden;

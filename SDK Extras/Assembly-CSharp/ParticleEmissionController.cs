@@ -1,35 +1,38 @@
 using UnityEngine;
 
-public class ParticleEmissionController : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private ParticleSystem[] ParticleSystems;
-
-	[SerializeField]
-	private ParticleSystem.EmissionModule[] EmissionSystems;
-
-	[HideInInspector]
-	[SerializeField]
-	private float[] EmissionMultipliers;
-
-	private void Reset()
+	public class ParticleEmissionController : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private ParticleSystem[] ParticleSystems;
 
-	private void Initialize()
-	{
-	}
+		[SerializeField]
+		private ParticleSystem.EmissionModule[] EmissionSystems;
 
-	private void Awake()
-	{
-	}
+		[HideInInspector]
+		[SerializeField]
+		private float[] EmissionMultipliers;
 
-	public void ChangeSystems(float rateMultiplier)
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	public ParticleEmissionController()
-		: base()
-	{
+		private void Initialize()
+		{
+		}
+
+		private void Awake()
+		{
+		}
+
+		public void ChangeSystems(float rateMultiplier)
+		{
+		}
+
+		public ParticleEmissionController()
+			: base()
+		{
+		}
 	}
 }

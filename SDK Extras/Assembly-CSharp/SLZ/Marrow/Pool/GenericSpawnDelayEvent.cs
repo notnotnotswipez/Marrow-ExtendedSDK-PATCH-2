@@ -3,10 +3,11 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Marrow.Pool;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SLZ.Marrow.Pool
+namespace SLZ.Utilities
 {
 	public class GenericSpawnDelayEvent : SpawnEvents
 	{

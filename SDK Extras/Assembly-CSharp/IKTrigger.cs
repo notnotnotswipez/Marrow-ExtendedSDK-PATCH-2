@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class IKTrigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private bool isEnablingIK;
-
-	private void OnTriggerEnter(Collider other)
+	public class IKTrigger : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private bool isEnablingIK;
 
-	public IKTrigger()
-		: base()
-	{
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		public IKTrigger()
+			: base()
+		{
+		}
 	}
 }

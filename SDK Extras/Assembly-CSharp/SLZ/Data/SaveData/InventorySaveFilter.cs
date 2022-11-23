@@ -3,7 +3,7 @@ using System.Runtime.CompilerServices;
 using SLZ.Marrow.Warehouse;
 using UnityEngine;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	[CreateAssetMenu(fileName = "InventorySaveFilter", menuName = "StressLevelZero/Inventory Save Filter")]
 	public class InventorySaveFilter : ScriptableObject

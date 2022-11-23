@@ -1,11 +1,14 @@
 using System;
 
-[Serializable]
-public struct int3signed
+namespace SLZ.Bonelab
 {
-	public int x;
+	[Serializable]
+	public struct int3signed
+	{
+		public int x;
 
-	public int y;
+		public int y;
 
-	public int z;
+		public int z;
+	}
 }

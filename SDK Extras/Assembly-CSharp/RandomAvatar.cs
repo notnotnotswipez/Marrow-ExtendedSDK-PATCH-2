@@ -7,24 +7,27 @@ using SLZ.Marrow.Warehouse;
 using SLZ.Rig;
 using UnityEngine;
 
-public class RandomAvatar : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public RigManager rm;
-
-	[Header("Avatars")]
-	public AvatarCrate[] avatarCrates;
-
-	public void RANDOMAVATAR()
+	public class RandomAvatar : MonoBehaviour
 	{
-	}
+		public RigManager rm;
 
-	private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
-	{
-		return default(UniTaskVoid);
-	}
+		[Header("Avatars")]
+		public AvatarCrate[] avatarCrates;
 
-	public RandomAvatar()
-		: base()
-	{
+		public void RANDOMAVATAR()
+		{
+		}
+
+		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
+		{
+			return default(UniTaskVoid);
+		}
+
+		public RandomAvatar()
+			: base()
+		{
+		}
 	}
 }

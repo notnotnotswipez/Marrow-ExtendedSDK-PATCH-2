@@ -55,8 +55,8 @@ namespace SLZ.Bonelab
 
 		public SpawnableCrateReference sparksCrate;
 
-		[Header("Doors")]
 		[SerializeField]
+		[Header("Doors")]
 		public bool isClosing;
 
 		[SerializeField]

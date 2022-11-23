@@ -9,26 +9,63 @@ using SLZ.Marrow.Utilities;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-[RequireComponent(typeof(Volume))]
-public class FadeAndDespawnVolume : SpawnEvents
+namespace SLZ.Bonelab
 {
-	private static ComponentCache<FadeAndDespawnVolume> _cache;
+	[RequireComponent(typeof(Volume))]
+	public class FadeAndDespawnVolume : SpawnEvents
+	{
+		private static ComponentCache<FadeAndDespawnVolume> _cache;
 
-	public Volume volume;
+		public Volume volume;
 
-	public Action onComplete;
+		public Action onComplete;
 
-	public float duration;
+		public float duration;
 
-	private float startValue;
+		private float startValue;
 
-	private float endValue;
+		private float endValue;
 
-	public GameObject fadingQuad;
+		public GameObject fadingQuad;
 
-	private Material mat;
+		private Material mat;
 
-	private Color black;
+		private Color black;
 
-	private Color clear;
+		private Color clear;
+
+		public static ComponentCache<FadeAndDespawnVolume> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		protected void Awake()
+		{
+		}
+
+		public void OnDestroy()
+		{
+		}
+
+		protected override void OnSpawn(GameObject go)
+		{
+		}
+
+		private UniTaskVoid FadeOverTime(float seconds)
+		{
+			return default(UniTaskVoid);
+		}
+
+		private void SetValues(float lerper)
+		{
+		}
+
+		public FadeAndDespawnVolume()
+			: base()
+		{
+		}
+	}
 }

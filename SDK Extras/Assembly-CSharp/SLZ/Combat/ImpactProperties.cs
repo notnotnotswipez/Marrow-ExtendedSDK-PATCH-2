@@ -20,12 +20,12 @@ namespace SLZ.Combat
 		[SerializeField]
 		public bool hasManager;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		public bool ShowControls;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		public ImpactPropertiesManager Manager;
 
 		private bool setup;

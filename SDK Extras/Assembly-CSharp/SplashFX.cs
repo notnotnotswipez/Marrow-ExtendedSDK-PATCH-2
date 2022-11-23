@@ -6,33 +6,36 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-public class SplashFX : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float VelocityThreshold;
-
-	public float ImpulseThreshold;
-
-	public Spawnable SpawnableVFX;
-
-	private void OnCollisionEnter(Collision collision)
+	public class SplashFX : MonoBehaviour
 	{
-	}
+		public float VelocityThreshold;
 
-	public void ImpactVFX(Collision collision)
-	{
-	}
+		public float ImpulseThreshold;
 
-	private void Awake()
-	{
-	}
+		public Spawnable SpawnableVFX;
 
-	public UniTaskVoid RegAsync()
-	{
-		return default(UniTaskVoid);
-	}
+		private void OnCollisionEnter(Collision collision)
+		{
+		}
 
-	public SplashFX()
-		: base()
-	{
+		public void ImpactVFX(Collision collision)
+		{
+		}
+
+		private void Awake()
+		{
+		}
+
+		public UniTaskVoid RegAsync()
+		{
+			return default(UniTaskVoid);
+		}
+
+		public SplashFX()
+			: base()
+		{
+		}
 	}
 }

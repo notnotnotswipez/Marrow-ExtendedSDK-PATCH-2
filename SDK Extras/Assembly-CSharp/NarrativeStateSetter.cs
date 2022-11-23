@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class NarrativeStateSetter : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public NarrativeManager narrativeManager;
-
-	public void SetStateExplicit(NarrativeState state)
+	public class NarrativeStateSetter : MonoBehaviour
 	{
-	}
+		public NarrativeManager narrativeManager;
 
-	public NarrativeStateSetter()
-		: base()
-	{
+		public void SetStateExplicit(NarrativeState state)
+		{
+		}
+
+		public NarrativeStateSetter()
+			: base()
+		{
+		}
 	}
 }

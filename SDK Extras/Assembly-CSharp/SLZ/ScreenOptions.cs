@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public class ScreenOptions : MonoBehaviour
 	{

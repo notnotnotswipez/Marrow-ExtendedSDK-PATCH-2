@@ -1,46 +1,50 @@
+using SLZ.Combat;
 using SLZ.Interaction;
 using UnityEngine;
 
-public class OutputVelocity : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public bool runThis;
-
-	public InteractableHost host;
-
-	public Rigidbody rb;
-
-	public Transform measurePoint;
-
-	public UnityEventFloat eventFloatSqrMag;
-
-	public UnityEventFloat eventFloatMag;
-
-	public Vector4 range_out_sm;
-
-	[HideInInspector]
-	public float cur_sm;
-
-	[HideInInspector]
-	public float cur_m;
-
-	[HideInInspector]
-	public float output_sqrMag;
-
-	private void Start()
+	public class OutputVelocity : MonoBehaviour
 	{
-	}
+		public bool runThis;
 
-	private Vector3 CalcTransformVelocity(Vector3 transformPos)
-	{
-		return default(Vector3);
-	}
+		public InteractableHost host;
 
-	private void FixedUpdate()
-	{
-	}
+		public Rigidbody rb;
 
-	public OutputVelocity()
-		: base()
-	{
+		public Transform measurePoint;
+
+		public UnityEventFloat eventFloatSqrMag;
+
+		public UnityEventFloat eventFloatMag;
+
+		public Vector4 range_out_sm;
+
+		[HideInInspector]
+		public float cur_sm;
+
+		[HideInInspector]
+		public float cur_m;
+
+		[HideInInspector]
+		public float output_sqrMag;
+
+		private void Start()
+		{
+		}
+
+		private Vector3 CalcTransformVelocity(Vector3 transformPos)
+		{
+			return default(Vector3);
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public OutputVelocity()
+			: base()
+		{
+		}
 	}
 }

@@ -1,4 +1,4 @@
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	public static class SaveConstants
 	{

@@ -50,20 +50,20 @@ namespace SLZ.Vehicle
 		[Tooltip("x = flexion, y = rotation, z = lateral flexion, w = extension")]
 		public Vector4 spineRom;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		private AxisAssignment primaryUpDown;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		private AxisAssignment primaryLeftRight;
 
 		[HideInInspector]
 		[SerializeField]
 		private AxisAssignment secondaryUpDown;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private AxisAssignment secondaryLeftRight;
 
 		private RigManager _rig;

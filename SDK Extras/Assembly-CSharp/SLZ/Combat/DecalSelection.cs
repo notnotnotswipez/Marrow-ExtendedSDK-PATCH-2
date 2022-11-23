@@ -6,6 +6,9 @@ namespace SLZ.Combat
 {
 	public class DecalSelection : MonoBehaviour
 	{
+		private static ComponentCache<DecalSelection> _cache;
+
+		public DecalMaterials decalMaterials;
 
 		[SerializeField]
 		private GameObject LightCone;
@@ -13,6 +16,13 @@ namespace SLZ.Combat
 		[HideInInspector]
 		public ImpactProperties SurfaceProperties;
 
+		public static ComponentCache<DecalSelection> Cache
+		{
+			get
+			{
+				return null;
+			}
+		}
 
 		private void Awake()
 		{
@@ -26,6 +36,9 @@ namespace SLZ.Combat
 		{
 		}
 
+		public void PickDecal(AttackType attackType)
+		{
+		}
 
 		private void OnDisable()
 		{

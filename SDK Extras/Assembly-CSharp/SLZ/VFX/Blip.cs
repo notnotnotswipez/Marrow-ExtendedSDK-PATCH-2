@@ -28,8 +28,8 @@ namespace SLZ.VFX
 
 		private bool isDestructible;
 
-		[Header("DO NOT SET IN INSPECTOR")]
 		[HideInInspector]
+		[Header("DO NOT SET IN INSPECTOR")]
 		public bool forceBlip;
 
 		private bool sfxPlayed;

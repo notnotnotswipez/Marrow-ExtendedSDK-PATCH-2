@@ -1,12 +1,15 @@
-public static class ExtensionsEnum
+namespace SLZ.Bonelab
 {
-	public static T Next<T>(this T src) where T : struct
+	public static class ExtensionsEnum
 	{
-		return (T)default(T);
-	}
+		public static T Next<T>(this T src) where T : struct
+		{
+			return (T)default(T);
+		}
 
-	public static T Previous<T>(this T src) where T : struct
-	{
-		return (T)default(T);
+		public static T Previous<T>(this T src) where T : struct
+		{
+			return (T)default(T);
+		}
 	}
 }

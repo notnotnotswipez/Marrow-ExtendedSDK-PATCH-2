@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class HideOnAwake : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	public class HideOnAwake : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public HideOnAwake()
-		: base()
-	{
+		public HideOnAwake()
+			: base()
+		{
+		}
 	}
 }

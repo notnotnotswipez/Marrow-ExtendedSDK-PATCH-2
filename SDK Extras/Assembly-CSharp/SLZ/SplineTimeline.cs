@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Splines;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public class SplineTimeline : MonoBehaviour
 	{

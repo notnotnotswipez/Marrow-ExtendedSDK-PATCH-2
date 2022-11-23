@@ -1,40 +1,43 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class TempTextureRef : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Texture2DArray NoiseTextureArray;
-
-	[SerializeField]
-	private Texture2DArray iconArray;
-
-	private int NoiseID;
-
-	private int NoisePixels;
-
-	private int currentTex;
-
-	private int arraySize;
-
-	private void Update()
+	[ExecuteInEditMode]
+	public class TempTextureRef : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Texture2DArray NoiseTextureArray;
 
-	private void Awake()
-	{
-	}
+		[SerializeField]
+		private Texture2DArray iconArray;
 
-	private void AssignNoiseTexture()
-	{
-	}
+		private int NoiseID;
 
-	private void NextNoise()
-	{
-	}
+		private int NoisePixels;
 
-	public TempTextureRef()
-		: base()
-	{
+		private int currentTex;
+
+		private int arraySize;
+
+		private void Update()
+		{
+		}
+
+		private void Awake()
+		{
+		}
+
+		private void AssignNoiseTexture()
+		{
+		}
+
+		private void NextNoise()
+		{
+		}
+
+		public TempTextureRef()
+			: base()
+		{
+		}
 	}
 }

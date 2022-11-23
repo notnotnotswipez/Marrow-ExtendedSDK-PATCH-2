@@ -3,53 +3,56 @@ using SLZ.AI;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GenGameControl_Trigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public bool disableOnTrigger;
-
-	public bool ignoreEnemies;
-
-	[HideInInspector]
-	public Collider m_Collider;
-
-	public UnityEvent OnPlayerEnter;
-
-	public UnityEvent OnPlayerExit;
-
-	public UnityEvent OnNPCEnter;
-
-	public UnityEvent OnNPCExit;
-
-	public Action<TriggerRefProxy> OnNPC_ProxyEnter;
-
-	public Action<TriggerRefProxy> OnNPC_ProxyExit;
-
-	private void Start()
+	public class GenGameControl_Trigger : MonoBehaviour
 	{
-	}
+		public bool disableOnTrigger;
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		public bool ignoreEnemies;
 
-	private void OnTriggerExit(Collider other)
-	{
-	}
+		[HideInInspector]
+		public Collider m_Collider;
 
-	private void TogglePlayerTrigger(bool enable = true)
-	{
-	}
+		public UnityEvent OnPlayerEnter;
 
-	private void ToggleNPCTrigger(TriggerRefProxy proxy, bool enable = true)
-	{
-	}
+		public UnityEvent OnPlayerExit;
 
-	public void ToggleCollider(bool enable)
-	{
-	}
+		public UnityEvent OnNPCEnter;
 
-	public GenGameControl_Trigger()
-		: base()
-	{
+		public UnityEvent OnNPCExit;
+
+		public Action<TriggerRefProxy> OnNPC_ProxyEnter;
+
+		public Action<TriggerRefProxy> OnNPC_ProxyExit;
+
+		private void Start()
+		{
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void OnTriggerExit(Collider other)
+		{
+		}
+
+		private void TogglePlayerTrigger(bool enable = true)
+		{
+		}
+
+		private void ToggleNPCTrigger(TriggerRefProxy proxy, bool enable = true)
+		{
+		}
+
+		public void ToggleCollider(bool enable)
+		{
+		}
+
+		public GenGameControl_Trigger()
+			: base()
+		{
+		}
 	}
 }

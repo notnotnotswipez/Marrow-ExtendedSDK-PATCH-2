@@ -1,9 +1,8 @@
 using SLZ.Interaction;
-using SLZ.Rig;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace SLZ.Utilities
+namespace SLZ.Bonelab
 {
 	public class TutorialGrip : MonoBehaviour
 	{

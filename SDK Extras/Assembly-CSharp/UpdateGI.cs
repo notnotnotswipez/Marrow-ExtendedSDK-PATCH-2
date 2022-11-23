@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class UpdateGI : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Renderer rnder;
-
-	private void Reset()
+	public class UpdateGI : MonoBehaviour
 	{
-	}
+		public Renderer rnder;
 
-	private void Update()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	public UpdateGI()
-		: base()
-	{
+		private void Update()
+		{
+		}
+
+		public UpdateGI()
+			: base()
+		{
+		}
 	}
 }

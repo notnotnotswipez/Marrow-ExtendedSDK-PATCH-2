@@ -6,31 +6,34 @@ using Cysharp.Threading.Tasks.CompilerServices;
 using SLZ.Marrow.Data;
 using UnityEngine;
 
-public class SpawnLauncher : MonoBehaviour
+namespace SLZ.Combat
 {
-	public Spawnable spawnable;
-
-	public Transform firePoint;
-
-	private void Start()
+	public class SpawnLauncher : MonoBehaviour
 	{
-	}
+		public Spawnable spawnable;
 
-	public UniTaskVoid Spawn()
-	{
-		return default(UniTaskVoid);
-	}
+		public Transform firePoint;
 
-	private void OnSpawn(GameObject go)
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void DrawBounds(Bounds bounds, Vector3 position, Quaternion rotation)
-	{
-	}
+		public UniTaskVoid Spawn()
+		{
+			return default(UniTaskVoid);
+		}
 
-	public SpawnLauncher()
-		: base()
-	{
+		private void OnSpawn(GameObject go)
+		{
+		}
+
+		private void DrawBounds(Bounds bounds, Vector3 position, Quaternion rotation)
+		{
+		}
+
+		public SpawnLauncher()
+			: base()
+		{
+		}
 	}
 }

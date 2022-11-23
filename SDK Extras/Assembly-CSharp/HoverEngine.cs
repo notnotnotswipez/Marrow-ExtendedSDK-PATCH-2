@@ -1,55 +1,58 @@
 using UnityEngine;
 
-public class HoverEngine : MonoBehaviour
+namespace SLZ.Props
 {
-	public LayerMask RaycastMask;
-
-	public float MaxHeight;
-
-	public float GroundForce;
-
-	public float Damping;
-
-	public float Exponent;
-
-	public float MaxAngleDrift;
-
-	public Rigidbody Rigidbody;
-
-	private float m_LastPower;
-
-	private RaycastHit m_GroundHit;
-
-	public bool HasGround
+	public class HoverEngine : MonoBehaviour
 	{
-		get
+		public LayerMask RaycastMask;
+
+		public float MaxHeight;
+
+		public float GroundForce;
+
+		public float Damping;
+
+		public float Exponent;
+
+		public float MaxAngleDrift;
+
+		public Rigidbody Rigidbody;
+
+		private float m_LastPower;
+
+		private RaycastHit m_GroundHit;
+
+		public bool HasGround
 		{
-			return default(bool);
+			get
+			{
+				return default(bool);
+			}
 		}
-	}
 
-	public float Power
-	{
-		get
+		public float Power
 		{
-			return default(float);
+			get
+			{
+				return default(float);
+			}
 		}
-	}
 
-	public RaycastHit Ground
-	{
-		get
+		public RaycastHit Ground
 		{
-			return default(RaycastHit);
+			get
+			{
+				return default(RaycastHit);
+			}
 		}
-	}
 
-	private void FixedUpdate()
-	{
-	}
+		private void FixedUpdate()
+		{
+		}
 
-	public HoverEngine()
-		: base()
-	{
+		public HoverEngine()
+			: base()
+		{
+		}
 	}
 }

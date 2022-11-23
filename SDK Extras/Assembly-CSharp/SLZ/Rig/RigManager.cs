@@ -4,10 +4,12 @@ using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
+using SLZ.Bonelab;
 using SLZ.Interaction;
 using SLZ.Marrow.Data;
 using SLZ.Marrow.Utilities;
 using SLZ.Marrow.Warehouse;
+using SLZ.Mods;
 using SLZ.Player;
 using SLZ.VRMK;
 using SLZ.Vehicle;
@@ -62,9 +64,9 @@ namespace SLZ.Rig
 
 		public Seat activeSeat;
 
+		[ReadOnly(false)]
 		[Header("Avatar")]
 		[SerializeField]
-		[ReadOnly(false)]
 		[Tooltip("Readonly field, to change which avatar is used in a scene, use \"Avatar Override\"")]
 		private SLZ.VRMK.Avatar _avatar;
 
@@ -97,6 +99,8 @@ namespace SLZ.Rig
 		private Rig[] rigs;
 
 		private bool _fixedRan;
+
+		private bool _reEnable;
 
 		private int _lastFrame;
 

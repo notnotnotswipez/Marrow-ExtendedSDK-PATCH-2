@@ -6,28 +6,31 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GenericOnEnable : MonoBehaviour
+namespace SLZ.Utilities
 {
-	[SerializeField]
-	private UnityEvent StartEvent;
-
-	private bool wasJustAwake;
-
-	private void Awake()
+	public class GenericOnEnable : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private UnityEvent StartEvent;
 
-	private IEnumerator CoDelaySpawn()
-	{
-		return null;
-	}
+		private bool wasJustAwake;
 
-	private void OnEnable()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public GenericOnEnable()
-		: base()
-	{
+		private IEnumerator CoDelaySpawn()
+		{
+			return null;
+		}
+
+		private void OnEnable()
+		{
+		}
+
+		public GenericOnEnable()
+			: base()
+		{
+		}
 	}
 }

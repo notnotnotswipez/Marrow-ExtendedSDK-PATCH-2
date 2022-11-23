@@ -1,6 +1,7 @@
+using SLZ.Bonelab;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Interaction
 {
 	[CreateAssetMenu(fileName = "New Icon Asset", menuName = "Variables/Icon Asset", order = 5)]
 	public class InteractableIconObject : SingletonScriptableObject<InteractableIconObject>

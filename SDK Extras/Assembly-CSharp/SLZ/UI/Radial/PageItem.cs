@@ -1,6 +1,6 @@
 using System;
 
-namespace SLZ.UI.Radial
+namespace SLZ.UI
 {
 	public class PageItem
 	{

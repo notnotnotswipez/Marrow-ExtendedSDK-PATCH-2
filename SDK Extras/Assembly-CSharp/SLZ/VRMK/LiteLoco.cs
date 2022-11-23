@@ -97,8 +97,8 @@ namespace SLZ.VRMK
 			[Tooltip("Velocity Threshold to downshift to previous gear if existent")]
 			public float downshiftVel;
 
-			[Tooltip("Percentage of previous step completion before another can be triggered 0-1f")]
 			[Range(0f, 1f)]
+			[Tooltip("Percentage of previous step completion before another can be triggered 0-1f")]
 			public float stepProgressThreshold;
 
 			[Tooltip("Blend of how much step is behind and in front of neutral point")]

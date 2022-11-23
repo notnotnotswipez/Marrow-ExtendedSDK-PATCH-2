@@ -5,8 +5,9 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.Audio;
+using UnityEngine.Events;
 
-namespace SLZ.Environment
+namespace SLZ.Bonelab
 {
 	public class Cart : MonoBehaviour
 	{
@@ -57,6 +58,8 @@ namespace SLZ.Environment
 		private float _velocity;
 
 		private float _gatePerc;
+
+		public UnityEvent StopAction;
 
 		public void Reset()
 		{

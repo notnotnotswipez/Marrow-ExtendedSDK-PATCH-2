@@ -1,16 +1,19 @@
 using System;
 using UnityEngine;
 
-public class ScrollElementsContainer : MonoBehaviour
+namespace SLZ.UI
 {
-	public Action OnContainerChildrenChanged;
-
-	private void OnTransformChildrenChanged()
+	public class ScrollElementsContainer : MonoBehaviour
 	{
-	}
+		public Action OnContainerChildrenChanged;
 
-	public ScrollElementsContainer()
-		: base()
-	{
+		private void OnTransformChildrenChanged()
+		{
+		}
+
+		public ScrollElementsContainer()
+			: base()
+		{
+		}
 	}
 }

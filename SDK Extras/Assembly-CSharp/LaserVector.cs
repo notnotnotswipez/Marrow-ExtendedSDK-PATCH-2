@@ -1,34 +1,37 @@
 using UnityEngine;
 
-public class LaserVector : MonoBehaviour
+namespace SLZ.VFX
 {
-	public enum Alignment
+	public class LaserVector : MonoBehaviour
 	{
-		X = 0,
-		Y = 1,
-		Z = 2
-	}
+		public enum Alignment
+		{
+			X = 0,
+			Y = 1,
+			Z = 2
+		}
 
-	public Alignment alignment;
+		public Alignment alignment;
 
-	public Renderer[] renderers;
+		public Renderer[] renderers;
 
-	public TrailRenderer trail;
+		public TrailRenderer trail;
 
-	private Vector3 preV3;
+		private Vector3 preV3;
 
-	private Color startcolor;
+		private Color startcolor;
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	public LaserVector()
-		: base()
-	{
+		public LaserVector()
+			: base()
+		{
+		}
 	}
 }

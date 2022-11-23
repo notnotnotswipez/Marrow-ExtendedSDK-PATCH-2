@@ -7,149 +7,152 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 
-public class NarrativeState : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum HoldState
+	public class NarrativeState : MonoBehaviour
 	{
-		INACTIVE = 0,
-		INTRO = 1,
-		HOLD = 2,
-		PROMPT = 3,
-		EXIT = 4,
-		INTERRUPTED = 5
-	}
+		public enum HoldState
+		{
+			INACTIVE = 0,
+			INTRO = 1,
+			HOLD = 2,
+			PROMPT = 3,
+			EXIT = 4,
+			INTERRUPTED = 5
+		}
 
-	public HoldState currHoldState;
+		public HoldState currHoldState;
 
-	public HoldState prevHoldState;
+		public HoldState prevHoldState;
 
-	[Space(10f)]
-	public bool playIntroOnStart;
+		[Space(10f)]
+		public bool playIntroOnStart;
 
-	public bool ExitAfterIntro;
+		public bool ExitAfterIntro;
 
-	[HideInInspector]
-	public int _stateIndex;
+		[HideInInspector]
+		public int _stateIndex;
 
-	public NarrativeState nextState;
+		public NarrativeState nextState;
 
-	[SerializeField]
-	private float initTimerValue;
+		[SerializeField]
+		private float initTimerValue;
 
-	[SerializeField]
-	private float timerValue;
+		[SerializeField]
+		private float timerValue;
 
-	[SerializeField]
-	private int currPrompt;
+		[SerializeField]
+		private int currPrompt;
 
-	private Coroutine holdRoutine;
+		private Coroutine holdRoutine;
 
-	[SerializeField]
-	private bool intertupedTimerRoutine;
+		[SerializeField]
+		private bool intertupedTimerRoutine;
 
-	[SerializeField]
-	[Header("Playable Directors")]
-	private PlayableDirector introDirector;
+		[Header("Playable Directors")]
+		[SerializeField]
+		private PlayableDirector introDirector;
 
-	[SerializeField]
-	private PlayableDirector holdDirector;
+		[SerializeField]
+		private PlayableDirector holdDirector;
 
-	[SerializeField]
-	private PlayableDirector[] promptDirectors;
+		[SerializeField]
+		private PlayableDirector[] promptDirectors;
 
-	private List<TrackData> promptDirectorDataList;
+		private List<TrackData> promptDirectorDataList;
 
-	[Header("Events")]
-	[SerializeField]
-	private UnityEvent OnIntro;
+		[SerializeField]
+		[Header("Events")]
+		private UnityEvent OnIntro;
 
-	[SerializeField]
-	private UnityEvent OnEnterHold;
+		[SerializeField]
+		private UnityEvent OnEnterHold;
 
-	[SerializeField]
-	private UnityEvent OnTimeOut;
+		[SerializeField]
+		private UnityEvent OnTimeOut;
 
-	[SerializeField]
-	private UnityEvent OnExit;
+		[SerializeField]
+		private UnityEvent OnExit;
 
-	public static Action<NarrativeState, PlayableDirector> OnStateChange;
+		public static Action<NarrativeState, PlayableDirector> OnStateChange;
 
-	[Header("Debug State Directors")]
-	[SerializeField]
-	private PlayableDirector activeDirector;
+		[Header("Debug State Directors")]
+		[SerializeField]
+		private PlayableDirector activeDirector;
 
-	[SerializeField]
-	private PlayableDirector prevDirector;
+		[SerializeField]
+		private PlayableDirector prevDirector;
 
-	public void Start()
-	{
-	}
+		public void Start()
+		{
+		}
 
-	[ContextMenu("PlayIntro")]
-	public void PlayIntro()
-	{
-	}
+		[ContextMenu("PlayIntro")]
+		public void PlayIntro()
+		{
+		}
 
-	public void HoldForInput()
-	{
-	}
+		public void HoldForInput()
+		{
+		}
 
-	public void HoldWithTimeoutPrompt(float time = -1f)
-	{
-	}
+		public void HoldWithTimeoutPrompt(float time = -1f)
+		{
+		}
 
-	private void TimeoutState()
-	{
-	}
+		private void TimeoutState()
+		{
+		}
 
-	public void InteruptState()
-	{
-	}
+		public void InteruptState()
+		{
+		}
 
-	public void ResumeState()
-	{
-	}
+		public void ResumeState()
+		{
+		}
 
-	[ContextMenu("ExitState")]
-	public void ExitState()
-	{
-	}
+		[ContextMenu("ExitState")]
+		public void ExitState()
+		{
+		}
 
-	private IEnumerator CoHold()
-	{
-		return null;
-	}
+		private IEnumerator CoHold()
+		{
+			return null;
+		}
 
-	private void StopHoldRoutine()
-	{
-	}
+		private void StopHoldRoutine()
+		{
+		}
 
-	public void UpdateState(HoldState state, PlayableDirector director)
-	{
-	}
+		public void UpdateState(HoldState state, PlayableDirector director)
+		{
+		}
 
-	public void SetCheckPoint()
-	{
-	}
+		public void SetCheckPoint()
+		{
+		}
 
-	public void SwapDirectorPlayable(PlayableDirector director, PlayableAsset asset)
-	{
-	}
+		public void SwapDirectorPlayable(PlayableDirector director, PlayableAsset asset)
+		{
+		}
 
-	public void GetBindings(PlayableDirector director)
-	{
-	}
+		public void GetBindings(PlayableDirector director)
+		{
+		}
 
-	public void SetBindings(PlayableDirector director)
-	{
-	}
+		public void SetBindings(PlayableDirector director)
+		{
+		}
 
-	public static void Bind(PlayableDirector director, string trackName, UnityEngine.Object sourceObj)
-	{
-	}
+		public static void Bind(PlayableDirector director, string trackName, UnityEngine.Object sourceObj)
+		{
+		}
 
-	public NarrativeState()
-		: base()
-	{
+		public NarrativeState()
+			: base()
+		{
+		}
 	}
 }

@@ -13,10 +13,10 @@ using SLZ.Marrow.Console;
 
 namespace SLZ.Bonelab.Console
 {
-	[ConsoleCommand("repo", "list", "List mod repos")]
-	[ConsoleCommand("repo", "del", "Delete a mod repo")]
-	[ConsoleCommand("repo", "delete", "Delete a mod repo")]
 	[ConsoleCommand("repo", "add", "Add a mod repo")]
+	[ConsoleCommand("repo", "delete", "Delete a mod repo")]
+	[ConsoleCommand("repo", "del", "Delete a mod repo")]
+	[ConsoleCommand("repo", "list", "List mod repos")]
 	public class RepoConsoleCommand : BaseConsoleCommand
 	{
 

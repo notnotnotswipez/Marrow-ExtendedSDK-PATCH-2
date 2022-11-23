@@ -1,40 +1,43 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FreezeBlast : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public List<ConfigurableJoint> ConfigJoints;
-
-	public float breakForce;
-
-	public float breakTorque;
-
-	public float BlastRadius;
-
-	public ConfigurableJointMotion jointMotion;
-
-	public Collider selfCollider;
-
-	private Collider[] cols;
-
-	private void OnEnable()
+	public class FreezeBlast : MonoBehaviour
 	{
-	}
+		public List<ConfigurableJoint> ConfigJoints;
 
-	private void Update()
-	{
-	}
+		public float breakForce;
 
-	private void OnDisable()
-	{
-	}
+		public float breakTorque;
 
-	private void OnDrawGizmosSelected()
-	{
-	}
+		public float BlastRadius;
 
-	public FreezeBlast()
-		: base()
-	{
+		public ConfigurableJointMotion jointMotion;
+
+		public Collider selfCollider;
+
+		private Collider[] cols;
+
+		private void OnEnable()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDrawGizmosSelected()
+		{
+		}
+
+		public FreezeBlast()
+			: base()
+		{
+		}
 	}
 }

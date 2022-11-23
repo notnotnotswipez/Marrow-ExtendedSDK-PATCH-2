@@ -1,3 +1,4 @@
+using SLZ.Data;
 using SLZ.SFX;
 using SLZ.Zones;
 using UnityEngine;

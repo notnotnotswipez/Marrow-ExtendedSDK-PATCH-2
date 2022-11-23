@@ -2,36 +2,39 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-[RequireComponent(typeof(InteractableHost))]
-public class InteractableEvents : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public UnityEvent OnGrab;
-
-	public UnityEvent OnRelease;
-
-	[Tooltip("Only trigger the event when both hands let go of the object")]
-	public bool CompleteRelease;
-
-	private InteractableHost host;
-
-	private void Awake()
+	[RequireComponent(typeof(InteractableHost))]
+	public class InteractableEvents : MonoBehaviour
 	{
-	}
+		public UnityEvent OnGrab;
 
-	public void OnHandAttached(InteractableHost host, Hand hand)
-	{
-	}
+		public UnityEvent OnRelease;
 
-	public void OnDetachedHand(InteractableHost host, Hand hand)
-	{
-	}
+		[Tooltip("Only trigger the event when both hands let go of the object")]
+		public bool CompleteRelease;
 
-	private void OnDestroy()
-	{
-	}
+		private InteractableHost host;
 
-	public InteractableEvents()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		public void OnHandAttached(InteractableHost host, Hand hand)
+		{
+		}
+
+		public void OnDetachedHand(InteractableHost host, Hand hand)
+		{
+		}
+
+		private void OnDestroy()
+		{
+		}
+
+		public InteractableEvents()
+			: base()
+		{
+		}
 	}
 }

@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class NameCollision : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void OnCollisionEnter(Collision collision)
+	public class NameCollision : MonoBehaviour
 	{
-	}
+		private void OnCollisionEnter(Collision collision)
+		{
+		}
 
-	public NameCollision()
-		: base()
-	{
+		public NameCollision()
+			: base()
+		{
+		}
 	}
 }

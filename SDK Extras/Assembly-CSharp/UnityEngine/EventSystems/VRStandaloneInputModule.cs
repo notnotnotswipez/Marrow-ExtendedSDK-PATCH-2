@@ -1,6 +1,8 @@
 using System;
+using UnityEngine;
+using UnityEngine.EventSystems;
 
-namespace UnityEngine.EventSystems
+namespace SLZ.UI
 {
 	[AddComponentMenu("Event/Standalone Input Module")]
 	public class VRStandaloneInputModule : VRInputModule

@@ -1,27 +1,30 @@
 using UnityEngine;
 
-public class JointVisual : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private ConfigurableJoint joint;
-
-	[SerializeField]
-	private GameObject connectedTransformObject;
-
-	private void Awake()
+	public class JointVisual : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private ConfigurableJoint joint;
 
-	public void OnDrawGizmos()
-	{
-	}
+		[SerializeField]
+		private GameObject connectedTransformObject;
 
-	public void CreateKinematicConnectedObject()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public JointVisual()
-		: base()
-	{
+		public void OnDrawGizmos()
+		{
+		}
+
+		public void CreateKinematicConnectedObject()
+		{
+		}
+
+		public JointVisual()
+			: base()
+		{
+		}
 	}
 }

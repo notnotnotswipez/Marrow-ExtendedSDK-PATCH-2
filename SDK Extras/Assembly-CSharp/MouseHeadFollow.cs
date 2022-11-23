@@ -1,60 +1,63 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseHeadFollow : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum RotationAxes
+	public class MouseHeadFollow : MonoBehaviour
 	{
-		MouseXAndY = 0,
-		MouseX = 1,
-		MouseY = 2
-	}
+		public enum RotationAxes
+		{
+			MouseXAndY = 0,
+			MouseX = 1,
+			MouseY = 2
+		}
 
-	public RotationAxes axes;
+		public RotationAxes axes;
 
-	public float sensitivityX;
+		public float sensitivityX;
 
-	public float sensitivityY;
+		public float sensitivityY;
 
-	public float minimumX;
+		public float minimumX;
 
-	public float maximumX;
+		public float maximumX;
 
-	public float minimumY;
+		public float minimumY;
 
-	public float maximumY;
+		public float maximumY;
 
-	private float rotationX;
+		private float rotationX;
 
-	private float rotationY;
+		private float rotationY;
 
-	private List<float> rotArrayX;
+		private List<float> rotArrayX;
 
-	private float rotAverageX;
+		private float rotAverageX;
 
-	private List<float> rotArrayY;
+		private List<float> rotArrayY;
 
-	private float rotAverageY;
+		private float rotAverageY;
 
-	public float frameCounter;
+		public float frameCounter;
 
-	private Quaternion originalRotation;
+		private Quaternion originalRotation;
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public static float ClampAngle(float angle, float min, float max)
-	{
-		return default(float);
-	}
+		public static float ClampAngle(float angle, float min, float max)
+		{
+			return default(float);
+		}
 
-	public MouseHeadFollow()
-		: base()
-	{
+		public MouseHeadFollow()
+			: base()
+		{
+		}
 	}
 }

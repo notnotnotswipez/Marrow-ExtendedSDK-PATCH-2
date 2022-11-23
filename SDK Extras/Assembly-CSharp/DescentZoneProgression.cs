@@ -1,6 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
-using SLZ.Data.SaveData;
+using SLZ.Bonelab;
+using SLZ.SaveData;
 using SLZ.Zones;
 using UnityEngine;
 

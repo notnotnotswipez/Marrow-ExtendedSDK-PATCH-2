@@ -5,19 +5,22 @@ using Cysharp.Threading.Tasks;
 using Cysharp.Threading.Tasks.CompilerServices;
 using UnityEngine;
 
-public class EntitledChild : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void OnEnable()
+	public class EntitledChild : MonoBehaviour
 	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private UniTaskVoid CheckAsync()
-	{
-		return default(UniTaskVoid);
-	}
+		private UniTaskVoid CheckAsync()
+		{
+			return default(UniTaskVoid);
+		}
 
-	public EntitledChild()
-		: base()
-	{
+		public EntitledChild()
+			: base()
+		{
+		}
 	}
 }

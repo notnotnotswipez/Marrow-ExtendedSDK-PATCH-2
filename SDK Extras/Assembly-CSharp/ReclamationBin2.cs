@@ -5,29 +5,32 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class ReclamationBin2 : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Control_Player controlPlayer;
-
-	public void OnTriggerEnter(Collider other)
+	public class ReclamationBin2 : MonoBehaviour
 	{
-	}
+		public Control_Player controlPlayer;
 
-	private IEnumerator CoDelayDespawn(Rigidbody rb)
-	{
-		return null;
-	}
+		public void OnTriggerEnter(Collider other)
+		{
+		}
 
-	public void DataWrite(string barcode)
-	{
-	}
+		private IEnumerator CoDelayDespawn(Rigidbody rb)
+		{
+			return null;
+		}
 
-	private void ACHIEVEMENTUNLOCKS()
-	{
-	}
+		public void DataWrite(string barcode)
+		{
+		}
 
-	public ReclamationBin2()
-		: base()
-	{
+		private void ACHIEVEMENTUNLOCKS()
+		{
+		}
+
+		public ReclamationBin2()
+			: base()
+		{
+		}
 	}
 }

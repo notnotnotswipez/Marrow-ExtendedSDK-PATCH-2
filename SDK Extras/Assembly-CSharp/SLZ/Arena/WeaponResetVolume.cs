@@ -3,7 +3,7 @@ using System.Runtime.InteropServices;
 using SLZ.Interaction;
 using UnityEngine;
 
-namespace SLZ.Arena
+namespace SLZ.Bonelab
 {
 	public class WeaponResetVolume : MonoBehaviour
 	{

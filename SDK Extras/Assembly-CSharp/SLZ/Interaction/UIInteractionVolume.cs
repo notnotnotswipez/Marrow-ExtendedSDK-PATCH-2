@@ -1,5 +1,5 @@
 using System.Collections.Generic;
-using SLZ.UI.Radial;
+using SLZ.UI;
 using UnityEngine;
 
 namespace SLZ.Interaction

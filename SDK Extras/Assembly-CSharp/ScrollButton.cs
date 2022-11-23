@@ -7,93 +7,96 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-[RequireComponent(typeof(Button))]
-public class ScrollButton : MonoBehaviour, IPointerDownHandler, IEventSystemHandler, IPointerUpHandler
+namespace SLZ.UI
 {
-	private enum ScrollButtonDirection
+	[RequireComponent(typeof(Button))]
+	public class ScrollButton : MonoBehaviour, IPointerDownHandler, IEventSystemHandler, IPointerUpHandler
 	{
-		UP = 0,
-		DOWN = 1
-	}
+		private enum ScrollButtonDirection
+		{
+			UP = 0,
+			DOWN = 1
+		}
 
-	[SerializeField]
-	private ScrollButtonDirection direction;
+		[SerializeField]
+		private ScrollButtonDirection direction;
 
-	[SerializeField]
-	private bool incremental;
+		[SerializeField]
+		private bool incremental;
 
-	[SerializeField]
-	private float stepSize;
+		[SerializeField]
+		private float stepSize;
 
-	[SerializeField]
-	private float scrollFrequency;
+		[SerializeField]
+		private float scrollFrequency;
 
-	[SerializeField]
-	private Scrollbar scrollbar;
+		[SerializeField]
+		private Scrollbar scrollbar;
 
-	[SerializeField]
-	private ScrollElementsContainer scrollElementsContainer;
+		[SerializeField]
+		private ScrollElementsContainer scrollElementsContainer;
 
-	private float signedStepSize;
+		private float signedStepSize;
 
-	private Button button;
+		private Button button;
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	private void HandleScrollViewChanged()
-	{
-	}
+		private void HandleScrollViewChanged()
+		{
+		}
 
-	private void HandleScrollValueChanged(float value)
-	{
-	}
+		private void HandleScrollValueChanged(float value)
+		{
+		}
 
-	private void SetButtonState(bool enabled)
-	{
-	}
+		private void SetButtonState(bool enabled)
+		{
+		}
 
-	public void OnPointerDown(PointerEventData eventData)
-	{
-	}
+		public void OnPointerDown(PointerEventData eventData)
+		{
+		}
 
-	public void OnPointerUp(PointerEventData eventData)
-	{
-	}
+		public void OnPointerUp(PointerEventData eventData)
+		{
+		}
 
-	public void stopScrolls()
-	{
-	}
+		public void stopScrolls()
+		{
+		}
 
-	private void IncrementalScrollContent()
-	{
-	}
+		private void IncrementalScrollContent()
+		{
+		}
 
-	private void ScrollContent()
-	{
-	}
+		private void ScrollContent()
+		{
+		}
 
-	private IEnumerator SmoothScrolling(float minValue, float maxValue, float totalTime)
-	{
-		return null;
-	}
+		private IEnumerator SmoothScrolling(float minValue, float maxValue, float totalTime)
+		{
+			return null;
+		}
 
-	private IEnumerator RefactoredSmoothScrolling(float CurValue, float TargetValue, float totalTime)
-	{
-		return null;
-	}
+		private IEnumerator RefactoredSmoothScrolling(float CurValue, float TargetValue, float totalTime)
+		{
+			return null;
+		}
 
-	private void OnDestroy()
-	{
-	}
+		private void OnDestroy()
+		{
+		}
 
-	public ScrollButton()
-		: base()
-	{
+		public ScrollButton()
+			: base()
+		{
+		}
 	}
 }

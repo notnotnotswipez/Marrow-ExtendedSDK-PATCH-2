@@ -5,88 +5,91 @@ using SLZ.Marrow.Pool;
 using SLZ.Props.Weapons;
 using UnityEngine;
 
-public class WeaponPack : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum WeaponType
+	public class WeaponPack : MonoBehaviour
 	{
-		RANGED = 0,
-		MELEE = 1
-	}
+		public enum WeaponType
+		{
+			RANGED = 0,
+			MELEE = 1
+		}
 
-	public enum MeleeType
-	{
-		BLADE = 0,
-		BLUNT = 1
-	}
+		public enum MeleeType
+		{
+			BLADE = 0,
+			BLUNT = 1
+		}
 
-	public bool isSpawned;
+		public bool isSpawned;
 
-	public WeaponType weaponType;
+		public WeaponType weaponType;
 
-	public MeleeType meleeType;
+		public MeleeType meleeType;
 
-	[Header("Secondary Weapon Packs")]
-	public WeaponPack secondaryPack;
+		[Header("Secondary Weapon Packs")]
+		public WeaponPack secondaryPack;
 
-	[Header("SpawnableCrates")]
-	public Spawnable weaponSpawnable;
+		[Header("SpawnableCrates")]
+		public Spawnable weaponSpawnable;
 
-	public Spawnable magSpawnable;
+		public Spawnable magSpawnable;
 
-	public AssetPoolee weaponAssetPoolee;
+		public AssetPoolee weaponAssetPoolee;
 
-	[Header("Spawned Instances")]
-	public GameObject spawnedWeaponObj;
+		[Header("Spawned Instances")]
+		public GameObject spawnedWeaponObj;
 
-	public GameObject spawnedMagObj;
+		public GameObject spawnedMagObj;
 
-	[Header("Spawn Points")]
-	public Transform weaponSpawn;
+		[Header("Spawn Points")]
+		public Transform weaponSpawn;
 
-	public Transform magazineSpawn;
+		public Transform magazineSpawn;
 
-	[Header("Weapon Swap Refs")]
-	public InteractableHost weaponHost;
+		[Header("Weapon Swap Refs")]
+		public InteractableHost weaponHost;
 
-	public Gun gun;
+		public Gun gun;
 
-	public Grip weaponGrip;
+		public Grip weaponGrip;
 
-	public AmmoSocket slotReciever;
+		public AmmoSocket slotReciever;
 
-	public Rigidbody gunBody;
+		public Rigidbody gunBody;
 
-	public Grip[] allGrips;
+		public Grip[] allGrips;
 
-	[Header("Magazine Swap Refs")]
-	public Magazine magazine;
+		[Header("Magazine Swap Refs")]
+		public Magazine magazine;
 
-	public Grip magGrip;
+		public Grip magGrip;
 
-	public InteractableHost magHost;
+		public InteractableHost magHost;
 
-	public Rigidbody magBody;
+		public Rigidbody magBody;
 
-	public Action<WeaponPack> OnPackGrabbed;
+		public Action<WeaponPack> OnPackGrabbed;
 
-	public void OnSpawnWeapon()
-	{
-	}
+		public void OnSpawnWeapon()
+		{
+		}
 
-	public void OnDespawnWeapon()
-	{
-	}
+		public void OnDespawnWeapon()
+		{
+		}
 
-	public void ResetHostObj(InteractableHost host)
-	{
-	}
+		public void ResetHostObj(InteractableHost host)
+		{
+		}
 
-	public void OnWeaponGrabbed(Hand hand)
-	{
-	}
+		public void OnWeaponGrabbed(Hand hand)
+		{
+		}
 
-	public WeaponPack()
-		: base()
-	{
+		public WeaponPack()
+			: base()
+		{
+		}
 	}
 }

@@ -1,7 +1,7 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class GravityStaff : MonoBehaviour
 	{

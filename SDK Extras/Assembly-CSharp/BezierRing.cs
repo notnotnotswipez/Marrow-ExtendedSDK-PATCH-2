@@ -1,55 +1,58 @@
 using UnityEngine;
 
-public class BezierRing : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	public Transform[] points;
-
-	private LineRenderer Liner;
-
-	public int lineSteps;
-
-	public int CurveCount
+	public class BezierRing : MonoBehaviour
 	{
-		get
+		[SerializeField]
+		public Transform[] points;
+
+		private LineRenderer Liner;
+
+		public int lineSteps;
+
+		public int CurveCount
 		{
-			return default(int);
+			get
+			{
+				return default(int);
+			}
 		}
-	}
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public Vector3 GetPoint(float t)
-	{
-		return default(Vector3);
-	}
+		public Vector3 GetPoint(float t)
+		{
+			return default(Vector3);
+		}
 
-	public Vector3 GetVelocity(float t)
-	{
-		return default(Vector3);
-	}
+		public Vector3 GetVelocity(float t)
+		{
+			return default(Vector3);
+		}
 
-	public Vector3 GetDirection(float t)
-	{
-		return default(Vector3);
-	}
+		public Vector3 GetDirection(float t)
+		{
+			return default(Vector3);
+		}
 
-	public void OnWillRenderObject()
-	{
-	}
+		public void OnWillRenderObject()
+		{
+		}
 
-	public void UpdateLines()
-	{
-	}
+		public void UpdateLines()
+		{
+		}
 
-	public BezierRing()
-		: base()
-	{
+		public BezierRing()
+			: base()
+		{
+		}
 	}
 }

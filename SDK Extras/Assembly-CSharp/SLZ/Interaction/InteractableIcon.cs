@@ -21,8 +21,8 @@ namespace SLZ.Interaction
 
 		public GripIconType gripIconType;
 
-		[HideInInspector]
 		[SerializeField]
+		[HideInInspector]
 		private GameObject iconObj;
 
 		private Renderer iconRenderer;
@@ -37,8 +37,8 @@ namespace SLZ.Interaction
 		[Header("Overrides default settings")]
 		private bool LocalOverride;
 
-		[Tooltip("Override default icon")]
 		[SerializeField]
+		[Tooltip("Override default icon")]
 		private Texture IconTex;
 
 		[SerializeField]

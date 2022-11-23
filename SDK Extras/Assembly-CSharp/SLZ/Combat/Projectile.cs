@@ -33,13 +33,13 @@ namespace SLZ.Combat
 		[Tooltip("Bullet reference. Use stated values if empty")]
 		private ProjectileData _data;
 
+		[SerializeField]
 		[Tooltip("Velocity in Meters per Second")]
 		[Space(5f)]
-		[SerializeField]
 		private float startSpeed;
 
-		[SerializeField]
 		[Tooltip("Mass in kg")]
+		[SerializeField]
 		private float Mass;
 
 		[SerializeField]
@@ -58,11 +58,11 @@ namespace SLZ.Combat
 
 		public GameObject projectileMeshGameObject;
 
-		[Tooltip("Max amount of impact particle systems allowed to spawn")]
-		[Range(0f, 19f)]
-		[SerializeField]
-		[Space(5f)]
 		[Header("Pool Options")]
+		[Range(0f, 19f)]
+		[Space(5f)]
+		[SerializeField]
+		[Tooltip("Max amount of impact particle systems allowed to spawn")]
 		private int MaxParticleSpawns;
 
 		[SerializeField]

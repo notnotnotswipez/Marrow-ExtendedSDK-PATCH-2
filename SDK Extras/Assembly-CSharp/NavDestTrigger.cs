@@ -2,58 +2,61 @@ using System.Collections.Generic;
 using SLZ.Props;
 using UnityEngine;
 
-public class NavDestTrigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private bool isObstructed;
-
-	[SerializeField]
-	private int destCount;
-
-	[SerializeField]
-	private int costModMult;
-
-	[SerializeField]
-	private ObjectDestructable defaultDestObj;
-
-	[Header("LinkTrigger")]
-	[SerializeField]
-	private bool isLink;
-
-	[SerializeField]
-	private LinkData[] linkDatas;
-
-	[Header("NavMeshAreaTrigger")]
-	[SerializeField]
-	private Arena_GameController gameController;
-
-	[SerializeField]
-	private string areaName;
-
-	private HashSet<ObjectDestructable> destHash;
-
-	private void OnEnable()
+	public class NavDestTrigger : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private bool isObstructed;
 
-	private void OnDisable()
-	{
-	}
+		[SerializeField]
+		private int destCount;
 
-	private void OnDestruction(ObjectDestructable dest)
-	{
-	}
+		[SerializeField]
+		private int costModMult;
 
-	private void OnTriggerEnter(Collider other)
-	{
-	}
+		[SerializeField]
+		private ObjectDestructable defaultDestObj;
 
-	private void ToggleAreaOrLink()
-	{
-	}
+		[Header("LinkTrigger")]
+		[SerializeField]
+		private bool isLink;
 
-	public NavDestTrigger()
-		: base()
-	{
+		[SerializeField]
+		private LinkData[] linkDatas;
+
+		[Header("NavMeshAreaTrigger")]
+		[SerializeField]
+		private Arena_GameController gameController;
+
+		[SerializeField]
+		private string areaName;
+
+		private HashSet<ObjectDestructable> destHash;
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		private void OnDestruction(ObjectDestructable dest)
+		{
+		}
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		private void ToggleAreaOrLink()
+		{
+		}
+
+		public NavDestTrigger()
+			: base()
+		{
+		}
 	}
 }

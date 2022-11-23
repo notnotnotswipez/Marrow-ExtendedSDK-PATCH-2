@@ -1,4 +1,4 @@
-namespace SLZ
+namespace SLZ.Interaction
 {
 	public enum GripIconType
 	{

@@ -1,7 +1,7 @@
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-namespace StressLevelZero.Utilities
+namespace SLZ.Utilities
 {
 	public class DisableOnLoad : MonoBehaviour
 	{

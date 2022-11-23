@@ -1,8 +1,9 @@
 using System;
+using SLZ.Marrow.Utilities;
 using SLZ.VRMK;
 using UnityEngine;
 
-namespace SLZ.Marrow.Utilities
+namespace SLZ.Mods
 {
 	public class BonelabSerializableDictionaries : MonoBehaviour
 	{

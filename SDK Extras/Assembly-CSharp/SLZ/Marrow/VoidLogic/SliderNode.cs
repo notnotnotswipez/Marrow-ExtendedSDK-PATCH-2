@@ -10,21 +10,21 @@ namespace SLZ.Marrow.VoidLogic
 	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Slider")]
 	public class SliderNode : BaseNode
 	{
-		[Tooltip("Output response curve (multiplied by input)")]
 		[SerializeField]
+		[Tooltip("Output response curve (multiplied by input)")]
 		private AnimationCurve _curve;
 
 		[Min(0f)]
-		[Tooltip("Slider Types:\n0 => Free\n1 => Momentary\n2+ => Stepped")]
 		[SerializeField]
+		[Tooltip("Slider Types:\n0 => Free\n1 => Momentary\n2+ => Stepped")]
 		private int _steps;
 
 		[Tooltip("Slider joint that drives the output power value")]
 		[SerializeField]
 		private ConfigurableJoint _sliderConfigurableJoint;
 
-		[Tooltip("Intearactable host i.e. for running haptics")]
 		[SerializeField]
+		[Tooltip("Intearactable host i.e. for running haptics")]
 		private InteractableHost _interactableHost;
 
 		[SerializeField]

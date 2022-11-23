@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class GravityStaffReciever : MonoBehaviour
 	{

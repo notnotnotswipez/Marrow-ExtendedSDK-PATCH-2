@@ -3,8 +3,8 @@ using UnityEngine;
 
 namespace SLZ.Marrow.VoidLogic
 {
-	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Trigger")]
 	[RequireComponent(typeof(Collider))]
+	[AddComponentMenu("VoidLogic/Nodes/VoidLogic Trigger")]
 	public class TriggerNode : BaseNode
 	{
 		public enum TriggerBehavior
@@ -14,8 +14,8 @@ namespace SLZ.Marrow.VoidLogic
 			Pinned = 2
 		}
 
-		[Tooltip("Trigger Behavior:\nAlways => Enter and Exit\nOnce => Enter and Exit, once\nPinned => Enter (pin to \"on\" state)")]
 		[SerializeField]
+		[Tooltip("Trigger Behavior:\nAlways => Enter and Exit\nOnce => Enter and Exit, once\nPinned => Enter (pin to \"on\" state)")]
 		private TriggerBehavior _triggerBehavior;
 
 		[Tooltip("Limit trigger to player only")]
@@ -26,8 +26,8 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		private bool _playerOrNpcOnly;
 
-		[SerializeField]
 		[Tooltip("Limit trigger to a specific object collision. CONFLICTS WITH: Player Only")]
+		[SerializeField]
 		private GameObject _triggerObject;
 
 		private bool _isTriggered;

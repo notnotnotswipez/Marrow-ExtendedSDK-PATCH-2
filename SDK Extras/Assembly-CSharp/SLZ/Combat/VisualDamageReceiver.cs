@@ -1,4 +1,5 @@
 using System.Runtime.InteropServices;
+using PuppetMasta;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.Serialization;
@@ -11,8 +12,8 @@ namespace SLZ.Combat
 		[SerializeField]
 		private Vector3 orgpos;
 
-		[SerializeField]
 		[HideInInspector]
+		[SerializeField]
 		private Quaternion orgrot;
 
 		[HideInInspector]
@@ -21,15 +22,17 @@ namespace SLZ.Combat
 
 		public Transform bone;
 
-		[SerializeField]
 		[FormerlySerializedAs("ParentObj")]
+		[SerializeField]
 		private VisualDamageController visualDamageController;
 
-		[Space(10f)]
 		[Header("CutOut area")]
 		[Space(5f)]
 		[SerializeField]
+		[Space(10f)]
 		public GibletEllipsoid[] gibletEllipsoid;
+
+		public PuppetMaster puppet;
 
 		private void Reset()
 		{

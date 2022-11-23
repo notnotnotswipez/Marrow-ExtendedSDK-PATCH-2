@@ -9,7 +9,7 @@ using SLZ.SFX;
 using SLZ.VFX;
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class GravityGun : MonoBehaviour
 	{

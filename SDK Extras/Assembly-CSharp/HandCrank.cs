@@ -1,40 +1,43 @@
 using SLZ.Interaction;
 using UnityEngine;
 
-public class HandCrank : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Rigidbody rotaterBody;
-
-	public GameObject rotaterBar;
-
-	public GameObject staticBar;
-
-	public float prevSignedAngle;
-
-	public float signedAngle;
-
-	public float deltaSignedAngle;
-
-	public ConfigurableJoint moverJoint;
-
-	public Grip leftGrip;
-
-	public Grip rightGrip;
-
-	public float jointIncrementVal;
-
-	public float maxPosition;
-
-	public void FixedUpdate()
+	public class HandCrank : MonoBehaviour
 	{
-	}
+		public Rigidbody rotaterBody;
 
-	private void MoveJoint(bool forward)
-	{
-	}
+		public GameObject rotaterBar;
 
-	public HandCrank()
-		: base()
-	{
+		public GameObject staticBar;
+
+		public float prevSignedAngle;
+
+		public float signedAngle;
+
+		public float deltaSignedAngle;
+
+		public ConfigurableJoint moverJoint;
+
+		public Grip leftGrip;
+
+		public Grip rightGrip;
+
+		public float jointIncrementVal;
+
+		public float maxPosition;
+
+		public void FixedUpdate()
+		{
+		}
+
+		private void MoveJoint(bool forward)
+		{
+		}
+
+		public HandCrank()
+			: base()
+		{
+		}
 	}
 }

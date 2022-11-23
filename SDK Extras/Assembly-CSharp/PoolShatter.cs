@@ -1,52 +1,55 @@
 using System;
 using UnityEngine;
 
-public class PoolShatter : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Serializable]
-	public struct SimpleTrans
+	public class PoolShatter : MonoBehaviour
 	{
-		public Vector3 Position;
+		[Serializable]
+		public struct SimpleTrans
+		{
+			public Vector3 Position;
 
-		public Quaternion Rotation;
+			public Quaternion Rotation;
 
-		public Vector3 Scale;
-	}
+			public Vector3 Scale;
+		}
 
-	public GameObject TargetObject;
+		public GameObject TargetObject;
 
-	public GameObject[] Objects;
+		public GameObject[] Objects;
 
-	[SerializeField]
-	private SimpleTrans[] transforms;
+		[SerializeField]
+		private SimpleTrans[] transforms;
 
-	private void Awake()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	private void SetPoser()
-	{
-	}
+		private void SetPoser()
+		{
+		}
 
-	private void Reset()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	[ContextMenu("Gather Transforms")]
-	private void GatherTransforms()
-	{
-	}
+		[ContextMenu("Gather Transforms")]
+		private void GatherTransforms()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	public PoolShatter()
-		: base()
-	{
+		public PoolShatter()
+			: base()
+		{
+		}
 	}
 }

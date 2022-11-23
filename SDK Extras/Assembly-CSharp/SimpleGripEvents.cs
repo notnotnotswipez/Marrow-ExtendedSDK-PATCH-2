@@ -8,9 +8,24 @@ public class SimpleGripEvents : MonoBehaviour
 
 	public UnityEvent OnMenuTapDown;
 
+	public UnityEvent OnAttach;
+
+	public UnityEvent OnDetach;
+
 	public Grip[] Grips;
 
+	[Header("When enabled OnAttach will only fire on the first hand attach and OnDetach will only fire when both hands are detached.")]
+	public bool doNotRetriggerOnMultiGirp;
+
+	private bool leftHand;
+
+	private bool rightHand;
+
 	private void Awake()
+	{
+	}
+
+	private void OnDestroy()
 	{
 	}
 
@@ -18,7 +33,11 @@ public class SimpleGripEvents : MonoBehaviour
 	{
 	}
 
-	private void OnDestroy()
+	public void OnAttachedDelegate(Hand hand)
+	{
+	}
+
+	public void OnDetachedDelegate(Hand hand)
 	{
 	}
 

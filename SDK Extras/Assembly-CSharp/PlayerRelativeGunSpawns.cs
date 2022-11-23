@@ -1,29 +1,32 @@
 using UnityEngine;
 
-public class PlayerRelativeGunSpawns : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Transform playerDropGunCenterSpawn;
-
-	public GameObject gunDropCanvas;
-
-	private float maxDistFromCenter;
-
-	public Rigidbody playerPelvisRB;
-
-	public void CheckDropLocation()
+	public class PlayerRelativeGunSpawns : MonoBehaviour
 	{
-	}
+		public Transform playerDropGunCenterSpawn;
 
-	public void ToggleSprite(bool active)
-	{
-	}
+		public GameObject gunDropCanvas;
 
-	private void OnDrawGizmos()
-	{
-	}
+		private float maxDistFromCenter;
 
-	public PlayerRelativeGunSpawns()
-		: base()
-	{
+		public Rigidbody playerPelvisRB;
+
+		public void CheckDropLocation()
+		{
+		}
+
+		public void ToggleSprite(bool active)
+		{
+		}
+
+		private void OnDrawGizmos()
+		{
+		}
+
+		public PlayerRelativeGunSpawns()
+			: base()
+		{
+		}
 	}
 }

@@ -6,78 +6,81 @@ using System.Runtime.CompilerServices;
 using SLZ.Rig;
 using UnityEngine;
 
-public class TimeBender : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[Header("SLOW-MOTION-FOR-ME")]
-	[SerializeField]
-	private bool limitedSlowMo;
-
-	[SerializeField]
-	private bool isSlowTime;
-
-	[SerializeField]
-	private GameObject visObj;
-
-	private Coroutine limitedSlowMoRoutine;
-
-	private Coroutine regenSlowMoRoutine;
-
-	[SerializeField]
-	private float maxSlowMoJuice;
-
-	[SerializeField]
-	private float slowMoJuice;
-
-	[SerializeField]
-	private GameObject[] timeBips;
-
-	[SerializeField]
-	private GameObject slowMoSlider;
-
-	[SerializeField]
-	private Control_GlobalTime timeControl;
-
-	[SerializeField]
-	private ControllerRig controllerRig;
-
-	[SerializeField]
-	private AudioClip slowMoCoolClip;
-
-	[SerializeField]
-	private AudioClip slowMoJuicedClip;
-
-	private float currStep;
-
-	private float sliderScaleMax;
-
-	private void OnEnable()
+	public class TimeBender : MonoBehaviour
 	{
-	}
+		[Header("SLOW-MOTION-FOR-ME")]
+		[SerializeField]
+		private bool limitedSlowMo;
 
-	private void OnDisable()
-	{
-	}
+		[SerializeField]
+		private bool isSlowTime;
 
-	public void ToggleSlowLimits(bool isLimited)
-	{
-	}
+		[SerializeField]
+		private GameObject visObj;
 
-	public void SlowTimeToggle(float step)
-	{
-	}
+		private Coroutine limitedSlowMoRoutine;
 
-	private IEnumerator CoLimitSlowMo(float step = 1f)
-	{
-		return null;
-	}
+		private Coroutine regenSlowMoRoutine;
 
-	private IEnumerator CoRegenSlowMo(float delay = 0f)
-	{
-		return null;
-	}
+		[SerializeField]
+		private float maxSlowMoJuice;
 
-	public TimeBender()
-		: base()
-	{
+		[SerializeField]
+		private float slowMoJuice;
+
+		[SerializeField]
+		private GameObject[] timeBips;
+
+		[SerializeField]
+		private GameObject slowMoSlider;
+
+		[SerializeField]
+		private Control_GlobalTime timeControl;
+
+		[SerializeField]
+		private ControllerRig controllerRig;
+
+		[SerializeField]
+		private AudioClip slowMoCoolClip;
+
+		[SerializeField]
+		private AudioClip slowMoJuicedClip;
+
+		private float currStep;
+
+		private float sliderScaleMax;
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		public void ToggleSlowLimits(bool isLimited)
+		{
+		}
+
+		public void SlowTimeToggle(float step)
+		{
+		}
+
+		private IEnumerator CoLimitSlowMo(float step = 1f)
+		{
+			return null;
+		}
+
+		private IEnumerator CoRegenSlowMo(float delay = 0f)
+		{
+			return null;
+		}
+
+		public TimeBender()
+			: base()
+		{
+		}
 	}
 }

@@ -6,29 +6,32 @@ using System.Runtime.CompilerServices;
 using SLZ.Zones;
 using UnityEngine;
 
-public class AIHeadbanger : MonoBehaviour
+namespace SLZ.AI
 {
-	public ZoneSpawner[] danceSpawners;
-
-	public float danceTick;
-
-	private Coroutine _danCo;
-
-	private bool _danceBeat;
-
-	private bool _danceLeft;
-
-	public void ToggleDance(bool on)
+	public class AIHeadbanger : MonoBehaviour
 	{
-	}
+		public ZoneSpawner[] danceSpawners;
 
-	public IEnumerator DanceCo()
-	{
-		return null;
-	}
+		public float danceTick;
 
-	public AIHeadbanger()
-		: base()
-	{
+		private Coroutine _danCo;
+
+		private bool _danceBeat;
+
+		private bool _danceLeft;
+
+		public void ToggleDance(bool on)
+		{
+		}
+
+		public IEnumerator DanceCo()
+		{
+			return null;
+		}
+
+		public AIHeadbanger()
+			: base()
+		{
+		}
 	}
 }

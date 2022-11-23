@@ -9,8 +9,8 @@ namespace SLZ.Combat
 		[Tooltip("Muzzle type")]
 		public MuzzleBreakType muzzleBreakType;
 
-		[Range(0f, 1f)]
 		[Tooltip("Amount of recoil suppression")]
+		[Range(0f, 1f)]
 		public float RecoilCompensation;
 
 		[Range(0f, 1f)]

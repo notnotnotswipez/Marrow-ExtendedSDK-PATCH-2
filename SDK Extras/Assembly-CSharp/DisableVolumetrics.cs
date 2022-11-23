@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class DisableVolumetrics : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	public class DisableVolumetrics : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public DisableVolumetrics()
-		: base()
-	{
+		public DisableVolumetrics()
+			: base()
+		{
+		}
 	}
 }

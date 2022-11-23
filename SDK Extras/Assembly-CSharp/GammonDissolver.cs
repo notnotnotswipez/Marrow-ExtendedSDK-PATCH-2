@@ -3,26 +3,29 @@ using SLZ.Marrow.Pool;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GammonDissolver : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Grip grip;
-
-	public AssetPoolee poolee;
-
-	public UnityEvent onDespawned;
-
-	public AudioClip despawnClip;
-
-	private void Awake()
+	public class GammonDissolver : MonoBehaviour
 	{
-	}
+		public Grip grip;
 
-	public void OnHandAttached(Hand hand)
-	{
-	}
+		public AssetPoolee poolee;
 
-	public GammonDissolver()
-		: base()
-	{
+		public UnityEvent onDespawned;
+
+		public AudioClip despawnClip;
+
+		private void Awake()
+		{
+		}
+
+		public void OnHandAttached(Hand hand)
+		{
+		}
+
+		public GammonDissolver()
+			: base()
+		{
+		}
 	}
 }

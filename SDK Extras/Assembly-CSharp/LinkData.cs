@@ -8,402 +8,405 @@ using SLZ.Rig;
 using UnityEngine;
 using UnityEngine.AI;
 
-[ExecuteInEditMode]
-public class LinkData : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum LinkType
+	[ExecuteInEditMode]
+	public class LinkData : MonoBehaviour
 	{
-		CLIMB = 0,
-		JUMP = 1,
-		LAUNCH = 2,
-		ZIPLINE_UP = 3,
-		CLIMB_BARS = 4,
-		SLIDE = 5,
-		CLIMB_LEDGE = 6,
-		ZIPLINE_DOWN = 7,
-		ESCALATOR = 8
-	}
-
-	public struct LaunchData
-	{
-		public readonly Vector3 initialVelocity;
-
-		public readonly float timeToTarget;
-
-		public LaunchData(Vector3 initialVelocity, float timeToTarget)
+		public enum LinkType
 		{
-			this.timeToTarget = default(float);
-			this.initialVelocity = default(Vector3);
+			CLIMB = 0,
+			JUMP = 1,
+			LAUNCH = 2,
+			ZIPLINE_UP = 3,
+			CLIMB_BARS = 4,
+			SLIDE = 5,
+			CLIMB_LEDGE = 6,
+			ZIPLINE_DOWN = 7,
+			ESCALATOR = 8
 		}
-	}
 
-	public LinkType linkType;
+		public struct LData
+		{
+			public Vector3 iVel;
 
-	public int legAgentID;
+			public float ttTarg;
 
-	public int crabletAgentID;
+			public LData(Vector3 initialVelocity, float timeToTarget)
+			{
+				this.ttTarg = default(float);
+				this.iVel = default(Vector3);
+			}
+		}
 
-	[SerializeField]
-	private NavMeshLink[] allNavLinks;
+		public LinkType linkType;
 
-	public NavMeshLink navLinkLeg;
+		public int legAgentID;
 
-	public NavMeshLink navLinkCrab;
+		public int crabletAgentID;
 
-	public AgentLinkControl currLinkAgent;
+		[SerializeField]
+		private NavMeshLink[] allNavLinks;
 
-	public bool isOccupied;
+		public NavMeshLink navLinkLeg;
 
-	public float agentDot;
+		public NavMeshLink navLinkCrab;
 
-	public Vector3 startPosLocal;
+		public AgentLinkControl currLinkAgent;
 
-	public Vector3 endPosLocal;
+		public bool isOccupied;
 
-	public GameObject rotaterParentObj;
+		public float agentDot;
 
-	public Transform edgeTarget;
+		public Vector3 startPosLocal;
 
-	public Transform startRayTarget;
+		public Vector3 endPosLocal;
 
-	public Transform endRayTarget;
+		public GameObject rotaterParentObj;
 
-	[Tooltip("Y local length")]
-	public float edgeHeight;
+		public Transform edgeTarget;
 
-	[Tooltip("X local length")]
-	public float edgeWidth;
+		public Transform startRayTarget;
 
-	[Tooltip("Z local length")]
-	public float edgeDepth;
+		public Transform endRayTarget;
 
-	public float chestHeight;
+		[Tooltip("Y local length")]
+		public float edgeHeight;
 
-	public float chestDepth;
+		[Tooltip("X local length")]
+		public float edgeWidth;
 
-	public float kneeHeight;
+		[Tooltip("Z local length")]
+		public float edgeDepth;
 
-	public float launchHeight;
+		public float chestHeight;
 
-	public float linkDepth;
+		public float chestDepth;
 
-	public float launchMag;
+		public float kneeHeight;
 
-	public ConfigurableJoint linkJoint;
+		public float launchHeight;
 
-	private JointDrive jointDrive;
+		public float linkDepth;
 
-	public Transform crabTarget;
+		public float launchMag;
 
-	[Header("Climb")]
-	public bool isObstructed;
+		public ConfigurableJoint linkJoint;
 
-	public Transform leftHandTarget;
+		private JointDrive jointDrive;
 
-	public Transform rightHandTarget;
+		public Transform crabTarget;
 
-	public Transform leftKneeTarget;
+		[Header("Climb")]
+		public bool isObstructed;
 
-	public Transform rightKneeTarget;
+		public Transform leftHandTarget;
 
-	public Transform leftHandTargetSecondary;
+		public Transform rightHandTarget;
 
-	public Transform rightHandTargetSecondary;
+		public Transform leftKneeTarget;
 
-	public Transform headTarget;
+		public Transform rightKneeTarget;
 
-	public float destArmTime;
+		public Transform leftHandTargetSecondary;
 
-	public Transform chestTargetPrimary;
+		public Transform rightHandTargetSecondary;
 
-	public Transform chestTargetSecondary;
+		public Transform headTarget;
 
-	[Header("Slide")]
-	public GameObject moverJointObj;
+		public float destArmTime;
 
-	public Rigidbody moverJointBody;
+		public Transform chestTargetPrimary;
 
-	public Transform chestPointStart;
+		public Transform chestTargetSecondary;
 
-	public Transform chestPointGoal;
+		[Header("Slide")]
+		public GameObject moverJointObj;
 
-	public bool ignoreLaunchTarget;
+		public Rigidbody moverJointBody;
 
-	private Vector3 lastLaunchTargPos;
+		public Transform chestPointStart;
 
-	public Transform launchTarget;
+		public Transform chestPointGoal;
 
-	public float launchForce;
+		public bool ignoreLaunchTarget;
 
-	public float launchForceMult;
+		private Vector3 lastLaunchTargPos;
 
-	public float launchTime;
+		public Transform launchTarget;
 
-	public float crabJumpForce;
+		public float launchForce;
 
-	public bool applyCorrectiveForce;
+		public float launchForceMult;
 
-	public float correctivePerc;
+		public float launchTime;
 
-	public Action<Vector3> OnLaunchAction;
+		public float crabJumpForce;
 
-	public GameObject playerTargForwObj;
+		public bool applyCorrectiveForce;
 
-	public GameObject playerTargRevObj;
+		public float correctivePerc;
 
-	public RigManager rigManager;
+		public Action<Vector3> OnLaunchAction;
 
-	public Rigidbody playerPelvisBody;
+		public GameObject playerTargForwObj;
 
-	public Rigidbody[] playerBodies;
+		public GameObject playerTargRevObj;
 
-	public MeshRenderer[] colorizedRends;
+		public RigManager rigManager;
 
-	public Material explicitMat;
+		public Rigidbody playerPelvisBody;
 
-	public Material autoMat;
+		public Rigidbody[] playerBodies;
 
-	public GameObject autoTriggerForwObj;
+		public MeshRenderer[] colorizedRends;
 
-	public GameObject autoTriggerRevObj;
+		public Material explicitMat;
 
-	private Coroutine launchRoutine;
+		public Material autoMat;
 
-	public GameObject forwardObj;
+		public GameObject autoTriggerForwObj;
 
-	public GameObject reverseObj;
+		public GameObject autoTriggerRevObj;
 
-	[SerializeField]
-	private float coolDownDuration;
+		private Coroutine launchRoutine;
 
-	private float launchableTime;
+		public GameObject forwardObj;
 
-	public Vector3[] launchLinePoints;
+		public GameObject reverseObj;
 
-	[Header("Climb Bars")]
-	[SerializeField]
-	private GameObject[] barObjs;
+		[SerializeField]
+		private float coolDownDuration;
 
-	public GameObject[] grabObjs;
+		private float launchableTime;
 
-	[Header("Zip Line")]
-	public Transform zipSpawn;
+		public Vector3[] launchLinePoints;
 
-	public GameObject zipStickPrefab;
+		[Header("Climb Bars")]
+		[SerializeField]
+		private GameObject[] barObjs;
 
-	public float zipTime;
+		public GameObject[] grabObjs;
 
-	public GenGameControl_Trigger zipTrigger;
+		[Header("Zip Line")]
+		public Transform zipSpawn;
 
-	public ZipLinkManager zipManager;
+		public GameObject zipStickPrefab;
 
-	public ZipJointMover zipJointMover;
+		public float zipTime;
 
-	public float lerpDistance;
+		public GenGameControl_Trigger zipTrigger;
 
-	public TriggerRefProxy currProxy;
+		public ZipLinkManager zipManager;
 
-	public Vector3 startPoint;
+		public ZipJointMover zipJointMover;
 
-	public Vector3 endPoint;
+		public float lerpDistance;
 
-	public GameObject startRayObj;
+		public TriggerRefProxy currProxy;
 
-	public GameObject endRayObj;
+		public Vector3 startPoint;
 
-	public Mesh zipStickMesh;
+		public Vector3 endPoint;
 
-	[Header("Escalator")]
-	public Escalator escalator;
+		public GameObject startRayObj;
 
-	public GameObject moverTargetParent;
+		public GameObject endRayObj;
 
-	public GameObject moverTarget;
+		public Mesh zipStickMesh;
 
-	public Transform startMoveTarget;
+		[Header("Escalator")]
+		public Escalator escalator;
 
-	public Transform endMoveTarget;
+		public GameObject moverTargetParent;
 
-	public GenGameControl_Trigger compTrigger;
+		public GameObject moverTarget;
 
-	public ConfigurableJoint headJoint;
+		public Transform startMoveTarget;
 
-	public ConfigurableJoint chestJoint;
+		public Transform endMoveTarget;
 
-	public ConfigurableJoint leftHandJoint;
+		public GenGameControl_Trigger compTrigger;
 
-	public ConfigurableJoint rightHandJoint;
+		public ConfigurableJoint headJoint;
 
-	public ConfigurableJoint leftElbowJoint;
+		public ConfigurableJoint chestJoint;
 
-	public ConfigurableJoint rightElbowJoint;
+		public ConfigurableJoint leftHandJoint;
 
-	public ConfigurableJoint leftFootJoint;
+		public ConfigurableJoint rightHandJoint;
 
-	public ConfigurableJoint rightFootJoint;
+		public ConfigurableJoint leftElbowJoint;
 
-	public ConfigurableJoint leftKneeJoint;
+		public ConfigurableJoint rightElbowJoint;
 
-	public ConfigurableJoint rightKneeJoint;
+		public ConfigurableJoint leftFootJoint;
 
-	public Color chestColor;
+		public ConfigurableJoint rightFootJoint;
 
-	private static Color headColor;
+		public ConfigurableJoint leftKneeJoint;
 
-	private static Color leftHandColor;
+		public ConfigurableJoint rightKneeJoint;
 
-	private static Color rightHandColor;
+		public Color chestColor;
 
-	private static Color leftElbowColor;
+		private static Color headColor;
 
-	private static Color rightElbowColor;
+		private static Color leftHandColor;
 
-	public GameObject climbingBarsPrefab;
+		private static Color rightHandColor;
 
-	public LinkDataManager linkDataManager;
+		private static Color leftElbowColor;
 
-	public bool disableOnLinkCompletion;
+		private static Color rightElbowColor;
 
-	private bool isSubbedToJump;
+		public GameObject climbingBarsPrefab;
 
-	public bool isDrawingSim;
+		public LinkDataManager linkDataManager;
 
-	public GameObject simLaunchObj;
+		public bool disableOnLinkCompletion;
 
-	[ContextMenu("CreateStartEndPoints")]
-	public void CreateStartEndPoints()
-	{
-	}
+		private bool isSubbedToJump;
 
-	public void SetStartEndPoints()
-	{
-	}
+		public bool isDrawingSim;
 
-	[ContextMenu("CreateEdgeObjectsByType")]
-	public void CreateEdgeObjectsByType()
-	{
-	}
+		public GameObject simLaunchObj;
 
-	public void CreateSingleEdgeObjects()
-	{
-	}
+		[ContextMenu("CreateStartEndPoints")]
+		public void CreateStartEndPoints()
+		{
+		}
 
-	public void CreateSlideObjects()
-	{
-	}
+		public void SetStartEndPoints()
+		{
+		}
 
-	public void OffsetBarGrabObjects()
-	{
-	}
+		[ContextMenu("CreateEdgeObjectsByType")]
+		public void CreateEdgeObjectsByType()
+		{
+		}
 
-	private void CreateJumpObjects()
-	{
-	}
+		public void CreateSingleEdgeObjects()
+		{
+		}
 
-	private void CreateLaunchObjects()
-	{
-	}
+		public void CreateSlideObjects()
+		{
+		}
 
-	private void CreateClimbBarObjects()
-	{
-	}
+		public void OffsetBarGrabObjects()
+		{
+		}
 
-	private void CreateZipObjects()
-	{
-	}
+		private void CreateJumpObjects()
+		{
+		}
 
-	public void CreateMoverJoint()
-	{
-	}
+		private void CreateLaunchObjects()
+		{
+		}
 
-	public void RotateLinkTargets(bool isForward)
-	{
-	}
+		private void CreateClimbBarObjects()
+		{
+		}
 
-	public float CheckAgentDot(GameObject agentObj)
-	{
-		return default(float);
-	}
+		private void CreateZipObjects()
+		{
+		}
 
-	public void LaunchAudio(bool isForw)
-	{
-	}
+		public void CreateMoverJoint()
+		{
+		}
 
-	public void ToggleBiDirectional()
-	{
-	}
+		public void RotateLinkTargets(bool isForward)
+		{
+		}
 
-	public void OnZipOccupied()
-	{
-	}
+		public float CheckAgentDot(GameObject agentObj)
+		{
+			return default(float);
+		}
 
-	public void ClaimLink(AgentLinkControl currAgent)
-	{
-	}
+		public void LaunchAudio(bool isForw)
+		{
+		}
 
-	public void ReleaseLink()
-	{
-	}
+		public void ToggleBiDirectional()
+		{
+		}
 
-	public void TogglePlayerTarget(bool enable)
-	{
-	}
+		public void OnZipOccupied()
+		{
+		}
 
-	public void PlayerAttack()
-	{
-	}
+		public void ClaimLink(AgentLinkControl currAgent)
+		{
+		}
 
-	[ContextMenu("GetAllPlayerBodies")]
-	public void GetAllPlayerBodies()
-	{
-	}
+		public void ReleaseLink()
+		{
+		}
 
-	public void LaunchPlayer(float jumpCharge = 1.1f)
-	{
-	}
+		public void TogglePlayerTarget(bool enable)
+		{
+		}
 
-	private IEnumerator CoLaunch(float pDot, float timeToTarg)
-	{
-		return null;
-	}
+		public void PlayerAttack()
+		{
+		}
 
-	private void ApplyCorrectiveForce(float playerDot)
-	{
-	}
+		[ContextMenu("GetAllPlayerBodies")]
+		public void GetAllPlayerBodies()
+		{
+		}
 
-	public LaunchData CalculateLaunchData(GameObject launchObj, float height, float gravity)
-	{
-		return default(LaunchData);
-	}
+		public void LaunchPlayer(float jumpCharge = 1.1f)
+		{
+		}
 
-	public TrajectoryData CalcInitialVelocity(GameObject launchObj, Vector3 target, float height)
-	{
-		return null;
-	}
+		private IEnumerator CoLaunch(float pDot, float timeToTarg)
+		{
+			return null;
+		}
 
-	private IEnumerator CoLaunchSequence(GameObject triggerObj)
-	{
-		return null;
-	}
+		private void ApplyCorrectiveForce(float playerDot)
+		{
+		}
 
-	public void EnableTrajectoryHelper(GameObject triggerObj)
-	{
-	}
+		public LData CalculateLaunchData(GameObject launchObj, float height, float gravity)
+		{
+			return default(LData);
+		}
 
-	public void DisableTrajectoryHelper()
-	{
-	}
+		public TrajectoryData CalcInitialVelocity(GameObject launchObj, Vector3 target, float height)
+		{
+			return null;
+		}
 
-	public void SubToPlayerJump(bool enable)
-	{
-	}
+		private IEnumerator CoLaunchSequence(GameObject triggerObj)
+		{
+			return null;
+		}
 
-	public void OnDrawGizmosSelected()
-	{
-	}
+		public void EnableTrajectoryHelper(GameObject triggerObj)
+		{
+		}
 
-	public LinkData()
-		: base()
-	{
+		public void DisableTrajectoryHelper()
+		{
+		}
+
+		public void SubToPlayerJump(bool enable)
+		{
+		}
+
+		public void OnDrawGizmosSelected()
+		{
+		}
+
+		public LinkData()
+			: base()
+		{
+		}
 	}
 }

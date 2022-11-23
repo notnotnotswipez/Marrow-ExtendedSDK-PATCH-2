@@ -1,23 +1,26 @@
 using UnityEngine;
 
-public class ConfigJointHelper : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Rigidbody rb;
-
-	public ConfigurableJoint configurableJoint;
-
-	public bool updateAnchor;
-
-	private void Awake()
+	public class ConfigJointHelper : MonoBehaviour
 	{
-	}
+		private Rigidbody rb;
 
-	private void FixedUpdate()
-	{
-	}
+		public ConfigurableJoint configurableJoint;
 
-	public ConfigJointHelper()
-		: base()
-	{
+		public bool updateAnchor;
+
+		private void Awake()
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		public ConfigJointHelper()
+			: base()
+		{
+		}
 	}
 }

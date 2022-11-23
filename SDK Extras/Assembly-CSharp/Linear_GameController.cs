@@ -1,8 +1,18 @@
-public class Linear_GameController : BaseGameController
+namespace SLZ.Bonelab
 {
-
-	public Linear_GameController()
-		: base()
+	public class Linear_GameController : BaseGameController
 	{
+		protected override void Awake()
+		{
+		}
+
+		protected override void Start()
+		{
+		}
+
+		public Linear_GameController()
+			: base()
+		{
+		}
 	}
 }

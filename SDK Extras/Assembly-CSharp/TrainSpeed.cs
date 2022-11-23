@@ -1,38 +1,40 @@
-using SLZ;
 using UnityEngine;
 
-public class TrainSpeed : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float speed;
-
-	public SplineBody[] bodies;
-
-	private float[] _cachedSpeed;
-
-	private float _stopSpeed;
-
-	private void Reset()
+	public class TrainSpeed : MonoBehaviour
 	{
-	}
+		public float speed;
 
-	private void Start()
-	{
-	}
+		public SplineBody[] bodies;
 
-	public void UpdateSpeeds()
-	{
-	}
+		private float[] _cachedSpeed;
 
-	public void StopTrain()
-	{
-	}
+		private float _stopSpeed;
 
-	public void StartTrain()
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	public TrainSpeed()
-		: base()
-	{
+		private void Start()
+		{
+		}
+
+		public void UpdateSpeeds()
+		{
+		}
+
+		public void StopTrain()
+		{
+		}
+
+		public void StartTrain()
+		{
+		}
+
+		public TrainSpeed()
+			: base()
+		{
+		}
 	}
 }

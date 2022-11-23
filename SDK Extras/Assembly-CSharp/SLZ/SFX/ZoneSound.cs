@@ -1,8 +1,8 @@
-using SLZ.Zones;
+using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.Serialization;
 
-namespace SLZ.SFX
+namespace SLZ.Zones
 {
 	public class ZoneSound : ZoneItem
 	{

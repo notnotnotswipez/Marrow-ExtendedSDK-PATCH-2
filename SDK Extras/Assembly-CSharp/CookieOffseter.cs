@@ -1,23 +1,26 @@
 using UnityEngine;
 using UnityEngine.Rendering.Universal;
 
-[RequireComponent(typeof(Light))]
-public class CookieOffseter : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public UniversalAdditionalLightData LightData;
-
-	public Vector2 cookieOffsetSpeed;
-
-	private void Update()
+	[RequireComponent(typeof(Light))]
+	public class CookieOffseter : MonoBehaviour
 	{
-	}
+		public UniversalAdditionalLightData LightData;
 
-	private void Reset()
-	{
-	}
+		public Vector2 cookieOffsetSpeed;
 
-	public CookieOffseter()
-		: base()
-	{
+		private void Update()
+		{
+		}
+
+		private void Reset()
+		{
+		}
+
+		public CookieOffseter()
+			: base()
+		{
+		}
 	}
 }

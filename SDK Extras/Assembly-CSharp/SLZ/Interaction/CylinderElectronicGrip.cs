@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 
-namespace SLZ.Interaction
+namespace SLZ.Bonelab
 {
 	public class CylinderElectronicGrip : CylinderGrip
 	{

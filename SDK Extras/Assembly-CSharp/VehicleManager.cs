@@ -1,43 +1,47 @@
 using UnityEngine;
+using VehicleAI;
 
-public class VehicleManager : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public RCC_GroundMaterials groundMaterials;
-
-	public RCC_Skidmarks[] skidmarks;
-
-	public int[] skidmarksIndexes;
-
-	private int _lastGroundIndex;
-
-	public VehicleSettings defaultVData;
-
-	public VehicleSettings driftVData;
-
-	private void Start()
+	public class VehicleManager : MonoBehaviour
 	{
-	}
+		public RCC_GroundMaterials groundMaterials;
 
-	public int AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex, int groundIndex)
-	{
-		return default(int);
-	}
+		public RCC_Skidmarks[] skidmarks;
 
-	public int AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex, int groundIndex, float width)
-	{
-		return default(int);
-	}
+		public int[] skidmarksIndexes;
 
-	public void CleanSkidMark()
-	{
-	}
+		private int _lastGroundIndex;
 
-	public void CleanSkidMark(int index)
-	{
-	}
+		public VehicleSettings defaultVData;
 
-	public VehicleManager()
-		: base()
-	{
+		public VehicleSettings driftVData;
+
+		private void Start()
+		{
+		}
+
+		public int AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex, int groundIndex)
+		{
+			return default(int);
+		}
+
+		public int AddSkidMark(Vector3 pos, Vector3 normal, float intensity, int lastIndex, int groundIndex, float width)
+		{
+			return default(int);
+		}
+
+		public void CleanSkidMark()
+		{
+		}
+
+		public void CleanSkidMark(int index)
+		{
+		}
+
+		public VehicleManager()
+			: base()
+		{
+		}
 	}
 }

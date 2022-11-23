@@ -43,6 +43,14 @@ namespace SLZ.Interaction
 
 		public Transform endInsertTarget;
 
+		public MeshRenderer MeshLight;
+
+		[ColorUsage(true, true)]
+		public Color LockedColor;
+
+		[ColorUsage(true, true)]
+		public Color UnlockedColor;
+
 		public AudioClip[] insertClipsReject;
 
 		public AudioClip[] insertClipsAccept;
@@ -84,6 +92,8 @@ namespace SLZ.Interaction
 		private float _PercVelocity;
 
 		private bool _isActive;
+
+		private int newMask;
 
 		private SimpleTransform _InsertTargetToHand;
 

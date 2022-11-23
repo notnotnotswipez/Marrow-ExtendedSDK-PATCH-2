@@ -1,22 +1,25 @@
 using SLZ.Zones;
 using UnityEngine;
 
-public class CrabletTosser : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public SceneZone sceneZone;
-
-	private Rigidbody rigidbody;
-
-	public Vector3 velocity;
-
-	public Vector3 angularVelocity;
-
-	public void SENDCRABLET()
+	public class CrabletTosser : MonoBehaviour
 	{
-	}
+		public SceneZone sceneZone;
 
-	public CrabletTosser()
-		: base()
-	{
+		private Rigidbody rigidbody;
+
+		public Vector3 velocity;
+
+		public Vector3 angularVelocity;
+
+		public void SENDCRABLET()
+		{
+		}
+
+		public CrabletTosser()
+			: base()
+		{
+		}
 	}
 }

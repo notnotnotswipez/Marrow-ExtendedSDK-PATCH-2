@@ -1,48 +1,51 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Rigidbody))]
-public class RadialBlur : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Rigidbody rigidbody;
-
-	public float maxBlur;
-
-	public float AVBlurMultiplier;
-
-	public float AVThresholdBlur;
-
-	public float AVUpdateThreshold;
-
-	public Renderer BluredRenderer;
-
-	public GameObject RealObj;
-
-	private float AVm;
-
-	private bool blurring;
-
-	private void Awake()
+	[RequireComponent(typeof(Rigidbody))]
+	public class RadialBlur : MonoBehaviour
 	{
-	}
+		private Rigidbody rigidbody;
 
-	private void Update()
-	{
-	}
+		public float maxBlur;
 
-	private void toggleOff()
-	{
-	}
+		public float AVBlurMultiplier;
 
-	private void toggleOn()
-	{
-	}
+		public float AVThresholdBlur;
 
-	private void ChangeMaterialBlur()
-	{
-	}
+		public float AVUpdateThreshold;
 
-	public RadialBlur()
-		: base()
-	{
+		public Renderer BluredRenderer;
+
+		public GameObject RealObj;
+
+		private float AVm;
+
+		private bool blurring;
+
+		private void Awake()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		private void toggleOff()
+		{
+		}
+
+		private void toggleOn()
+		{
+		}
+
+		private void ChangeMaterialBlur()
+		{
+		}
+
+		public RadialBlur()
+			: base()
+		{
+		}
 	}
 }

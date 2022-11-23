@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class ConfigurableJointSandbox : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private ConfigurableJoint joint;
-
-	private void Start()
+	public class ConfigurableJointSandbox : MonoBehaviour
 	{
-	}
+		private ConfigurableJoint joint;
 
-	private void Update()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public ConfigurableJointSandbox()
-		: base()
-	{
+		private void Update()
+		{
+		}
+
+		public ConfigurableJointSandbox()
+			: base()
+		{
+		}
 	}
 }

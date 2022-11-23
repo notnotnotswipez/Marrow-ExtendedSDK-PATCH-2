@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ.Props.Weapons
+namespace SLZ.Props
 {
 	public class MocapGun : MonoBehaviour
 	{

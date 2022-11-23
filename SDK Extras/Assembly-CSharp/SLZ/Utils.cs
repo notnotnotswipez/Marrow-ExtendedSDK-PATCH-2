@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	public class Utils
 	{

@@ -19,16 +19,16 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		private int _steps;
 
-		[Tooltip("Lever joint that drives the output power value")]
 		[SerializeField]
+		[Tooltip("Lever joint that drives the output power value")]
 		private ConfigurableJoint _leverConfigurableJoint;
 
-		[Tooltip("Interactable host i.e. for running haptics")]
 		[SerializeField]
+		[Tooltip("Interactable host i.e. for running haptics")]
 		private InteractableHost _interactableHost;
 
-		[Header("Force")]
 		[SerializeField]
+		[Header("Force")]
 		private float force_Spring;
 
 		[SerializeField]

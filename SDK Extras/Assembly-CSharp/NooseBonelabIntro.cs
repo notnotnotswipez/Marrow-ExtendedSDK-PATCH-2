@@ -12,186 +12,189 @@ using UnityEngine.Audio;
 using UnityEngine.Events;
 using UnityEngine.Playables;
 
-public class NooseBonelabIntro : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private enum NooseStage
+	public class NooseBonelabIntro : MonoBehaviour
 	{
-		Initial = 0,
-		Reeling = 1,
-		Locked = 2,
-		Hanging = 3,
-		Cut = 4
-	}
+		private enum NooseStage
+		{
+			Initial = 0,
+			Reeling = 1,
+			Locked = 2,
+			Hanging = 3,
+			Cut = 4
+		}
 
-	public PlayableDirector introCutscene;
+		public PlayableDirector introCutscene;
 
-	public RigManager rM;
+		public RigManager rM;
 
-	public Player_Health pH;
+		public Player_Health pH;
 
-	private ConfigurableJoint _chestToKnot;
+		private ConfigurableJoint _chestToKnot;
 
-	private SpringJoint _minDistanceJoint;
+		private SpringJoint _minDistanceJoint;
 
-	private InteractableHostManager _hostManager;
+		private InteractableHostManager _hostManager;
 
-	public Rigidbody knotRb;
+		public Rigidbody knotRb;
 
-	public Rigidbody nooseLeftRb;
+		public Rigidbody nooseLeftRb;
 
-	public Rigidbody nooseRightRb;
+		public Rigidbody nooseRightRb;
 
-	public Rigidbody nooseBottomRb;
+		public Rigidbody nooseBottomRb;
 
-	public float nooseOnToSceneReveal;
+		public float nooseOnToSceneReveal;
 
-	public float sceneRevealToPlankDrop;
+		public float sceneRevealToPlankDrop;
 
-	public float plankDropTimer;
+		public float plankDropTimer;
 
-	public float damageTickRate;
+		public float damageTickRate;
 
-	public float damagePerTick;
+		public float damagePerTick;
 
-	public AudioClip nooseReveal;
+		public AudioClip nooseReveal;
 
-	public AudioClip noosePutOn;
+		public AudioClip noosePutOn;
 
-	public AudioClip nooseCut;
+		public AudioClip nooseCut;
 
-	public AudioMixerGroup audioMixerGroup;
+		public AudioMixerGroup audioMixerGroup;
 
-	[SerializeField]
-	private NooseStage _nooseStage;
+		[SerializeField]
+		private NooseStage _nooseStage;
 
-	private bool _sideLeft;
+		private bool _sideLeft;
 
-	private float _nooseTimer;
+		private float _nooseTimer;
 
-	private bool _nooseBool;
+		private bool _nooseBool;
 
-	public bool _isHanging;
+		public bool _isHanging;
 
-	private int _stageInt;
+		private int _stageInt;
 
-	private float _timeSinceLastDamageTick;
+		private float _timeSinceLastDamageTick;
 
-	public UnityEvent nooseOnEvent;
+		public UnityEvent nooseOnEvent;
 
-	public UnityEvent nooseOnAndHeldEvent;
+		public UnityEvent nooseOnAndHeldEvent;
 
-	public UnityEvent daggerSpawnEvent;
+		public UnityEvent daggerSpawnEvent;
 
-	public UnityEvent nooseCutEvent;
+		public UnityEvent nooseCutEvent;
 
-	public UnityEvent nooseDeath;
+		public UnityEvent nooseDeath;
 
-	public ConfigurableJoint[] armPlatformJoints;
+		public ConfigurableJoint[] armPlatformJoints;
 
-	private Quaternion _armJointInitial0;
+		private Quaternion _armJointInitial0;
 
-	private Quaternion _armJointInitial1;
+		private Quaternion _armJointInitial1;
 
-	private Quaternion _armJointInitial2;
+		private Quaternion _armJointInitial2;
 
-	private Quaternion _armJointInitial3;
+		private Quaternion _armJointInitial3;
 
-	private Quaternion _armJointInitial4;
+		private Quaternion _armJointInitial4;
 
-	public Rigidbody dagger;
+		public Rigidbody dagger;
 
-	private Vector3 _daggerInitV3;
+		private Vector3 _daggerInitV3;
 
-	private Quaternion _daggerInitRot;
+		private Quaternion _daggerInitRot;
 
-	private ConfigurableJoint _daggerJoint;
+		private ConfigurableJoint _daggerJoint;
 
-	[Header("Level Loader")]
-	public LevelCrateReference level;
+		[Header("Level Loader")]
+		public LevelCrateReference level;
 
-	public Spawnable vfxFadeOutSpawnable;
+		public Spawnable vfxFadeOutSpawnable;
 
-	public void AddVelocityToNoose(Vector3 force)
-	{
-	}
+		public void AddVelocityToNoose(Vector3 force)
+		{
+		}
 
-	private void OnEnable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	public void ResetNoose()
-	{
-	}
+		public void ResetNoose()
+		{
+		}
 
-	private void OnDisable()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	private bool CheckRelativeToHead()
-	{
-		return default(bool);
-	}
+		private bool CheckRelativeToHead()
+		{
+			return default(bool);
+		}
 
-	private float CheckReel()
-	{
-		return default(float);
-	}
+		private float CheckReel()
+		{
+			return default(float);
+		}
 
-	private void CheckAndSetTargetSide()
-	{
-	}
+		private void CheckAndSetTargetSide()
+		{
+		}
 
-	private void OnHandAttached(InteractableHost host, Hand hand)
-	{
-	}
+		private void OnHandAttached(InteractableHost host, Hand hand)
+		{
+		}
 
-	private void OnHandDetached(InteractableHost host, Hand hand)
-	{
-	}
+		private void OnHandDetached(InteractableHost host, Hand hand)
+		{
+		}
 
-	private void AttachNeck()
-	{
-	}
+		private void AttachNeck()
+		{
+		}
 
-	private void ReelingNeck()
-	{
-	}
+		private void ReelingNeck()
+		{
+		}
 
-	private void LockedNeck()
-	{
-	}
+		private void LockedNeck()
+		{
+		}
 
-	private void HangingSequence()
-	{
-	}
+		private void HangingSequence()
+		{
+		}
 
-	public void NooseCut()
-	{
-	}
+		public void NooseCut()
+		{
+		}
 
-	public void Reveal()
-	{
-	}
+		public void Reveal()
+		{
+		}
 
-	private IEnumerator LoadFXAndLevel()
-	{
-		return null;
-	}
+		private IEnumerator LoadFXAndLevel()
+		{
+			return null;
+		}
 
-	private void LoadLevel()
-	{
-	}
+		private void LoadLevel()
+		{
+		}
 
-	private void CutScene(bool play, bool turnOn)
-	{
-	}
+		private void CutScene(bool play, bool turnOn)
+		{
+		}
 
-	public NooseBonelabIntro()
-		: base()
-	{
+		public NooseBonelabIntro()
+			: base()
+		{
+		}
 	}
 }

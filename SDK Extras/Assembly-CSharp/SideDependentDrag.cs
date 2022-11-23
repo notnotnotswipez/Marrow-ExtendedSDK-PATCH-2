@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class SideDependentDrag : MonoBehaviour
+namespace SLZ.Props
 {
-	public Vector3 DragCoeffs;
-
-	private void FixedUpdate()
+	public class SideDependentDrag : MonoBehaviour
 	{
-	}
+		public Vector3 DragCoeffs;
 
-	public SideDependentDrag()
-		: base()
-	{
+		private void FixedUpdate()
+		{
+		}
+
+		public SideDependentDrag()
+			: base()
+		{
+		}
 	}
 }

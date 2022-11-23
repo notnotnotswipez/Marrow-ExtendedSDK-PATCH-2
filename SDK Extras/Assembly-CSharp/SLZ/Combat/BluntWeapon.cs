@@ -18,8 +18,8 @@ namespace SLZ.Combat
 
 			public Collider pointCollider;
 
-			[Range(0f, 1000f)]
 			[Tooltip("Area in millimeters squared of the tip")]
+			[Range(0f, 1000f)]
 			public float sharpness;
 
 			public float damage;

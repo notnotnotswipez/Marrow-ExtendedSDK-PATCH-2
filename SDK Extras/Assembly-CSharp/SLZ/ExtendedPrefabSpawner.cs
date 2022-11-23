@@ -5,13 +5,14 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Marrow.Data;
 using UnityEngine;
+using UnityEngine.Events;
 
-namespace SLZ
+namespace SLZ.Utilities
 {
 	public class ExtendedPrefabSpawner : MonoBehaviour
 	{
-		[SerializeField]
 		[Tooltip("Spawnable")]
+		[SerializeField]
 		private Spawnable[] spawnables;
 
 		public bool spawnOnStart;
@@ -39,6 +40,14 @@ namespace SLZ
 		public Vector3 spawnTorqueHigh;
 
 		public float frequencey;
+
+		public bool useCoolDown;
+
+		public bool useRestCoolDown;
+
+		public UnityEvent spawnEvent;
+
+		private float lastSpawnTime;
 
 		private Rigidbody rb;
 

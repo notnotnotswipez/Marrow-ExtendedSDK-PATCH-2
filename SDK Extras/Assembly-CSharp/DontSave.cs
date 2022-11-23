@@ -1,14 +1,17 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
-public class DontSave : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	[ExecuteInEditMode]
+	public class DontSave : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public DontSave()
-		: base()
-	{
+		public DontSave()
+			: base()
+		{
+		}
 	}
 }

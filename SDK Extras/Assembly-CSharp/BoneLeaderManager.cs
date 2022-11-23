@@ -1,224 +1,232 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Diagnostics;
-using System.Runtime.CompilerServices;
+using SLZ.Data;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-public class BoneLeaderManager : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public enum LeaderMode
+	public class BoneLeaderManager : MonoBehaviour
 	{
-		ALL_USER_DATA = 0,
-		SINGLE_DATA = 1
-	}
+		public enum LeaderMode
+		{
+			ALL_USER_DATA = 0,
+			SINGLE_DATA = 1
+		}
 
-	public LeaderMode leaderMode;
+		public LeaderMode leaderMode;
 
-	[SerializeField]
-	[Header("LEADERBOARD DATA")]
-	private List<BoneLeaderData> allLeaderDataList;
+		[Header("LEADERBOARD DATA")]
+		[SerializeField]
+		private List<BoneLeaderData> allLeaderDataList;
 
-	public BoneLeaderData currData;
+		public BoneLeaderData currData;
 
-	[Space(20f)]
-	[Header("OCULUS USER DATA")]
-	[SerializeField]
-	private ulong myID;
+		[Space(20f)]
+		[Header("OCULUS USER DATA")]
+		[SerializeField]
+		private ulong myID;
 
-	[SerializeField]
-	private string myOculusID;
+		[SerializeField]
+		private string myOculusID;
 
-	[Header("PREFABS_REPLACE W/ SPAWANBLES?")]
-	[SerializeField]
-	private GameObject entryPrefab;
+		[Header("STEAM USER DATA")]
+		[SerializeField]
+		private string steamName;
 
-	[SerializeField]
-	private GameObject userEntryPrefab;
+		[SerializeField]
+		[Header("PREFABS")]
+		private GameObject entryPrefab;
 
-	[Header("UI DISPLAY")]
-	public bool allowExitButton;
+		[SerializeField]
+		private GameObject userEntryPrefab;
 
-	[SerializeField]
-	private bool isCurrentUser;
+		[Header("UI DISPLAY")]
+		public bool allowExitButton;
 
-	[SerializeField]
-	private bool displayPanel;
+		[SerializeField]
+		private bool isCurrentUser;
 
-	[SerializeField]
-	private List<GameObject> entryObjectList;
+		[SerializeField]
+		private bool displayPanel;
 
-	[SerializeField]
-	private GameObject leaderboardEntryParent;
+		[SerializeField]
+		private List<GameObject> entryObjectList;
 
-	[SerializeField]
-	private bool isAltHighPanel;
+		[SerializeField]
+		private GameObject leaderboardEntryParent;
 
-	[SerializeField]
-	private TMP_Text text_TitleBoard;
+		[SerializeField]
+		private bool isAltHighPanel;
 
-	[SerializeField]
-	private TMP_Text text_TitleKey;
+		[SerializeField]
+		private TMP_Text text_TitleBoard;
 
-	[SerializeField]
-	private TMP_Text text_ID_Rank_Key;
+		[SerializeField]
+		private TMP_Text text_TitleKey;
 
-	[SerializeField]
-	private TMP_Text text_ScoreKey;
+		[SerializeField]
+		private TMP_Text text_ID_Rank_Key;
 
-	[SerializeField]
-	private Button button_Filter;
+		[SerializeField]
+		private TMP_Text text_ScoreKey;
 
-	[SerializeField]
-	private Button button_StartAt;
+		[SerializeField]
+		private Button button_Filter;
 
-	[SerializeField]
-	private TMP_Text startAtButtonText;
+		[SerializeField]
+		private Button button_StartAt;
 
-	[SerializeField]
-	private TMP_Text filterButtonText;
+		[SerializeField]
+		private TMP_Text startAtButtonText;
 
-	[SerializeField]
-	private Button button_Exit;
+		[SerializeField]
+		private TMP_Text filterButtonText;
 
-	[SerializeField]
-	private TMP_Text currPageText;
+		[SerializeField]
+		private Button button_Exit;
 
-	[SerializeField]
-	private TMP_Text totalPageText;
+		[SerializeField]
+		private TMP_Text currPageText;
 
-	[SerializeField]
-	private GameObject pageButtonsObj;
+		[SerializeField]
+		private TMP_Text totalPageText;
 
-	[SerializeField]
-	private GameObject pageDownButtonObj;
+		[SerializeField]
+		private GameObject pageButtonsObj;
 
-	[SerializeField]
-	private GameObject pageUpButtonObj;
+		[SerializeField]
+		private GameObject pageDownButtonObj;
 
-	[SerializeField]
-	private TMP_Text text_InternetRequired;
+		[SerializeField]
+		private GameObject pageUpButtonObj;
 
-	private int maxEntriesPerPage;
+		[SerializeField]
+		private TMP_Text text_InternetRequired;
 
-	private int currIndex;
+		private int maxEntriesPerPage;
 
-	private int currentPage;
+		private int currIndex;
 
-	private int totalPages;
+		private int currentPage;
 
-	[HideInInspector]
-	public UnityEvent onDataComplete;
+		private int totalPages;
 
-	[SerializeField]
-	private Transform altLocation;
+		[HideInInspector]
+		public UnityEvent onDataComplete;
 
-	private Coroutine timeOutRoutine;
+		[SerializeField]
+		private Transform altLocation;
 
-	private void Awake()
-	{
-	}
+		private Coroutine timeOutRoutine;
 
-	private void PassedEntitlements()
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	public void InitializeDisplay()
-	{
-	}
+		private void PassedEntitlements()
+		{
+		}
 
-	private void UpdatePages()
-	{
-	}
+		public void InitializeDisplay()
+		{
+		}
 
-	public void FocusExplicitLeaderboard(BoneLeaderData data)
-	{
-	}
+		private void UpdatePages()
+		{
+		}
 
-	public void ReturnToUserDisplay()
-	{
-	}
+		public void FocusBoardAtIndex(int i)
+		{
+		}
 
-	public void PageUp()
-	{
-	}
+		public void FocusExplicitLeaderboard(BoneLeaderData data)
+		{
+		}
 
-	public void PageDown()
-	{
-	}
+		public void ReturnToUserDisplay()
+		{
+		}
 
-	public void UpdateDisplayState()
-	{
-	}
+		public void PageUp()
+		{
+		}
 
-	public void ToggleFilterType()
-	{
-	}
+		public void PageDown()
+		{
+		}
 
-	public void ToggleStartAt()
-	{
-	}
+		public void UpdateDisplayState()
+		{
+		}
 
-	public void ToggleAllButtons(bool isUser)
-	{
-	}
+		public void ToggleFilterType()
+		{
+		}
 
-	public void ToggleGameObject(GameObject go, bool show)
-	{
-	}
+		public void ToggleStartAt()
+		{
+		}
 
-	[ContextMenu("DestroyCurrentEntries")]
-	public void DestroyCurrentEntries()
-	{
-	}
+		public void ToggleAllButtons(bool enable)
+		{
+		}
 
-	public void GetUserLeaderboardData(int index)
-	{
-	}
+		[ContextMenu("DestroyCurrentEntries")]
+		public void DestroyCurrentEntries()
+		{
+		}
 
-	public void GetUserLeaderboardPage()
-	{
-	}
+		public void GetUserLeaderboardData(int index)
+		{
+		}
 
-	private void CreateBlankUserEntry()
-	{
-	}
+		public void GetUserLeaderboardPage()
+		{
+		}
+		
 
-	private void CreateBlankExplicitEntry()
-	{
-	}
+		private void CreateBlankUserEntry()
+		{
+		}
 
-	public void TeleportToAltLocation()
-	{
-	}
+		private void CreateBlankExplicitEntry()
+		{
+		}
 
-	public void ToggleConnectionText(bool enable)
-	{
-	}
+		[ContextMenu("TeleportToAlt")]
+		public void TeleportToAltLocation()
+		{
+		}
 
-	public void SubmitLeaderboardScore(uint score)
-	{
-	}
+		public void ToggleConnectionText(bool enable)
+		{
+		}
 
-	private IEnumerator CoWaitAndQuery()
-	{
-		return null;
-	}
+		public void SubmitLeaderboardScore(uint score)
+		{
+		}
 
-	public void QueryCurrentData()
-	{
-	}
+		private IEnumerator CoWaitAndQuery()
+		{
+			return null;
+		}
 
-	private IEnumerator CoQueryTimeout(BoneLeaderData data)
-	{
-		return null;
-	}
+		public void QueryCurrentData()
+		{
+		}
 
-	public BoneLeaderManager()
-		: base()
-	{
+		private IEnumerator CoQueryTimeout(BoneLeaderData data)
+		{
+			return null;
+		}
+
+		public BoneLeaderManager()
+			: base()
+		{
+		}
 	}
 }

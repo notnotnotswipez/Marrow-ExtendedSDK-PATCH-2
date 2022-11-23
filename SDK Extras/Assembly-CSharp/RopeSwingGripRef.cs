@@ -1,11 +1,14 @@
 using UnityEngine;
 
-public class RopeSwingGripRef : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public GameObject lineRendTarget;
-
-	public RopeSwingGripRef()
-		: base()
+	public class RopeSwingGripRef : MonoBehaviour
 	{
+		public GameObject lineRendTarget;
+
+		public RopeSwingGripRef()
+			: base()
+		{
+		}
 	}
 }

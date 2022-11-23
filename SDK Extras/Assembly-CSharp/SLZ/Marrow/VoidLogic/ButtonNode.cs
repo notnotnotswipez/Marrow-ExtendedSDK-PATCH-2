@@ -20,8 +20,8 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		protected Transform _endTransform;
 
-		[Tooltip("Clip(s) to be played on button press")]
 		[SerializeField]
+		[Tooltip("Clip(s) to be played on button press")]
 		[Header("Audio")]
 		protected AudioClip[] _pressClips;
 
@@ -29,8 +29,8 @@ namespace SLZ.Marrow.VoidLogic
 		[SerializeField]
 		protected AudioClip[] _depressClips;
 
-		[SerializeField]
 		[Tooltip("Mixer group for pressed/unpressed clips")]
+		[SerializeField]
 		protected AudioMixerGroup _mixerGroup;
 
 		[Tooltip("Colliders that the button shaft collider will ignore")]

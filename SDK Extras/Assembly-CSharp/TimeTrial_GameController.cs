@@ -3,119 +3,137 @@ using SLZ.Zones;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TimeTrial_GameController : BaseGameController
+namespace SLZ.Bonelab
 {
-	public enum TimeTrialMode
+	public class TimeTrial_GameController : BaseGameController
 	{
-		KILLS = 0,
-		SPEED_RUN = 1
-	}
+		public enum TimeTrialMode
+		{
+			KILLS = 0,
+			SPEED_RUN = 1
+		}
 
-	public enum TimeTrialStartMode
-	{
-		ON_START = 0,
-		ON_TRIGGER = 1
-	}
+		public enum TimeTrialStartMode
+		{
+			ON_START = 0,
+			ON_TRIGGER = 1
+		}
 
-	public TimeTrialMode timeTrialMode;
+		public enum TTDifficulty
+		{
+			EASY = 0,
+			MEDIUM = 1,
+			HARD = 2
+		}
 
-	public TimeTrialStartMode timeTrialStartMode;
+		public TimeTrialMode timeTrialMode;
 
-	public GenGameControl_Trigger timeTrialStartTrigger;
+		public TimeTrialStartMode timeTrialStartMode;
 
-	public GenGameControl_Trigger timeTrialEndTrigger;
+		public TTDifficulty ttDifficulty;
 
-	[SerializeField]
-	private AudioClip timeTrialBeginClip;
+		public GenGameControl_Trigger timeTrialStartTrigger;
 
-	[SerializeField]
-	private AudioClip timeTrialEndClip;
+		public GenGameControl_Trigger timeTrialEndTrigger;
 
-	[SerializeField]
-	private int initLightAmmo;
+		[SerializeField]
+		private AudioClip timeTrialBeginClip;
 
-	[SerializeField]
-	private int initMedAmmo;
+		[SerializeField]
+		private AudioClip timeTrialEndClip;
 
-	[SerializeField]
-	private int initHeavyAmmo;
+		[SerializeField]
+		private int initLightAmmo;
 
-	[SerializeField]
-	private ZoneSpawner[] zSpawners;
+		[SerializeField]
+		private int initMedAmmo;
 
-	public int[] diffReqKillCount;
+		[SerializeField]
+		private int initHeavyAmmo;
 
-	[SerializeField]
-	private int reqKillCount;
+		[SerializeField]
+		private ZoneSpawner[] zSpawners;
 
-	public int remainSeekCount;
+		public int[] diffReqKillCount;
 
-	private bool spawnedSeekers;
+		[SerializeField]
+		private int reqKillCount;
 
-	public UnityEvent OnKilledAll;
+		public int remainSeekCount;
 
-	public bool isSingleSpawn;
+		private bool spawnedSeekers;
 
-	public List<ZoneSpawner> easySpawnerList;
+		public UnityEvent OnKilledAll;
 
-	public List<ZoneSpawner> mediumSpawnerList;
+		public bool isSingleSpawn;
 
-	public List<ZoneSpawner> hardSpawnerList;
+		public List<ZoneSpawner> easySpawnerList;
 
-	public SpawnerDifficulties[] spawnerDifficulties;
+		public List<ZoneSpawner> mediumSpawnerList;
 
-	private List<ZoneSpawner> activeSpawnersList;
+		public List<ZoneSpawner> hardSpawnerList;
 
-	protected override void OnEnable()
-	{
-	}
+		public SpawnerDifficulties[] spawnerDifficulties;
 
-	protected override void OnDisable()
-	{
-	}
+		private List<ZoneSpawner> activeSpawnersList;
 
-	protected override void Awake()
-	{
-	}
+		private BoneLeaderManager leaderManager;
 
-	protected override void Start()
-	{
-	}
+		protected override void OnEnable()
+		{
+		}
 
-	public void OnRegisteredNPC_Death(NPC_Data data)
-	{
-	}
+		protected override void OnDisable()
+		{
+		}
 
-	public void UpdateDifficulty(int difficulty)
-	{
-	}
+		protected override void Awake()
+		{
+		}
 
-	private void CheckTimeTrialKills()
-	{
-	}
+		protected override void Start()
+		{
+		}
 
-	public void TIMETRIAL_PlayerStartTrigger()
-	{
-	}
+		public void OnRegisteredNPC_Death(NPC_Data data)
+		{
+		}
 
-	public void TIMETRIAL_PlayerEndTrigger()
-	{
-	}
+		public void UpdateDifficulty(int difficulty)
+		{
+		}
 
-	private void CreateActiveSpawnSeekers()
-	{
-	}
+		private void CheckTimeTrialKills()
+		{
+		}
 
-	public void ProgPointKillCount(int tCount)
-	{
-	}
+		public void TIMETRIAL_PlayerStartTrigger()
+		{
+		}
 
-	public void SetRequiredKillCount(int killCount)
-	{
-	}
+		public void TIMETRIAL_PlayerEndTrigger()
+		{
+		}
 
-	public TimeTrial_GameController()
-		: base()
-	{
+		private void CreateActiveSpawnSeekers()
+		{
+		}
+
+		public void ProgPointKillCount(int tCount)
+		{
+		}
+
+		public void SetRequiredKillCount(int killCount)
+		{
+		}
+
+		public void SetLeaderboardByDifficulty()
+		{
+		}
+
+		public TimeTrial_GameController()
+			: base()
+		{
+		}
 	}
 }

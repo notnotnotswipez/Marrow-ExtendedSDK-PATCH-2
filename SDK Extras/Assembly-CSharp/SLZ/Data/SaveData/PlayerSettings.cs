@@ -6,7 +6,7 @@ using JetBrains.Annotations;
 using Newtonsoft.Json;
 using SLZ.VRMK;
 
-namespace SLZ.Data.SaveData
+namespace SLZ.SaveData
 {
 	public sealed class PlayerSettings : INotifyPropertyChanging, INotifyPropertyChanged
 	{

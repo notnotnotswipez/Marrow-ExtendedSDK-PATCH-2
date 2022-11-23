@@ -1,7 +1,6 @@
 using System;
-using SLZ.Data.SaveData;
 
-namespace SLZ.Data
+namespace SLZ.SaveData
 {
 	public class GameSavedEventArgs : EventArgs
 	{

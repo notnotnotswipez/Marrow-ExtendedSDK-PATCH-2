@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class RigidbodyNeverSleep : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private Rigidbody rb;
-
-	private void Start()
+	public class RigidbodyNeverSleep : MonoBehaviour
 	{
-	}
+		private Rigidbody rb;
 
-	public RigidbodyNeverSleep()
-		: base()
-	{
+		private void Start()
+		{
+		}
+
+		public RigidbodyNeverSleep()
+			: base()
+		{
+		}
 	}
 }

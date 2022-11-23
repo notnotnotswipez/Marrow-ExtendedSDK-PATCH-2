@@ -23,8 +23,8 @@ public class SimpleSFX : MonoBehaviour
 	[Tooltip("Is the sound 2d or 3d?")]
 	public float spatialBlend;
 
-	[Tooltip("Radius of min sphere")]
 	[Range(0.1f, 10f)]
+	[Tooltip("Radius of min sphere")]
 	public float sourceRadius;
 
 	[Range(0f, 1f)]

@@ -1,86 +1,89 @@
 using UnityEngine;
 
-[ExecuteInEditMode]
-[ImageEffectAllowedInSceneView]
-public class FractalMaster : MonoBehaviour
+namespace SLZ.VFX
 {
-	public ComputeShader fractalShader;
-
-	[Range(0.1f, 1.5f)]
-	public float ResolutionScaler;
-
-	public Vector3 offset;
-
-	public float nearClip;
-
-	[Range(1f, 20f)]
-	public float fractalPower;
-
-	public float darkness;
-
-	[Range(0f, 1f)]
-	[Header("Colour mixing")]
-	public float blackAndWhite;
-
-	[Range(0f, 1f)]
-	public float redA;
-
-	[Range(0f, 1f)]
-	public float greenA;
-
-	[Range(0f, 1f)]
-	public float blueA;
-
-	[Range(0f, 1f)]
-	public float redB;
-
-	[Range(0f, 1f)]
-	public float greenB;
-
-	[Range(0f, 1f)]
-	public float blueB;
-
-	private RenderTexture target;
-
-	private Camera cam;
-
-	private Light directionalLight;
-
-	private Vector2Int res;
-
-	[Header("Animation Settings")]
-	public float powerIncreaseSpeed;
-
-	private void Start()
+	[ExecuteInEditMode]
+	[ImageEffectAllowedInSceneView]
+	public class FractalMaster : MonoBehaviour
 	{
-	}
+		public ComputeShader fractalShader;
 
-	private void Init()
-	{
-	}
+		[Range(0.1f, 1.5f)]
+		public float ResolutionScaler;
 
-	private void Update()
-	{
-	}
+		public Vector3 offset;
 
-	private void LateUpdate()
-	{
-	}
+		public float nearClip;
 
-	private void RunFunction()
-	{
-	}
+		[Range(1f, 20f)]
+		public float fractalPower;
 
-	private void SetParameters()
-	{
-	}
+		public float darkness;
 
-	private void InitRenderTexture()
-	{
-	}
+		[Range(0f, 1f)]
+		[Header("Colour mixing")]
+		public float blackAndWhite;
 
-	public FractalMaster()
-		: base()
-	{
+		[Range(0f, 1f)]
+		public float redA;
+
+		[Range(0f, 1f)]
+		public float greenA;
+
+		[Range(0f, 1f)]
+		public float blueA;
+
+		[Range(0f, 1f)]
+		public float redB;
+
+		[Range(0f, 1f)]
+		public float greenB;
+
+		[Range(0f, 1f)]
+		public float blueB;
+
+		private RenderTexture target;
+
+		private Camera cam;
+
+		private Light directionalLight;
+
+		private Vector2Int res;
+
+		[Header("Animation Settings")]
+		public float powerIncreaseSpeed;
+
+		private void Start()
+		{
+		}
+
+		private void Init()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		private void LateUpdate()
+		{
+		}
+
+		private void RunFunction()
+		{
+		}
+
+		private void SetParameters()
+		{
+		}
+
+		private void InitRenderTexture()
+		{
+		}
+
+		public FractalMaster()
+			: base()
+		{
+		}
 	}
 }

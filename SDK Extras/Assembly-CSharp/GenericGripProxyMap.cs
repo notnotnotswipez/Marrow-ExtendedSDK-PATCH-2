@@ -1,17 +1,20 @@
 using UnityEngine;
 
-public class GenericGripProxyMap : MonoBehaviour
+namespace SLZ.Mods
 {
-	private void Start()
+	public class GenericGripProxyMap : MonoBehaviour
 	{
-	}
+		private void Start()
+		{
+		}
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	public GenericGripProxyMap()
-		: base()
-	{
+		public GenericGripProxyMap()
+			: base()
+		{
+		}
 	}
 }

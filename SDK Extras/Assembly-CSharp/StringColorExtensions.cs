@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public static class StringColorExtensions
+namespace SLZ.Bonelab
 {
-	public static string AddColor(this string text, Color col)
+	public static class StringColorExtensions
 	{
-		return null;
-	}
+		public static string AddColor(this string text, Color col)
+		{
+			return null;
+		}
 
-	public static string ToHexString(this Color unityColor)
-	{
-		return null;
+		public static string ToHexString(this Color unityColor)
+		{
+			return null;
+		}
 	}
 }

@@ -7,7 +7,7 @@ using SLZ.Marrow.Utilities;
 using SLZ.SFX;
 using UnityEngine;
 
-namespace SLZ
+namespace SLZ.Props
 {
 	[RequireComponent(typeof(Rigidbody))]
 	public class CaseEject : MonoBehaviour

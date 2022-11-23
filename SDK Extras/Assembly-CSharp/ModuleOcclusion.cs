@@ -1,21 +1,24 @@
 using UnityEngine;
 
-public class ModuleOcclusion : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public static ModuleOcclusion _instance;
-
-	public ModuleHandler mHandler;
-
-	private void Awake()
+	public class ModuleOcclusion : MonoBehaviour
 	{
-	}
+		public static ModuleOcclusion _instance;
 
-	public void SETMODULESTATE(string state)
-	{
-	}
+		public ModuleHandler mHandler;
 
-	public ModuleOcclusion()
-		: base()
-	{
+		private void Awake()
+		{
+		}
+
+		public void SETMODULESTATE(string state)
+		{
+		}
+
+		public ModuleOcclusion()
+			: base()
+		{
+		}
 	}
 }

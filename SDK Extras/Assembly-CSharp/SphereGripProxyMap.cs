@@ -8,27 +8,30 @@ using SLZ.Interaction;
 using SLZ.Marrow.Proxy;
 using UnityEngine;
 
-public class SphereGripProxyMap : BoneProxyMap<SphereGripProxy, SphereGrip>
+namespace SLZ.Mods
 {
-	protected override void MapProperties()
+	public class SphereGripProxyMap : BoneProxyMap<SphereGripProxy, SphereGrip>
 	{
-	}
+		protected override void MapProperties()
+		{
+		}
 
-	public override void AfterGenerateReal()
-	{
-	}
+		public override void AfterGenerateReal()
+		{
+		}
 
-	public UniTaskVoid SetupHandPose()
-	{
-		return default(UniTaskVoid);
-	}
+		public UniTaskVoid SetupHandPose()
+		{
+			return default(UniTaskVoid);
+		}
 
-	public override void MapMethods()
-	{
-	}
+		public override void MapMethods()
+		{
+		}
 
-	public SphereGripProxyMap()
-		: base()
-	{
+		public SphereGripProxyMap()
+			: base()
+		{
+		}
 	}
 }

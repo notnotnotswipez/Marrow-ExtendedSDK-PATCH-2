@@ -2,28 +2,31 @@ using SLZ.Marrow.Warehouse;
 using SLZ.SFX;
 using UnityEngine;
 
-public class PlacerNail : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public AudioClip breakSFX;
-
-	public Transform nailTransform;
-
-	public float breakforce;
-
-	public void OnPlaced(SpawnableCratePlacer placer, GameObject go)
+	public class PlacerNail : MonoBehaviour
 	{
-	}
+		public AudioClip breakSFX;
 
-	private void SetJoint(ConfigurableJoint joint, Rigidbody rb)
-	{
-	}
+		public Transform nailTransform;
 
-	private void SetImpactSFX(ImpactSFX impactSFX)
-	{
-	}
+		public float breakforce;
 
-	public PlacerNail()
-		: base()
-	{
+		public void OnPlaced(SpawnableCratePlacer placer, GameObject go)
+		{
+		}
+
+		private void SetJoint(ConfigurableJoint joint, Rigidbody rb)
+		{
+		}
+
+		private void SetImpactSFX(ImpactSFX impactSFX)
+		{
+		}
+
+		public PlacerNail()
+			: base()
+		{
+		}
 	}
 }

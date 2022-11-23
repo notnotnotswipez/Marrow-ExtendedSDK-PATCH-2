@@ -4,10 +4,11 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+using SLZ.Rig;
 using TMPro;
 using UnityEngine;
 
-namespace SLZ.Rig
+namespace SLZ.Bonelab
 {
 	public class HeadTitles : MonoBehaviour
 	{

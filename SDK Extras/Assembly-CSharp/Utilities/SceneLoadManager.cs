@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Utilities
+namespace SLZ.Utilities
 {
 	public class SceneLoadManager : MonoBehaviour
 	{

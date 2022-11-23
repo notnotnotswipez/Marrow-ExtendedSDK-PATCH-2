@@ -1,13 +1,16 @@
 using UnityEngine;
 
-public class BlitMesh
+namespace SLZ.Bonelab
 {
-	public static void BlitScreenspace(RenderTexture target, Mesh mesh, Material material, bool clearRT)
+	public class BlitMesh
 	{
-	}
+		public static void BlitScreenspace(RenderTexture target, Mesh mesh, Material material, bool clearRT)
+		{
+		}
 
-	public BlitMesh()
-		: base()
-	{
+		public BlitMesh()
+			: base()
+		{
+		}
 	}
 }

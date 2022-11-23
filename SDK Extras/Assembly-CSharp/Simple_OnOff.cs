@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class Simple_OnOff : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public bool liveOnStart;
-
-	private void Start()
+	public class Simple_OnOff : MonoBehaviour
 	{
-	}
+		public bool liveOnStart;
 
-	public void FlipOnOff()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public Simple_OnOff()
-		: base()
-	{
+		public void FlipOnOff()
+		{
+		}
+
+		public Simple_OnOff()
+			: base()
+		{
+		}
 	}
 }

@@ -5,51 +5,54 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class MineCartLightFlicker : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Light cartLight;
-
-	public AnimationCurve OnCurve;
-
-	public AnimationCurve OffCurve;
-
-	public float flickerLength;
-
-	private float _curTime;
-
-	private float _endTime;
-
-	private float _cachedOnIntensity;
-
-	private Coroutine _flickerCo;
-
-	public bool offOnStart;
-
-	private void Awake()
+	public class MineCartLightFlicker : MonoBehaviour
 	{
-	}
+		public Light cartLight;
 
-	private void Start()
-	{
-	}
+		public AnimationCurve OnCurve;
 
-	[ContextMenu("Flicker On")]
-	public void FlickerOn()
-	{
-	}
+		public AnimationCurve OffCurve;
 
-	[ContextMenu("Flicker Off")]
-	public void FlickerOff()
-	{
-	}
+		public float flickerLength;
 
-	private IEnumerator Flicker(AnimationCurve curve, float curIntensity, float targetIntesity, bool isTurningOn)
-	{
-		return null;
-	}
+		private float _curTime;
 
-	public MineCartLightFlicker()
-		: base()
-	{
+		private float _endTime;
+
+		private float _cachedOnIntensity;
+
+		private Coroutine _flickerCo;
+
+		public bool offOnStart;
+
+		private void Awake()
+		{
+		}
+
+		private void Start()
+		{
+		}
+
+		[ContextMenu("Flicker On")]
+		public void FlickerOn()
+		{
+		}
+
+		[ContextMenu("Flicker Off")]
+		public void FlickerOff()
+		{
+		}
+
+		private IEnumerator Flicker(AnimationCurve curve, float curIntensity, float targetIntesity, bool isTurningOn)
+		{
+			return null;
+		}
+
+		public MineCartLightFlicker()
+			: base()
+		{
+		}
 	}
 }

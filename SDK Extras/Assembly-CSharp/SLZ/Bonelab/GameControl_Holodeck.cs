@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
+using SLZ.Data;
 using SLZ.SFX;
 using UnityEngine;
 using UnityEngine.UI;
@@ -62,6 +63,10 @@ namespace SLZ.Bonelab
 		private int materialIndex;
 
 		private IEnumerator matCycle;
+
+		public override void Awake()
+		{
+		}
 
 		private new void Start()
 		{

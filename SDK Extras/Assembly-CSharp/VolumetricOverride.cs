@@ -1,26 +1,29 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Camera))]
-public class VolumetricOverride : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public VolumetricRendering rendering;
-
-	private Camera oldCamRef;
-
-	private void OnEnable()
+	[RequireComponent(typeof(Camera))]
+	public class VolumetricOverride : MonoBehaviour
 	{
-	}
+		public VolumetricRendering rendering;
 
-	private void Reenabling()
-	{
-	}
+		private Camera oldCamRef;
 
-	private void OnDisable()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	public VolumetricOverride()
-		: base()
-	{
+		private void Reenabling()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		public VolumetricOverride()
+			: base()
+		{
+		}
 	}
 }

@@ -1,40 +1,49 @@
-using SLZ;
+using RootMotion.FinalIK;
 using UnityEngine;
 
-public class RunOffDoorControl : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float rightArmPositionWeight;
-
-	public float lookAtWeight;
-
-	public bool pressButton;
-
-	public DisableDelay disableDelay;
-
-	public GameObject brett;
-
-	public Rigidbody gun;
-
-	public float timeDelayFromButton;
-
-	public Vector3 gunVelocity;
-
-	public Vector3 gunAngVelocity;
-
-	public GarageDoor_Phys_Powerable garageDoor;
-
-	private bool _buttonPressedOneTime;
-
-	private bool _gunPushedOneTime;
-
-	private float _timer;
-
-	private void Update()
+	public class RunOffDoorControl : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private LimbIK _limbIkRightArm;
 
-	public RunOffDoorControl()
-		: base()
-	{
+		[SerializeField]
+		private LookAtIK _lookAtIk;
+
+		public float rightArmPositionWeight;
+
+		public float lookAtWeight;
+
+		public bool pressButton;
+
+		public DisableDelay disableDelay;
+
+		public GameObject brett;
+
+		public Rigidbody gun;
+
+		public float timeDelayFromButton;
+
+		public Vector3 gunVelocity;
+
+		public Vector3 gunAngVelocity;
+
+		public GarageDoor_Phys_Powerable garageDoor;
+
+		private bool _buttonPressedOneTime;
+
+		private bool _gunPushedOneTime;
+
+		private float _timer;
+
+		private void Update()
+		{
+		}
+
+		public RunOffDoorControl()
+			: base()
+		{
+		}
 	}
 }

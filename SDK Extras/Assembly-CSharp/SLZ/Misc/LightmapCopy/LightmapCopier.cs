@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ.Misc.LightmapCopy
+namespace SLZ.Bonelab
 {
 	[RequireComponent(typeof(MeshRenderer))]
 	public class LightmapCopier : MonoBehaviour

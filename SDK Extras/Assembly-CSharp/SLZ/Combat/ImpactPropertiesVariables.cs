@@ -54,27 +54,27 @@ namespace SLZ.Combat
 		[HideInInspector]
 		public ModelType modelType;
 
-		[Header("Particle Color")]
 		[HideInInspector]
+		[Header("Particle Color")]
 		public Color MainColor;
 
 		[HideInInspector]
 		public Color SecondaryColor;
 
-		[Header("Ballistics")]
-		[Range(0.001f, 1f)]
 		[HideInInspector]
+		[Range(0.001f, 1f)]
+		[Header("Ballistics")]
 		public float PenetrationResistance;
 
 		[HideInInspector]
 		public float megaPascalModifier;
 
-		[Header(null)]
 		[HideInInspector]
+		[Header(null)]
 		public bool Flammable;
 
-		[Tooltip("Fire Resistance in C")]
 		[HideInInspector]
+		[Tooltip("Fire Resistance in C")]
 		public float FireResistance;
 
 		public ImpactPropertiesVariables()

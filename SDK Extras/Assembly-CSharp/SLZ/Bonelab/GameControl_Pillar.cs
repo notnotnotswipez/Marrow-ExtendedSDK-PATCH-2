@@ -37,6 +37,10 @@ namespace SLZ.Bonelab
 			return default(UniTaskVoid);
 		}
 
+		public override void DoLevelComplete()
+		{
+		}
+
 		private void ButtonsSetup()
 		{
 		}

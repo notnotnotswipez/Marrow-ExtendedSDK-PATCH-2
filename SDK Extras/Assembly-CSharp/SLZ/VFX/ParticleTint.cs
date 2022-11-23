@@ -9,8 +9,8 @@ namespace SLZ.VFX
 	{
 		private static ComponentCache<ParticleTint> _cache;
 
-		[SerializeField]
 		[Header("This is used to tint particels when they are spawned in")]
+		[SerializeField]
 		[Space]
 		private ParticleSystem[] ParticleSystems;
 

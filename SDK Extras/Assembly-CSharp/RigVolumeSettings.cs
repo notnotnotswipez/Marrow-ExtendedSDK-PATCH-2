@@ -1,15 +1,18 @@
 using UnityEngine;
 using UnityEngine.Rendering;
 
-[RequireComponent(typeof(Volume))]
-public class RigVolumeSettings : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private void Awake()
+	[RequireComponent(typeof(Volume))]
+	public class RigVolumeSettings : MonoBehaviour
 	{
-	}
+		private void Awake()
+		{
+		}
 
-	public RigVolumeSettings()
-		: base()
-	{
+		public RigVolumeSettings()
+			: base()
+		{
+		}
 	}
 }

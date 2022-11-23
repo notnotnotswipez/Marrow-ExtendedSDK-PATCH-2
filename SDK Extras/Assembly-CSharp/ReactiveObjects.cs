@@ -1,36 +1,39 @@
 using UnityEngine;
 
-[RequireComponent(typeof(Renderer))]
-public class ReactiveObjects : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Transform[] ReactiveTransforms;
-
-	private Vector4[] extractedPositions;
-
-	private Material TargetMat;
-
-	private const int MaxCount = 32;
-
-	private int clampCount;
-
-	private int TrackedPosID;
-
-	private int NumOfPosID;
-
-	private void Start()
+	[RequireComponent(typeof(Renderer))]
+	public class ReactiveObjects : MonoBehaviour
 	{
-	}
+		public Transform[] ReactiveTransforms;
 
-	private void Update()
-	{
-	}
+		private Vector4[] extractedPositions;
 
-	public void IntializeArray()
-	{
-	}
+		private Material TargetMat;
 
-	public ReactiveObjects()
-		: base()
-	{
+		private const int MaxCount = 32;
+
+		private int clampCount;
+
+		private int TrackedPosID;
+
+		private int NumOfPosID;
+
+		private void Start()
+		{
+		}
+
+		private void Update()
+		{
+		}
+
+		public void IntializeArray()
+		{
+		}
+
+		public ReactiveObjects()
+			: base()
+		{
+		}
 	}
 }

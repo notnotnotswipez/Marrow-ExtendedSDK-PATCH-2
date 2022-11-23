@@ -1,17 +1,20 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GenericOnDestroy : MonoBehaviour
+namespace SLZ.Utilities
 {
-	[SerializeField]
-	private UnityEvent DestroyEvent;
-
-	private void OnDestroy()
+	public class GenericOnDestroy : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private UnityEvent DestroyEvent;
 
-	public GenericOnDestroy()
-		: base()
-	{
+		private void OnDestroy()
+		{
+		}
+
+		public GenericOnDestroy()
+			: base()
+		{
+		}
 	}
 }

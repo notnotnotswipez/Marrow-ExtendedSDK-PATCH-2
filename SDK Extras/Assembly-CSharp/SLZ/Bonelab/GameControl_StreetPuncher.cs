@@ -24,6 +24,10 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GameObject avatarGacha;
 
+		public override void Start()
+		{
+		}
+
 		public void SwitchAvatar()
 		{
 		}
@@ -31,6 +35,10 @@ namespace SLZ.Bonelab
 		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
 		{
 			return default(UniTaskVoid);
+		}
+
+		public override void DoLevelComplete()
+		{
 		}
 
 		private void ButtonsSetup()

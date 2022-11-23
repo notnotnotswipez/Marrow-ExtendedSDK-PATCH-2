@@ -1,45 +1,48 @@
 using UnityEngine;
 
-[RequireComponent(typeof(ParticleSystem))]
-public class TweenParticleEmission : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private ParticleSystem partSys;
-
-	private ParticleSystem.EmissionModule emissionModule;
-
-	private float OrginalEmission;
-
-	private void Reset()
+	[RequireComponent(typeof(ParticleSystem))]
+	public class TweenParticleEmission : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private ParticleSystem partSys;
 
-	private void Awake()
-	{
-	}
+		private ParticleSystem.EmissionModule emissionModule;
 
-	public void TweenOn(float time)
-	{
-	}
+		private float OrginalEmission;
 
-	public void TweenOff(float time)
-	{
-	}
+		private void Reset()
+		{
+		}
 
-	private void SetEmission(float currentEmissions, float ratio)
-	{
-	}
+		private void Awake()
+		{
+		}
 
-	private void DisableSystem()
-	{
-	}
+		public void TweenOn(float time)
+		{
+		}
 
-	private void EnableSystem()
-	{
-	}
+		public void TweenOff(float time)
+		{
+		}
 
-	public TweenParticleEmission()
-		: base()
-	{
+		private void SetEmission(float currentEmissions, float ratio)
+		{
+		}
+
+		private void DisableSystem()
+		{
+		}
+
+		private void EnableSystem()
+		{
+		}
+
+		public TweenParticleEmission()
+			: base()
+		{
+		}
 	}
 }

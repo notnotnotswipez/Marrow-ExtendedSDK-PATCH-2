@@ -59,7 +59,7 @@ namespace SLZ.Rig
 		{
 		}
 
-		public virtual void OnRigEnable()
+		public virtual void OnRigEnable(bool reEnable)
 		{
 		}
 

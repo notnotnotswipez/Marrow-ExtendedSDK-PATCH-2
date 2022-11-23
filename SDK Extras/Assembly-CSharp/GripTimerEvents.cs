@@ -7,54 +7,57 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GripTimerEvents : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Grip[] grips;
-
-	[SerializeField]
-	private float elapsedTime;
-
-	[SerializeField]
-	private float firstThreshold;
-
-	[SerializeField]
-	private float secondThreshold;
-
-	public UnityEvent OnFirstThreshold;
-
-	public UnityEvent OnSecondThreshold;
-
-	private Coroutine gripTimerRoutine;
-
-	private void OnEnable()
+	public class GripTimerEvents : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Grip[] grips;
 
-	private void OnDisable()
-	{
-	}
+		[SerializeField]
+		private float elapsedTime;
 
-	public void OnGrab(Hand hand)
-	{
-	}
+		[SerializeField]
+		private float firstThreshold;
 
-	public void OnDrop(Hand hand)
-	{
-	}
+		[SerializeField]
+		private float secondThreshold;
 
-	private IEnumerator CoGripTimerRoutine()
-	{
-		return null;
-	}
+		public UnityEvent OnFirstThreshold;
 
-	private IEnumerator CoCheckGrips()
-	{
-		return null;
-	}
+		public UnityEvent OnSecondThreshold;
 
-	public GripTimerEvents()
-		: base()
-	{
+		private Coroutine gripTimerRoutine;
+
+		private void OnEnable()
+		{
+		}
+
+		private void OnDisable()
+		{
+		}
+
+		public void OnGrab(Hand hand)
+		{
+		}
+
+		public void OnDrop(Hand hand)
+		{
+		}
+
+		private IEnumerator CoGripTimerRoutine()
+		{
+			return null;
+		}
+
+		private IEnumerator CoCheckGrips()
+		{
+			return null;
+		}
+
+		public GripTimerEvents()
+			: base()
+		{
+		}
 	}
 }

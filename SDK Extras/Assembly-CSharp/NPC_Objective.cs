@@ -13,294 +13,297 @@ using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.Events;
 
-public class NPC_Objective : MonoBehaviour, IAttackReceiver, IEventSystemHandler
+namespace SLZ.Bonelab
 {
-	public enum TowerMode
+	public class NPC_Objective : MonoBehaviour, IAttackReceiver, IEventSystemHandler
 	{
-		CHARGING = 0,
-		DRAINING = 1,
-		NONE = 2
-	}
+		public enum TowerMode
+		{
+			CHARGING = 0,
+			DRAINING = 1,
+			NONE = 2
+		}
 
-	public TowerMode towerMode;
+		public TowerMode towerMode;
 
-	[SerializeField]
-	private float energy;
+		[SerializeField]
+		private float energy;
 
-	[SerializeField]
-	private float initEnergy;
+		[SerializeField]
+		private float initEnergy;
 
-	public bool isEmpty;
+		public bool isEmpty;
 
-	public bool isFull;
+		public bool isFull;
 
-	private float chargeDelta;
+		private float chargeDelta;
 
-	[SerializeField]
-	private float energyPerc;
+		[SerializeField]
+		private float energyPerc;
 
-	[SerializeField]
-	private GameObject energyBarObj;
+		[SerializeField]
+		private GameObject energyBarObj;
 
-	[SerializeField]
-	private GameObject batteryBarObj;
+		[SerializeField]
+		private GameObject batteryBarObj;
 
-	private Vector3 currScale;
+		private Vector3 currScale;
 
-	private Vector3 startBar;
+		private Vector3 startBar;
 
-	[SerializeField]
-	private Vector3 endBar;
+		[SerializeField]
+		private Vector3 endBar;
 
-	public Action<NPC_Objective> OnObjectiveKeyed;
+		public Action<NPC_Objective> OnObjectiveKeyed;
 
-	public Action<NPC_Objective> OnObjectiveDestroyed;
+		public Action<NPC_Objective> OnObjectiveDestroyed;
 
-	public Action<NPC_Objective> OnObjectiveCharged;
+		public Action<NPC_Objective> OnObjectiveCharged;
 
-	public TriggerRefProxy proxy;
+		public TriggerRefProxy proxy;
 
-	public List<NPC_Data> npcList;
+		public List<NPC_Data> npcList;
 
-	public HashSet<NPC_Data> npcHash;
+		public HashSet<NPC_Data> npcHash;
 
-	[SerializeField]
-	private ShockTrap shockTrap;
+		[SerializeField]
+		private ShockTrap shockTrap;
 
-	[SerializeField]
-	private float fireMult;
+		[SerializeField]
+		private float fireMult;
 
-	[SerializeField]
-	private float bluntMult;
+		[SerializeField]
+		private float bluntMult;
 
-	[Header("Events")]
-	public UnityEvent ObjectiveModeStart;
+		[Header("Events")]
+		public UnityEvent ObjectiveModeStart;
 
-	[Header("Key")]
-	[SerializeField]
-	private bool isKeyRequired;
+		[Header("Key")]
+		[SerializeField]
+		private bool isKeyRequired;
 
-	[SerializeField]
-	private bool isKeyed;
+		[SerializeField]
+		private bool isKeyed;
 
-	public KeyReciever keyReciever;
+		public KeyReciever keyReciever;
 
-	[SerializeField]
-	private Key batteryKey;
+		[SerializeField]
+		private Key batteryKey;
 
-	[SerializeField]
-	private ObjectiveBattery battery;
+		[SerializeField]
+		private ObjectiveBattery battery;
 
-	public int tankIndex;
+		public int tankIndex;
 
-	[Header("Audio")]
-	[SerializeField]
-	private AudioSource loopingASource;
+		[Header("Audio")]
+		[SerializeField]
+		private AudioSource loopingASource;
 
-	[SerializeField]
-	private AudioMixerGroup audioGroup;
+		[SerializeField]
+		private AudioMixerGroup audioGroup;
 
-	[SerializeField]
-	private AudioClip enableClip;
+		[SerializeField]
+		private AudioClip enableClip;
 
-	[SerializeField]
-	private AudioClip explodeClip;
+		[SerializeField]
+		private AudioClip explodeClip;
 
-	[SerializeField]
-	private AudioClip fullChargeClip;
+		[SerializeField]
+		private AudioClip fullChargeClip;
 
-	[SerializeField]
-	private AudioClip[] damageClips;
+		[SerializeField]
+		private AudioClip[] damageClips;
 
-	[SerializeField]
-	private AudioClip batterySpawnClip;
+		[SerializeField]
+		private AudioClip batterySpawnClip;
 
-	[SerializeField]
-	private AudioClip batteryAlarmClip;
+		[SerializeField]
+		private AudioClip batteryAlarmClip;
 
-	[SerializeField]
-	[Header("VFX")]
-	private Spawnable blasterVoid;
+		[Header("VFX")]
+		[SerializeField]
+		private Spawnable blasterVoid;
 
-	[SerializeField]
-	private Spawnable blasterLightning;
+		[SerializeField]
+		private Spawnable blasterLightning;
 
-	[SerializeField]
-	private Spawnable blasterLightningNeg;
+		[SerializeField]
+		private Spawnable blasterLightningNeg;
 
-	[SerializeField]
-	private LineRenderer lineRend;
+		[SerializeField]
+		private LineRenderer lineRend;
 
-	[Header("UI")]
-	[SerializeField]
-	private TMP_Text energyText;
+		[SerializeField]
+		[Header("UI")]
+		private TMP_Text energyText;
 
-	[Header("DoorJoints")]
-	[SerializeField]
-	private ConfigurableJoint joint;
+		[SerializeField]
+		[Header("DoorJoints")]
+		private ConfigurableJoint joint;
 
-	[SerializeField]
-	private Vector3 jointTarg;
+		[SerializeField]
+		private Vector3 jointTarg;
 
-	[Header("MagmaGate")]
-	public Renderer towerRend;
+		[Header("MagmaGate")]
+		public Renderer towerRend;
 
-	private MaterialPropertyBlock matPropBlock;
+		private MaterialPropertyBlock matPropBlock;
 
-	private int emisColorID;
+		private int emisColorID;
 
-	public Color emissionColor;
+		public Color emissionColor;
 
-	public float maxColorIntensity;
+		public float maxColorIntensity;
 
-	private Coroutine laserRoutine;
+		private Coroutine laserRoutine;
 
-	[SerializeField]
-	private GameObject laserScalerParent;
+		[SerializeField]
+		private GameObject laserScalerParent;
 
-	[SerializeField]
-	private float maxLaserScale;
+		[SerializeField]
+		private float maxLaserScale;
 
-	[SerializeField]
-	private GameObject magmaObj;
+		[SerializeField]
+		private GameObject magmaObj;
 
-	[SerializeField]
-	private float laserScaleTime;
+		[SerializeField]
+		private float laserScaleTime;
 
-	private float currIntensity;
+		private float currIntensity;
 
-	[SerializeField]
-	private LightningStriker striker;
+		[SerializeField]
+		private LightningStriker striker;
 
-	[SerializeField]
-	[Header("ContainerYard")]
-	private GameObject puddleScalerObj;
+		[Header("ContainerYard")]
+		[SerializeField]
+		private GameObject puddleScalerObj;
 
-	private Vector3 startPuddleScale;
+		private Vector3 startPuddleScale;
 
-	[SerializeField]
-	private GameObject[] puddleFXObjs;
+		[SerializeField]
+		private GameObject[] puddleFXObjs;
 
-	[SerializeField]
-	private GameObject explodeSphereObj;
+		[SerializeField]
+		private GameObject explodeSphereObj;
 
-	private float explosionForce;
+		private float explosionForce;
 
-	private float explosionRadius;
+		private float explosionRadius;
 
-	private float expandDuration;
+		private float expandDuration;
 
-	public void OnEnable()
-	{
-	}
+		public void OnEnable()
+		{
+		}
 
-	public void OnDisable()
-	{
-	}
+		public void OnDisable()
+		{
+		}
 
-	private void Start()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public void ReceiveAttack(Attack attack)
-	{
-	}
+		public void ReceiveAttack(Attack attack)
+		{
+		}
 
-	private void UpdateDamage(float damage)
-	{
-	}
+		private void UpdateDamage(float damage)
+		{
+		}
 
-	private void Update()
-	{
-	}
+		private void Update()
+		{
+		}
 
-	private void ChargeTick()
-	{
-	}
+		private void ChargeTick()
+		{
+		}
 
-	private void DrainTick()
-	{
-	}
+		private void DrainTick()
+		{
+		}
 
-	private void ObjectiveDeath()
-	{
-	}
+		private void ObjectiveDeath()
+		{
+		}
 
-	public void KeyRecieved(Key key)
-	{
-	}
+		public void KeyRecieved(Key key)
+		{
+		}
 
-	public void KeyRemoved()
-	{
-	}
+		public void KeyRemoved()
+		{
+		}
 
-	private void FullCharge()
-	{
-	}
+		private void FullCharge()
+		{
+		}
 
-	[ContextMenu("ExplodeCharger")]
-	public void ExplodeCharger()
-	{
-	}
+		[ContextMenu("ExplodeCharger")]
+		public void ExplodeCharger()
+		{
+		}
 
-	private IEnumerator CoExploder()
-	{
-		return null;
-	}
+		private IEnumerator CoExploder()
+		{
+			return null;
+		}
 
-	[ContextMenu("FullChargeExplosion")]
-	public void FullChargeExplosion()
-	{
-	}
+		[ContextMenu("FullChargeExplosion")]
+		public void FullChargeExplosion()
+		{
+		}
 
-	[ContextMenu("TEST_FX")]
-	public void TestFX()
-	{
-	}
+		[ContextMenu("TEST_FX")]
+		public void TestFX()
+		{
+		}
 
-	[ContextMenu("ToggleJoint")]
-	public void ToggleJoint()
-	{
-	}
+		[ContextMenu("ToggleJoint")]
+		public void ToggleJoint()
+		{
+		}
 
-	[ContextMenu("FadePumpEmission")]
-	private void FadePumpEmission()
-	{
-	}
+		[ContextMenu("FadePumpEmission")]
+		private void FadePumpEmission()
+		{
+		}
 
-	private IEnumerator CoFadePumpEmission()
-	{
-		return null;
-	}
+		private IEnumerator CoFadePumpEmission()
+		{
+			return null;
+		}
 
-	public void LightStrike()
-	{
-	}
+		public void LightStrike()
+		{
+		}
 
-	private void UpdateEmission()
-	{
-	}
+		private void UpdateEmission()
+		{
+		}
 
-	public void DefenseComplete()
-	{
-	}
+		public void DefenseComplete()
+		{
+		}
 
-	private IEnumerator CoFadeEmission()
-	{
-		return null;
-	}
+		private IEnumerator CoFadeEmission()
+		{
+			return null;
+		}
 
-	private void LaserBlast()
-	{
-	}
+		private void LaserBlast()
+		{
+		}
 
-	private IEnumerator CoLaser()
-	{
-		return null;
-	}
+		private IEnumerator CoLaser()
+		{
+			return null;
+		}
 
-	public NPC_Objective()
-		: base()
-	{
+		public NPC_Objective()
+			: base()
+		{
+		}
 	}
 }

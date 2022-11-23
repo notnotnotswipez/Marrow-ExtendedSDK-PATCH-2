@@ -1,6 +1,6 @@
 using System.Security.Cryptography;
 
-namespace Utilities
+namespace SLZ.Utilities
 {
 	public static class EncryptedXmlSerializer
 	{

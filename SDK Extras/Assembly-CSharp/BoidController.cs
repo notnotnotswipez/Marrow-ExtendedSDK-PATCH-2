@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Assets.Marrow_ExtendedSDK.StubClasses;
+using PuppetMasta;
 using SLZ.AI;
 using UnityEngine;
 
@@ -24,13 +25,15 @@ public class BoidController : MonoBehaviour
 
 	public bool use_neighbor_loss;
 
+	public bool use_vel_loss;
+
+	public BehaviourBoidAgent_SlicedInference agent;
+
 	public Transform boidBall;
 
 	public Rigidbody _rb;
 
-	public float move_mod;
-
-	public float speed_ramp_mod;
+	public float max_accel;
 
 	public float max_speed;
 
@@ -39,6 +42,8 @@ public class BoidController : MonoBehaviour
 	public float rotation_slerp_mod;
 
 	public bool log_losses;
+
+	public bool alwaysForward;
 
 	public Vector3 avg_pos;
 
@@ -54,7 +59,11 @@ public class BoidController : MonoBehaviour
 
 	public float cohesion_loss_mod;
 
+	public float personal_space_mod;
+
 	public float alignment_loss_mod;
+
+	public float avgvel_loss_mod;
 
 	public float separation_loss_mod;
 
@@ -65,6 +74,16 @@ public class BoidController : MonoBehaviour
 	public float reflect_mod;
 
 	public float out_of_radius_mod;
+
+	public float in_radius_mod;
+
+	public bool use_out_penalty;
+
+	public bool out_penalty_on_attempt;
+
+	public bool attempt_started;
+
+	public float rayBumperMod;
 
 	private float previous_speed;
 
@@ -146,6 +165,14 @@ public class BoidController : MonoBehaviour
 
 	public bool debugInput;
 
+	public float collisionStayTimer;
+
+	public float collisionStayCur;
+
+	private int waypointInd;
+
+	private TriggerRefProxy tempTrp;
+
 	public void Reactivate()
 	{
 	}
@@ -194,6 +221,16 @@ public class BoidController : MonoBehaviour
 		return default(float);
 	}
 
+	public float AvgVelLoss()
+	{
+		return default(float);
+	}
+
+	public float PersonalSpaceLoss()
+	{
+		return default(float);
+	}
+
 	public float ProximityLoss()
 	{
 		return default(float);
@@ -233,7 +270,15 @@ public class BoidController : MonoBehaviour
 	{
 	}
 
+	private void Start()
+	{
+	}
+
 	public void OnCollisionEnter(Collision collision)
+	{
+	}
+
+	public void OnCollisionStay(Collision collision)
 	{
 	}
 
@@ -242,10 +287,6 @@ public class BoidController : MonoBehaviour
 	}
 
 	internal void SlowMoveVel(int dirToGo, int pitch, int roll, int yaw)
-	{
-	}
-
-	internal void SlowMoveVel_OLD(int dirToGo, int pitch, int roll, int yaw)
 	{
 	}
 
@@ -258,7 +299,7 @@ public class BoidController : MonoBehaviour
 		return null;
 	}
 
-	private IEnumerator PostLaunchCooldown()
+	public IEnumerator PostLaunchCooldown()
 	{
 		return null;
 	}

@@ -25,6 +25,8 @@ namespace SLZ.Bonelab
 
 		public Chunk TownfightChunk;
 
+		public Chunk WindMillOpChunk;
+
 		public Chunk SkyTubeChunk;
 
 		public Chunk TaxiStartChunk;
@@ -39,10 +41,6 @@ namespace SLZ.Bonelab
 
 		public Chunk VoidG114ConfigChunk;
 
-		public GameObject TopDummyChunkTrigger;
-
-		public GameObject MenuDummyChunkTrigger;
-
 		public GameObject TaxiSequence;
 
 		public GameObject WindmillGate;
@@ -50,8 +48,6 @@ namespace SLZ.Bonelab
 		public ArmFinale ArmFinale;
 
 		public GameObject VoidMenu;
-
-		public GameObject BlankFloor;
 
 		public GameObject windmill;
 
@@ -94,6 +90,14 @@ namespace SLZ.Bonelab
 
 		public SpawnableCrateReference blueApollo;
 
+		public override void Awake()
+		{
+		}
+
+		public override void Start()
+		{
+		}
+
 		public void DespawnTownItemsAirlock()
 		{
 		}
@@ -105,6 +109,10 @@ namespace SLZ.Bonelab
 		private IEnumerator CycleWindmillAirlock()
 		{
 			return null;
+		}
+
+		public void WarmUpJimmyArm()
+		{
 		}
 
 		private void ReachWindmill()
@@ -140,7 +148,7 @@ namespace SLZ.Bonelab
 		{
 		}
 
-		private IEnumerator ChangeChunk(Chunk targetChunk)
+		private IEnumerator ChangeChunk(Chunk targetChunk, float delay = 0f)
 		{
 			return null;
 		}

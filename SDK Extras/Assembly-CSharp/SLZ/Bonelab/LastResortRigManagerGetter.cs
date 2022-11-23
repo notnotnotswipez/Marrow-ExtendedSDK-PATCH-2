@@ -1,5 +1,7 @@
 using System;
 using System.Runtime.CompilerServices;
+using System.Runtime.InteropServices;
+using SLZ.AI;
 using SLZ.Rig;
 using UnityEngine;
 
@@ -24,6 +26,16 @@ namespace SLZ.Bonelab
 
 		private void OnEnable()
 		{
+		}
+
+		internal static bool TryGetTriggerRefProxy_HACKY([Out] TriggerRefProxy triggerRefProxy)
+		{
+			return default(bool);
+		}
+
+		internal static bool TryGetRigManager_HACKY([Out] RigManager rigManager)
+		{
+			return default(bool);
 		}
 
 		private void SearchDesperatelyForRigManager()

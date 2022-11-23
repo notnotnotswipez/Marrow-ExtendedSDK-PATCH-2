@@ -1,32 +1,35 @@
 using SLZ.Rig;
 using UnityEngine;
 
-public class Simple_PlayerLeasher : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float min_leash;
-
-	public float max_leash;
-
-	public RigManager rM;
-
-	public void OnEnable()
+	public class Simple_PlayerLeasher : MonoBehaviour
 	{
-	}
+		public float min_leash;
 
-	public void OnDisable()
-	{
-	}
+		public float max_leash;
 
-	public void LEASH()
-	{
-	}
+		public RigManager rM;
 
-	public void UNLEASH()
-	{
-	}
+		public void OnEnable()
+		{
+		}
 
-	public Simple_PlayerLeasher()
-		: base()
-	{
+		public void OnDisable()
+		{
+		}
+
+		public void LEASH()
+		{
+		}
+
+		public void UNLEASH()
+		{
+		}
+
+		public Simple_PlayerLeasher()
+			: base()
+		{
+		}
 	}
 }

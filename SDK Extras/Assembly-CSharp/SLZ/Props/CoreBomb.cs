@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.Interaction;
 using SLZ.Marrow.Utilities;
-using SLZ.Props.Weapons;
 using SLZ.Utilities;
 using UnityEngine;
 using UnityEngine.Audio;

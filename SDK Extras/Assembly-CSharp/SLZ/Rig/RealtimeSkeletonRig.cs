@@ -6,8 +6,8 @@ namespace SLZ.Rig
 {
 	public class RealtimeSkeletonRig : HeptaRig
 	{
-		[Header("RealHeptaRig")]
 		[SerializeField]
+		[Header("RealHeptaRig")]
 		private SLZ.VRMK.Avatar _player;
 
 		private float _adaptiveY;

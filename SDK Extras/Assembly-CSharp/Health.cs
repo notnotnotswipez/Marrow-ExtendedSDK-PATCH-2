@@ -22,8 +22,8 @@ public class Health : MonoBehaviour
 
 	protected HealthMode prevHealthMode;
 
-	[Space(10f)]
 	[Tooltip("Enemy maximum health")]
+	[Space(10f)]
 	[Header("HEALTH")]
 	public float max_Health;
 
@@ -36,9 +36,9 @@ public class Health : MonoBehaviour
 	[HideInInspector]
 	public int hits;
 
-	[Tooltip("Can be damaged by attacks")]
-	[Header("ATTACKED")]
 	[Space(10f)]
+	[Header("ATTACKED")]
+	[Tooltip("Can be damaged by attacks")]
 	public bool damageFromAttack;
 
 	[Tooltip("Modifier multiplier to attack damage")]

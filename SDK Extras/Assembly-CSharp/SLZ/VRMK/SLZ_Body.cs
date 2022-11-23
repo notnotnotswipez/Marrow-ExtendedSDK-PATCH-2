@@ -54,8 +54,8 @@ namespace SLZ.VRMK
 			[Tooltip("Weight of spine leaning to maintain balance due to acceleration (0 to 1)")]
 			public float accelLeanWeight;
 
-			[Range(0f, 4f)]
 			[Tooltip("Weight of spine leaning to maintain balance due to fluid drag (0 to 4, 1 default)")]
+			[Range(0f, 4f)]
 			public float dragWeight;
 
 			[Tooltip("Product of p(mass density) * A(area) * Cd(drag coef). p = 1.2 at 20celcius, A ~= .4m2, Cd ~= .6 - 1")]
@@ -229,8 +229,8 @@ namespace SLZ.VRMK
 
 			public float stepLzRt;
 
-			[Tooltip("The speed of steps.")]
 			[Range(0.5f, 5f)]
+			[Tooltip("The speed of steps.")]
 			public float stepSpeed;
 
 			[Tooltip("Degrees splayed 'Y' over 0 - 1 squat factor 'X'.")]

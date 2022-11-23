@@ -6,8 +6,8 @@ namespace SLZ
 	[Serializable]
 	public class VirtualControllerSettings
 	{
-		[Tooltip("Primary to Secondary swing weight (Blends into per-hand swing weight)")]
 		[Range(0f, 1f)]
+		[Tooltip("Primary to Secondary swing weight (Blends into per-hand swing weight)")]
 		public float lookRotationWeight;
 
 		[Tooltip("Per-hand blend twist rotation")]
@@ -22,8 +22,8 @@ namespace SLZ
 		[Tooltip("Per-hand blend position")]
 		public float positionWeight;
 
-		[Tooltip("Joint swing limits")]
 		[Range(0f, 90f)]
+		[Tooltip("Joint swing limits")]
 		public float jointSwingLimit;
 
 		[Tooltip("Joint twist limits")]

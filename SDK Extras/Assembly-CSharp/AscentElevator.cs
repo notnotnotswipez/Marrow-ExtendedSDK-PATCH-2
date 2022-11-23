@@ -5,34 +5,37 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class AscentElevator : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Transform startObj;
-
-	public Transform endObj;
-
-	public Transform platform;
-
-	[SerializeField]
-	private float moveDuration;
-
-	private Coroutine platformRoutine;
-
-	private Vector3 startPos;
-
-	private Vector3 endPos;
-
-	public void StartMotion()
+	public class AscentElevator : MonoBehaviour
 	{
-	}
+		public Transform startObj;
 
-	private IEnumerator MovePlatform()
-	{
-		return null;
-	}
+		public Transform endObj;
 
-	public AscentElevator()
-		: base()
-	{
+		public Transform platform;
+
+		[SerializeField]
+		private float moveDuration;
+
+		private Coroutine platformRoutine;
+
+		private Vector3 startPos;
+
+		private Vector3 endPos;
+
+		public void StartMotion()
+		{
+		}
+
+		private IEnumerator MovePlatform()
+		{
+			return null;
+		}
+
+		public AscentElevator()
+			: base()
+		{
+		}
 	}
 }

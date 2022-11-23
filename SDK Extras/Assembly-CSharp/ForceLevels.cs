@@ -1,16 +1,20 @@
 using UnityEngine;
 
-public class ForceLevels : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private bool DynamicFoveatedRendering;
-
-	private void Awake()
+	public class ForceLevels : MonoBehaviour
 	{
-	}
 
-	public ForceLevels()
-		: base()
-	{
+		[SerializeField]
+		private bool DynamicFoveatedRendering;
+
+		private void Awake()
+		{
+		}
+
+		public ForceLevels()
+			: base()
+		{
+		}
 	}
 }

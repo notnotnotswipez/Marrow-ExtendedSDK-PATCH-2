@@ -1,45 +1,48 @@
 using UnityEngine;
 
-public class JointMover : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private Transform startTrans;
-
-	[SerializeField]
-	private Transform endTrans;
-
-	[SerializeField]
-	private float duration;
-
-	[SerializeField]
-	private float lerpVal;
-
-	[SerializeField]
-	private ConfigurableJoint joint;
-
-	[SerializeField]
-	private GameObject anchorObj;
-
-	public bool isMovingOut;
-
-	public float maxTime;
-
-	private float lastSwitchTime;
-
-	private void Start()
+	public class JointMover : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private Transform startTrans;
 
-	private void FixedUpdate()
-	{
-	}
+		[SerializeField]
+		private Transform endTrans;
 
-	private void CreateAnchorObject()
-	{
-	}
+		[SerializeField]
+		private float duration;
 
-	public JointMover()
-		: base()
-	{
+		[SerializeField]
+		private float lerpVal;
+
+		[SerializeField]
+		private ConfigurableJoint joint;
+
+		[SerializeField]
+		private GameObject anchorObj;
+
+		public bool isMovingOut;
+
+		public float maxTime;
+
+		private float lastSwitchTime;
+
+		private void Start()
+		{
+		}
+
+		private void FixedUpdate()
+		{
+		}
+
+		private void CreateAnchorObject()
+		{
+		}
+
+		public JointMover()
+			: base()
+		{
+		}
 	}
 }

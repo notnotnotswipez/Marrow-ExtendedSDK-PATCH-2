@@ -1,22 +1,24 @@
-using SLZ;
 using UnityEngine;
 
-public class SplineBodyTrigger : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public float targetVelocity;
-
-	public float positionDamper;
-
-	public float maximumForce;
-
-	public SplineBody splineBody;
-
-	private void OnTriggerEnter(Collider other)
+	public class SplineBodyTrigger : MonoBehaviour
 	{
-	}
+		public float targetVelocity;
 
-	public SplineBodyTrigger()
-		: base()
-	{
+		public float positionDamper;
+
+		public float maximumForce;
+
+		public SplineBody splineBody;
+
+		private void OnTriggerEnter(Collider other)
+		{
+		}
+
+		public SplineBodyTrigger()
+			: base()
+		{
+		}
 	}
 }

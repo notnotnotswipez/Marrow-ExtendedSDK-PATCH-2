@@ -15,7 +15,7 @@ using SLZ.Marrow.Warehouse;
 using UnityEngine;
 using UnityEngine.Scripting;
 
-namespace SLZ
+namespace SLZ.Bonelab
 {
 	[Preserve]
 	public static class SupportLogs

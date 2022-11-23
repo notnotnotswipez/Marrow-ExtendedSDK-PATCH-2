@@ -10,101 +10,104 @@ using SLZ.Rig;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class AvatarDice : MonoBehaviour
+namespace SLZ.Props
 {
-	public Dice dice;
-
-	public List<AvatarCrateReference> avatars;
-
-	public bool useOverrideFirstAvatar;
-
-	public AvatarCrateReference firstAvatar;
-
-	private RigManager rigManager;
-
-	private InteractableHost interactableHost;
-
-	private bool handAttachEventSetup;
-
-	private bool firstRoll;
-
-	public UnityEvent OnHandAttach;
-
-	private void Start()
+	public class AvatarDice : MonoBehaviour
 	{
-	}
+		public Dice dice;
 
-	private void OnDisable()
-	{
-	}
+		public List<AvatarCrateReference> avatars;
 
-	private void OnEnable()
-	{
-	}
+		public bool useOverrideFirstAvatar;
 
-	private UniTaskVoid ActiveRoll(int result)
-	{
-		return default(UniTaskVoid);
-	}
+		public AvatarCrateReference firstAvatar;
 
-	private UniTaskVoid DiceResult(int result)
-	{
-		return default(UniTaskVoid);
-	}
+		private RigManager rigManager;
 
-	private UniTask ChangeAvatar(int result, bool isResultRoll = false)
-	{
-		return default(UniTask);
-	}
+		private InteractableHost interactableHost;
 
-	private void OnHandAttached(InteractableHost host, Hand hand)
-	{
-	}
+		private bool handAttachEventSetup;
 
-	private void _listenForHandAttach()
-	{
-	}
+		private bool firstRoll;
 
-	private void _unlistenForHandAttach()
-	{
-	}
+		public UnityEvent OnHandAttach;
 
-	private void _simulateRoll(int result)
-	{
-	}
+		private void Start()
+		{
+		}
 
-	[ContextMenu("Simulate Roll 1")]
-	private void _simulateRoll1()
-	{
-	}
+		private void OnDisable()
+		{
+		}
 
-	[ContextMenu("Simulate Roll 2")]
-	private void _simulateRoll2()
-	{
-	}
+		private void OnEnable()
+		{
+		}
 
-	[ContextMenu("Simulate Roll 3")]
-	private void _simulateRoll3()
-	{
-	}
+		private UniTaskVoid ActiveRoll(int result)
+		{
+			return default(UniTaskVoid);
+		}
 
-	[ContextMenu("Simulate Roll 4")]
-	private void _simulateRoll4()
-	{
-	}
+		private UniTaskVoid DiceResult(int result)
+		{
+			return default(UniTaskVoid);
+		}
 
-	[ContextMenu("Simulate Roll 5")]
-	private void _simulateRoll5()
-	{
-	}
+		private UniTask ChangeAvatar(int result, bool isResultRoll = false)
+		{
+			return default(UniTask);
+		}
 
-	[ContextMenu("Simulate Roll 6")]
-	private void _simulateRoll6()
-	{
-	}
+		private void OnHandAttached(InteractableHost host, Hand hand)
+		{
+		}
 
-	public AvatarDice()
-		: base()
-	{
+		private void _listenForHandAttach()
+		{
+		}
+
+		private void _unlistenForHandAttach()
+		{
+		}
+
+		private void _simulateRoll(int result)
+		{
+		}
+
+		[ContextMenu("Simulate Roll 1")]
+		private void _simulateRoll1()
+		{
+		}
+
+		[ContextMenu("Simulate Roll 2")]
+		private void _simulateRoll2()
+		{
+		}
+
+		[ContextMenu("Simulate Roll 3")]
+		private void _simulateRoll3()
+		{
+		}
+
+		[ContextMenu("Simulate Roll 4")]
+		private void _simulateRoll4()
+		{
+		}
+
+		[ContextMenu("Simulate Roll 5")]
+		private void _simulateRoll5()
+		{
+		}
+
+		[ContextMenu("Simulate Roll 6")]
+		private void _simulateRoll6()
+		{
+		}
+
+		public AvatarDice()
+			: base()
+		{
+		}
 	}
 }

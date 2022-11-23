@@ -1,19 +1,22 @@
 using UnityEngine;
 
-public class ParticleSystemTextureStreaming : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private ParticleSystemRenderer particleSystemRenderer;
-
-	private void Start()
+	public class ParticleSystemTextureStreaming : MonoBehaviour
 	{
-	}
+		private ParticleSystemRenderer particleSystemRenderer;
 
-	private void OnDestroy()
-	{
-	}
+		private void Start()
+		{
+		}
 
-	public ParticleSystemTextureStreaming()
-		: base()
-	{
+		private void OnDestroy()
+		{
+		}
+
+		public ParticleSystemTextureStreaming()
+			: base()
+		{
+		}
 	}
 }

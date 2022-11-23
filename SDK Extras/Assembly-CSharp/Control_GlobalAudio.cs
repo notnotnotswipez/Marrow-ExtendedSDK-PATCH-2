@@ -1,35 +1,38 @@
 using UnityEngine;
 
-public class Control_GlobalAudio : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	private static Control_GlobalAudio _instance;
-
-	private Control_Player ctrl_Player;
-
-	private float safeguardaudio;
-
-	public static Control_GlobalAudio instance
+	public class Control_GlobalAudio : MonoBehaviour
 	{
-		get
-		{
-			return null;
-		}
-	}
+		private static Control_GlobalAudio _instance;
 
-	[HideInInspector]
-	public float audio_GlobalVolume
-	{
-		get
-		{
-			return default(float);
-		}
-		set
-		{
-		}
-	}
+		private Control_Player ctrl_Player;
 
-	public Control_GlobalAudio()
-		: base()
-	{
+		private float safeguardaudio;
+
+		public static Control_GlobalAudio instance
+		{
+			get
+			{
+				return null;
+			}
+		}
+
+		[HideInInspector]
+		public float audio_GlobalVolume
+		{
+			get
+			{
+				return default(float);
+			}
+			set
+			{
+			}
+		}
+
+		public Control_GlobalAudio()
+			: base()
+		{
+		}
 	}
 }

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SLZ.Misc.LMUtils
+namespace SLZ.Bonelab
 {
 	public class ToggleObjectOnBake : MonoBehaviour
 	{

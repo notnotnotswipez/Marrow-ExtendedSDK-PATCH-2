@@ -5,25 +5,28 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using UnityEngine;
 
-public class TransformLerp : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Transform SourceTransform;
-
-	public Transform StartingTransform;
-
-	public Transform EndingTransform;
-
-	public void DoLerpTransform(float time)
+	public class TransformLerp : MonoBehaviour
 	{
-	}
+		public Transform SourceTransform;
 
-	private IEnumerator LerpTransform(float time)
-	{
-		return null;
-	}
+		public Transform StartingTransform;
 
-	public TransformLerp()
-		: base()
-	{
+		public Transform EndingTransform;
+
+		public void DoLerpTransform(float time)
+		{
+		}
+
+		private IEnumerator LerpTransform(float time)
+		{
+			return null;
+		}
+
+		public TransformLerp()
+			: base()
+		{
+		}
 	}
 }

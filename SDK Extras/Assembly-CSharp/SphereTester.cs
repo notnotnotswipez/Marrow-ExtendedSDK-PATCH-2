@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class SphereTester : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	public Transform raycaster;
-
-	private void Update()
+	public class SphereTester : MonoBehaviour
 	{
-	}
+		public Transform raycaster;
 
-	public SphereTester()
-		: base()
-	{
+		private void Update()
+		{
+		}
+
+		public SphereTester()
+			: base()
+		{
+		}
 	}
 }

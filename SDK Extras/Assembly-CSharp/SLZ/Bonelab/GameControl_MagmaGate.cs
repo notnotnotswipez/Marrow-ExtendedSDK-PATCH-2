@@ -20,8 +20,8 @@ namespace SLZ.Bonelab
 		[SerializeField]
 		private GenericCrateReference unlockCrate;
 
-		[FormerlySerializedAs("avatarGatcha")]
 		[SerializeField]
+		[FormerlySerializedAs("avatarGatcha")]
 		private GameObject avatarGacha;
 
 		public GameObject doorArt;
@@ -41,6 +41,10 @@ namespace SLZ.Bonelab
 		private UniTaskVoid SwapAvatar(AvatarCrate avatarCrate)
 		{
 			return default(UniTaskVoid);
+		}
+
+		public override void DoLevelComplete()
+		{
 		}
 
 		private void ButtonsSetup()

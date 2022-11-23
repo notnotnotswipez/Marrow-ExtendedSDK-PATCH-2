@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
+using PuppetMasta;
+using SLZ.Bonelab;
 using SLZ.Marrow.Data;
 using SLZ.Props;
 using UnityEngine;
@@ -32,6 +34,8 @@ namespace SLZ.Combat
 		private Dictionary<GameObject, Rigidbody> _goToRbMap;
 
 		private Dictionary<Rigidbody, int> _rigidbodyRefs;
+
+		private Dictionary<GameObject, MuscleCollisionBroadcaster> _rootToTriggerRefProxy;
 
 		private List<PlayerDamageReceiver> _playerDamageRecievers;
 

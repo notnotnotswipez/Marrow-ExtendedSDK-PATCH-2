@@ -1,8 +1,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using SLZ.Data.SaveData;
 
-namespace SLZ.Data
+namespace SLZ.SaveData
 {
 	public sealed class DataManager
 	{

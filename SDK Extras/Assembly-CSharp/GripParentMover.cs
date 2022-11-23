@@ -7,58 +7,61 @@ using SLZ.Interaction;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class GripParentMover : MonoBehaviour
+namespace SLZ.Bonelab
 {
-	[SerializeField]
-	private ConfigurableJoint[] joints;
-
-	[SerializeField]
-	private InteractableHost[] hosts;
-
-	[SerializeField]
-	private float lerpDuration;
-
-	private Coroutine moveRoutine;
-
-	[SerializeField]
-	private Collider[] localColliders;
-
-	[SerializeField]
-	private Collider[] collidersToIgnore;
-
-	[SerializeField]
-	private UnityEvent OnCompleteMove;
-
-	[SerializeField]
-	private Vector3 startPos;
-
-	[SerializeField]
-	private Vector3 endPos;
-
-	private void Start()
+	public class GripParentMover : MonoBehaviour
 	{
-	}
+		[SerializeField]
+		private ConfigurableJoint[] joints;
 
-	[ContextMenu("StartMove")]
-	public void ExtrudeAndStartCountdown()
-	{
-	}
+		[SerializeField]
+		private InteractableHost[] hosts;
 
-	private IEnumerator CoMoveJoints()
-	{
-		return null;
-	}
+		[SerializeField]
+		private float lerpDuration;
 
-	public void ForceDetachAll()
-	{
-	}
+		private Coroutine moveRoutine;
 
-	public void IgnoreColliders(bool ignore = true)
-	{
-	}
+		[SerializeField]
+		private Collider[] localColliders;
 
-	public GripParentMover()
-		: base()
-	{
+		[SerializeField]
+		private Collider[] collidersToIgnore;
+
+		[SerializeField]
+		private UnityEvent OnCompleteMove;
+
+		[SerializeField]
+		private Vector3 startPos;
+
+		[SerializeField]
+		private Vector3 endPos;
+
+		private void Start()
+		{
+		}
+
+		[ContextMenu("StartMove")]
+		public void ExtrudeAndStartCountdown()
+		{
+		}
+
+		private IEnumerator CoMoveJoints()
+		{
+			return null;
+		}
+
+		public void ForceDetachAll()
+		{
+		}
+
+		public void IgnoreColliders(bool ignore = true)
+		{
+		}
+
+		public GripParentMover()
+			: base()
+		{
+		}
 	}
 }
