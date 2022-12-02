@@ -23,7 +23,7 @@ namespace SLZ.Zones
 		{
 		}
 
-		private void LoadLevel()
+		public void LoadLevel()
 		{
 		}
 
