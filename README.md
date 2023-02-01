@@ -21,7 +21,7 @@ https://github.com/StressLevelZero/Custom-RenderPipelineCore.git
 
 https://github.com/StressLevelZero/Custom-URP.git#Bonelab
 
-https://github.com/Kairus101/MarrowSDKExt.git
+https://github.com/notnotnotswipez/MarrowSDKExt.git
 
 Using the green Code dropdown at the top of this page, download a zip of this repository, and unzip it's contents into your Assets folder to have Assets/Marrow-ExtendedSDK-PATCH-2
 
