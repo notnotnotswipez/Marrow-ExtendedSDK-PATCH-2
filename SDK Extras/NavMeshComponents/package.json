@@ -1,0 +1,25 @@
+{
+  "name": "com.unity.ai.navigation",
+  "displayName": "AI Navigation",
+  "version": "1.0.0-exp.4",
+  "unity": "2019.4",
+  "description": "High-level NavMesh components for building and using NavMeshes at runtime and at edit time.",
+  "dependencies": {
+    "com.unity.modules.ai": "1.0.0"
+  },
+  "samples": [
+    {
+      "displayName": "Build And Connect NavMesh Surfaces",
+      "description": "A set of examples on how to build and use a dynamic navigation space made of NavMesh surfaces and segment-to-segment connections.",
+      "path": "Samples~"
+    }
+  ],
+  "upmCi": {
+    "footprint": "6212939d0fb9194fb2a5405afef874ea4e3f6dd5"
+  },
+  "repository": {
+    "url": "https://github.cds.internal.unity3d.com/unity/com.unity.ai.navigation.git",
+    "type": "git",
+    "revision": "e38a28933e4513afa2b6084c2948852bd9daad56"
+  }
+}
