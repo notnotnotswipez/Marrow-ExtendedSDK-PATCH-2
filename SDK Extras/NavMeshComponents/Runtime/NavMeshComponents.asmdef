@@ -1,5 +1,5 @@
 {
-    "name": "UnityEngine.AI",
+    "name": "NavMeshComponents",
     "rootNamespace": "",
     "references": [],
     "includePlatforms": [],
