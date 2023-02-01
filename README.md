@@ -35,5 +35,5 @@ Stress Level Zero's Official Bonelab SDK is MIT licenced, and by extension, so i
 ### This repo contains DUMMY scripts. Which are scripts that are not functional and contain no code. They simply get replaced with their ingame equivalents upon being loaded. It also contains some example pieces with simple (Blocky) art assets.
 
 ## IF YOU WOULD LIKE TO PR SOMETHING TO THIS REPO PLEASE FOLLOW THESE GUIDELINES:
-### Do not PR any FUNCTIONAL scripts that come from paid asset packs/utilities. Dummy scripts are fine. Functional and FREE open source/public scripts are fine.
+### Do not PR any FUNCTIONAL/NON DUMMY scripts that come from paid asset packs/utilities. Dummy scripts are fine. Functional and FREE open source/public scripts are fine.
 ### Do not PR any art that must be paid for or was paid for by someone. This includes assets ripped directly from Bonelab (PRs containing direct Bonelab assets will not be accepted). Only free assets or assets personally made and granted free open access by the creator are allowed. (This keeps things like the examples usable with no worry about copyright)
