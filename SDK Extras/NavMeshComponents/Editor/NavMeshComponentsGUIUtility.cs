@@ -3,7 +3,7 @@ using UnityEditor.AI;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unity.AI.Navigation.Editor
+namespace Unity.AI.Editor
 {
     /// <summary> Class containing a set of utility functions meant for presenting information from the NavMeshComponents into the GUI. </summary>
     public static class NavMeshComponentsGUIUtility

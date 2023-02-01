@@ -15,7 +15,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
 
-namespace Unity.AI.Navigation.Editor.Tests
+namespace Unity.AI.Editor.Tests
 {
     [Category("PrefabsWithNavMeshModifierVolume")]
     class NavMeshModifierVolumeInPrefabTests

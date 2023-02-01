@@ -5,7 +5,7 @@ using UnityEditor.Experimental.SceneManagement;
 #endif
 using UnityEditor.SceneManagement;
 
-namespace Unity.AI.Navigation.Editor.Tests
+namespace Unity.AI.Editor.Tests
 {
     class PrefabSavingUtil
     {

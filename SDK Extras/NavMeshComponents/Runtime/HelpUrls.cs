@@ -1,4 +1,4 @@
-namespace Unity.AI.Navigation
+namespace UnityEngine.AI
 {
 	/// <summary>
 	/// Helper for compile-time constant strings for the [HelpURL](xref:UnityEngine.HelpURLAttribute) attribute.

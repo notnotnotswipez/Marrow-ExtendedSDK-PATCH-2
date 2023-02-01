@@ -12,7 +12,7 @@ using UnityEditorInternal;
 using UnityEngine.AI;
 using UnityEngine;
 
-namespace Unity.AI.Navigation.Editor
+namespace Unity.AI.Editor
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(NavMeshSurface))]

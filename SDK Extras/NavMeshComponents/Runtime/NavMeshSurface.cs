@@ -8,7 +8,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.Serialization;
 
-namespace Unity.AI.Navigation
+namespace UnityEngine.AI
 {
     /// <summary> Sets the method for filtering the objects retrieved when baking the NavMesh. </summary>
     public enum CollectObjects

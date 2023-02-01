@@ -3,7 +3,7 @@ using UnityEditor.AI;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unity.AI.Navigation.Editor
+namespace Unity.AI.Editor
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(NavMeshLink))]

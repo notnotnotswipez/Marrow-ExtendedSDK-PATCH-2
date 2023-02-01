@@ -2,8 +2,9 @@
 
 using NUnit.Framework;
 using UnityEngine;
+using UnityEngine.AI;
 
-namespace Unity.AI.Navigation.Tests
+namespace Unity.AI.Tests
 {
     [TestFixture]
     class NavMeshSurfaceModifierTests

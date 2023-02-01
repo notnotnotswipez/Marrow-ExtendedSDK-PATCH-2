@@ -6,7 +6,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.TestTools;
 
-namespace Unity.AI.Navigation.Tests
+namespace Unity.AI.Tests
 {
     class NavMeshSurfaceAgentTests
     {

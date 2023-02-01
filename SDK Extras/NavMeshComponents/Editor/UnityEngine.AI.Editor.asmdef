@@ -1,5 +1,5 @@
 {
-    "name": "Unity.AI.Navigation.Editor",
+    "name": "UnityEngine.AI.Editor",
     "rootNamespace": "",
     "references": [
         "GUID:8c4dd21966739024fbd72155091d199e"

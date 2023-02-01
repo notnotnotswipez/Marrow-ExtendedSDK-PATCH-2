@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unity.AI.Navigation
+namespace UnityEngine.AI
 {
     /// <summary> Component used by the NavMesh building process to assign a different area type to the region inside the specified volume.</summary>
     [ExecuteInEditMode]

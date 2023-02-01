@@ -4,8 +4,8 @@ using System;
 using System.Collections;
 using System.IO;
 using NUnit.Framework;
-using Unity.AI.Navigation;
-using Unity.AI.Navigation.Editor;
+using Unity.AI;
+using Unity.AI.Editor;
 using UnityEditor;
 #if !UNITY_2021_2_OR_NEWER
 using UnityEditor.Experimental.SceneManagement;
@@ -17,7 +17,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.TestTools;
 using Object = UnityEngine.Object;
 
-namespace Unity.AI.Navigation.Editor.Tests
+namespace Unity.AI.Editor.Tests
 {
     [Category("PrefabsWithNavMeshComponents")]
     class NavMeshSurfaceInPrefabVariantTests

@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unity.AI.Navigation
+namespace UnityEngine.AI
 {
     /// <summary>
     /// Component used to create a navigable link between two NavMesh locations.

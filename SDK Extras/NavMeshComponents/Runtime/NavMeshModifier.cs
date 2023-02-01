@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unity.AI.Navigation
+namespace UnityEngine.AI
 {
     /// <summary> Component that modifies the properties of the GameObjects used for building a NavMesh. </summary>
     /// <remarks>The properties apply to the current GameObject and recursively to all its children

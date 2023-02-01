@@ -5,7 +5,7 @@ using UnityEditorInternal;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unity.AI.Navigation.Editor
+namespace Unity.AI.Editor
 {
     [CanEditMultipleObjects]
     [CustomEditor(typeof(NavMeshModifierVolume))]

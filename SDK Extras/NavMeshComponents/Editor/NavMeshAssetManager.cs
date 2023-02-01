@@ -8,7 +8,7 @@ using UnityEditor.SceneManagement;
 using UnityEngine;
 using UnityEngine.AI;
 
-namespace Unity.AI.Navigation.Editor
+namespace Unity.AI.Editor
 {
     /// <summary>
     /// Manages assets and baking operation of the navmesh 

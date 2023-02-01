@@ -1,7 +1,7 @@
 {
-    "name": "Unity.AI.Navigation",
+    "name": "UnityEngine.AI",
+    "rootNamespace": "",
     "references": [],
-    "optionalUnityReferences": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

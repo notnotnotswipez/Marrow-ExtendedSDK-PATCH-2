@@ -2,7 +2,7 @@
 using System.Reflection;
 using UnityEditor;
 
-namespace Unity.AI.Navigation.Editor.Tests
+namespace Unity.AI.Editor.Tests
 {
     static class PrefabStageAutoSavingUtil
     {
