@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using MK.Glow.URP;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
@@ -197,7 +198,7 @@ namespace MK.Glow
 
 		private RenderDimension _computeThreadGroups;
 
-		private CameraEditor.Settings _settings;
+		private Settings _settings;
 
 		private RenderTarget sourceFrameBuffer
 		{
@@ -288,7 +289,7 @@ namespace MK.Glow
 		{
 		}
 
-		internal void Build(RenderTarget source, RenderTarget destination, CameraEditor.Settings settings, CommandBuffer cmd, CameraData cameraData, Camera renderingCamera = default(Camera), bool finalBlit = true)
+		internal void Build(RenderTarget source, RenderTarget destination, Settings settings, CommandBuffer cmd, CameraData cameraData, Camera renderingCamera = default(Camera), bool finalBlit = true)
 		{
 		}
 
