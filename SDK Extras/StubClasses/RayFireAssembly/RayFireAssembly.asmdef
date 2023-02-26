@@ -1,0 +1,9 @@
+{
+  "name": "RayFireAssembly",
+  "references": [
+    "RFLib_DotNet_2018",
+    "UnityEditor.UI",
+    "UnityEngine.UI"
+  ],
+  "allowUnsafeCode": true
+}

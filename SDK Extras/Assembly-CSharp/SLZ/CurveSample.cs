@@ -80,7 +80,7 @@ namespace SplineMesh
 		}
 	}
 
-	public class MeshVertex
+	public partial class MeshVertex
 	{
 	}
 }

@@ -5,6 +5,7 @@ using SLZ.Marrow.Utilities;
 using SplineMesh;
 using UnityEngine;
 using UnityEngine.Splines;
+using Spline = UnityEngine.Splines.Spline;
 
 namespace SLZ.Bonelab
 {
