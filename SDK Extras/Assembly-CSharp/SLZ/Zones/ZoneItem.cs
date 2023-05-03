@@ -16,7 +16,6 @@ namespace SLZ.Zones
 		[HideInInspector]
 		public bool inSecondaryZone;
 
-		[HideInInspector]
 		public bool isEnabled;
 
 		[HideInInspector]
