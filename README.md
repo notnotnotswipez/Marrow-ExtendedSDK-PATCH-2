@@ -40,5 +40,5 @@ Stress Level Zero's Official Bonelab SDK is MIT licenced, and by extension, so i
 
 # Credits and Attributions
 Kairus101, RevOcelotMGS, dotbenj, goodboy10 - Original ExtendedSDK which this fork is based on. <br>
-yellowyears - Replaced dummy Navmesh scripts with their functional counterparts. Deleted duplicate Spline Joint scripts. <br>
+yellowyears - Replaced dummy Navmesh scripts with their functional counterparts. <br>
 notnotnotswipez - Current maintainer/updater of this fork of the ExtendedSDK.
