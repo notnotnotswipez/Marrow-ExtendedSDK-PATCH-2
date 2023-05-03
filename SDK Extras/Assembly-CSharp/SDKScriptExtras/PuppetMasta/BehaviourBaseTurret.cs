@@ -5,7 +5,6 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using SLZ.AI;
 using SLZ.Bonelab;
-using SLZ.Marrow.Interaction;
 using SLZ.Marrow.Utilities;
 using UnityEngine;
 

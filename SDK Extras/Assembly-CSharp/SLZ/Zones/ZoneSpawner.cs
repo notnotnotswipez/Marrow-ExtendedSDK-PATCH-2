@@ -218,7 +218,7 @@ namespace SLZ.Zones
 		{
 		}
 
-		public void StartSpawn(GameObject playerObject)
+		public void StartSpawn(GameObject playerObject = default(GameObject))
 		{
 		}
 
