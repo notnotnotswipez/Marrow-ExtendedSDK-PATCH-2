@@ -17,7 +17,7 @@ Follow steps 1-5 from the official SDK over at https://github.com/StressLevelZer
 
 In step 6, you'll want to import these three packages via github URL:
 
-https://github.com/StressLevelZero/Custom-RenderPipelineCore.git
+https://github.com/StressLevelZero/Custom-RenderPipelineCore.git#Bonelab
 
 https://github.com/StressLevelZero/Custom-URP.git#Bonelab
 
